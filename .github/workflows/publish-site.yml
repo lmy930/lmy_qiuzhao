@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir -p _site/data
           cp index.html _site/index.html
-          cp data/companies.json data/daily_changes.json data/page_verification_report.json data/launch_baseline.json _site/data/
+          cp data/companies.json data/daily_changes.json data/page_verification_report.json data/launch_baseline.json data/company_order.json _site/data/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

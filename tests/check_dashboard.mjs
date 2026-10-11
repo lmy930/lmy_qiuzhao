@@ -19,15 +19,16 @@ async function boot(storage=new Map(),{baselineFails=false,companiesFail=false,h
  const elements=new Map();
  function el(id){if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',disabled:false,dataset:{},listeners:new Map(),addEventListener(type,fn){this.listeners.set(type,fn)},click(){this.clicked=true}});return elements.get(id)}
  const categories=['','银行','央企','民营500'].map(category=>({dataset:{category},listeners:new Map(),attributes:{},setAttribute(k,v){this.attributes[k]=v},addEventListener(k,v){this.listeners.set(k,v)}}));
- const ctx={Date,console,Blob,URL,setInterval(){},atob,localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},document:{getElementById:el,querySelectorAll:selector=>selector==='[data-category]'?categories:[],addEventListener(){},createElement:()=>({click(){}})},fetch:async url=>{
+ const directoryCategories=['民营500','银行','央企'].map(directoryCategory=>({dataset:{directoryCategory},listeners:new Map(),attributes:{},setAttribute(k,v){this.attributes[k]=v},addEventListener(k,v){this.listeners.set(k,v)}}));
+ const ctx={Date,console,Blob,URL,setInterval(){},atob,localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},document:{getElementById:el,querySelectorAll:selector=>selector==='[data-category]'?categories:selector==='[data-directory-category]'?directoryCategories:[],addEventListener(){},createElement:()=>({click(){}})},fetch:async url=>{
   if(String(url).includes('launch_baseline.json')){if(baselineFails)throw Error('unreachable');return {ok:true,json:async()=>snapshot}}
-  if(String(url).includes('daily_changes.json'))return {ok:true,json:async()=>({events:updates})};
+  if(String(url).includes('company_order.json'))return {ok:true,json:async()=>JSON.parse(fs.readFileSync('data/company_order.json','utf8'))};if(String(url).includes('daily_changes.json'))return {ok:true,json:async()=>({events:updates})};
   if(String(url).includes('page_verification_report.json'))return {ok:true,json:async()=>({scanned_at:new Date().toISOString(),pages_read:healthyScan?1:0,pages_attempted:1})};
   if(String(url).includes('companies.json')){if(companiesFail)throw Error('unreachable');return {ok:true,json:async()=>db}};
   throw Error('unexpected resource');
  }};
  vm.runInNewContext(source,ctx);await new Promise(r=>setTimeout(r,10));
- return {ctx,el,storage,db,unverifiedName,category(value){categories.find(c=>c.dataset.category===value).listeners.get('click')()},select(id,value){el(id).value=value;el(id).listeners.get('change')()},click(name,action){el('applicationList').listeners.get('click')({target:{closest:()=>({dataset:{company:encodeURIComponent(name),action}})}})}};
+ return {ctx,el,storage,db,unverifiedName,directory(value){directoryCategories.find(c=>c.dataset.directoryCategory===value).listeners.get('click')()},category(value){categories.find(c=>c.dataset.category===value).listeners.get('click')()},select(id,value){el(id).value=value;el(id).listeners.get('change')()},click(name,action){el('applicationList').listeners.get('click')({target:{closest:()=>({dataset:{company:encodeURIComponent(name),action}})}})}};
 }
 let app=await boot();
 assert.match(app.el('scanNotice').textContent,/自动更新暂受影响/);
@@ -84,8 +85,19 @@ updated.select('boardRange','updated');assert.equal(updated.el('visibleCount').t
 updated.select('boardRange','all');assert.match(updated.el('uncertainSummary').innerHTML,/尚未确认启动/);
 const sortedNames=[...updated.el('applicationList').innerHTML.matchAll(/data-name="([^"]+)"/g)].map(m=>m[1]);
 let sawUncertain=false;for(const n of sortedNames){const c=updated.db.companies.find(c=>c.name===n);const uncertain=c.status==='已发布公告（网申待核验）'||!c.page_verification?.sha256;if(uncertain)sawUncertain=true;else assert.equal(sawUncertain,false,'Certain record appeared below uncertain records')}
-updated.category('银行');assert.ok(!updated.el('uncertainSummary').innerHTML.includes('华为投资控股有限公司'));
+updated.directory('银行');assert.ok(!updated.el('uncertainSummary').innerHTML.includes('华为投资控股有限公司'));
 console.log('PASS: uncertain records last, grouped name summary and actual daily update colors');
 
 const freshToday=await boot(new Map(),{simulateNew:true,updates:[{name,kind:'first_confirmed',date:today,observed_at:new Date().toISOString()}]});freshToday.select('boardRange','updated');assert.equal(freshToday.el('visibleCount').textContent,1);assert.match(freshToday.el('applicationList').innerHTML,/new-company/);
 console.log('PASS: today filter also includes newly confirmed employers');
+
+const directory=await boot();
+for(const group of ['民营500','银行','央企']){
+ directory.directory(group);const html=directory.el('uncertainSummary').innerHTML;
+ const expected=JSON.parse(fs.readFileSync('data/company_order.json','utf8')).groups[group];
+ assert.equal((html.match(/<tr(?: class="unconfirmed-row")?>/g)||[]).length,expected.length+1);
+ for(const row of expected)assert.ok(html.includes('<td>'+row.number+'</td><td>'+row.name.replaceAll('&','&amp;')),'Missing original catalog ordinal');
+}
+directory.directory('民营500');assert.match(directory.el('uncertainSummary').innerHTML,/<td>67<\/td><td>中国民生银行股份有限公司/);
+directory.el('boardQuery').value='华为';directory.el('boardQuery').listeners.get('input')();assert.match(directory.el('uncertainSummary').innerHTML,/<td>4<\/td>/);assert.ok(!directory.el('uncertainSummary').innerHTML.includes('class="unconfirmed-row"'));
+console.log('PASS: three complete directory tables, preserved ordinals, private rank 67 recovery and honest highlighting');
