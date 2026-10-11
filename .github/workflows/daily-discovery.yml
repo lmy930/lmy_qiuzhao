@@ -21,6 +21,9 @@ jobs:
       - name: Collect possible recruitment leads
         continue-on-error: true
         run: python scripts/discover.py
+      - name: Read public recruitment aggregator listings
+        continue-on-error: true
+        run: python scripts/aggregate_sources.py
       - name: Automatically verify discovered 2027 recruitment pages
         continue-on-error: true
         run: python scripts/promote_evidence.py
