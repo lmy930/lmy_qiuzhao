@@ -4,6 +4,11 @@ on:
     - cron: '40 0 * * *'
     - cron: '40 12 * * *'
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/**'
+      - 'data/source_catalog.json'
+      - '.github/workflows/daily-discovery.yml'
 permissions:
   contents: write
 concurrency:
