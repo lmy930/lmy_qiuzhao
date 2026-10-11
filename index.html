@@ -88,7 +88,7 @@ function renderDirectory(){
  const c=byName.get(row.name),known=c&&launched(c)&&c.page_verification?.sha256;
  const status=!c||!launched(c)?"待核验（尚未确认启动）":!known?"已有启动记录，证据待补齐":c.status==="已结束"?"已确认招聘，已记录结束":c.status==="已开启"?"已记录网申开启":"已发布本届招聘公告";
  const state=appliedState(row.name),record=state==="applied"?"已投递":state==="later"?"暂不投":"未投递";
- return '<tr'+(!known?' class="unconfirmed-row"':'')+'><td>'+row.number+'</td><td>'+esc(row.name)+'</td><td>'+esc(status)+'</td><td>'+record+'</td></tr>';
+ return '<tr'+(!known?' class="unconfirmed-row"':'')+'><td>'+row.number+'</td><td>'+esc(row.name)+'</td><td>'+esc(status)+'</td><td><div class="actions"><span class="application-state">'+record+'</span><button type="button" data-action="applied" data-company="'+encodeURIComponent(row.name)+'" aria-pressed="'+(state==="applied")+'"'+(state==="applied"?' class="active"':'')+'>已投递</button><button type="button" data-action="pending" data-company="'+encodeURIComponent(row.name)+'" aria-pressed="'+(state==="pending")+'"'+(state==="pending"?' class="active"':'')+'>未投递</button></div></td></tr>';
  }).join('')+'</tbody></table>';
 }
 async function loadDirectoryOrder(){try{const response=await fetch("./data/company_order.json?t="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("order unavailable");const data=await response.json();if(data.schema_version!==1||!["民营500","银行","央企"].every(g=>Array.isArray(data.groups?.[g])&&data.groups[g].every(r=>Number.isInteger(r.number)&&r.number>0&&typeof r.name==="string")))throw Error("invalid order");directoryOrders=data.groups}catch{directoryOrders=null}if(companiesStatus==="ready")renderDirectory()}
@@ -108,7 +108,7 @@ function handleApplicationClick(event){
  if(state==="pending")delete tracker.applications[name];else tracker.applications[name]={state,marked_at:new Date().toISOString()};
  saveTracker();renderDashboard();
 }
-for(const id of ["applicationList"])$(id).addEventListener("click",handleApplicationClick);
+for(const id of ["applicationList","uncertainSummary"])$(id).addEventListener("click",handleApplicationClick);
 $("applicationFilter").addEventListener("change",renderDashboard);$("recruitmentFilter").addEventListener("change",renderDashboard);
 document.querySelectorAll("[data-directory-category]").forEach(button=>button.addEventListener("click",()=>{directoryGroup=button.dataset.directoryCategory;document.querySelectorAll("[data-directory-category]").forEach(item=>item.setAttribute("aria-pressed",String(item.dataset.directoryCategory===directoryGroup)));renderDirectory()}));
 $("boardRange").addEventListener("change",renderDashboard);$("boardQuery").addEventListener("input",renderDashboard);

@@ -101,3 +101,19 @@ for(const group of ['民营500','银行','央企']){
 directory.directory('民营500');assert.match(directory.el('uncertainSummary').innerHTML,/<td>67<\/td><td>中国民生银行股份有限公司/);
 directory.el('boardQuery').value='华为';directory.el('boardQuery').listeners.get('input')();assert.match(directory.el('uncertainSummary').innerHTML,/<td>4<\/td>/);assert.ok(!directory.el('uncertainSummary').innerHTML.includes('class="unconfirmed-row"'));
 console.log('PASS: three complete directory tables, preserved ordinals, private rank 67 recovery and honest highlighting');
+
+let tableTracker=await boot();
+const tableName='中国民生银行股份有限公司';
+function tableClick(app,name,action){app.el('uncertainSummary').listeners.get('click')({target:{closest:()=>({dataset:{company:encodeURIComponent(name),action}})}})}
+tableTracker.directory('银行');tableClick(tableTracker,tableName,'applied');
+assert.equal(JSON.parse(tableTracker.storage.get(key)).applications[tableName].state,'applied');
+tableTracker=await boot(tableTracker.storage);tableTracker.directory('民营500');
+let tableRow=tableTracker.el('uncertainSummary').innerHTML.split('<tr').find(row=>row.includes('<td>'+tableName+'</td>'));
+assert.match(tableRow,/data-action="applied"[^>]+aria-pressed="true"/);
+assert.match(tableTracker.el('applicationList').innerHTML.split('<article').find(row=>row.includes('data-name="'+tableName+'"')),/application-state">已投递/);
+tableClick(tableTracker,tableName,'pending');tableTracker=await boot(tableTracker.storage);
+assert.ok(!JSON.parse(tableTracker.storage.get(key)).applications[tableName]);
+tableClick(tableTracker,tableTracker.unverifiedName,'applied');tableTracker=await boot(tableTracker.storage);
+assert.equal(JSON.parse(tableTracker.storage.get(key)).applications[tableTracker.unverifiedName].state,'applied','Unconfirmed employers can also be tracked without promoting recruitment status');
+assert.equal(tableTracker.db.companies.find(c=>c.name===tableTracker.unverifiedName).status,'待核验');
+console.log('PASS: table application buttons persist, sync with cards and categories, reset and support unconfirmed employers');
