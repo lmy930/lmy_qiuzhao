@@ -7,6 +7,15 @@ from page_evidence import page_text, TextParser
 from discover import OFFICIAL_DOMAIN
 
 RECRUITMENT_PUBLISHERS={
+    'iguopin.com':'国聘招聘信息',
+    'zhaopin.com':'智联招聘信息',
+    '51job.com':'前程无忧招聘信息',
+    'yingjiesheng.com':'应届生招聘信息',
+    'yinhangzhaopin.com':'银行招聘信息',
+    'yhks.cn':'银行考试网招聘信息',
+    'liepin.com':'猎聘招聘信息',
+    'zhipin.com':'BOSS招聘信息',
+    'ncss.cn':'国家大学生就业服务平台',
     'fenbi.com':'粉笔招聘信息',
     'eoffcn.com':'中公招聘信息',
     'gwy.com':'高顿招聘信息',

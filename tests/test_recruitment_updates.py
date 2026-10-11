@@ -28,3 +28,9 @@ class UpdateTests(unittest.TestCase):
         matches,_=inspect(('https://www.nowcoder.com/',{'text':'','links':[('华为2027届校园招聘','/article/123')]},None),[c])
         self.assertEqual(matches[0]['hit']['url'],'https://www.nowcoder.com/article/123')
         self.assertEqual(matches[0]['hit']['evidence_level'],'article_link')
+
+    def test_new_platforms_are_secondary_and_do_not_grant_global_official_trust(self):
+        from source_documents import source_kind
+        for domain in ['iguopin.com','zhaopin.com','51job.com','yingjiesheng.com','yinhangzhaopin.com','yhks.cn','liepin.com','zhipin.com','ncss.cn']:
+            self.assertEqual(source_kind('华为投资控股有限公司','https://www.'+domain+'/article/123'),'recruitment')
+            self.assertIsNone(source_kind('华为投资控股有限公司','https://'+domain+'.evil.test/article/123'))
