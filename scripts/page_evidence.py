@@ -89,7 +89,7 @@ def match_scope(name, title):
     if any(child in t for child in group_children.get(name,())):return 'subsidiary'
     return 'employer'
 
-DATE=r'(?P<y>20\d{2})\s*[年./-]\s*(?P<m>\d{1,2})\s*[月./-]\s*(?P<d>\d{1,2})日?'
+DATE=r'(?=(?:20\d{2}\s*年\s*\d{1,2}\s*月|20\d{2}\s*(?P<date_sep>[./-])\s*\d{1,2}\s*(?P=date_sep)))(?P<y>20\d{2})\s*[年./-]\s*(?P<m>\d{1,2})\s*[月./-]\s*(?P<d>\d{1,2})(?!\d)日?'
 START=r'(?:网申(?:报名)?(?:开始|开启|启动|起止)?(?:时间|日期)?|网上报名(?:时间|日期)?|报名(?:开始|起始|起止)?(?:时间|日期)|(?:简历)?投递(?:开始|开放|起始|起止)?(?:时间|日期)?|申请(?:开始|开放|时间))'
 def normalize_shared_cohort_eligibility(text):
     """Only explicit common eligibility may share the 2027 application period."""

@@ -147,3 +147,9 @@ class InvitedCohortAndClockRangeTests(unittest.TestCase):
         self.assertEqual(opening['date'],'2026-09-03')
         self.assertEqual(deadline_evidence(text,opening)['date'],'2026-10-08')
         self.assertIsNone(deadline_evidence('2027届 简历投递：2026年9月1日至9月3日',{'date':'2026-09-01','batch':'第一批'}))
+
+class MonthRangeIsNotDayTests(unittest.TestCase):
+    def test_observed_month_only_range_never_becomes_twentieth_day(self):
+        for text in ['2027届 网申时间：2026.10-2027.07','2027届 网申时间：2026.08-2027.07','2027届 网申时间：2026.07-10','2027届 网申时间：2026年9月123日']:
+            self.assertIsNone(opening_evidence(text,'2026-12-01'))
+        self.assertEqual(opening_evidence('2027届 简历投递：2026年9月10日10:00至10月26日','2026-10-11')['date'],'2026-09-10')
