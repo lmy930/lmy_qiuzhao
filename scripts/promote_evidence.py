@@ -66,7 +66,7 @@ def score(name,h):
  if not any(y in t for y in YEAR) or any(y in t for y in IGNORE):return 0
  if not any(a in t for a in canonical_aliases(name)):return 0
  if name=="中国航空集团有限公司" and ("航空发动机" in t or "中国航发" in t):return 0
- if not any(norm(x) in t for x in LAUNCH) and not any(x in t for x in ("校园招聘","校招","秋招","管培生招聘","2027届管培生计划")):return 0
+ if not any(norm(x) in t for x in LAUNCH) and not any(x in t for x in ("校园招聘","校招","秋招","管培生招聘","2027届管培生计划")) and not re.search(r"(招聘|校招|秋招).{0,10}(启动|开启|开始|进行|发布)",t):return 0
  # Explicit 2027 launch headlines from a trusted government or university publication.
  publisher=hosts(h)
  if h.get("evidence_level")=="university_listing":return 3
