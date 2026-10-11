@@ -10,6 +10,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections import Counter
+from employer_aliases import primary
 
 BASE=pathlib.Path(__file__).resolve().parents[1]
 DATA=BASE/"data"/"companies.json"
@@ -41,7 +42,7 @@ ALIASES={
 }
 RECRUIT=("校园招聘","秋季招聘","秋招","校招","应届生招聘","毕业生招聘","高校毕业生招聘")
 def search_name(s):
-    return ALIASES.get(s,re.sub(r"(有限责任公司|股份有限公司|集团有限公司|控股有限公司|有限公司)$","",s))
+    return primary(s)
 def normalize(s):
     return re.sub(r"\s+|[（）()·]","",s or "").lower()
 def feed(name):
