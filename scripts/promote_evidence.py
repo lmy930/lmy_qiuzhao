@@ -8,6 +8,7 @@ import pathlib
 import re
 import urllib.parse
 from collections import defaultdict
+from employer_aliases import aliases as canonical_aliases
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DIR=ROOT/"data"
 TODAY=(dt.datetime.now(dt.timezone.utc)+dt.timedelta(hours=8)).date().isoformat()
@@ -63,11 +64,12 @@ def score(name,h):
  title=h.get("title","")
  t=norm(title)
  if not any(y in t for y in YEAR) or any(y in t for y in IGNORE):return 0
- if not any(a in t for a in company_aliases(name)):return 0
+ if not any(a in t for a in canonical_aliases(name)):return 0
  if name=="中国航空集团有限公司" and ("航空发动机" in t or "中国航发" in t):return 0
- if not any(norm(x) in t for x in LAUNCH):return 0
+ if not any(norm(x) in t for x in LAUNCH) and not any(x in t for x in ("校园招聘","校招","秋招","管培生招聘","2027届管培生计划")):return 0
  # Explicit 2027 launch headlines from a trusted government or university publication.
  publisher=hosts(h)
+ if h.get("evidence_level")=="university_listing":return 3
  if any(norm(x) in publisher for x in HIGH_TRUST) or "sasac.gov.cn" in publisher:return 3
  # Other clearly attributable 2027 recruitment headlines are discovery evidence.
  return 1
