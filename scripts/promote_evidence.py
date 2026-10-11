@@ -57,7 +57,11 @@ def check(c,entry):
  good=[]
  for h in hits:
   url=h.get("url","")
-  if not url.startswith("https://") or not trust(url):continue
+  if not url.startswith("https://"):continue
+  # News RSS is a discovery source: resolve the original publisher only if available.
+  # Otherwise require two independent recruitment-index hits before recording launch.
+  if "news.google.com/rss/articles/" in url:continue
+  if not trust(url):continue
   try:
    body=fetch(url)
    if not body or "2027" not in body or not any(x in body for x in KWORDS):continue
