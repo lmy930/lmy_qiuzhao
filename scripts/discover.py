@@ -85,12 +85,31 @@ def google_news(name):
     return hits[:5]
 
 SOURCES=json.loads((BASE/"data"/"source_catalog.json").read_text(encoding="utf-8"))["sources"]
+OFFICIAL_DOMAIN={
+"兴业银行股份有限公司":"xyyh.com.cn",
+"中国华电集团有限公司":"chd.com.cn",
+"国家电网有限公司":"sgcc.com.cn",
+"中国电力建设集团有限公司":"powerchina.cn",
+"中国建筑集团有限公司":"cscec.com",
+"中国工商银行股份有限公司":"icbc.com.cn",
+"中国农业银行股份有限公司":"abchina.com",
+"中国建设银行股份有限公司":"ccb.com",
+"中国银行股份有限公司":"bankofchina.com",
+"招商银行股份有限公司":"cmbchina.com",
+"中国邮政储蓄银行股份有限公司":"psbc.com",
+"中国石油天然气集团有限公司":"cnpc.com.cn",
+"中国石油化工集团有限公司":"sinopecgroup.com",
+"中国海洋石油集团有限公司":"cnooc.com.cn",
+}
+
 def site_feed(c):
     # Rotate across all registered sites without multiplying search load by 25.
     relevant=[x for x in SOURCES if any(g in x["groups"] for g in c.get("groups",[]))]
     if not relevant:return []
     n=(dt.date.fromisoformat(TODAY).toordinal()+sum(ord(k) for k in c["name"]))%len(relevant)
     source=relevant[n]
+    official=OFFICIAL_DOMAIN.get(c["name"])
+    if official:source={"name":"该企业官网优先","domain":official}
     short=search_name(c["name"])
     query=f'site:{source["domain"]} "{short}" "2027" (校招 OR 秋招 OR 校园招聘)'
     url="https://www.bing.com/search?format=rss&q="+urllib.parse.quote(query)
