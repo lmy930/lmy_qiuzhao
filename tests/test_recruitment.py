@@ -29,6 +29,8 @@ class EmployerAliasTests(unittest.TestCase):
         self.assertEqual(promote_evidence.score("小米通讯技术有限公司",h),0)
     def test_2027_global_campus_recruitment(self):
         h={"title":"TCL2027届全球校园招聘 - 南开大学就业网","url":"https://career.nankai.edu.cn/correcruit/content/id/111111.html","evidence_level":"university_listing"}
+        self.assertEqual(promote_evidence.score("TCL 实业控股股份有限公司",h),0)
+        h["title"]="TCL实业2027届全球校园招聘 - 南开大学就业网"
         self.assertEqual(promote_evidence.score("TCL 实业控股股份有限公司",h),3)
     def test_school_anchor_extractor(self):
         parser=university_sources.Anchors()

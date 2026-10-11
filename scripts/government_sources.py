@@ -12,6 +12,7 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from employer_aliases import aliases as canonical_aliases
 from html.parser import HTMLParser
+from page_evidence import match_scope
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DIR=ROOT/"data"
 TODAY=(dt.datetime.now(dt.timezone.utc)+dt.timedelta(hours=8)).date().isoformat()
@@ -78,7 +79,7 @@ def valid(title, name):
  t=norm(title)
  if not any(x in t for x in ("2027","27届")):return False
  if not any(x in t for x in ("校园招聘","校招","秋招","高校毕业生招聘","招聘启动","招聘正式启动","校园招聘开启")):return False
- if not any(x in t for x in aliases(name)):return False
+ if match_scope(name,title) is None:return False
  if name=="中国航空工业集团有限公司" and ("航空发动机" in t or "中国航发" in t):return False
  if name=="中国航空集团有限公司" and ("中国航空工业" in t or "航空发动机" in t):return False
  if name=="中国农业发展集团有限公司" and ("农业发展银行" in t or "农发行" in t):return False
@@ -106,7 +107,7 @@ def main():
     c["status"]="已发布公告（网申待核验）"
     c["discovered_2027"]=True
     c["announcement_source_url"]=urllib.parse.urljoin(url,href)
-    if "下属" in title or "子公司" in title:c["source_scope"]="subsidiary"
+    c["source_scope"]=match_scope(c["name"],title)
     c["verification_note"]="政府招聘栏目直接检索到2027届招聘条目；未确认首次网申开启日期及当前可投状态。"
     changed.append(c["name"])
   report.append({"source":source,"mode":mode,"direct_error":direct_error,"links":len(links),"matched_employers":matches})

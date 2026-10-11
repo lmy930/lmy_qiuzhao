@@ -29,7 +29,7 @@ def main():
         history["events"].append({
             "date":TODAY, "name":c["name"], "groups":c.get("groups",[]),
             "scope":c.get("source_scope","employer"),
-            "opening_date":c.get("open_date"),
+            "opening_date":c.get("open_date") if c.get("open_date_evidence",{}).get("date")==c.get("open_date") and c.get("open_date_evidence",{}).get("scope")=="employer" else None,
             "kind":"first_confirmed"
         })
     history["known_launch_names"]=sorted(known|existing)

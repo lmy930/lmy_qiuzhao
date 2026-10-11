@@ -7,6 +7,7 @@ import pathlib
 import re
 import urllib.parse
 import urllib.request
+from page_evidence import opening_evidence
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DIR=ROOT/"data"
@@ -43,16 +44,18 @@ def main():
             assert name in company_by_name, "Unknown company"
             assert domain_ok(url,domain), "URL not in approved official domain"
             assert source["year"]==2027, "Wrong cohort"
-            assert re.fullmatch(r"\d{4}-\d{2}-\d{2}",source["open_date"]), "Missing approved starting date"
-            assert source["open_date"]<=TODAY, "Future opening date"
             if source.get("deadline"):
                 assert re.fullmatch(r"\d{4}-\d{2}-\d{2}",source["deadline"]), "Invalid deadline"
             content=get_text(url)
             assert any(re.sub(r"\s+","",phrase) in content for phrase in source["match_any"]), "Official recruitment statement not present"
             assert "2027" in content, "Target class missing"
             target=company_by_name[name]
+            opening=opening_evidence(content,TODAY)
+            if not opening:
+                raise ValueError("No matching explicit application opening date in page body")
             target["status"]="已结束" if source.get("deadline") and source["deadline"]<TODAY else "已开启"
-            target["open_date"]=source["open_date"]
+            target["open_date"]=opening["date"]
+            target["open_date_evidence"]={**opening,"url":url,"scope":"employer","checked_at":TODAY}
             target["deadline"]=source.get("deadline")
             target["source_url"]=url
             target["apply_url"]=source.get("apply_url")
@@ -61,7 +64,7 @@ def main():
             target["verification_note"]=source.get("note","")
             record["result"]="official_page_verified"
         except Exception as exc:
-            record["result"]="requires_review"
+            record["result"]="verification_unresolved"
             record["reason"]=f"{type(exc).__name__}: {exc}"
             # Do not delete evidence on transient errors. A prior manual record remains.
         log.append(record)
@@ -69,7 +72,7 @@ def main():
         "generated_at":TODAY,
         "sources_checked":len(log),
         "passed":sum(x["result"]=="official_page_verified" for x in log),
-        "review_required":sum(x["result"]=="requires_review" for x in log),
+        "review_required":sum(x["result"]=="verification_unresolved" for x in log),
         "checks":log
     },ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     data["generated_at"]=TODAY

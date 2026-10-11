@@ -9,12 +9,14 @@
 <p class="muted" id="health"></p></main>
 <script>
 const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-let companies=[],discoveryEvents=[],shown=new Date(),selected=new Date();shown.setDate(1);
+function chinaToday(){const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const values=Object.fromEntries(parts.map(p=>[p.type,p.value]));return new Date(Number(values.year),Number(values.month)-1,Number(values.day))}
+let companies=[],discoveryEvents=[],shown=chinaToday(),selected=chinaToday();shown.setDate(1);
 const iso=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-");
+const calendarDate=c=>c.open_date_evidence?.date===c.open_date&&c.open_date_evidence?.scope==="employer"?c.open_date:null;
 const launched=c=>c.status==="已开启"||c.status==="已结束"||c.status==="已发布公告（网申待核验）"||Boolean(c.announcement_date);
 function filtered(){const q=$("query").value.trim().toLowerCase(),group=$("group").value,bank=$("bankType").value,status=$("status").value;return companies.filter(c=>(!q||c.name.toLowerCase().includes(q))&&(!group||c.groups.includes(group))&&(!bank||c.bank_type===bank)&&(!status||(status==="launched"?launched(c):!launched(c))))}
-function render(){const all=filtered();$("total").textContent=companies.length;$("launched").textContent=companies.filter(launched).length;$("dated").textContent=companies.filter(c=>c.open_date).length;$("newly").textContent=discoveryEvents.filter(e=>e.date===iso(new Date())).length;
-$("list").innerHTML=all.map(c=>'<div class="result"><div><b>'+esc(c.name)+'</b><div class="muted">'+esc(c.groups.join("、"))+(c.bank_type?" · "+esc(c.bank_type):"")+'</div></div><div style="text-align:right"><span class="tag">'+(launched(c)?(["subsidiary","旗下单位"].includes(c.source_scope)?"旗下单位已启动":"2027秋招已启动"):"暂无可靠开启记录")+'</span><div class="muted" style="margin-top:6px">'+(c.open_date?"开启 "+esc(c.open_date):c.announcement_date?"公告 "+esc(c.announcement_date):"日期待发现")+'</div></div></div>').join("")||'<p class="muted">没有符合条件的企业。</p>';
+function render(){const all=filtered();$("total").textContent=companies.length;$("launched").textContent=companies.filter(launched).length;$("dated").textContent=companies.filter(c=>calendarDate(c)).length;$("newly").textContent=discoveryEvents.filter(e=>e.date===iso(chinaToday())).length;
+$("list").innerHTML=all.map(c=>'<div class="result"><div><b>'+esc(c.name)+'</b><div class="muted">'+esc(c.groups.join("、"))+(c.bank_type?" · "+esc(c.bank_type):"")+'</div></div><div style="text-align:right"><span class="tag">'+(launched(c)?(["subsidiary","旗下单位"].includes(c.source_scope)?"旗下单位已启动":"2027秋招已启动"):"暂无可靠开启记录")+'</span><div class="muted" style="margin-top:6px">'+(calendarDate(c)?"开启 "+esc(calendarDate(c)):c.announcement_date?"公告 "+esc(c.announcement_date):"日期待发现")+'</div></div></div>').join("")||'<p class="muted">没有符合条件的企业。</p>';
 renderCalendar(all)}
 function renderCalendar(all){
  const year=shown.getFullYear(),month=shown.getMonth(),first=new Date(year,month,1).getDay();
@@ -24,7 +26,7 @@ function renderCalendar(all){
  for(const x of "日一二三四五六")html+='<div class="weekday">周'+x+'</div>';
  for(let i=0;i<42;i++){
   const d=new Date(year,month,i-first+1),day=iso(d),inMonth=d.getMonth()===month;
-  const started=all.filter(c=>c.open_date===day),newFound=discoveryEvents.filter(e=>e.date===day&&names.has(e.name));
+  const started=all.filter(c=>calendarDate(c)===day),newFound=discoveryEvents.filter(e=>e.date===day&&names.has(e.name));
   html+='<button type="button" class="day'+(inMonth?"":" out")+(day===iso(selected)?" selected":"")+'" data-date="'+day+'">'+d.getDate()+
    (started.length?'<span class="count">'+started.length+'家确切开启</span>':"")+
    (newFound.length?'<span class="newcount">'+newFound.length+'家新确认</span>':"")+
@@ -32,7 +34,7 @@ function renderCalendar(all){
  }
  $("calendar").innerHTML=html;
  document.querySelectorAll(".day").forEach(el=>el.addEventListener("click",()=>{const [y,m,d]=el.dataset.date.split("-").map(Number);selected=new Date(y,m-1,d);shown=new Date(y,m-1,1);render()}));
- const day=iso(selected),started=all.filter(c=>c.open_date===day),newFound=discoveryEvents.filter(e=>e.date===day&&names.has(e.name));
+ const day=iso(selected),started=all.filter(c=>calendarDate(c)===day),newFound=discoveryEvents.filter(e=>e.date===day&&names.has(e.name));
  $("dayTitle").textContent=day+" · 确切开启 "+started.length+" 家 · 新确认 "+newFound.length+" 家";
  let out='<h4>当天确切开启秋招</h4>';
  out+=started.length?started.map(c=>'<div class="result"><b>'+esc(c.name)+'</b><span class="tag">'+esc(c.groups.join("、"))+'</span></div>').join(""):'<p class="muted">暂无已核实的实际开启日期。</p>';
@@ -42,7 +44,7 @@ function renderCalendar(all){
 }
 $("prev").onclick=()=>{shown=new Date(shown.getFullYear(),shown.getMonth()-1,1);selected=new Date(shown);render()};
 $("next").onclick=()=>{shown=new Date(shown.getFullYear(),shown.getMonth()+1,1);selected=new Date(shown);render()};
-$("today").onclick=()=>{selected=new Date();shown=new Date(selected.getFullYear(),selected.getMonth(),1);render()};
+$("today").onclick=()=>{selected=chinaToday();shown=new Date(selected.getFullYear(),selected.getMonth(),1);render()};
 ["query","group","bankType","status"].forEach(id=>$(id).addEventListener(id==="query"?"input":"change",render));
 let inflight=false;
 async function loadLatest(){

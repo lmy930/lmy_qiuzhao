@@ -3,11 +3,17 @@
   "sources": [
     {
       "source": "国务院国资委",
-      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+      "mode": "indexed_fallback",
+      "direct_error": "HTTP Error 503: Service Unavailable",
+      "links": 0,
+      "matched_employers": 0
     },
     {
       "source": "上海市国资委",
-      "error": "HTTP Error 403: Forbidden"
+      "mode": "indexed_fallback",
+      "direct_error": "HTTP Error 503: Service Unavailable",
+      "links": 0,
+      "matched_employers": 0
     }
   ],
   "newly_confirmed": []

@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-10-11T09:05:17.672618+00:00",
+  "scanned_at": "2026-10-11T09:25:50.645979+00:00",
   "companies_total": 657,
   "registered_sources": 41,
   "search_methods": [
@@ -8,12 +8,37 @@
     "rotating domain-targeted Bing RSS"
   ],
   "searches_attempted": 657,
-  "searches_succeeded": 657,
+  "searches_succeeded": 651,
   "companies_with_new_hits": 36,
   "companies_with_any_leads": 83,
   "note": "搜索成功指至少一个搜索服务返回结果，未必找到招聘公告；未发现不代表未开启。",
-  "searches_failed": 0,
-  "errors": [],
+  "searches_failed": 6,
+  "errors": [
+    {
+      "name": "立中四通轻合金集团股份有限公司",
+      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "金鹏控股集团有限公司",
+      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "北京数据街控股集团有限公司",
+      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "南京新华海科技产业集团有限公司",
+      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "河南心连心化学工业集团股份有限公司",
+      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "贵阳银行股份有限公司",
+      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
+    }
+  ],
   "disclaimer": "RSS搜索发现属于未核验线索，不能据此宣称开放网申。来源可能包含转发、旧消息、伪相关。请以官方招聘公告为准。",
   "leads": [
     {
@@ -1850,38 +1875,38 @@
   "aggregate_report": [
     {
       "site": "https://www.givemeoc.com/",
-      "matched": 0
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
     },
     {
       "site": "https://www.gankinterview.cn/campus",
-      "matched": 0
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
     },
     {
       "site": "https://www.mianlingai.com/jobs/",
-      "matched": 0
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
     },
     {
       "site": "https://qiuzhaowang.com/latest",
-      "matched": 0
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
     },
     {
       "site": "https://offerqianxian.com/",
-      "matched": 0
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
     },
     {
       "site": "https://www.offerstar.cn/recruitment",
-      "matched": 1
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
     },
     {
       "site": "https://campus.sma-wiki.cn/",
-      "matched": 0
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
     },
     {
       "site": "https://mnowpick.nowcoder.com/m/school/schedule",
-      "matched": 2
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
     }
   ],
   "university_scan_at": "2026-10-11",
-  "university_pages_ok": 49,
-  "university_new_hits": 28
+  "university_pages_ok": 0,
+  "university_new_hits": 0
 }

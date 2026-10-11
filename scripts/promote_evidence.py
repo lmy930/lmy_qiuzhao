@@ -8,6 +8,7 @@ import pathlib
 import re
 import urllib.parse
 from collections import defaultdict
+from page_evidence import match_scope
 from employer_aliases import aliases as canonical_aliases
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DIR=ROOT/"data"
@@ -71,8 +72,10 @@ def score(name,h):
  if not any(norm(x) in t for x in LAUNCH) and not any(x in t for x in ("校园招聘","校招","秋招","管培生招聘","2027届管培生计划")) and not re.search(r"(招聘|校招|秋招).{0,10}(启动|开启|开始|进行|发布)",t):return 0
  # Explicit 2027 launch headlines from a trusted government or university publication.
  publisher=hosts(h)
- if h.get("evidence_level")=="university_listing":return 3
- if any(norm(x) in publisher for x in HIGH_TRUST) or "sasac.gov.cn" in publisher:return 3
+ if match_scope(name,title) is None:return 0
+ if (urllib.parse.urlsplit(h.get("url","")).hostname or "").endswith(".edu.cn"):return 3
+ host=urllib.parse.urlsplit(h.get("url","")).hostname or ""
+ if host.endswith(".gov.cn"):return 3
  # Other clearly attributable 2027 recruitment headlines are discovery evidence.
  return 1
 def main():
@@ -89,15 +92,17 @@ def main():
   publishers={hosts(h) for h,k in positive if hosts(h)}
   strong=any(k>=3 for h,k in positive)
   corroborated=len(publishers)>=2
-  launched=strong or corroborated
+  launched=strong
   if positive:
    c["evidence_last_checked"]=TODAY
    c["evidence_sources"]=[{"title":h.get("title",""),"url":h.get("url",""),"publisher":hosts(h),"classification":"trusted" if k>=3 else "discovery"} for h,k in positive[:8]]
   if launched and c.get("status")=="待核验":
    c["status"]="已发布公告（网申待核验）"
    c["discovered_2027"]=True
-   c["announcement_source_url"]=positive[0][0].get("url")
-   c["verification_note"]="自动确认2027届校招曾启动：政府/高校发布信息，或至少两家独立来源的明确校招标题。当前报名是否仍开放、首次启动日期尚未确认。"
+   trusted_hit=next(h for h,k in positive if k>=3)
+   c["source_scope"]=match_scope(c["name"],trusted_hit.get("title",""))
+   c["announcement_source_url"]=trusted_hit.get("url")
+   c["verification_note"]="自动确认2027届校招曾启动：政府/高校实际域名上的明确校招标题。当前报名是否仍开放、首次启动日期尚未确认。"
    changed.append(c["name"])
   details.append({"name":c["name"],"evidence":len(positive),"publishers":len(publishers),"accepted":launched})
  data["generated_at"]=TODAY

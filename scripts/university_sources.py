@@ -16,6 +16,7 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 DIR=ROOT/"data"
 TODAY=(dt.datetime.now(dt.timezone.utc)+dt.timedelta(hours=8)).date().isoformat()
 from employer_aliases import aliases
+from page_evidence import match_scope
 BASE="https://career.nankai.edu.cn"
 PAGES=[BASE+"/correcruit/index.html"]+[BASE+"/correcruit/index/p/"+str(n)+".html" for n in range(2,66)]
 RECRUIT=("校园招聘","秋招","校招","招聘启动","招聘开启","管培生招聘","秋季招聘","应届生招聘","毕业生招聘")
@@ -65,7 +66,7 @@ def main():
    if not url.startswith(BASE+"/"):continue
    for name,names in normalized:
     # For short brands (e.g. 京东) require a literal brand in the job headline.
-    if not any(a in t for a in names):continue
+    if match_scope(name,title) is None:continue
     if name=="中国航空集团有限公司" and "航空发动机" in t:continue
     entry=leadmap.setdefault(name,{"name":name,"hits":[],"last_found":TODAY})
     if not any(h.get("url")==url for h in entry["hits"]):
