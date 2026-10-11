@@ -1,0 +1,58 @@
+// Run with: node tests/check_frontend.mjs
+// No third-party libraries. Checks parse errors and live data rendering.
+import fs from "node:fs";
+import vm from "node:vm";
+import assert from "node:assert/strict";
+const html=fs.readFileSync("index.html","utf8");
+const match=html.match(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/i);
+assert.ok(match,"Inline browser script is missing");
+const script=match[1];
+new vm.Script(script,{filename:"index.html inline script"});
+const db=JSON.parse(fs.readFileSync("data/companies.json","utf8"));
+const elements=new Map();
+function el(id) {
+  if(!elements.has(id))elements.set(id,{
+    value:"",textContent:"",innerHTML:"",disabled:false,onclick:null,
+    addEventListener(){}, dataset:{}
+  });
+  return elements.get(id);
+}
+let fetches=[];
+const doc={
+  hidden:false,
+  getElementById:el,
+  querySelectorAll(){return []},
+  addEventListener(){}
+};
+const ctx={
+  document:doc,
+  Date,
+  console,
+  setInterval(){},
+  atob(x){return Buffer.from(x,"base64").toString("binary")},
+  fetch:async (url)=>{
+    fetches.push(String(url));
+    if(String(url).includes("companies.json"))return {ok:true,json:async()=>db};
+    if(String(url).includes("leads.json"))return {ok:true,json:async()=>({
+      scanned_at:"2026-10-11T07:48:00Z",
+      searches_succeeded:657,
+      searches_attempted:657,
+      searches_failed:0,
+      companies_with_any_leads:32
+    })};
+    throw Error("Unknown fetch: "+url);
+  }
+};
+vm.runInNewContext(script,ctx,{filename:"index.html inline script"});
+await new Promise(resolve=>setTimeout(resolve,10));
+assert.equal(el("total").textContent,657,"Company total failed to load");
+const launched=db.companies.filter(x=>["已开启","已结束","已发布公告（网申待核验）"].includes(x.status)||x.announcement_date).length;
+assert.equal(el("launched").textContent,launched,"Launched count is incorrect");
+assert.match(el("month").textContent,/20\d{2}年\d{1,2}月/);
+assert.match(el("calendar").innerHTML,/class="day/,"Calendar day buttons were not rendered");
+assert.ok(el("dayTitle").textContent.includes("当日开启"),"Clicked-day detail not rendered");
+assert.ok(el("list").innerHTML.includes("企业")||el("list").innerHTML.length>200,"Enterprise list missing");
+assert.equal(typeof el("refreshNow").onclick,"function","Reload button not wired");
+await el("refreshNow").onclick();
+assert.ok(fetches.filter(x=>x.includes("companies.json")).length>=2,"Manual refresh did not request data");
+console.log("PASS: frontend JS parses, loads "+db.companies.length+" companies, renders calendar and refreshes data.");
