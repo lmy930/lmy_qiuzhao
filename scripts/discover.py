@@ -53,8 +53,8 @@ def main():
                 "中国邮政储蓄银行股份有限公司","交通银行股份有限公司",
                 "华为投资控股有限公司","比亚迪股份有限公司","宁德时代新能源科技股份有限公司"]
     n = len(companies)
-    start = (TODAY.toordinal() * 36) % n
-    chosen = [companies[(start+i)%n]["name"] for i in range(min(n,36))]
+    start = (TODAY.toordinal() * 90) % n
+    chosen = [companies[(start+i)%n]["name"] for i in range(min(n,90))]
     chosen = list(dict.fromkeys(priority + chosen))
     checked,errors = 0,0
     for name in chosen:
