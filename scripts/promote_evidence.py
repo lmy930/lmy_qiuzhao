@@ -108,7 +108,7 @@ def main():
   details.append({"name":c["name"],"evidence":len(positive),"publishers":len(publishers),"accepted":launched})
  data["generated_at"]=TODAY
  path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
- report={"checked_at":TODAY,"employers":len(data["companies"]),"lead_companies":len(leads),"positive_evidence_companies":sum(x["evidence"]>0 for x in details),"accepted_companies":sum(x["accepted"] for x in details),"newly_promoted":len(changed),"promoted":changed,"note":"已启动不等于仍可报名；原始证据在companies.json，只有明确日期才进入日历"}
+ report={"checked_at":TODAY,"employers":len(data["companies"]),"lead_companies":len(leads),"positive_evidence_companies":sum(x["evidence"]>0 for x in details),"accepted_companies":sum(x["accepted"] for x in details),"newly_promoted":len(changed),"promoted":changed,"note":"已启动不等于仍可报名；原始证据在companies.json，严格开启日期仅采用正文原文，首次确认日不是开启日"}
  (DIR/"auto_verification_report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
  print(json.dumps(report,ensure_ascii=False))
 if __name__=="__main__":main()

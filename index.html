@@ -15,7 +15,7 @@
 <script>
 const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let companies=[],companiesStatus="loading";
-const launched=c=>c.status==="已开启"||c.status==="已结束"||c.status==="已发布公告（网申待核验）"||Boolean(c.announcement_date);
+const launched=c=>c.status==="已开启"||c.status==="已结束"||c.status==="已发布公告（网申待核验）";
 function render(){renderDashboard()}
 
 const TRACKER_KEY="qiuzhao-2027-tracker-v1";
