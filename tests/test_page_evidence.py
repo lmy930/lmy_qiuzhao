@@ -138,3 +138,12 @@ class ObservedDateSyntaxTests(unittest.TestCase):
         self.assertEqual(evidence['date'],'2026-07-30')
         self.assertEqual(evidence['batch'],'第一批')
         self.assertIsNone(opening_evidence('2027届招聘 简历投递：截至2026年11月22日','2026-10-11'))
+
+class InvitedCohortAndClockRangeTests(unittest.TestCase):
+    def test_explicit_invitation_and_clocked_submission_table(self):
+        from page_evidence import deadline_evidence
+        text='浦发银行2027年度校园招聘。招聘对象：我们不仅面向2027届应届毕业生，也郑重地向2025届、2026届的同学们发出邀请。\n简历投递\n2026年9月3日10：00至10月8日18：00'
+        opening=opening_evidence(text,'2026-10-11',cohort_bound=True)
+        self.assertEqual(opening['date'],'2026-09-03')
+        self.assertEqual(deadline_evidence(text,opening)['date'],'2026-10-08')
+        self.assertIsNone(deadline_evidence('2027届 简历投递：2026年9月1日至9月3日',{'date':'2026-09-01','batch':'第一批'}))

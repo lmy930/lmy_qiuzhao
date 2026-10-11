@@ -107,6 +107,11 @@ def normalize_shared_cohort_eligibility(text):
             quotes.append(match.group(0));return re.sub(r'202[4568]届','其他符合条件届别',match.group(0))
         return match.group(0)
     text=re.sub(pattern,additional,text)
+    invitation=r'(?:面向|招聘对象|招录对象)[^。\n]{0,100}2027届[^。\n]{0,160}(?:也|同时|亦)[^。\n]{0,80}202[4568]届(?:[、与和\s]*202[4568]届)?[^。\n]{0,60}(?:发出邀请|也可报名|也可投递)'
+    def invited(match):
+        if re.search(DATE,match.group(0)) or re.search(r'上一届|往届招聘|去年|网申时间|报名时间|投递时间',match.group(0)):return match.group(0)
+        quotes.append(match.group(0));return re.sub(r'202[4568]届','其他符合条件届别',match.group(0))
+    text=re.sub(invitation,invited,text)
     return text,quotes
 
 def opening_evidence(text, today=None, cohort_bound=False):
@@ -232,9 +237,10 @@ def deadline_evidence(text, opening=None):
         try:date=dt.date(int(match['y']),int(match['m']),int(match['d'])).isoformat()
         except ValueError:continue
         if '2026-01-01'<=date<='2027-12-31':found.append({'date':date,'quote':match.group(0)})
-    if opening:
+    if opening and not opening.get('batch'):
         end=r'(?:(?P<ey>20\d{2})\s*[年./-]\s*)?(?P<em>\d{1,2})\s*[月./-]\s*(?P<ed>\d{1,2})日?'
-        pattern=START+r'[\s:：为是自从]*'+DATE+r'\s*(?:至|到|[-~—–～])\s*'+end
+        clock=r'(?:\s*(?:[01]?\d|2[0-3])\s*[:：]\s*[0-5]\d(?:时)?)?'
+        pattern=START+r'[\s:：为是自从]*'+DATE+clock+r'\s*(?:至|到|[-~—–～])\s*'+end
         for match in re.finditer(pattern,text):
             try:
                 start=dt.date(int(match['y']),int(match['m']),int(match['d']))
