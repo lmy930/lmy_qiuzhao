@@ -1,25 +1,45 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2027秋招开启日历</title><style>
-*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;margin:0;background:#f5f7fb;color:#17243a}.wrap{max-width:1150px;margin:auto;padding:22px}h1{margin:0}p,.sub{color:#64748b}.panel,.stat{background:#fff;border:1px solid #e1e7ef;border-radius:15px;padding:19px;margin-top:16px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat strong{display:block;font-size:30px}.stat small{color:#64748b}header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.filters{display:flex;gap:10px;flex-wrap:wrap}input,select,button{font:inherit;border:1px solid #d4deeb;border-radius:9px;padding:10px;background:white}input{flex:1;min-width:180px}button{cursor:pointer}.nav{display:flex;justify-content:space-between;align-items:center;gap:8px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.weekday{text-align:center;padding:10px 0;color:#64748b;font-size:12px}.day{width:100%;height:91px;text-align:left;background:white;overflow:hidden;border:1px solid #e4eaf2;border-radius:8px;padding:7px;cursor:pointer}.day:hover,.day:focus-visible{background:#eef3ff}.day.selected{border:2px solid #4d6fd7;background:#eaf0ff}.day.out{opacity:.38}.count{display:block;font-size:12px;color:#1d57be;margin-top:7px;font-weight:600}.names{display:block;font-size:11px;color:#53617b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:5px}.result{border-bottom:1px solid #e8edf4;padding:12px 4px;display:flex;justify-content:space-between;align-items:center;gap:12px}.muted{font-size:13px;color:#64748b}.tag{font-size:12px;color:#4b5d76;background:#f0f3f8;padding:5px 8px;border-radius:8px}.tip{font-size:13px;background:#eef5ff;border-radius:9px;padding:12px;margin:16px 0;color:#3d587f}.buttonline{display:flex;gap:6px}#list{max-height:400px;overflow:auto}@media(max-width:650px){.wrap{padding:10px}.day{height:63px;padding:4px}.names{display:none}h1{font-size:23px}.stat{padding:12px}.stat strong{font-size:23px}}
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;margin:0;background:#f5f7fb;color:#17243a}.wrap{max-width:1150px;margin:auto;padding:22px}h1{margin:0}p,.sub{color:#64748b}.panel,.stat{background:#fff;border:1px solid #e1e7ef;border-radius:15px;padding:19px;margin-top:16px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat strong{display:block;font-size:30px}.stat small{color:#64748b}.newcount{display:block;color:#8d5718;font-size:11px;margin-top:5px}.day{font-size:13px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.filters{display:flex;gap:10px;flex-wrap:wrap}input,select,button{font:inherit;border:1px solid #d4deeb;border-radius:9px;padding:10px;background:white}input{flex:1;min-width:180px}button{cursor:pointer}.nav{display:flex;justify-content:space-between;align-items:center;gap:8px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.weekday{text-align:center;padding:10px 0;color:#64748b;font-size:12px}.day{width:100%;height:91px;text-align:left;background:white;overflow:hidden;border:1px solid #e4eaf2;border-radius:8px;padding:7px;cursor:pointer}.day:hover,.day:focus-visible{background:#eef3ff}.day.selected{border:2px solid #4d6fd7;background:#eaf0ff}.day.out{opacity:.38}.count{display:block;font-size:12px;color:#1d57be;margin-top:7px;font-weight:600}.names{display:block;font-size:11px;color:#53617b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:5px}.result{border-bottom:1px solid #e8edf4;padding:12px 4px;display:flex;justify-content:space-between;align-items:center;gap:12px}.muted{font-size:13px;color:#64748b}.tag{font-size:12px;color:#4b5d76;background:#f0f3f8;padding:5px 8px;border-radius:8px}.tip{font-size:13px;background:#eef5ff;border-radius:9px;padding:12px;margin:16px 0;color:#3d587f}.buttonline{display:flex;gap:6px}#list{max-height:400px;overflow:auto}@media(max-width:650px){.stats{grid-template-columns:repeat(2,1fr)}.wrap{padding:10px}.day{height:63px;padding:4px}.names{display:none}h1{font-size:23px}.stat{padding:12px}.stat strong{font-size:23px}}
 </style></head><body><main class="wrap"><header><div><h1>2027秋招开启日历</h1><p>每天自动更新招聘信息 · 点击日期查看当天开启的企业</p></div><div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap"><span class="muted" id="updated"></span><button id="refreshNow" type="button">重新加载数据</button></div></header>
-<div class="tip">按2027届秋招启动信息归档。点击日期查看当天开启的企业；尚未找到可靠信息不代表企业没有招聘。</div>
-<div class="stats"><div class="stat"><strong id="total">—</strong><small>监控企业</small></div><div class="stat"><strong id="launched">—</strong><small>已确认2027届秋招启动</small></div><div class="stat"><strong id="dated">—</strong><small>已记录具体开启日期</small></div></div>
+<div class="tip">按2027届秋招启动信息归档。日期格将分别显示“确切开启”和“当天新确认”企业；首次确认不等于企业实际开启日。未找到记录不代表没招聘。</div>
+<div class="stats"><div class="stat"><strong id="total">—</strong><small>监控企业</small></div><div class="stat"><strong id="launched">—</strong><small>已确认2027届秋招启动</small></div><div class="stat"><strong id="dated">—</strong><small>已记录具体开启日期</small></div><div class="stat"><strong id="newly">—</strong><small>今天新确认启动</small></div></div>
 <section class="panel filters"><input id="query" aria-label="搜索企业" placeholder="搜索企业名称"><select id="group" aria-label="企业类别"><option value="">所有企业</option><option>央企</option><option>银行</option><option>民营500</option></select><select id="bankType" aria-label="银行类型"><option value="">全部银行类型</option><option>政策性及开发性银行</option><option>国有大型商业银行</option><option>全国性股份制银行</option><option>城市商业银行</option></select><select id="status" aria-label="秋招情况"><option value="">全部状态</option><option value="launched">已确认秋招启动</option><option value="unknown">未检索到可靠记录</option></select></section>
 <section class="panel"><div class="nav"><h2 id="month"></h2><div class="buttonline"><button id="prev">←</button><button id="today">今天</button><button id="next">→</button></div></div><div class="calendar" id="calendar"></div><div style="border-top:1px solid #e7ebf1;margin-top:17px;padding-top:13px"><h3 id="dayTitle"></h3><div id="dayList"></div></div></section>
-<section class="panel"><h2>企业秋招状态</h2><p class="muted">“已启动”表示已有可靠的2027届招聘信息；具体开启日期不明确的企业暂不放入日历。</p><div id="list"></div></section>
+<section class="panel"><h2>企业秋招状态</h2><p class="muted">“已启动”表示已有2027届招聘证据；无法确定真实开启日期的企业会从首次被确认那天开始出现在“每日新确认”中。</p><div id="list"></div></section>
 <p class="muted" id="health"></p></main>
 <script>
 const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-let companies=[],shown=new Date(),selected=new Date();shown.setDate(1);
+let companies=[],discoveryEvents=[],shown=new Date(),selected=new Date();shown.setDate(1);
 const iso=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-");
 const launched=c=>c.status==="已开启"||c.status==="已结束"||c.status==="已发布公告（网申待核验）"||Boolean(c.announcement_date);
 function filtered(){const q=$("query").value.trim().toLowerCase(),group=$("group").value,bank=$("bankType").value,status=$("status").value;return companies.filter(c=>(!q||c.name.toLowerCase().includes(q))&&(!group||c.groups.includes(group))&&(!bank||c.bank_type===bank)&&(!status||(status==="launched"?launched(c):!launched(c))))}
-function render(){const all=filtered();$("total").textContent=companies.length;$("launched").textContent=companies.filter(launched).length;$("dated").textContent=companies.filter(c=>c.open_date).length;
+function render(){const all=filtered();$("total").textContent=companies.length;$("launched").textContent=companies.filter(launched).length;$("dated").textContent=companies.filter(c=>c.open_date).length;$("newly").textContent=discoveryEvents.filter(e=>e.date===iso(new Date())).length;
 $("list").innerHTML=all.map(c=>'<div class="result"><div><b>'+esc(c.name)+'</b><div class="muted">'+esc(c.groups.join("、"))+(c.bank_type?" · "+esc(c.bank_type):"")+'</div></div><div style="text-align:right"><span class="tag">'+(launched(c)?(["subsidiary","旗下单位"].includes(c.source_scope)?"旗下单位已启动":"2027秋招已启动"):"暂无可靠开启记录")+'</span><div class="muted" style="margin-top:6px">'+(c.open_date?"开启 "+esc(c.open_date):c.announcement_date?"公告 "+esc(c.announcement_date):"日期待发现")+'</div></div></div>').join("")||'<p class="muted">没有符合条件的企业。</p>';
 renderCalendar(all)}
-function renderCalendar(all){const year=shown.getFullYear(),month=shown.getMonth(),first=new Date(year,month,1).getDay();$("month").textContent=year+"年"+(month+1)+"月";let s="";for(const x of "日一二三四五六")s+='<div class="weekday">周'+x+'</div>';
-for(let i=0;i<42;i++){const d=new Date(year,month,i-first+1),key=iso(d),m=d.getMonth()===month,dayCompanies=all.filter(c=>c.open_date===key);s+='<button class="day'+(m?"":" out")+(key===iso(selected)?" selected":"")+'" data-date="'+key+'" aria-label="'+key+" 开启"+dayCompanies.length+'家">'+d.getDate()+(dayCompanies.length?'<span class="count">'+dayCompanies.length+'家开启</span><span class="names">'+esc(dayCompanies.slice(0,2).map(x=>x.name).join("、"))+'</span>':"")+'</button>'}
-$("calendar").innerHTML=s;document.querySelectorAll(".day").forEach(e=>e.addEventListener("click",()=>{const [y,m,d]=e.dataset.date.split("-").map(Number);selected=new Date(y,m-1,d);shown=new Date(y,m-1,1);render()}));
-const date=iso(selected),arr=all.filter(c=>c.open_date===date);$("dayTitle").textContent=date+" · 当日开启 "+arr.length+" 家";$("dayList").innerHTML=arr.length?arr.map(c=>'<div class="result"><b>'+esc(c.name)+'</b><span class="tag">'+esc(c.groups.join("、"))+'</span></div>').join(""):'<p class="muted">目前还没有检索到这一天的可靠秋招开启日期，并不代表没有企业开启。</p>'}
+function renderCalendar(all){
+ const year=shown.getFullYear(),month=shown.getMonth(),first=new Date(year,month,1).getDay();
+ $("month").textContent=year+"年"+(month+1)+"月";
+ const names=new Set(all.map(c=>c.name));
+ let html="";
+ for(const x of "日一二三四五六")html+='<div class="weekday">周'+x+'</div>';
+ for(let i=0;i<42;i++){
+  const d=new Date(year,month,i-first+1),day=iso(d),inMonth=d.getMonth()===month;
+  const started=all.filter(c=>c.open_date===day),newFound=discoveryEvents.filter(e=>e.date===day&&names.has(e.name));
+  html+='<button type="button" class="day'+(inMonth?"":" out")+(day===iso(selected)?" selected":"")+'" data-date="'+day+'">'+d.getDate()+
+   (started.length?'<span class="count">'+started.length+'家确切开启</span>':"")+
+   (newFound.length?'<span class="newcount">'+newFound.length+'家新确认</span>':"")+
+   '</button>';
+ }
+ $("calendar").innerHTML=html;
+ document.querySelectorAll(".day").forEach(el=>el.addEventListener("click",()=>{const [y,m,d]=el.dataset.date.split("-").map(Number);selected=new Date(y,m-1,d);shown=new Date(y,m-1,1);render()}));
+ const day=iso(selected),started=all.filter(c=>c.open_date===day),newFound=discoveryEvents.filter(e=>e.date===day&&names.has(e.name));
+ $("dayTitle").textContent=day+" · 确切开启 "+started.length+" 家 · 新确认 "+newFound.length+" 家";
+ let out='<h4>当天确切开启秋招</h4>';
+ out+=started.length?started.map(c=>'<div class="result"><b>'+esc(c.name)+'</b><span class="tag">'+esc(c.groups.join("、"))+'</span></div>').join(""):'<p class="muted">暂无已核实的实际开启日期。</p>';
+ out+='<h4>当天新确认已启动（并非实际开启日）</h4>';
+ out+=newFound.length?newFound.map(e=>'<div class="result"><b>'+esc(e.name)+'</b><span class="tag">首次确认'+(e.opening_date?' · 实际开启 '+esc(e.opening_date):' · 开启日仍待明确')+'</span></div>').join(""):'<p class="muted">没有新确认记录。既有企业不会被重复记为当天新确认。</p>';
+ $("dayList").innerHTML=out;
+}
 $("prev").onclick=()=>{shown=new Date(shown.getFullYear(),shown.getMonth()-1,1);selected=new Date(shown);render()};
 $("next").onclick=()=>{shown=new Date(shown.getFullYear(),shown.getMonth()+1,1);selected=new Date(shown);render()};
 $("today").onclick=()=>{selected=new Date();shown=new Date(selected.getFullYear(),selected.getMonth(),1);render()};
@@ -58,13 +78,25 @@ async function loadLatest(){
   }
  }finally{inflight=false;btn.disabled=false;btn.textContent="重新加载数据"}
 }
-$("refreshNow").onclick=loadLatest;
+async function loadHistory(){
+ try{
+  const response=await fetch("./data/daily_changes.json?t="+Date.now(),{cache:"no-store"});
+  if(!response.ok)throw Error("HTTP "+response.status);
+  const history=await response.json();
+  discoveryEvents=Array.isArray(history.events)?history.events:[];
+  render();
+ }catch(e){
+  discoveryEvents=[];
+  if(companies.length)render();
+ }
+}
+$("refreshNow").onclick=async()=>{await loadLatest();await loadHistory()};
 renderCalendar([]);
 $("total").textContent="加载中";
 $("launched").textContent="—";
 $("dated").textContent="—";
-loadLatest();
-document.addEventListener("visibilitychange",()=>{if(!document.hidden)loadLatest()});
-setInterval(()=>{if(!document.hidden)loadLatest()},120000);
+loadLatest();loadHistory();
+document.addEventListener("visibilitychange",()=>{if(!document.hidden){loadLatest();loadHistory()}});
+setInterval(()=>{if(!document.hidden){loadLatest();loadHistory()}},120000);
 fetch("./data/leads.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(d=>{$("health").textContent=d.scanned_at?"最近定时扫描："+d.scanned_at+"；搜索接口成功 "+d.searches_succeeded+"/"+d.searches_attempted+"，发现线索企业 "+(d.companies_with_any_leads??(d.leads||[]).length)+" 家（不代表这些企业均已核验）":"尚未运行自动搜索"}).catch(()=>{$("health").textContent="尚未读取自动搜索报告"});
 </script></body></html>
