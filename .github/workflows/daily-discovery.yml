@@ -2,7 +2,8 @@ name: Daily recruitment discovery
 on:
   schedule:
     - cron: '40 0 * * *'
-    - cron: '40 12 * * *'
+    - cron: '40 12 * * 1-6'
+    - cron: '40 12 * * 0'
   workflow_dispatch:
     inputs:
       historical_backfill:
@@ -17,7 +18,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: ${{ (inputs.historical_backfill || github.event.schedule == '40 12 * * 0') && 90 || 35 }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,7 +26,7 @@ jobs:
           python-version: '3.12'
       - name: Visit employer websites and multiple public recruitment archives
         env:
-          HISTORICAL_BACKFILL: ${{ inputs.historical_backfill || false }}
+          HISTORICAL_BACKFILL: ${{ inputs.historical_backfill || github.event.schedule == '40 12 * * 0' }}
         run: |
           if [ "$HISTORICAL_BACKFILL" = "true" ]; then
             python scripts/broad_sources.py --backfill
@@ -49,7 +50,7 @@ jobs:
         run: python scripts/verify_pages.py
       - name: Reconcile verified recruitment evidence
         run: python scripts/promote_evidence.py
-      - name: Record newly confirmed companies for daily calendar
+      - name: Record newly confirmed companies and evidence changes
         run: python scripts/update_daily_changes.py
       - name: Validate scan output
         run: |

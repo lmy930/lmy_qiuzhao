@@ -40,7 +40,7 @@
 - `scripts/promote_evidence.py`：从证据将2027届招聘标记为已启动，需持续加强防误报/来源去重。
 - `scripts/verify_official.py`：登记官网页面的专用核验。
 - `scripts/update_daily_changes.py`：在批量扫描最后写新增确认事件（不是真实开启日）。
-- `.github/workflows/daily-discovery.yml`：每天两次扫描，并将结果 commit/push，已有并发推送冲突重试。
+- `.github/workflows/daily-discovery.yml`：每天两次扫描，周日20:40自动深度回溯，并将结果 commit/push，已有并发推送冲突重试。
 - `.github/workflows/pipeline-check.yml`：脚本编译、Python tests、Node 前端冒烟测试。
 - `tests/check_frontend.mjs`、`tests/test_recruitment.py`：修改时务必验证。
 
