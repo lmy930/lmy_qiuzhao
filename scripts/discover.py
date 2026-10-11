@@ -88,6 +88,9 @@ def google_news(name):
 
 SOURCES=json.loads((BASE/"data"/"source_catalog.json").read_text(encoding="utf-8"))["sources"]
 OFFICIAL_DOMAIN={
+"北京嘀嘀无限科技发展有限公司 (滴滴出行)":"didiglobal.com",
+"北京快手科技有限公司":"kuaishou.com",
+"蚂蚁科技集团股份有限公司":"antgroup.com",
 "科大讯飞股份有限公司":"iflytek.com",
 "北京爱奇艺科技有限公司":"iqiyi.com",
 "美的集团股份有限公司":"midea.com",

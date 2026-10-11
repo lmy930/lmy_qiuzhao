@@ -29,6 +29,11 @@ class BroadSourceTests(unittest.TestCase):
         self.assertEqual(match_scope('中国长江三峡集团有限公司','中国三峡新能源2027届校园招聘'),'subsidiary')
         self.assertEqual(match_scope('三一集团有限公司','三一重工2027届校园招聘'),'subsidiary')
         self.assertIsNone(match_scope('大华 (集团)有限公司','大华股份2027届校园招聘'))
+    def test_consumer_brands_and_holding_subsidiaries(self):
+        self.assertEqual(match_scope('北京嘀嘀无限科技发展有限公司 (滴滴出行)','滴滴出行2027届校园招聘'),'employer')
+        self.assertEqual(match_scope('北京快手科技有限公司','快手2027届校园招聘'),'employer')
+        self.assertEqual(match_scope('盛虹控股集团有限公司','东方盛虹2027届校园招聘'),'subsidiary')
+        self.assertEqual(match_scope('浙江卫星控股股份有限公司','卫星化学2027届校园招聘'),'subsidiary')
     def test_title_without_recruitment_body_is_not_confirmation(self):
         title='科大讯飞2027届校园招聘'
         self.assertEqual(evaluate('科大讯飞股份有限公司',title,title)['reason'],'recruitment_body_missing')
