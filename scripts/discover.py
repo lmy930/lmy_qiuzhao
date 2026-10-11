@@ -169,7 +169,8 @@ OFFICIAL_DOMAIN={
 
 def site_feed(c):
     # Rotate across all registered sites without multiplying search load by 25.
-    relevant=[x for x in SOURCES if any(g in x["groups"] for g in c.get("groups",[]))]
+    official=OFFICIAL_DOMAIN.get(c["name"])
+    relevant=[x for x in SOURCES if x["domain"]!=official and any(g in x["groups"] for g in c.get("groups",[]))]
     if not relevant:return []
     n=(dt.date.fromisoformat(TODAY).toordinal()+sum(ord(k) for k in c["name"]))%len(relevant)
     source=relevant[n]

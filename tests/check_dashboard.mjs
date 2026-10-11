@@ -86,3 +86,6 @@ const sortedNames=[...updated.el('applicationList').innerHTML.matchAll(/data-nam
 let sawUncertain=false;for(const n of sortedNames){const c=updated.db.companies.find(c=>c.name===n);const uncertain=c.status==='已发布公告（网申待核验）'||!c.page_verification?.sha256;if(uncertain)sawUncertain=true;else assert.equal(sawUncertain,false,'Certain record appeared below uncertain records')}
 updated.category('银行');assert.ok(!updated.el('uncertainSummary').innerHTML.includes('华为投资控股有限公司'));
 console.log('PASS: uncertain records last, grouped name summary and actual daily update colors');
+
+const freshToday=await boot(new Map(),{simulateNew:true,updates:[{name,kind:'first_confirmed',date:today,observed_at:new Date().toISOString()}]});freshToday.select('boardRange','updated');assert.equal(freshToday.el('visibleCount').textContent,1);assert.match(freshToday.el('applicationList').innerHTML,/new-company/);
+console.log('PASS: today filter also includes newly confirmed employers');
