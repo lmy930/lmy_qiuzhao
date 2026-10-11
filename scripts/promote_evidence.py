@@ -55,9 +55,14 @@ def fetch(url):
  text=re.sub(r"<(script|style|noscript)\b[^>]*>.*?</\1>"," ",text,flags=re.S|re.I)
  return normalize(html.unescape(re.sub(r"<[^>]+>"," ",text)))
 def check(c,entry):
- hits=entry.get("hits",[])[:5]
+ hits=entry.get("hits",[])[:25]
+ aggregate=[h for h in hits if h.get("evidence_level")=="aggregate_nearby_text"]
+ agg_hosts={urllib.parse.urlsplit(h.get("url","")).hostname for h in aggregate}
  good=[]
+ if len(agg_hosts)>=2:
+  good=[{"url":h["url"],"title":h["title"],"source":"两个及以上独立2027届招聘汇总站点匹配","seen":str(DATE)} for h in aggregate[:3]]
  for h in hits:
+  if h.get("evidence_level")=="aggregate_nearby_text":continue
   url=h.get("url","")
   if not url.startswith("https://"):continue
   # News RSS is a discovery source: resolve the original publisher only if available.
@@ -101,7 +106,7 @@ def main():
   if c["status"]=="待核验":
    c["status"]="已发布公告（网申待核验）"
    c["announcement_source_url"]=good[0]["url"]
-   c["verification_note"]="发现可信发布方的2027届招聘启动信息（部分为RSS标题验证）；尚未核实精确日期及报名截止。"
+   c["verification_note"]="后台自动交叉检索到2027届招聘已发布（官方/高校招聘信息或两个独立聚合平台）；启动日期和报名截止需另行确认。"
    promoted.append(c["name"])
  data["generated_at"]=str(DATE)
  path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
