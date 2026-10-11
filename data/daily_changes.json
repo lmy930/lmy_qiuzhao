@@ -156,6 +156,57 @@
   ],
   "events": [
     {
+      "kind": "recruitment_updated",
+      "date": "2026-10-12",
+      "name": "小米通讯技术有限公司",
+      "observed_at": "2026-10-12T03:05:15.649614+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-12",
+      "name": "南京银行股份有限公司",
+      "observed_at": "2026-10-12T03:05:15.649614+08:00",
+      "changed_fields": [
+        "status"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-12",
+      "name": "中国石油天然气集团有限公司",
+      "observed_at": "2026-10-12T03:05:15.649614+08:00",
+      "changed_fields": [
+        "source_scope",
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-12",
+      "name": "中国石油化工集团有限公司",
+      "observed_at": "2026-10-12T03:05:15.649614+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-12",
+      "name": "中国农业发展银行",
+      "observed_at": "2026-10-12T03:05:15.649614+08:00",
+      "changed_fields": [
+        "status"
+      ],
+      "scope": "employer"
+    },
+    {
       "date": "2026-10-11",
       "name": "齐鲁制药集团有限公司",
       "groups": [
@@ -776,7 +827,7 @@
       "kind": "first_confirmed"
     }
   ],
-  "last_scanned_at": "2026-10-11",
+  "last_scanned_at": "2026-10-12",
   "known_open_dates": {
     "中国铝业集团有限公司": "2026-09-16",
     "中国中化控股有限责任公司": "2026-09-15",
@@ -850,8 +901,8 @@
     "中国石油天然气集团有限公司": {
       "status": "已发布公告（网申待核验）",
       "deadline": null,
-      "source_scope": "subsidiary",
-      "source_url": "https://career.hebut.edu.cn/correcruit/content/id/81287.html",
+      "source_scope": "employer",
+      "source_url": "https://career.cup.edu.cn/jobfair/view/id/32435",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -860,7 +911,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56407.html",
+      "source_url": "https://career.cup.edu.cn/campus/view/id/460632",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -1300,7 +1351,7 @@
       "application_urls": []
     },
     "中国农业发展银行": {
-      "status": "已开启",
+      "status": "已结束",
       "deadline": "2026-10-11",
       "source_scope": "employer",
       "source_url": "https://job.hust.edu.cn/zpinfo1/2449371.htm",
@@ -1567,7 +1618,7 @@
       "status": "已开启",
       "deadline": "2026-12-31",
       "source_scope": "employer",
-      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/116728.html",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2407338.htm",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -2067,7 +2118,7 @@
       "application_urls": []
     },
     "南京银行股份有限公司": {
-      "status": "已开启",
+      "status": "已结束",
       "deadline": "2026-10-11",
       "source_scope": "employer",
       "source_url": "https://job.hust.edu.cn/zpinfo1/2433647.htm",
