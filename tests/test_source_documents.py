@@ -175,3 +175,9 @@ class MalformedPublicLinkTests(unittest.TestCase):
         from source_documents import application_links,source_kind
         self.assertIsNone(source_kind('美的集团股份有限公司','https://[broken'))
         self.assertEqual(application_links('<article>网申：https://[broken</article>','https://career.nankai.edu.cn/a'),[])
+class MalformedAnchorTests(unittest.TestCase):
+    def test_malformed_anchor_does_not_abort_verified_article_followup(self):
+        from source_documents import application_links, referenced_official_urls
+        document='<article><a href="https://[broken">网申</a><a href="https://abc.zhiye.com/campus">正式投递</a></article>'
+        self.assertEqual(len(application_links(document,'https://job.school.edu.cn/1')),1)
+        self.assertEqual(referenced_official_urls('美的集团股份有限公司',document,'https://job.school.edu.cn/1'),[])

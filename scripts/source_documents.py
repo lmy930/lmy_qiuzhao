@@ -60,14 +60,18 @@ def decode_document(raw,content_type='text/html'):
     title,content=candidates[0]
     return '<title>'+html.escape(title)+'</title><article>'+content+'</article>'
 
+def resolve_url(base,href):
+    try:return urllib.parse.urljoin(base,href)
+    except ValueError:return None
+
 def referenced_official_urls(name,document,base,channels=None):
     """Only known employer-owned hosts can expand the primary-source queue."""
     from university_sources import Anchors
     p=Anchors();p.feed(document)
     urls=[]
     for title,href in p.items:
-        url=urllib.parse.urljoin(base,href)
-        if source_kind(name,url,channels) in ('official','official_application'):urls.append(url)
+        url=resolve_url(base,href)
+        if url and source_kind(name,url,channels) in ('official','official_application'):urls.append(url)
     urls.extend(channel['url'] for channel in channels or [] if source_kind(name,channel['url'],channels)=='official_application')
     return list(dict.fromkeys(urls))[:3]
 
@@ -78,7 +82,8 @@ def application_links(document,base):
         def handle_starttag(self,tag,attrs):
             super().handle_starttag(tag,attrs)
             if tag=='a' and self.article_depth:
-                href=dict(attrs).get('href','');self.links.append(urllib.parse.urljoin(base,href))
+                href=dict(attrs).get('href','');url=resolve_url(base,href)
+                if url:self.links.append(url)
     parser=Assets();parser.feed(document)
     if not parser.article_found:return []
     body=''.join(parser.article_parts)

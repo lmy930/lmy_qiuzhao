@@ -18,7 +18,7 @@ import urllib.request
 from collections import Counter
 from discover import OFFICIAL_DOMAIN
 from page_evidence import match_scope, page_text, evaluate
-from source_documents import source_kind
+from source_documents import source_kind, resolve_url
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'
@@ -95,7 +95,9 @@ def safe_read(url):
     except Exception as error:return {'url':url,'error':f'{type(error).__name__}: {error}'[:240]}
 
 def article_url(school,href,base):
-    url=urllib.parse.urljoin(base,href);p=urllib.parse.urlsplit(url)
+    url=resolve_url(base,href)
+    if not url:return None
+    p=urllib.parse.urlsplit(url)
     host=urllib.parse.urlsplit(school['url']).hostname
     if p.hostname!=host:return None
     if p.scheme=='http':url=urllib.parse.urlunsplit(('https',p.netloc,p.path,p.query,''))
@@ -108,7 +110,8 @@ def archive_pages(school,page,backfill):
     cap=school['cap'] if backfill else min(school['cap'],12)
     candidates=[]
     for label,href in page.get('items',[]):
-        u=urllib.parse.urljoin(page.get('final_url',school['url']),href)
+        u=resolve_url(page.get('final_url',school['url']),href)
+        if not u:continue
         if urllib.parse.urlsplit(u).hostname!=urllib.parse.urlsplit(school['url']).hostname:continue
         if school['mode']=='correcruit':m=re.search(r'/correcruit/index/p/(\d+)\.html',u)
         elif school['mode']=='hust':m=re.search(r'/searchJob_(\d+)\.do',u)
@@ -173,7 +176,8 @@ def main():
                 company=next(c for c in companies if c['name']==name)
                 if source_kind(name,page['final_url'],company.get('application_channels')) not in ('official','official_application'):continue
                 for title,href in page['items']:
-                    url=urllib.parse.urljoin(page['final_url'],href)
+                    url=resolve_url(page['final_url'],href)
+                    if not url:continue
                     if source_kind(name,url)!='official':continue
                     if relevant_title(title) and match_scope(name,title):add(name,title,url,'企业官网链接')
                     if re.search(r'招聘|人才|校招|careers?|recruit|campus',title+' '+url,re.I) and len(follow.get(name,[]))<4:
@@ -188,7 +192,8 @@ def main():
             for name in urlnames[page['url']]:
                 if source_kind(name,page['final_url'])!='official':continue
                 for title,href in page['items']:
-                    url=urllib.parse.urljoin(page['final_url'],href)
+                    url=resolve_url(page['final_url'],href)
+                    if not url:continue
                     if relevant_title(title) and match_scope(name,title) and source_kind(name,url)=='official':add(name,title,url,'官网招聘栏目')
     # Archive pages add candidates, never state changes. The full articles are subsequently read.
     list_jobs={s['url']:s for s in SCHOOLS};all_pages=[];extra_jobs={};weak_keys={c['name']:weak_brand_keys(c['name']) for c in companies if c['status']=='待核验'}

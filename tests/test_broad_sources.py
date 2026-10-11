@@ -16,6 +16,7 @@ class BroadSourceTests(unittest.TestCase):
         self.assertEqual(len(archive_pages(school,{'items':[('422','/correcruit/index/p/422.html')]},False)),11)
     def test_external_and_meeting_links_are_not_article_evidence(self):
         school=SCHOOLS[1]
+        self.assertIsNone(article_url(school,'https://[broken',school['url']))
         self.assertIsNone(article_url(school,'https://evil.test/correcruit/content/id/1.html',school['url']))
         self.assertIsNone(article_url(school,'/recruitment/content/type/2/id/123.html',school['url']))
         self.assertEqual(article_url(school,'/correcruit/content/id/123.html',school['url']),'https://career.hebut.edu.cn/correcruit/content/id/123.html')
