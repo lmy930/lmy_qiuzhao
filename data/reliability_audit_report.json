@@ -1,0 +1,406 @@
+{
+  "scanned_at": "2026-10-11T20:33:08.073489+08:00",
+  "companies_total": 24,
+  "candidate_pages": 25,
+  "pages_attempted": 25,
+  "pages_read": 22,
+  "accepted_employers": 8,
+  "secondary_candidate_employers": 1,
+  "corroborated_recruitment_employers": 0,
+  "confirmed_total": 24,
+  "recorded_date_total": 10,
+  "verified_date_total": 5,
+  "missing_verified_date_total": 19,
+  "newly_confirmed": [],
+  "new_open_dates": [],
+  "checks": [
+    {
+      "company": "华为投资控股有限公司",
+      "url": "https://career.huawei.com/cn/campus-recruitment",
+      "title": "校园招聘",
+      "sha256": "0ab778cf96311ff45c0f1687754c9abbdcda51d52bdddbbc7dfc18e619e9fa03",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "url": "https://www.adbc.com.cn/n354735/n355043/c722284/content.html",
+      "companies": [
+        "中国农业发展银行"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://campus.chinahr.com/pages/adbc2027",
+      "companies": [
+        "中国农业发展银行"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://wap.sasac.gov.cn/n2588035/n2588325/n2588350/index.html",
+      "companies": [
+        "中国机械工业集团有限公司",
+        "中国海洋石油集团有限公司",
+        "中国铝业集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "company": "OPPO (重庆)智能科技有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/index/sel_cate/3/p/37.html",
+      "title": "招聘信息|南开大学学生就业指导中心",
+      "sha256": "0ce0f6f62fe070cc3fe58fd798d9f4a6444edd6f329fe9cb1b40248b2c656bc5",
+      "source_kind": "university",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "company": "广东小鹏汽车科技集团有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/index/sel_cate/3/p/37.html",
+      "title": "招聘信息|南开大学学生就业指导中心",
+      "sha256": "0ce0f6f62fe070cc3fe58fd798d9f4a6444edd6f329fe9cb1b40248b2c656bc5",
+      "source_kind": "university",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "company": "华为投资控股有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/118766.html",
+      "title": "华为智能汽车解决方案BU 2027届应届生招聘启动-南开大学学生就业指导中心代发",
+      "sha256": "7ee86b01d5fd14d7e623c0755afb462f02fab60c04488c21a4fce0f794b5ee6c",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "华为投资控股有限公司",
+      "url": "https://job.hust.edu.cn/zpinfo1/2407326.htm",
+      "title": "华中科技大学就业信息网\n华为鸿蒙图形2027届应届生招聘",
+      "sha256": "989e32838ae1426e2f8485e18d72dfdedaa91cf7d2d9ac4744a0b752d85aa33a",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "比亚迪股份有限公司",
+      "url": "https://job.hust.edu.cn/zpinfo1/2407378.htm",
+      "title": "华中科技大学就业信息网\n寻找爱“迪”生——比亚迪2027届秋季校园招聘简章",
+      "sha256": "eae508c11badeebad7a6fc1ed17269f2185aa6686ae2029bac6c49512d3b31ca",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "比亚迪股份有限公司",
+      "url": "https://job.hust.edu.cn/extxjh/781788309488773.do",
+      "title": "-比亚迪股份有限公司\n比亚迪股份有限公司",
+      "sha256": "c6b560534adc26b74012b1b4fa15f0ced40e359aed5f972ca47233df4fe17fa2",
+      "source_kind": "university",
+      "accepted": false,
+      "reason": "headline_cohort_mismatch"
+    },
+    {
+      "company": "浙江吉利控股集团有限公司",
+      "url": "https://career.hebut.edu.cn/home/correcruit/content/id/79948.html",
+      "title": "吉利控股集团2027届秋季全球校园招聘-浙江吉利控股集团有限公司",
+      "sha256": "9ba83463dd6c12e543069976e1b0f565716c68cd991cad16aaca0221732b1b0e",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "subsidiary",
+      "opening": null,
+      "deadline": null,
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "中国中化控股有限责任公司",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119061.html",
+      "title": "中国中化2027年校园招聘正式启动-南开大学学生就业指导中心代发",
+      "sha256": "949b39e4c3c3a6b1d615209be60ca9c6f0db6f2c90fd3c42b4325a2109c06b9c",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "中国中化控股有限责任公司",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/118971.html",
+      "title": "中国中化控股有限责任公司 2027校园招聘公告-中国中化控股有限责任公司",
+      "sha256": "56cf8058e3ab107324159d4b98acadcf62c4f7f99d6b562a82b075c6b5bcbe1a",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-09-15",
+        "quote": "网申时间\n2026年9月15日",
+        "cohort_quote": "2027"
+      },
+      "deadline": {
+        "date": "2026-12-31",
+        "quote": "投递截止时间为2026年12月31日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "中国农业发展银行",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119483.html",
+      "title": "中国农业发展银行2027年度校园招聘公告-中国农业发展银行",
+      "sha256": "db009e2026e028b70deede3563d3422af655c476c3207dff9092f0931d5a7cc6",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-09-15",
+        "quote": "报名时间为2026年9月15日",
+        "cohort_quote": "2027年度"
+      },
+      "deadline": {
+        "date": "2026-10-11",
+        "quote": "报名时间为2026年9月15日至10月11日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "中国农业发展银行",
+      "url": "https://job.hust.edu.cn/zpinfo1/2449371.htm",
+      "title": "华中科技大学就业信息网\n中国农业发展银行2027年度校园招聘公告",
+      "sha256": "255c5fd9dede0003a5b2f7ab70b257f38a1abc3e4093e30202ea287cb0d8f2a5",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-09-15",
+        "quote": "报名时间为2026年9月15日",
+        "cohort_quote": "2027年度"
+      },
+      "deadline": {
+        "date": "2026-10-11",
+        "quote": "报名时间为2026年9月15日至10月11日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "中国铝业集团有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119052.html",
+      "title": "中国铝业集团有限公司2027年度高校毕业生招聘-中国铝业集团有限公司",
+      "sha256": "a81075ecc0d593945ca57f27b778fd1061f6756679ec331cab5c57b653f92e2a",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-09-16",
+        "quote": "报名时间：2026年9月16日",
+        "cohort_quote": "2027年度"
+      },
+      "deadline": {
+        "date": "2027-03-07",
+        "quote": "报名时间：2026年9月16日～2027年3月7日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "中国铝业集团有限公司",
+      "url": "https://job.hust.edu.cn/zpinfo1/2438357.htm",
+      "title": "华中科技大学就业信息网\n中国铝业集团有限公司2027年度高校毕业生招聘公告",
+      "sha256": "55d1191614c8638d1c6b61a906e2f59450e509d40777192badf428dbdae2300e",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-09-16",
+        "quote": "报名时间：2026年9月16日",
+        "cohort_quote": "2027年度"
+      },
+      "deadline": {
+        "date": "2027-03-07",
+        "quote": "报名时间：2026年9月16日～2027年3月7日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "南京银行股份有限公司",
+      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/55915.html",
+      "title": "Ai未来 等你来 ——南京银行2027届全球校园招聘公告-南京银行股份有限公司",
+      "sha256": "6dbc382f7d75a0c00511dbc82031544a83b3c11ced54684fc7b5dab2e3482150",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-09-08",
+        "quote": "网上报名时间为：2026年9月8日",
+        "cohort_quote": "2027届"
+      },
+      "deadline": {
+        "date": "2026-10-11",
+        "quote": "网上报名时间为：2026年9月8日至10月11日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "南京银行股份有限公司",
+      "url": "https://job.hust.edu.cn/zpinfo1/2438060.htm",
+      "title": "华中科技大学就业信息网\nAi未来 等你来  ——南京银行2027届全球校园招聘公告",
+      "sha256": "c3ac438196fb88d9e3437c5fadbc7f2c4238c963e59398e38126f6867759cebb",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-09-08",
+        "quote": "网上报名时间为：2026年9月8日",
+        "cohort_quote": "2027届"
+      },
+      "deadline": {
+        "date": "2026-10-11",
+        "quote": "网上报名时间为：2026年9月8日至10月11日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "南京银行股份有限公司",
+      "url": "https://job.hust.edu.cn/zpinfo1/2433647.htm",
+      "title": "华中科技大学就业信息网\nAi未来 等你来 ——南京银行2027届全球校园招聘公告",
+      "sha256": "a14987191e04626279ceabb16ec62a65ca6d0c82b862a182ba174d31dd8a63d8",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-09-08",
+        "quote": "网上报名时间为：2026年9月8日",
+        "cohort_quote": "2027届"
+      },
+      "deadline": {
+        "date": "2026-10-11",
+        "quote": "网上报名时间为：2026年9月8日至10月11日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "小米通讯技术有限公司",
+      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/55945.html",
+      "title": "小米集团中国区2027年校园招聘-小米通讯技术有限公司",
+      "sha256": "6f45994570c5f42c9df80356e5d19ce86a54d6b599efe430ea0d0bdf5bb5a839",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "小米通讯技术有限公司",
+      "url": "https://job.hust.edu.cn/zpinfo1/2407338.htm",
+      "title": "华中科技大学就业信息网\n小米集团2027届全球校园招聘正式启动",
+      "sha256": "ac078de2f6abd6f00edf67c2df53c200c72db98ae0cda45c812b5392c2cdda27",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-08-10",
+        "quote": "网申时间\n2026年8月10日",
+        "cohort_quote": "2027届"
+      },
+      "deadline": {
+        "date": "2026-12-31",
+        "quote": "网申时间\n2026年8月10日—2026年12月31日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "小米通讯技术有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/116728.html",
+      "title": "小米集团2027届全球校园招聘正式启动-北京小米移动软件有限公司",
+      "sha256": "25fab3566c7dffb93a387d1645e4658ca715fa69c40ebc273ab4c821c6fd971f",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": {
+        "date": "2026-08-10",
+        "quote": "网申时间\n2026年8月10日",
+        "cohort_quote": "2027届"
+      },
+      "deadline": {
+        "date": "2026-12-31",
+        "quote": "网申时间\n2026年8月10日—2026年12月31日"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "中国中车集团有限公司",
+      "url": "https://hera-webapp.fenbi.com/api/website/article/detail?apcid=0&app=web&av=100&client_context_id=119a0958c95a02c722e6496bbdc62d80&deviceType=3&hav=100&id=468984686992384&kav=100",
+      "title": "中国中车集团有限公司2027全球招聘公告\n中国中车集团有限公司2027全球招聘公告招聘若干人",
+      "sha256": "9ca9ae8e81f001d9b5b52e0ca3c8e019658f65abc63b73b5981ed70e15bfbfe1",
+      "source_kind": "recruitment",
+      "accepted": false,
+      "reason": "not_recruitment"
+    },
+    {
+      "company": "国家电力投资集团有限公司",
+      "url": "https://www.eoffcn.com/kszx/detail/2206495.html",
+      "title": "国家电投2027届秋招入口:https://spic2027.iguopin.com_中公网校\n国家电投2027届秋招入口:https://spic2027.iguopin.com咨询中心关于我们新手必读常见问题全国统一咨询热线商务合作",
+      "sha256": "d7e6b647193a88f60a6297c42ba13fcede0b951d93131fdea29f530abacf7bc5",
+      "source_kind": "recruitment",
+      "accepted": false,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "secondary_candidate"
+    },
+    {
+      "company": "国家电力投资集团有限公司",
+      "url": "https://www.fenbi.com/page/exam-information-detail/469068866410496",
+      "title": "国家电力投资集团有限公司27届校园招聘-国企-2026-国央企正式-国家级机构-国家电力投资集团有限公司-粉笔资讯国家电力投资集团有限公司27届校园招聘\n国家电力投资集团有限公司27届校园招聘公告正文国家电力投资集团有限公司27届校园招聘招聘若干人",
+      "sha256": "cd92c149dbd88cef4d6901650b073518f2172ffb6a203947b4279af4a784516d",
+      "source_kind": "recruitment",
+      "accepted": false,
+      "scope": "subsidiary",
+      "opening": {
+        "date": "2026-09-14",
+        "quote": "报名时间\n2026/9/14",
+        "cohort_quote": "27届"
+      },
+      "deadline": null,
+      "result": "secondary_candidate"
+    }
+  ],
+  "audit_scope": "针对当前标记已开启或缺少正文哈希的24家企业回访；不是657家全量扫描，不能替代全量报告。",
+  "target_names": [
+    "中国海洋石油集团有限公司",
+    "国家电力投资集团有限公司",
+    "中国机械工业集团有限公司",
+    "中国铝业集团有限公司",
+    "中国中化控股有限责任公司",
+    "中国有研科技集团有限公司",
+    "中国中车集团有限公司",
+    "中国农业发展银行",
+    "恒丰银行股份有限公司",
+    "华为投资控股有限公司",
+    "比亚迪股份有限公司",
+    "腾讯控股有限公司",
+    "浙江吉利控股集团有限公司",
+    "小米通讯技术有限公司",
+    "广东小鹏汽车科技集团有限公司",
+    "OPPO (重庆)智能科技有限公司",
+    "南京银行股份有限公司",
+    "成都银行股份有限公司",
+    "长沙银行股份有限公司",
+    "徽商银行股份有限公司",
+    "台州银行股份有限公司",
+    "四川银行股份有限公司",
+    "广西北部湾银行股份有限公司",
+    "桂林银行股份有限公司"
+  ]
+}
