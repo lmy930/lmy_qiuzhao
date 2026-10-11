@@ -49,5 +49,5 @@ $("refreshNow").onclick=loadLatest;
 loadLatest();
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)loadLatest()});
 setInterval(()=>{if(!document.hidden)loadLatest()},120000);
-fetch("./data/leads.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(d=>{$("health").textContent=d.scanned_at?"最近定时扫描："+d.scanned_at+"；搜索接口成功 "+d.searches_succeeded+"/"+d.searches_attempted+"，发现线索企业 "+(d.companies_with_any_leads??(d.leads||[]).length)+" 家（不代表这些企业均已核验）:"尚未运行自动搜索"}).catch(()=>{$("health").textContent="尚未读取自动搜索报告"});
+fetch("./data/leads.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(d=>{$("health").textContent=d.scanned_at?"最近定时扫描："+d.scanned_at+"；搜索接口成功 "+d.searches_succeeded+"/"+d.searches_attempted+"，发现线索企业 "+(d.companies_with_any_leads??(d.leads||[]).length)+" 家（不代表这些企业均已核验）":"尚未运行自动搜索"}).catch(()=>{$("health").textContent="尚未读取自动搜索报告"});
 </script></body></html>
