@@ -51,7 +51,9 @@ jobs:
       - name: Reconcile verified recruitment evidence
         run: python scripts/promote_evidence.py
       - name: Record newly confirmed companies and evidence changes
-        run: python scripts/update_daily_changes.py
+        run: |
+          python scripts/update_daily_changes.py
+          python scripts/report_coverage.py
       - name: Validate scan output
         run: |
           python -m unittest discover -s tests -v
@@ -67,7 +69,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/leads.json data/companies.json data/verification_report.json data/auto_verification_report.json data/government_scan_report.json data/university_scan_report.json data/daily_changes.json data/page_verification_report.json data/broad_source_report.json
+          git add data/leads.json data/companies.json data/verification_report.json data/auto_verification_report.json data/government_scan_report.json data/university_scan_report.json data/daily_changes.json data/page_verification_report.json data/broad_source_report.json data/coverage_report.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh recruitment discovery leads"
             for attempt in 1 2 3; do
