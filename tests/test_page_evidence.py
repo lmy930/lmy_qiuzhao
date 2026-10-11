@@ -65,7 +65,7 @@ class PipelineTests(unittest.TestCase):
     def test_conflicting_dates_are_reported_not_overwritten(self):
         from unittest.mock import patch
         from verify_pages import scan
-        data={'companies':[{'name':'中国农业发展银行','status':'已发布公告（网申待核验）','open_date':'2026-09-14'}]}
+        data={'companies':[{'name':'中国农业发展银行','status':'已发布公告（网申待核验）','open_date':'2026-09-14','open_date_evidence':{'date':'2026-09-14','quote':'已核验的网申开始日期','scope':'employer'}}]}
         leads={'leads':[{'name':'中国农业发展银行','hits':[{'url':'https://career.nankai.edu.cn/a'}]}]}
         with patch('verify_pages.fetch',return_value=('https://career.nankai.edu.cn/a','<title>中国农业发展银行2027届校园招聘</title><p>网申时间：2026年9月15日</p>','digest')):r=scan(data,leads)
         self.assertEqual(data['companies'][0]['open_date'],'2026-09-14')

@@ -1,23 +1,120 @@
 <!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2027秋招开启日历</title><style>
 *{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;margin:0;background:#f5f7fb;color:#17243a}.wrap{max-width:1150px;margin:auto;padding:22px}h1{margin:0}p,.sub{color:#64748b}.panel,.stat{background:#fff;border:1px solid #e1e7ef;border-radius:15px;padding:19px;margin-top:16px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat strong{display:block;font-size:30px}.stat small{color:#64748b}.newcount{display:block;color:#8d5718;font-size:11px;margin-top:5px}.day{font-size:13px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.filters{display:flex;gap:10px;flex-wrap:wrap}input,select,button{font:inherit;border:1px solid #d4deeb;border-radius:9px;padding:10px;background:white}input{flex:1;min-width:180px}button{cursor:pointer}.nav{display:flex;justify-content:space-between;align-items:center;gap:8px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.weekday{text-align:center;padding:10px 0;color:#64748b;font-size:12px}.day{width:100%;height:91px;text-align:left;background:white;overflow:hidden;border:1px solid #e4eaf2;border-radius:8px;padding:7px;cursor:pointer}.day:hover,.day:focus-visible{background:#eef3ff}.day.selected{border:2px solid #4d6fd7;background:#eaf0ff}.day.out{opacity:.38}.count{display:block;font-size:12px;color:#1d57be;margin-top:7px;font-weight:600}.names{display:block;font-size:11px;color:#53617b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:5px}.result{border-bottom:1px solid #e8edf4;padding:12px 4px;display:flex;justify-content:space-between;align-items:center;gap:12px}.muted{font-size:13px;color:#64748b}.tag{font-size:12px;color:#4b5d76;background:#f0f3f8;padding:5px 8px;border-radius:8px}.tip{font-size:13px;background:#eef5ff;border-radius:9px;padding:12px;margin:16px 0;color:#3d587f}.buttonline{display:flex;gap:6px}#list{max-height:400px;overflow:auto}@media(max-width:650px){.stats{grid-template-columns:repeat(2,1fr)}.wrap{padding:10px}.day{height:63px;padding:4px}.names{display:none}h1{font-size:23px}.stat{padding:12px}.stat strong{font-size:23px}}
-</style></head><body><main class="wrap"><header><div><h1>2027秋招开启日历</h1><p>每天自动更新招聘信息 · 点击日期查看当天开启的企业</p></div><div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap"><span class="muted" id="updated"></span><button id="refreshNow" type="button">重新加载数据</button></div></header>
-<div class="tip">按2027届秋招启动信息归档。日期格将分别显示“确切开启”和“当天新确认”企业；首次确认不等于企业实际开启日。未找到记录不代表没招聘。</div>
+
+.dashboard{margin-top:18px}.dashboard h2{margin:0 0 10px}.dashboard-head,.actions,.tracker-tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.dashboard-head{justify-content:space-between}.daily-stats{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}.daily-stats span{background:#eef5ff;border-radius:9px;padding:10px}.daily-stats b{color:#1d57be;font-size:22px;margin-right:5px}.update-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.update-columns h3{font-size:17px}.actions button{padding:7px 10px;font-size:13px}.actions button.active{background:#eaf0ff;border-color:#4d6fd7}.fresh{color:#ad5b04;background:#fff2d8}.result{flex-wrap:wrap}.result-name{flex:1;min-width:180px}.result-meta{margin-top:5px;line-height:1.6}.section-empty{padding:14px;background:#f7f9fc;border-radius:9px;line-height:1.7}.directory{margin-top:20px}.directory>summary{cursor:pointer;padding:15px;border:1px solid #e1e7ef;background:white;border-radius:12px;font-weight:600}.tracker-tools{margin-top:12px}.tracker-tools button{font-size:13px}.dashboard-list{max-height:560px;overflow:auto}.notice{font-size:13px;color:#765422}.application-state{font-size:12px;color:#48614d}.read-button{font-size:13px}button:focus-visible,select:focus-visible{outline:2px solid #4d6fd7;outline-offset:2px}@media(max-width:650px){.update-columns{grid-template-columns:1fr}.daily-stats{gap:6px}.daily-stats span{font-size:12px;padding:8px}.result-name{min-width:150px}}
+</style></head><body><main class="wrap"><header><div><h1>2027秋招开启日历</h1><p>先看每天的变化，再处理还没投递的企业</p></div><div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap"><span class="muted" id="updated"></span><button id="refreshNow" type="button">重新加载数据</button></div></header>
+<section class="panel dashboard" aria-labelledby="updatesTitle">
+<div class="dashboard-head"><h2 id="updatesTitle">每日投递看板</h2><span class="muted" id="boardDate"></span></div>
+<div class="daily-stats"><span><b id="todayOpen">—</b>今天确切开启</span><span><b id="todayConfirmed">—</b>今天新确认</span><span><b id="unreadCount">—</b>未读更新</span><span><b id="pendingCount">—</b>待投递企业</span></div>
+<div class="dashboard-head"><label>查看更新 <select id="updateWindow"><option value="unread">未读更新</option><option value="today">今天</option><option value="week">近7天</option></select></label><button id="readUpdates" class="read-button">将这些更新标为已读</button></div>
+<p class="muted">“确切开启”有报名起始日期依据；“新确认”可能早已开招，只是今天补查到。已启动不代表所有岗位仍可报名。</p>
+<div class="update-columns"><div><h3>确切开启</h3><div id="openingUpdates"></div></div><div><h3>新确认已启动</h3><div id="confirmationUpdates"></div></div></div>
+<h3>新补齐的历史开启日期</h3><div id="dateUpdates"></div>
+</section>
+<section class="panel dashboard" aria-labelledby="applicationsTitle">
+<div class="dashboard-head"><h2 id="applicationsTitle">我的投递清单</h2><label>投递状态 <select id="applicationFilter"><option value="pending">未投递</option><option value="applied">已投递</option><option value="later">暂不投</option><option value="all">全部已确认企业</option></select></label></div>
+<p class="muted">新变化会出现在上方；之前已确认、还没投的企业留在这里。点击标记后下次打开仍会记住。</p>
+<div id="applicationList" class="dashboard-list"></div>
+<p id="trackingNote" class="muted">投递记录只保存在此浏览器。换设备或清理浏览器前，可导出备份。</p>
+<div class="tracker-tools"><button id="exportTracker">导出投递记录</button><label><button id="importTracker">导入投递记录</button><input type="file" id="trackerFile" accept="application/json,.json" hidden></label><span id="trackingMessage" class="notice" role="status"></span></div>
+</section>
+<details class="directory"><summary>完整日历与657家企业目录</summary>
 <div class="stats"><div class="stat"><strong id="total">—</strong><small>监控企业</small></div><div class="stat"><strong id="launched">—</strong><small>已确认2027届秋招启动</small></div><div class="stat"><strong id="dated">—</strong><small>已记录具体开启日期</small></div><div class="stat"><strong id="newly">—</strong><small>今天新确认启动</small></div></div>
 <section class="panel filters"><input id="query" aria-label="搜索企业" placeholder="搜索企业名称"><select id="group" aria-label="企业类别"><option value="">所有企业</option><option>央企</option><option>银行</option><option>民营500</option></select><select id="bankType" aria-label="银行类型"><option value="">全部银行类型</option><option>政策性及开发性银行</option><option>国有大型商业银行</option><option>全国性股份制银行</option><option>城市商业银行</option></select><select id="status" aria-label="秋招情况"><option value="">全部状态</option><option value="launched">已确认秋招启动</option><option value="unknown">未检索到可靠记录</option></select></section>
 <section class="panel"><div class="nav"><h2 id="month"></h2><div class="buttonline"><button id="prev">←</button><button id="today">今天</button><button id="next">→</button></div></div><div class="calendar" id="calendar"></div><div style="border-top:1px solid #e7ebf1;margin-top:17px;padding-top:13px"><h3 id="dayTitle"></h3><div id="dayList"></div></div></section>
 <section class="panel"><h2>企业秋招状态</h2><p class="muted">“已启动”表示已有2027届招聘证据；无法确定真实开启日期的企业会从首次被确认那天开始出现在“每日新确认”中。</p><div id="list"></div></section>
-<p class="muted" id="health"></p></main>
+</details><p class="muted" id="health"></p></main>
 <script>
 const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function chinaToday(){const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const values=Object.fromEntries(parts.map(p=>[p.type,p.value]));return new Date(Number(values.year),Number(values.month)-1,Number(values.day))}
-let companies=[],discoveryEvents=[],shown=chinaToday(),selected=chinaToday();shown.setDate(1);
+let companies=[],discoveryEvents=[],historyStatus="loading",shown=chinaToday(),selected=chinaToday();shown.setDate(1);
 const iso=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,"0"),String(d.getDate()).padStart(2,"0")].join("-");
 const calendarDate=c=>c.open_date_evidence?.date===c.open_date&&c.open_date_evidence?.scope==="employer"?c.open_date:null;
 const launched=c=>c.status==="已开启"||c.status==="已结束"||c.status==="已发布公告（网申待核验）"||Boolean(c.announcement_date);
 function filtered(){const q=$("query").value.trim().toLowerCase(),group=$("group").value,bank=$("bankType").value,status=$("status").value;return companies.filter(c=>(!q||c.name.toLowerCase().includes(q))&&(!group||c.groups.includes(group))&&(!bank||c.bank_type===bank)&&(!status||(status==="launched"?launched(c):!launched(c))))}
-function render(){const all=filtered();$("total").textContent=companies.length;$("launched").textContent=companies.filter(launched).length;$("dated").textContent=companies.filter(c=>calendarDate(c)).length;$("newly").textContent=discoveryEvents.filter(e=>e.date===iso(chinaToday())).length;
+function render(){const all=filtered();$("total").textContent=companies.length;$("launched").textContent=companies.filter(launched).length;$("dated").textContent=companies.filter(c=>calendarDate(c)).length;$("newly").textContent=historyStatus==="ready"?discoveryEvents.filter(e=>e.kind==="first_confirmed"&&e.date===iso(chinaToday())).length:"—";
 $("list").innerHTML=all.map(c=>'<div class="result"><div><b>'+esc(c.name)+'</b><div class="muted">'+esc(c.groups.join("、"))+(c.bank_type?" · "+esc(c.bank_type):"")+'</div></div><div style="text-align:right"><span class="tag">'+(launched(c)?(["subsidiary","旗下单位"].includes(c.source_scope)?"旗下单位已启动":"2027秋招已启动"):"暂无可靠开启记录")+'</span><div class="muted" style="margin-top:6px">'+(calendarDate(c)?"开启 "+esc(calendarDate(c)):c.announcement_date?"公告 "+esc(c.announcement_date):"日期待发现")+'</div></div></div>').join("")||'<p class="muted">没有符合条件的企业。</p>';
-renderCalendar(all)}
+renderCalendar(all);renderDashboard()}
+
+const TRACKER_KEY="qiuzhao-2027-tracker-v1";
+const validState=new Set(["applied","later"]);
+let storageAvailable=true,tracker=readTracker();
+function validateTracker(raw){
+ if(!raw||raw.version!==1||typeof raw.applications!=="object"||raw.applications===null||Array.isArray(raw.applications)||!Array.isArray(raw.read_updates))throw Error("备份格式不正确");
+ const clean={version:1,applications:Object.create(null),read_updates:[]};
+ for(const [name,value] of Object.entries(raw.applications)){
+  if(typeof name!=="string"||name.length>150||!value||!validState.has(value.state)||(typeof value.marked_at!=="string"||!Number.isFinite(Date.parse(value.marked_at))))throw Error("投递记录格式不正确");
+  clean.applications[name]={state:value.state,marked_at:value.marked_at};
+ }
+ if(raw.read_updates.some(x=>typeof x!=="string"||x.length>400))throw Error("更新记录格式不正确");
+ clean.read_updates=[...new Set(raw.read_updates)];return clean;
+}
+function readTracker(){try{const storage=globalThis.localStorage;storageAvailable=Boolean(storage);const raw=storage?.getItem(TRACKER_KEY);if(raw)return validateTracker(JSON.parse(raw))}catch(e){storageAvailable=false}return {version:1,applications:Object.create(null),read_updates:[]}}
+function saveTracker(){
+ try{if(!storageAvailable)throw Error("storage unavailable");globalThis.localStorage.setItem(TRACKER_KEY,JSON.stringify(tracker))}
+ catch(e){storageAvailable=false;$("trackingMessage").textContent="记录暂时只能保留在当前页面，请导出备份。"}
+}
+const appliedState=name=>tracker.applications[name]?.state||"pending";
+const eventId=e=>[e.kind,e.date,e.name,e.opening_date||""].join("|");
+function updateItems(){
+ const events=discoveryEvents.filter(e=>e.kind==="first_confirmed"||e.kind==="date_verified").map(e=>({...e}));
+ for(const c of companies){const day=calendarDate(c),backfilled=events.some(e=>e.kind==="date_verified"&&e.name===c.name&&e.opening_date===day&&e.date>day);if(day&&!backfilled)events.push({kind:"opening",date:day,name:c.name,opening_date:day})}
+ const validNames=new Set(companies.map(c=>c.name));
+ return [...new Map(events.filter(e=>validNames.has(e.name)).map(e=>[eventId(e),e])).values()];
+}
+function visibleUpdates(){
+ const today=iso(chinaToday()),week=new Date(chinaToday());week.setDate(week.getDate()-6);
+ const choice=$("updateWindow").value||"unread",read=new Set(tracker.read_updates);
+ return updateItems().filter(e=>e.date<=today&&(choice==="today"?e.date===today:choice==="week"?e.date>=iso(week):!read.has(eventId(e))));
+}
+function companyRow(c,detail="",fresh=false){
+ const state=appliedState(c.name),date=calendarDate(c),scope=["subsidiary","旗下单位"].includes(c.source_scope)?"旗下单位已启动":"已确认2027届招聘";
+ const note=c.status==="已结束"?"已记录结束，请留意其他批次":date?"网申开启 "+date:"真实开启日待自动查证";
+ const name=encodeURIComponent(c.name);
+ return '<div class="result"><div class="result-name"><b>'+esc(c.name)+'</b>'+(fresh?' <span class="tag fresh">新变化</span>':'')+'<div class="muted result-meta">'+esc(c.groups.join("、"))+' · '+esc(scope)+'<br>'+esc(detail||note)+(c.deadline?"<br>记录截止 "+esc(c.deadline):"")+'</div></div><div class="actions"><span class="application-state">'+(state==="applied"?"已投递":state==="later"?"暂不投":"未投递")+'</span><button data-action="applied" data-company="'+name+'"'+(state==="applied"?' class="active"':'')+'>标记已投递</button><button data-action="later" data-company="'+name+'"'+(state==="later"?' class="active"':'')+'>暂不投</button>'+(state!=="pending"?'<button data-action="pending" data-company="'+name+'">改回未投递</button>':'')+'</div></div>';
+}
+function renderDashboard(){
+ const today=iso(chinaToday()),items=updateItems(),read=new Set(tracker.read_updates),byName=new Map(companies.map(c=>[c.name,c]));
+ $("boardDate").textContent=today+" · 北京时间";
+ $("todayOpen").textContent=items.filter(e=>e.kind==="opening"&&e.date===today).length;
+ $("todayConfirmed").textContent=historyStatus==="ready"?items.filter(e=>e.kind==="first_confirmed"&&e.date===today).length:"—";
+ $("unreadCount").textContent=historyStatus==="ready"?items.filter(e=>e.date<=today&&!read.has(eventId(e))).length:"—";
+ const active=companies.filter(c=>launched(c)&&c.status!=="已结束");
+ $("pendingCount").textContent=active.filter(c=>appliedState(c.name)==="pending").length;
+ const updates=visibleUpdates().sort((a,b)=>b.date.localeCompare(a.date)||a.name.localeCompare(b.name,"zh-CN"));
+ const show=(kind,id,empty)=>{const rows=updates.filter(e=>e.kind===kind);$(id).innerHTML=rows.length?rows.map(e=>companyRow(byName.get(e.name),kind==="opening"?"确切开启 "+e.date:kind==="date_verified"?"实际开启 "+e.opening_date+" · "+e.date+" 补齐日期":e.date+" 新确认 · "+(calendarDate(byName.get(e.name))?"实际开启 "+calendarDate(byName.get(e.name)):"实际开启日待查证"),!read.has(eventId(e)))).join(""):'<p class="muted section-empty">'+empty+'</p>'};
+ show("opening","openingUpdates","这个范围内暂无已核实的确切开启记录；不表示没有企业开招。");
+ show("first_confirmed","confirmationUpdates",historyStatus==="ready"?"这个范围内没有新确认记录。未投递的既有企业仍在下方清单。":historyStatus==="loading"?"正在读取每日更新…":"每日更新暂未读取成功，请重新加载。");
+ show("date_verified","dateUpdates","这个范围内没有新补齐的日期。");
+ $("readUpdates").disabled=!updates.some(e=>!read.has(eventId(e)));
+ const choice=$("applicationFilter").value||"pending";
+ const list=companies.filter(c=>launched(c)&&(choice==="all"||appliedState(c.name)===choice&&(choice!=="pending"||c.status!=="已结束")));
+ const recent=new Set(items.filter(e=>e.date<=today&&!read.has(eventId(e))).map(e=>e.name));
+ list.sort((a,b)=>Number(recent.has(b.name))-Number(recent.has(a.name))||(calendarDate(b)||"").localeCompare(calendarDate(a)||"")||a.name.localeCompare(b.name,"zh-CN"));
+ $("applicationList").innerHTML=list.length?list.map(c=>companyRow(c,"",recent.has(c.name))).join(""):'<p class="muted section-empty">这个投递状态下暂无企业。可切换到其他状态查看。</p>';
+ if(!storageAvailable)$("trackingNote").textContent="浏览器暂不能保存记录；关闭页面前请导出备份。";
+}
+function handleApplicationClick(event){
+ const button=event.target.closest?.("button[data-action]");if(!button)return;
+ const name=decodeURIComponent(button.dataset.company),state=button.dataset.action;
+ if(!companies.some(c=>c.name===name)||!["pending","applied","later"].includes(state))return;
+ if(state==="pending")delete tracker.applications[name];else tracker.applications[name]={state,marked_at:new Date().toISOString()};
+ if(state!=="pending")tracker.read_updates=[...new Set([...tracker.read_updates,...updateItems().filter(e=>e.name===name&&e.date<=iso(chinaToday())).map(eventId)])];
+ saveTracker();renderDashboard();
+}
+for(const id of ["openingUpdates","confirmationUpdates","dateUpdates","applicationList"])$(id).addEventListener("click",handleApplicationClick);
+$("updateWindow").addEventListener("change",renderDashboard);$("applicationFilter").addEventListener("change",renderDashboard);
+$("readUpdates").onclick=()=>{tracker.read_updates=[...new Set([...tracker.read_updates,...visibleUpdates().map(eventId)])];saveTracker();renderDashboard()};
+$("exportTracker").onclick=()=>{const blob=new Blob([JSON.stringify(tracker,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),link=document.createElement("a");link.href=url;link.download="2027秋招投递记录-"+iso(chinaToday())+".json";link.click();URL.revokeObjectURL(url)};
+$("importTracker").onclick=()=>$("trackerFile").click();
+$("trackerFile").addEventListener("change",async event=>{
+ try{const file=event.target.files?.[0];if(!file)return;if(file.size>1024*1024)throw Error("备份文件过大");const incoming=validateTracker(JSON.parse(await file.text()));
+  const merged={...tracker.applications};for(const [name,value] of Object.entries(incoming.applications)){const old=merged[name];if(!old||Date.parse(value.marked_at)>=Date.parse(old.marked_at))merged[name]=value}
+  tracker.applications=merged;tracker.read_updates=[...new Set([...tracker.read_updates,...incoming.read_updates])];saveTracker();renderDashboard();$("trackingMessage").textContent=storageAvailable?"已合并投递记录，保留较新的标记。":"已导入；浏览器无法保存，请保留备份。";
+ }catch(error){$("trackingMessage").textContent="导入失败："+error.message}finally{event.target.value=""}
+});
+globalThis.addEventListener?.("storage",event=>{if(event.key===TRACKER_KEY){tracker=readTracker();renderDashboard()}});
+
 function renderCalendar(all){
  const year=shown.getFullYear(),month=shown.getMonth(),first=new Date(year,month,1).getDay();
  $("month").textContent=year+"年"+(month+1)+"月";
@@ -26,7 +123,7 @@ function renderCalendar(all){
  for(const x of "日一二三四五六")html+='<div class="weekday">周'+x+'</div>';
  for(let i=0;i<42;i++){
   const d=new Date(year,month,i-first+1),day=iso(d),inMonth=d.getMonth()===month;
-  const started=all.filter(c=>calendarDate(c)===day),newFound=discoveryEvents.filter(e=>e.date===day&&names.has(e.name));
+  const started=all.filter(c=>calendarDate(c)===day),newFound=discoveryEvents.filter(e=>e.kind==="first_confirmed"&&e.date===day&&names.has(e.name));
   html+='<button type="button" class="day'+(inMonth?"":" out")+(day===iso(selected)?" selected":"")+'" data-date="'+day+'">'+d.getDate()+
    (started.length?'<span class="count">'+started.length+'家确切开启</span>':"")+
    (newFound.length?'<span class="newcount">'+newFound.length+'家新确认</span>':"")+
@@ -34,7 +131,7 @@ function renderCalendar(all){
  }
  $("calendar").innerHTML=html;
  document.querySelectorAll(".day").forEach(el=>el.addEventListener("click",()=>{const [y,m,d]=el.dataset.date.split("-").map(Number);selected=new Date(y,m-1,d);shown=new Date(y,m-1,1);render()}));
- const day=iso(selected),started=all.filter(c=>calendarDate(c)===day),newFound=discoveryEvents.filter(e=>e.date===day&&names.has(e.name));
+ const day=iso(selected),started=all.filter(c=>calendarDate(c)===day),newFound=discoveryEvents.filter(e=>e.kind==="first_confirmed"&&e.date===day&&names.has(e.name));
  $("dayTitle").textContent=day+" · 确切开启 "+started.length+" 家 · 新确认 "+newFound.length+" 家";
  let out='<h4>当天确切开启秋招</h4>';
  out+=started.length?started.map(c=>'<div class="result"><b>'+esc(c.name)+'</b><span class="tag">'+esc(c.groups.join("、"))+'</span></div>').join(""):'<p class="muted">暂无已核实的实际开启日期。</p>';
@@ -85,15 +182,16 @@ async function loadHistory(){
   const response=await fetch("./data/daily_changes.json?t="+Date.now(),{cache:"no-store"});
   if(!response.ok)throw Error("HTTP "+response.status);
   const history=await response.json();
-  discoveryEvents=Array.isArray(history.events)?history.events:[];
+  if(!Array.isArray(history.events))throw Error("更新记录格式错误");
+  discoveryEvents=history.events;historyStatus="ready";
   render();
  }catch(e){
-  discoveryEvents=[];
+  historyStatus="failed";$("trackingMessage").textContent="每日更新记录暂未读取成功，请重新加载。";
   if(companies.length)render();
  }
 }
 $("refreshNow").onclick=async()=>{await loadLatest();await loadHistory()};
-renderCalendar([]);
+renderCalendar([]);renderDashboard();
 $("total").textContent="加载中";
 $("launched").textContent="—";
 $("dated").textContent="—";

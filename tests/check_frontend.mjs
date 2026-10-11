@@ -52,7 +52,7 @@ const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",year:"nume
 const dateParts=Object.fromEntries(parts.map(p=>[p.type,p.value]));
 const today=new Date(Number(dateParts.year),Number(dateParts.month)-1,Number(dateParts.day));
 const day=[today.getFullYear(),String(today.getMonth()+1).padStart(2,"0"),String(today.getDate()).padStart(2,"0")].join("-");
-assert.equal(el("newly").textContent,history.events.filter(e=>e.date===day).length,"First-confirmed count must follow event history, not employer opening dates");
+assert.equal(el("newly").textContent,history.events.filter(e=>e.kind==="first_confirmed"&&e.date===day).length,"First-confirmed count must follow event history, not employer opening dates");
 assert.equal(el("dated").textContent,db.companies.filter(c=>c.open_date_evidence?.date===c.open_date&&c.open_date_evidence?.scope==="employer").length,"Calendar must exclude historical dates lacking application evidence");
 const launched=db.companies.filter(x=>["已开启","已结束","已发布公告（网申待核验）"].includes(x.status)||x.announcement_date).length;
 assert.equal(el("launched").textContent,launched,"Launched count is incorrect");

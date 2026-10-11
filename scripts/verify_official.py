@@ -7,7 +7,8 @@ import pathlib
 import re
 import urllib.parse
 import urllib.request
-from page_evidence import opening_evidence
+from page_evidence import opening_evidence, deadline_evidence, page_text
+from verify_pages import fetch as fetch_page, set_opening
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DIR=ROOT/"data"
@@ -19,18 +20,11 @@ def domain_ok(url,allowed):
     return parsed.scheme=="https" and parsed.hostname==allowed and not parsed.username and not parsed.password
 
 def get_text(url):
-    request=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"text/html,application/xhtml+xml"})
-    with urllib.request.urlopen(request,timeout=18) as response:
-        final=response.geturl()
-        if urllib.parse.urlsplit(final).hostname != urllib.parse.urlsplit(url).hostname:
-            raise ValueError("Redirected outside approved hostname")
-        content_type=response.headers.get("Content-Type","").lower()
-        if "html" not in content_type and "text" not in content_type:
-            raise ValueError("Unexpected content type")
-        body=response.read(650000).decode("utf-8",errors="replace")
-    body=re.sub(r"<(script|style)\b[^>]*>.*?</\1>"," ",body,flags=re.S|re.I)
-    body=re.sub(r"<[^>]+>"," ",body)
-    return html.unescape(re.sub(r"\s+","",body))
+    final,document,digest=fetch_page(url)
+    if urllib.parse.urlsplit(final).hostname!=urllib.parse.urlsplit(url).hostname:
+        raise ValueError("Redirected outside approved hostname")
+    title,text=page_text(document)
+    return title+"\n"+text
 
 def main():
     data=json.loads((DIR/"companies.json").read_text(encoding="utf-8"))
@@ -47,16 +41,22 @@ def main():
             if source.get("deadline"):
                 assert re.fullmatch(r"\d{4}-\d{2}-\d{2}",source["deadline"]), "Invalid deadline"
             content=get_text(url)
-            assert any(re.sub(r"\s+","",phrase) in content for phrase in source["match_any"]), "Official recruitment statement not present"
+            assert any(re.sub(r"\s+","",phrase) in re.sub(r"\s+","",content) for phrase in source["match_any"]), "Official recruitment statement not present"
             assert "2027" in content, "Target class missing"
             target=company_by_name[name]
-            opening=opening_evidence(content,TODAY)
+            opening=opening_evidence(content,TODAY,cohort_bound=True)
             if not opening:
                 raise ValueError("No matching explicit application opening date in page body")
-            target["status"]="已结束" if source.get("deadline") and source["deadline"]<TODAY else "已开启"
-            target["open_date"]=opening["date"]
-            target["open_date_evidence"]={**opening,"url":url,"scope":"employer","checked_at":TODAY}
-            target["deadline"]=source.get("deadline")
+            evidence={**opening,"url":url,"scope":"employer","source_kind":"official"}
+            set_opening(target,evidence,TODAY,record)
+            if record.get("date_conflict"):raise ValueError("Conflicting previously verified application date")
+            deadline=deadline_evidence(content,opening)
+            if deadline:
+                target["deadline"]=deadline["date"]
+                target["deadline_evidence"]={**deadline,"url":url,"scope":"employer","checked_at":TODAY}
+                target["status"]="已结束" if deadline["date"]<TODAY else "已开启"
+            elif target["status"] not in ("已结束",):
+                target["status"]="已发布公告（网申待核验）"
             target["source_url"]=url
             target["apply_url"]=source.get("apply_url")
             target["last_checked"]=TODAY
@@ -72,7 +72,7 @@ def main():
         "generated_at":TODAY,
         "sources_checked":len(log),
         "passed":sum(x["result"]=="official_page_verified" for x in log),
-        "review_required":sum(x["result"]=="verification_unresolved" for x in log),
+        "unresolved":sum(x["result"]=="verification_unresolved" for x in log),
         "checks":log
     },ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     data["generated_at"]=TODAY

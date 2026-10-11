@@ -24,3 +24,5 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Check browser JavaScript and render 657 records
         run: node tests/check_frontend.mjs
+      - name: Check application tracking and daily updates
+        run: node tests/check_dashboard.mjs

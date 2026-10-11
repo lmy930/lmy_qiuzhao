@@ -89,6 +89,16 @@ def google_news(name):
 SOURCES=json.loads((BASE/"data"/"source_catalog.json").read_text(encoding="utf-8"))["sources"]
 OFFICIAL_DOMAIN={
 "兴业银行股份有限公司":"xyyh.com.cn",
+"中国农业发展银行":"adbc.com.cn",
+"中国核工业集团有限公司":"cnnc.com.cn",
+"国家电力投资集团有限公司":"spic.com.cn",
+"中国中化控股有限责任公司":"sinochem.com",
+"中国中煤能源集团有限公司":"chinacoal.com",
+"中国中车集团有限公司":"crrcgc.cc",
+"中国广核集团有限公司":"cgnpc.com.cn",
+"中国长江三峡集团有限公司":"ctg.com.cn",
+"国家开发投资集团有限公司":"sdic.com.cn",
+"中国铝业集团有限公司":"chinalco.com.cn",
 "浙商银行股份有限公司":"czbank.com.cn",
 "中国华电集团有限公司":"chd.com.cn",
 "国家电网有限公司":"sgcc.com.cn",

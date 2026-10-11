@@ -6,13 +6,25 @@ from employer_aliases import aliases, normalize
 
 class TextParser(HTMLParser):
     def __init__(self):
-        super().__init__(); self.parts=[]; self.hidden=0; self.title=[]; self.in_title=False; self.heading=[]; self.in_heading=False
+        super().__init__(); self.parts=[]; self.hidden=0; self.title=[]; self.in_title=False; self.heading=[]; self.in_heading=False; self.article_depth=0; self.article_parts=[]; self.depth=0; self.stack=[]; self.article_found=False
     def handle_starttag(self, tag, attrs):
+        if tag not in ('br','img','meta','link','input','hr','source','wbr'):self.stack.append(tag)
+        self.depth=len(self.stack)
+        attrs=dict(attrs)
+        if not self.article_found and (tag=='article' or re.search(r'v_news_content|article-content|news-content|article_content',attrs.get('id','')+' '+attrs.get('class',''))):self.article_depth=self.depth;self.article_found=True
         if tag in ('script','style'): self.hidden+=1
         if tag=='title': self.in_title=True
         if tag in ('h1','h2'): self.in_heading=True
-        if tag in ('p','div','br','li','h1','h2','section','tr'): self.parts.append('\n')
+        if tag in ('p','div','br','li','h1','h2','section','tr'):
+            self.parts.append('\n')
+            if self.article_depth:self.article_parts.append('\n')
     def handle_endtag(self, tag):
+        if tag in ('br','img','meta','link','input','hr','source','wbr'):return
+        if tag in self.stack:
+            index=len(self.stack)-1-self.stack[::-1].index(tag)
+            self.stack=self.stack[:index]
+        self.depth=len(self.stack)
+        if self.article_depth>self.depth:self.article_depth=0
         if tag in ('script','style'): self.hidden=max(0,self.hidden-1)
         if tag=='title': self.in_title=False
         if tag in ('h1','h2'): self.in_heading=False
@@ -20,12 +32,13 @@ class TextParser(HTMLParser):
     def handle_data(self, data):
         if not self.hidden:
             self.parts.append(data)
+            if self.article_depth:self.article_parts.append(data)
             if self.in_title:self.title.append(data)
             if self.in_heading:self.heading.append(data)
 
 def page_text(raw):
     p=TextParser();p.feed(raw)
-    return '\n'.join([''.join(p.title).strip(), ''.join(p.heading).strip()]).strip(), '\n'.join(x.strip() for x in ''.join(p.parts).splitlines() if x.strip())
+    return '\n'.join([''.join(p.title).strip(), ''.join(p.heading).strip()]).strip(), '\n'.join(x.strip() for x in ''.join(p.article_parts if p.article_found else p.parts).splitlines() if x.strip())
 
 DENIED={
  '中国航空集团有限公司':('航空工业','航空发动机','中国航发'),
@@ -42,21 +55,23 @@ def match_scope(name, title):
     if name.startswith('TCL'):
         required=('tcl科技','tcl华星','tcl中环') if '科技' in name else ('tcl实业',)
         if not any(x in t for x in required):return None
-    if re.search(r'子公司|旗下|下属|分公司|分行|研究院|\d+所|[一二三四五六七八九十]+院|中建[一二三四五六七八九]局|国网信通|天翼云|天翼支付|阿里云|阿里国际|网易雷火|网易游戏|顺丰科技',t):
+    if re.search(r'子公司|旗下|下属|分公司|分行|支行|分支机构|直属单位|二级单位|研究所|研究院|\d+所|[一二三四五六七八九十]+院|中建[一二三四五六七八九]局|国网信通|天翼云|天翼支付|阿里云|阿里国际|网易雷火|网易游戏|顺丰科技|tcl华星|tcl中环',t):
         return 'subsidiary'
+    if name=='中国航空集团有限公司' and any(x in t for x in ('中国国航','中国国际航空')):return 'subsidiary'
+    if name=='腾讯控股有限公司' and any(x in t for x in ('腾讯音乐','腾讯云智')):return 'subsidiary'
     return 'employer'
 
 DATE=r'(?P<y>20\d{2})\s*[年./-]\s*(?P<m>\d{1,2})\s*[月./-]\s*(?P<d>\d{1,2})日?'
-START=r'(?:网申(?:开始|开启|启动|时间|日期)?|网上报名(?:时间)?|报名(?:开始|起始|时间|日期)|投递(?:开始|时间)|申请(?:开始|开放|时间))'
-def opening_evidence(text, today=None):
+START=r'(?:网申(?:报名)?(?:开始|开启|启动|起止)?(?:时间|日期)?|网上报名(?:时间|日期)?|报名(?:开始|起始|起止)?(?:时间|日期)|(?:简历)?投递(?:开始|时间|日期)|申请(?:开始|开放|时间))'
+def opening_evidence(text, today=None, cohort_bound=False):
     today=today or dt.date.today().isoformat()
     # Require the date in a recruiting section explicitly bound to this cohort.
     cohort=list(re.finditer(r'2027(?:届|年(?:度)?|(?=校园招聘|校招|秋招))|27届',text))
     found=[]
-    for mark in cohort:
-        block=text[max(0,mark.start()-100):mark.end()+1800]
+    blocks=[(text,cohort[0])] if cohort_bound and cohort and not re.search(r'202[4568]届',text) else [(text[max(0,mark.start()-100):mark.end()+6000],mark) for mark in cohort]
+    for block,mark in blocks:
         if re.search(r'202[4568]届',block):continue
-        patterns=[START+r'\s*[:：为是]?\s*'+DATE,
+        patterns=[START+r'[\s:：为是自从]*'+DATE,
                   DATE+r'\s*(?:起|开始|正式开启|启动)\s*(?:接受)?(?:网申|网上报名|报名|投递|申请)']
         for pattern in patterns:
             for m in re.finditer(pattern,block):
@@ -78,5 +93,29 @@ def evaluate(name,title,text,today=None):
         return {'accepted':False,'reason':'headline_cohort_mismatch'}
     if not re.search(r'校园招聘|校招|秋招|应届生招聘|毕业生招聘|管培生',title):
         return {'accepted':False,'reason':'not_recruitment'}
-    if not re.search(r'2027|27届',text):return {'accepted':False,'reason':'page_cohort_missing'}
-    return {'accepted':True,'scope':scope,'opening':opening_evidence(text,today)}
+    if re.search(r'202[4568]届',text) and not re.search(r'2027|27届',text):return {'accepted':False,'reason':'page_cohort_mismatch'}
+    if not re.search(r'2027|27届',text) and not re.search(START,text):return {'accepted':False,'reason':'page_cohort_missing'}
+    content=title+'\n'+text
+    opening=opening_evidence(content,today,cohort_bound=True)
+    return {'accepted':True,'scope':scope,'opening':opening,'deadline':deadline_evidence(content,opening)}
+
+
+def deadline_evidence(text, opening=None):
+    """A deadline comes from application language, never a publication timestamp."""
+    if re.search(r'202[4568]届',text):return None
+    found=[]
+    pattern=r'(?:网申|网上报名|报名|投递|申请)(?:截止|结束)(?:时间|日期)?[\s:：为至]*'+DATE
+    for match in re.finditer(pattern,text):
+        try:date=dt.date(int(match['y']),int(match['m']),int(match['d'])).isoformat()
+        except ValueError:continue
+        if '2026-01-01'<=date<='2027-12-31':found.append({'date':date,'quote':match.group(0)})
+    if opening:
+        end=r'(?:(?P<ey>20\d{2})\s*[年./-]\s*)?(?P<em>\d{1,2})\s*[月./-]\s*(?P<ed>\d{1,2})日?'
+        pattern=START+r'[\s:：为是自从]*'+DATE+r'\s*(?:至|到|[-~—–～])\s*'+end
+        for match in re.finditer(pattern,text):
+            try:
+                start=dt.date(int(match['y']),int(match['m']),int(match['d']))
+                date=dt.date(int(match['ey'] or match['y']),int(match['em']),int(match['ed']))
+            except ValueError:continue
+            if start.isoformat()==opening['date'] and start<=date and date.isoformat()<='2027-12-31':found.append({'date':date.isoformat(),'quote':match.group(0)})
+    return found[0] if len({item['date'] for item in found})==1 else None

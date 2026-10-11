@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "initialized_at": "2026-10-11",
   "description": "基线名单属于已知2027届招聘，不代表2026-10-11当日启动或首次发现。后续只记录真正的新确认事件。",
   "known_launch_names": [
@@ -108,6 +108,16 @@
   "events": [
     {
       "date": "2026-10-11",
+      "name": "小米通讯技术有限公司",
+      "groups": [
+        "民营500"
+      ],
+      "scope": "employer",
+      "opening_date": "2026-08-10",
+      "kind": "date_verified"
+    },
+    {
+      "date": "2026-10-11",
       "name": "国家开发投资集团有限公司",
       "groups": [
         "央企"
@@ -125,7 +135,43 @@
       "scope": "employer",
       "opening_date": null,
       "kind": "first_confirmed"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "中国铝业集团有限公司",
+      "groups": [
+        "央企"
+      ],
+      "scope": "employer",
+      "opening_date": "2026-09-16",
+      "kind": "date_verified"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "中国农业发展银行",
+      "groups": [
+        "银行"
+      ],
+      "scope": "employer",
+      "opening_date": "2026-09-15",
+      "kind": "date_verified"
+    },
+    {
+      "date": "2026-10-11",
+      "name": "中国中化控股有限责任公司",
+      "groups": [
+        "央企"
+      ],
+      "scope": "employer",
+      "opening_date": "2026-09-15",
+      "kind": "date_verified"
     }
   ],
-  "last_scanned_at": "2026-10-11"
+  "last_scanned_at": "2026-10-11",
+  "known_open_dates": {
+    "中国铝业集团有限公司": "2026-09-16",
+    "中国中化控股有限责任公司": "2026-09-15",
+    "中国农业发展银行": "2026-09-15",
+    "小米通讯技术有限公司": "2026-08-10"
+  }
 }
