@@ -9,6 +9,7 @@ assert.ok(match,"Inline browser script is missing");
 const script=match[1];
 new vm.Script(script,{filename:"index.html inline script"});
 const db=JSON.parse(fs.readFileSync("data/companies.json","utf8"));
+const history=JSON.parse(fs.readFileSync("data/daily_changes.json","utf8"));
 const elements=new Map();
 function el(id) {
   if(!elements.has(id))elements.set(id,{
@@ -33,6 +34,7 @@ const ctx={
   fetch:async (url)=>{
     fetches.push(String(url));
     if(String(url).includes("companies.json"))return {ok:true,json:async()=>db};
+    if(String(url).includes("daily_changes.json"))return {ok:true,json:async()=>history};
     if(String(url).includes("leads.json"))return {ok:true,json:async()=>({
       scanned_at:"2026-10-11T07:48:00Z",
       searches_succeeded:657,
@@ -46,11 +48,12 @@ const ctx={
 vm.runInNewContext(script,ctx,{filename:"index.html inline script"});
 await new Promise(resolve=>setTimeout(resolve,10));
 assert.equal(el("total").textContent,657,"Company total failed to load");
+assert.equal(el("newly").textContent,0,"Baseline must not misdate all confirmed employers as new today");
 const launched=db.companies.filter(x=>["已开启","已结束","已发布公告（网申待核验）"].includes(x.status)||x.announcement_date).length;
 assert.equal(el("launched").textContent,launched,"Launched count is incorrect");
 assert.match(el("month").textContent,/20\d{2}年\d{1,2}月/);
 assert.match(el("calendar").innerHTML,/class="day/,"Calendar day buttons were not rendered");
-assert.ok(el("dayTitle").textContent.includes("当日开启"),"Clicked-day detail not rendered");
+assert.ok(el("dayTitle").textContent.includes("确切开启")&&el("dayTitle").textContent.includes("新确认"),"Clicked-day details not rendered");
 assert.ok(el("list").innerHTML.includes("企业")||el("list").innerHTML.length>200,"Enterprise list missing");
 assert.equal(typeof el("refreshNow").onclick,"function","Reload button not wired");
 await el("refreshNow").onclick();
