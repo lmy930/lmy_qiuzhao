@@ -24,6 +24,8 @@ jobs:
       - name: Read public recruitment aggregator listings
         continue-on-error: true
         run: python scripts/aggregate_sources.py
+      - name: Direct scan of official government recruitment listings
+        run: python scripts/government_sources.py
       - name: Automatically verify discovered 2027 recruitment pages
         continue-on-error: true
         run: python scripts/promote_evidence.py
@@ -34,7 +36,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/leads.json data/companies.json data/verification_report.json data/auto_verification_report.json
+          git add data/leads.json data/companies.json data/verification_report.json data/auto_verification_report.json data/government_scan_report.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh recruitment discovery leads"
             git push
