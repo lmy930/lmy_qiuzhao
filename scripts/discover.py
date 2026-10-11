@@ -84,13 +84,36 @@ def google_news(name):
             hits.append({"title":title[:160],"url":link,"snippet":"","published_at":None})
     return hits[:5]
 
+SOURCES=json.loads((BASE/"data"/"source_catalog.json").read_text(encoding="utf-8"))["sources"]
+def site_feed(c):
+    # Rotate across all registered sites without multiplying search load by 25.
+    relevant=[x for x in SOURCES if any(g in x["groups"] for g in c.get("groups",[]))]
+    if not relevant:return []
+    n=(dt.date.fromisoformat(TODAY).toordinal()+sum(ord(k) for k in c["name"]))%len(relevant)
+    source=relevant[n]
+    short=search_name(c["name"])
+    query=f'site:{source["domain"]} "{short}" "2027" (校招 OR 秋招 OR 校园招聘)'
+    url="https://www.bing.com/search?format=rss&q="+urllib.parse.quote(query)
+    req=urllib.request.Request(url,headers={"User-Agent":UA})
+    with urllib.request.urlopen(req,timeout=11) as response:root=ET.fromstring(response.read(350000))
+    hits=[]
+    for item in root.findall(".//item")[:15]:
+        title=(item.findtext("title") or "").strip()
+        link=(item.findtext("link") or "").strip()
+        description=re.sub("<[^>]+>"," ",item.findtext("description") or "").strip()
+        body=normalize(title+" "+description)
+        if "2027" not in body or not any(k in body for k in RECRUIT) or normalize(short) not in body:continue
+        if not link.startswith("https://"):continue
+        hits.append({"title":title[:160],"url":link,"snippet":description[:280],"published_at":None,"discovered_via":source["name"]})
+    return hits[:5]
+
 def worker(c):
     hits=[]; failures=[]; successes=0
-    for provider in (feed,google_news):
+    for provider in (feed,google_news,lambda _:site_feed(c)):
         try:
             hits+=provider(c["name"]);successes+=1
         except Exception as exc:failures.append(str(exc)[:90])
-    unique=list({hit["url"]:hit for hit in hits}.values())[:8]
+    unique=list({hit["url"]:hit for hit in hits}.values())[:12]
     return c["name"],unique,None if successes else "; ".join(failures)[:160]
 def main():
     payload=json.loads(DATA.read_text(encoding="utf-8"))
@@ -125,6 +148,8 @@ def main():
     OUTPUT.write_text(json.dumps({
         "scanned_at":NOW.isoformat(),
         "companies_total":len(companies),
+        "registered_sources":len(SOURCES),
+        "search_methods":["Bing RSS","Google News RSS","rotating domain-targeted Bing RSS"],
         "searches_attempted":len(companies),
         "searches_succeeded":good,
         "searches_failed":len(errors),
