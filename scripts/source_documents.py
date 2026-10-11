@@ -31,6 +31,8 @@ def source_kind(name,url,channels=None):
         if channel.get('company')!=name or not channel.get('proof_sha256'):continue
         proof=source_kind(name,channel.get('proof_url',''))
         prefix=channel.get('url_prefix','')
+        route=application_route(channel.get('url',''))
+        if not route or route['url_prefix']!=prefix:continue
         same_route=url.split('#',1)[0]==channel.get('url','').split('#',1)[0] if channel.get('exact_url') else url==prefix.rstrip('/') or url.startswith(prefix)
         if proof in ('official','government','university') and prefix and same_route:
             return 'official_application'
@@ -75,6 +77,21 @@ def referenced_official_urls(name,document,base,channels=None):
     urls.extend(channel['url'] for channel in channels or [] if source_kind(name,channel['url'],channels)=='official_application')
     return list(dict.fromkeys(urls))[:3]
 
+def application_route(url):
+    try:parsed=urllib.parse.urlsplit(url);host=parsed.hostname or ''
+    except ValueError:return None
+    if parsed.scheme!='https' or parsed.username or parsed.password:return None
+    generic={'www','app','m','wecruit','hr','campus','jobs','job','career','careers','recruitment','recruit'}
+    dedicated=any(host.endswith(suffix) for suffix in ('.zhiye.com','.hotjob.cn','.wintalent.cn')) and host.split('.')[0] not in generic
+    shared=(host in ('campus.51job.com','campus.chinahr.com','app.mokahr.com','www.mokahr.com') and len([x for x in parsed.path.split('/') if x])>=2)
+    hotjob_tenant=re.match(r'^/(SU[a-fA-F0-9]{12,})/',parsed.path) if host.endswith('.hotjob.cn') and not dedicated else None
+    if hotjob_tenant:return {'url':url,'url_prefix':'https://'+parsed.netloc+'/'+hotjob_tenant.group(1)+'/','exact_url':False}
+    if not (dedicated or shared):return None
+    prefix='https://'+parsed.netloc+'/' if dedicated else 'https://'+parsed.netloc+parsed.path.rstrip('/')
+    if shared and not parsed.query:prefix+='/'
+    if shared and parsed.query:prefix=url
+    return {'url':url,'url_prefix':prefix,'exact_url':bool(shared and parsed.query)}
+
 def application_links(document,base):
     """Only links in the article body to dedicated employer application routes."""
     class Assets(TextParser):
@@ -91,15 +108,6 @@ def application_links(document,base):
         if re.search(r'投递|网申|报名|应聘|招聘网站',body[max(0,match.start()-100):match.end()+100]):parser.links.append(match.group(0).rstrip('.,;）)'))
     results=[]
     for url in dict.fromkeys(parser.links):
-        try:parsed=urllib.parse.urlsplit(url);host=parsed.hostname or ''
-        except ValueError:continue
-        if parsed.scheme!='https' or parsed.username or parsed.password:continue
-        dedicated=any(host.endswith(suffix) for suffix in ('.zhiye.com','.hotjob.cn','.wintalent.cn')) and not host.startswith(('www.','app.','m.'))
-        shared=(host in ('campus.51job.com','campus.chinahr.com','app.mokahr.com','www.mokahr.com') and len([x for x in parsed.path.split('/') if x])>=2)
-        if not (dedicated or shared):continue
-        prefix='https://'+parsed.netloc+'/' if dedicated else 'https://'+parsed.netloc+parsed.path.rstrip('/')
-        # A path-bound source must not match similarly named campaigns or other tenants.
-        if shared and not parsed.query:prefix+='/'
-        if shared and parsed.query:prefix=url
-        results.append({'url':url,'url_prefix':prefix,'exact_url':bool(shared and parsed.query)})
+        route=application_route(url)
+        if route:results.append(route)
     return results[:3]

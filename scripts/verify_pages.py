@@ -119,7 +119,7 @@ def scan(data,leads,limit=0,registry=None):
                             channels[:]=[item for item in channels if item['url_prefix']!=channel['url_prefix']]
                             channels.append(channel)
                             followups.setdefault(channel['url'],set()).add(name)
-                    for key in ('affiliation_evidence','identity_evidence'):
+                    for key in ('affiliation_evidence','identity_evidence','scope_evidence'):
                         if ev.get(key):c[key]={**ev[key],'url':final,'sha256':digest,'checked_at':now}
                     if ev['scope']=='employer' or c.get('page_verification',{}).get('scope')!='employer':
                         c['source_scope']=ev['scope'];c['page_verification']={'url':final,'title':title,'sha256':digest,'checked_at':now,'scope':ev['scope'],'source_kind':kind}

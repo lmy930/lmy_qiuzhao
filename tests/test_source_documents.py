@@ -181,3 +181,13 @@ class MalformedAnchorTests(unittest.TestCase):
         document='<article><a href="https://[broken">网申</a><a href="https://abc.zhiye.com/campus">正式投递</a></article>'
         self.assertEqual(len(application_links(document,'https://job.school.edu.cn/1')),1)
         self.assertEqual(referenced_official_urls('美的集团股份有限公司',document,'https://job.school.edu.cn/1'),[])
+
+class SharedHotjobTests(unittest.TestCase):
+    def test_shared_hotjob_host_is_bound_to_tenant_not_entire_platform(self):
+        from source_documents import application_links,source_kind
+        name='华夏银行股份有限公司'
+        link=application_links('<article><a href="https://wecruit.hotjob.cn/SU645b0d18bef57c0907e9fbc8/pb/school.html">网申</a></article>','https://job.school.edu.cn/1')[0]
+        channel={**link,'company':name,'proof_url':'https://job.school.edu.cn/1','proof_sha256':'proof'}
+        self.assertEqual(source_kind(name,link['url'],[channel]),'official_application')
+        self.assertIsNone(source_kind(name,'https://wecruit.hotjob.cn/SU69815a1bbe908548be0c82e9/pb/school.html',[channel]))
+        self.assertIsNone(source_kind(name,link['url'],[{**channel,'url_prefix':'https://wecruit.hotjob.cn/'}]))

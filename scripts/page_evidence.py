@@ -146,12 +146,33 @@ def body_identity(name,title,text):
     if not any(normalize(brand) in normalize(title) for brand in declared):return None
     return {'scope':'employer','quote':compact[max(0,position-15):position+len(legal)+100]}
 
+def declared_subsidiary_scope(name,text):
+    # These holding-company brands also label recruitment by named operating entities.
+    legal_children={
+        '宁波金田投资控股有限公司':('宁波金田铜业集团股份有限公司',),
+        '江西双胞胎控股有限公司':('双胞胎集团股份有限公司',),
+    }
+    children=legal_children.get(name,())
+    if not children:return None
+    intro=re.search(r'(?:公司简介|企业简介|公司介绍|企业介绍)[】\]:：\s]*(.{0,160})',text,re.S)
+    candidates=[intro.group(1)] if intro else []
+    candidates.append(text[:180])
+    for section in candidates:
+        compact=normalize(section)
+        for child in children:
+            position=compact.find(child)
+            if 0<=position<=25 and not re.search(r'客户|服务|合作|供应商|旗下',compact[:position]):
+                return {'scope':'subsidiary','quote':section[:160]}
+    return None
+
 def evaluate(name,title,text,today=None):
     scope=match_scope(name,title)
     affiliation=body_affiliation(name,title,text) if scope is None else None
     if affiliation:scope=affiliation['scope']
     identity=body_identity(name,title,text) if scope is None else None
     if identity:scope=identity['scope']
+    declared_child=declared_subsidiary_scope(name,text) if scope=='employer' else None
+    if declared_child:scope='subsidiary'
     if re.search(r'即将|敬请期待|预计|拟于|预告',title):return {'accepted':False,'reason':'not_yet_launched'}
     if scope is None:return {'accepted':False,'reason':'employer_ambiguous_or_mismatch'}
     # Do not accept a cohort appearing only in sidebar/footer as headline evidence.
@@ -174,6 +195,7 @@ def evaluate(name,title,text,today=None):
     result={'accepted':True,'scope':scope,'opening':opening,'deadline':deadline_evidence(content,opening)}
     if affiliation:result['affiliation_evidence']=affiliation
     if identity:result['identity_evidence']=identity
+    if declared_child:result['scope_evidence']=declared_child
     return result
 
 

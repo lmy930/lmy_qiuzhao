@@ -62,6 +62,14 @@ class BroadSourceTests(unittest.TestCase):
     def test_named_member_is_not_group_wide_launch(self):
         self.assertEqual(match_scope('中国建材集团有限公司','中国建材天山材料股份有限公司2027届校园招聘'),'subsidiary')
         self.assertEqual(match_scope('美的集团股份有限公司','美的集团股份有限公司2027届校园招聘'),'employer')
+    def test_operating_entity_introduction_keeps_holding_scope_separate(self):
+        text='【企业简介】宁波金田铜业（集团）股份有限公司，招聘对象2027届本科生，简历投递已启动。'
+        result=evaluate('宁波金田投资控股有限公司','金田集团2027届校园招聘',text)
+        self.assertTrue(result['accepted'])
+        self.assertEqual(result['scope'],'subsidiary')
+        self.assertIn('scope_evidence',result)
+        customer=text.replace('宁波金田铜业','服务客户宁波金田铜业')
+        self.assertEqual(evaluate('宁波金田投资控股有限公司','金田集团2027届校园招聘',customer)['scope'],'employer')
     def test_explicit_article_cohort_applies_to_its_job_table(self):
         result=evaluate('骆驼集团股份有限公司','骆驼集团股份有限公司2027届校园招聘','招聘岗位：产品研发工程师。学历本科，专业机械。简历投递邮箱在公司招聘系统。')
         self.assertTrue(result['accepted'])

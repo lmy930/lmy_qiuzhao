@@ -4,6 +4,7 @@ import datetime as dt
 import json
 import pathlib
 from discover import OFFICIAL_DOMAIN
+from source_documents import source_kind
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 def main():
@@ -13,7 +14,7 @@ def main():
     known=set(baseline['known_launch_names'])
     confirmed=[c for c in companies if c['status']!='待核验']
     registry=json.loads((directory/'official_sources.json').read_text())
-    registered=set(OFFICIAL_DOMAIN)|{s['company'] for s in registry['sources']}|{c['name'] for c in companies if c.get('application_channels')}
+    registered=set(OFFICIAL_DOMAIN)|{s['company'] for s in registry['sources']}|{c['name'] for c in companies if any(source_kind(c['name'],ch['url'],[ch])=='official_application' for ch in c.get('application_channels',[]))}
     report={
         'checked_at':dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).isoformat(),
         'companies_total':len(companies),
