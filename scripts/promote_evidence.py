@@ -23,8 +23,8 @@ EXCLUDE=("2026届校园招聘","2025届校园招聘")
 CORP_DOMAINS=("career.huawei.com","job.byd.com","job.icbc.com.cn","job.10086.cn","zp.czbank.com.cn")
 TRUSTED_GOV=("sasac.gov.cn","gov.cn")
 TRUSTED_UNIV=(".edu.cn",)
-TRUSTED_PUBLISHERS=("国务院国有资产监督管理委员会","国资委","中国农业大学新闻网","南京审计大学","上观新闻")
-LAUNCH_WORDS=("启动","正式开启","全面启动","校园招聘开始","秋季校园招聘","秋招开启","火热进行中")
+TRUSTED_PUBLISHERS=("国务院国有资产监督管理委员会","国资委","中国农业大学新闻网","南京审计大学","上观新闻","金融时报","中国能源新闻网")
+LAUNCH_WORDS=("启动","正式开启","全面启动","校园招聘开始","秋季校园招聘","秋招开启","火热进行中","校园招聘公告","校招正式开始")
 RENAME={
 "华为投资控股有限公司":["华为"],
 "中国工商银行股份有限公司":["工商银行","中国工商银行"],
@@ -69,15 +69,17 @@ def check(c,entry):
   # Otherwise require two independent recruitment-index hits before recording launch.
   if "news.google.com/rss/articles/" in url:
    title=h.get("title","")
-   if "2027" not in title or not any(k in title for k in LAUNCH_WORDS):continue
+   if not any(k in title for k in ("2027","27届")) or not any(k in title for k in LAUNCH_WORDS):continue
    if not any(k in title for k in TRUSTED_PUBLISHERS):continue
    if not any(n in normalize(title) for n in names(c)):continue
+   # Avoid treating 航空发动机集团 as 中国航空集团, or a subsidiary as its parent without evidence.
+   if c["name"]=="中国航空集团有限公司" and "航空发动机" in title:continue
    good.append({"url":url,"title":title[:160],"source":"可信发布方的招聘资讯摘要（正文未独立验证）","seen":str(DATE)})
    continue
   if not trust(url):continue
   try:
    body=fetch(url)
-   if not body or "2027" not in body or not any(x in body for x in KWORDS):continue
+   if not body or not any(k in body for k in ("2027","27届")) or not any(x in body for x in KWORDS):continue
    if not any(alias in body for alias in names(c)):continue
    title=normalize(h.get("title",""))
    if "2027" not in title and not any(k in title for k in KWORDS):continue
