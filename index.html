@@ -35,7 +35,7 @@ async function loadLatest(){
   const raw=await response.json();
   let result;
   if(raw.companies)result=raw;
-  else if(raw.content)result=JSON.parse(decodeURIComponent(Array.from(atob(raw.content.replace(/\\s/g,"")),x=>"%"+x.charCodeAt(0).toString(16).padStart(2,"0")).join("")));
+  else if(raw.content)result=JSON.parse(decodeURIComponent(Array.from(atob(raw.content.replace(/\s/g,"")),x=>"%"+x.charCodeAt(0).toString(16).padStart(2,"0")).join("")));
   else throw Error("Unexpected API response");
   companies=result.companies||[];
   $("updated").textContent="最近获取 "+new Date().toLocaleTimeString("zh-CN")+" · 数据日期 "+(result.generated_at||"未知");
