@@ -90,16 +90,35 @@ def match_scope(name, title):
     return 'employer'
 
 DATE=r'(?P<y>20\d{2})\s*[年./-]\s*(?P<m>\d{1,2})\s*[月./-]\s*(?P<d>\d{1,2})日?'
-START=r'(?:网申(?:报名)?(?:开始|开启|启动|起止)?(?:时间|日期)?|网上报名(?:时间|日期)?|报名(?:开始|起始|起止)?(?:时间|日期)|(?:简历)?投递(?:开始|时间|日期)|申请(?:开始|开放|时间))'
+START=r'(?:网申(?:报名)?(?:开始|开启|启动|起止)?(?:时间|日期)?|网上报名(?:时间|日期)?|报名(?:开始|起始|起止)?(?:时间|日期)|(?:简历)?投递(?:开始|开放|起始|起止)?(?:时间|日期)?|申请(?:开始|开放|时间))'
+def normalize_shared_cohort_eligibility(text):
+    """Only explicit common eligibility may share the 2027 application period."""
+    quotes=[]
+    joint=r'(?:202[4568]届\s*(?:及|和|与|、|/|暨)\s*2027届|2027届\s*(?:及|和|与|、|/|暨)\s*202[4568]届)'
+    def common(match):
+        if re.search(r'招聘对象|招录对象|应聘对象|面向',text[max(0,match.start()-140):match.start()]):
+            quotes.append(match.group(0));return '2027届'
+        return match.group(0)
+    text=re.sub(joint,common,text)
+    pattern=r'202[4568]届[^。；\n]{0,120}(?:也可投递|也可报名|亦可投递)'
+    def additional(match):
+        preceding=text[max(0,match.start()-200):match.start()]
+        if '2027' in preceding and '招聘对象' in preceding and not re.search(DATE,match.group(0)) and not re.search(r'校园招聘|上一届|往届招聘|去年',match.group(0)):
+            quotes.append(match.group(0));return re.sub(r'202[4568]届','其他符合条件届别',match.group(0))
+        return match.group(0)
+    text=re.sub(pattern,additional,text)
+    return text,quotes
+
 def opening_evidence(text, today=None, cohort_bound=False):
     today=today or dt.date.today().isoformat()
+    text,eligibility_quotes=normalize_shared_cohort_eligibility(text)
     # Require the date in a recruiting section explicitly bound to this cohort.
     cohort=list(re.finditer(r'2027(?:届|年(?:度)?|(?=校园招聘|校招|秋招))|27届',text))
     found=[]
     blocks=[(text,cohort[0])] if cohort_bound and cohort and not re.search(r'202[4568]届',text) else [(text[max(0,mark.start()-100):mark.end()+6000],mark) for mark in cohort]
     for block,mark in blocks:
         if re.search(r'202[4568]届',block):continue
-        patterns=[START+r'[\s:：为是自从]*'+DATE,
+        patterns=[START+r'[\s:：为是自从]*(?:第[一二三四五六七八九十\d]+批(?:次)?[\s:：]*)?'+DATE,
                   DATE+r'\s*(?:起|开始|正式开启|启动)\s*(?:接受)?(?:网申|网上报名|报名|投递|申请)']
         for pattern in patterns:
             for m in re.finditer(pattern,block):
@@ -108,7 +127,11 @@ def opening_evidence(text, today=None, cohort_bound=False):
                 # 2027 cohort autumn applications occur in the preceding year.
                 if not ('2026-01-01'<=date<=min(today,'2027-12-31')):continue
                 if re.match(r'\s*(?:截止|前|之前|以前|结束)',block[m.end():]):continue
-                found.append({'date':date,'quote':m.group(0),'cohort_quote':mark.group(0)})
+                value={'date':date,'quote':m.group(0),'cohort_quote':mark.group(0)}
+                if eligibility_quotes:value['cohort_eligibility_quotes']=eligibility_quotes
+                batch=re.search(r'第[一二三四五六七八九十\d]+批(?:次)?',m.group(0))
+                if batch:value['batch']=batch.group(0)
+                found.append(value)
     dates={x['date'] for x in found}
     return found[0] if len(dates)==1 else None
 
@@ -201,6 +224,7 @@ def evaluate(name,title,text,today=None):
 
 def deadline_evidence(text, opening=None):
     """A deadline comes from application language, never a publication timestamp."""
+    text,_=normalize_shared_cohort_eligibility(text)
     if re.search(r'202[4568]届',text):return None
     found=[]
     pattern=r'(?:网申|网上报名|报名|投递|申请)(?:截止|结束)(?:时间|日期)?[\s:：为至]*'+DATE

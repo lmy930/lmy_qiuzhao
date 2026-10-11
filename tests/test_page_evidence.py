@@ -118,3 +118,23 @@ class DiscoveryTests(unittest.TestCase):
             result=worker({'name':'中国农业发展银行','status':'待核验'})
         self.assertIsNone(result[2])
         self.assertEqual(result[3],['blocked'])
+
+class ObservedDateSyntaxTests(unittest.TestCase):
+    def test_observed_bare_submission_and_compound_start_labels(self):
+        for text,date in [('2027届招聘流程：简历投递：2026年9月10日10:00时至10月26日20:00时','2026-09-10'),('2027届招聘主要程序\n简历投递\n2026年9月3日10：00至10月8日18：00','2026-09-03'),('2027届秋季招聘\n简历投递开始时间\n2026年9月4日','2026-09-04')]:
+            self.assertEqual(opening_evidence(text,'2026-10-11',cohort_bound=True)['date'],date)
+    def test_explicit_joint_cohort_eligibility_shares_start(self):
+        text='中国广核2027届招聘，招聘对象：2026届及2027届毕业生。简历投递开始时间：2026年9月4日'
+        evidence=opening_evidence(text,'2026-10-11',cohort_bound=True)
+        self.assertEqual(evidence['date'],'2026-09-04')
+        self.assertIn('2026届及2027届',evidence['cohort_eligibility_quotes'])
+    def test_explicit_additional_eligible_cohort_is_not_an_old_recruitment_section(self):
+        text='中国电信2027年度校园招聘。招聘对象：2027届毕业生。\n2026届毕业未就业人员也可投递，具体以岗位资格为准。\n招聘流程：网上报名\n2026年8月24日起请登录官网进行网上申请。'
+        self.assertEqual(opening_evidence(text,'2026-10-11',cohort_bound=True)['date'],'2026-08-24')
+        old='2027届校园招聘，招聘对象2027届毕业生。2026届校园招聘网申时间：2026年2月1日；2027届网申日期待定。'
+        self.assertIsNone(opening_evidence(old,'2026-10-11',cohort_bound=True))
+    def test_first_batch_label_preserves_scope_and_does_not_use_deadline(self):
+        evidence=opening_evidence('2027届招聘\n简历投递\n第一批：2026年7月30日-9月3日18时\n第二批：2026年7月30日-9月20日18时','2026-10-11',cohort_bound=True)
+        self.assertEqual(evidence['date'],'2026-07-30')
+        self.assertEqual(evidence['batch'],'第一批')
+        self.assertIsNone(opening_evidence('2027届招聘 简历投递：截至2026年11月22日','2026-10-11'))
