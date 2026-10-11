@@ -46,7 +46,7 @@ def normalize(s):
     return re.sub(r"\s+|[（）()·]","",s or "").lower()
 def feed(name):
     short=search_name(name)
-    query=f'"{short}" "2027" "校园招聘"'
+    query=f'"{short}" ("2027" OR "27届") ("校园招聘" OR "校招" OR "秋招")'
     url="https://www.bing.com/search?format=rss&q="+urllib.parse.quote(query)
     req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/rss+xml,application/xml,text/xml"})
     with urllib.request.urlopen(req,timeout=11) as response:
@@ -59,7 +59,7 @@ def feed(name):
         link=(item.findtext("link") or "").strip()
         description=re.sub("<[^>]*>"," ",item.findtext("description") or "").strip()
         body=normalize(title+" "+description)
-        if "2027" not in body or not any(x in body for x in RECRUIT): continue
+        if not any(x in body for x in ("2027","27届")) or not any(x in body for x in RECRUIT): continue
         if normalize(short) not in body: continue
         if not link.startswith("https://"): continue
         if not urllib.parse.urlsplit(link).hostname: continue
@@ -80,7 +80,7 @@ def google_news(name):
         title=(item.findtext("title") or "").strip()
         link=(item.findtext("link") or "").strip()
         body=normalize(title+" "+(item.findtext("description") or ""))
-        if "2027" in body and any(x in body for x in RECRUIT) and normalize(short) in body and link.startswith("https://"):
+        if any(x in body for x in ("2027","27届")) and any(x in body for x in RECRUIT) and normalize(short) in body and link.startswith("https://"):
             hits.append({"title":title[:160],"url":link,"snippet":"","published_at":None})
     return hits[:5]
 
@@ -102,7 +102,7 @@ def site_feed(c):
         link=(item.findtext("link") or "").strip()
         description=re.sub("<[^>]+>"," ",item.findtext("description") or "").strip()
         body=normalize(title+" "+description)
-        if "2027" not in body or not any(k in body for k in RECRUIT) or normalize(short) not in body:continue
+        if not any(x in body for x in ("2027","27届")) or not any(k in body for k in RECRUIT) or normalize(short) not in body:continue
         if not link.startswith("https://"):continue
         hits.append({"title":title[:160],"url":link,"snippet":description[:280],"published_at":None,"discovered_via":source["name"]})
     return hits[:5]
@@ -152,6 +152,9 @@ def main():
         "search_methods":["Bing RSS","Google News RSS","rotating domain-targeted Bing RSS"],
         "searches_attempted":len(companies),
         "searches_succeeded":good,
+        "companies_with_new_hits":sum(bool(results[c["name"]][0]) for c in companies),
+        "companies_with_any_leads":len(former),
+        "note":"搜索成功指至少一个搜索服务返回结果，未必找到招聘公告；未发现不代表未开启。",
         "searches_failed":len(errors),
         "errors":errors[:30],
         "disclaimer":"RSS搜索发现属于未核验线索，不能据此宣称开放网申。来源可能包含转发、旧消息、伪相关。请以官方招聘公告为准。",
