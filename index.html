@@ -141,7 +141,7 @@ async function loadScanHealth(){
   if(!report.scanned_at)throw Error("扫描报告缺少日期");
   const checked=new Date(report.scanned_at),date=checked.toLocaleDateString("en-CA",{timeZone:"Asia/Shanghai"}),stamp=checked.toLocaleString("zh-CN",{timeZone:"Asia/Shanghai"});
   $("health").textContent="最近核验："+stamp+"（北京时间）。未发现记录不代表企业没有招聘。";
-  $("scanNotice").textContent=report.pages_attempted>0&&report.pages_read===0?"最近核验未能读取来源页面；当前显示已保存结果，自动更新暂受影响。":date!==iso(chinaToday())?"今天的核验结果尚未更新，当前展示最近保存的信息。":report.pages_read<report.pages_attempted?"部分来源暂未读取成功，已保留既有信息。":"";
+  $("scanNotice").textContent=report.pages_attempted>0&&report.pages_read===0?"最近核验未能读取来源页面；当前显示已保存结果，自动更新暂受影响。":date!==new Date().toLocaleDateString("en-CA",{timeZone:"Asia/Shanghai"})?"今天的核验结果尚未更新，当前展示最近保存的信息。":report.pages_read<report.pages_attempted?"部分来源暂未读取成功，已保留既有信息。":"";
  }catch(error){$("scanNotice").textContent="暂未读取核验进度，当前展示已保存信息。";$("health").textContent="核验报告暂未读取成功。"}
 }
 </script></body></html>
