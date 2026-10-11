@@ -11,10 +11,26 @@ def verified_date(company):
     evidence=company.get('open_date_evidence') or {}
     return company.get('open_date') if evidence.get('date')==company.get('open_date') and evidence.get('scope')=='employer' else None
 
+def recruitment_snapshot(c):
+    return {'status':c.get('status'),'deadline':c.get('deadline'),'source_scope':c.get('source_scope'),
+            'source_url':(c.get('page_verification') or {}).get('url'),
+            'body_verified':bool((c.get('page_verification') or {}).get('sha256')),
+            'subsidiary_openings':sorted({(x.get('date',''),x.get('url','')) for x in c.get('subsidiary_openings',[])}),
+            'application_urls':sorted(ch['url'] for ch in c.get('application_channels',[]) if ch.get('proof_sha256'))}
+
 def update_history(companies,history,today):
-    known={c['name'] for c in companies if c.get('status') in CONFIRMED or c.get('announcement_date')}
+    known={c['name'] for c in companies if c.get('status') in CONFIRMED }
     initial=history is None
     if initial:history={'schema_version':2,'initialized_at':today,'events':[],'known_launch_names':sorted(known)}
+    observed_at=dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).isoformat()
+    snapshots=json.loads(json.dumps({c['name']:recruitment_snapshot(c) for c in companies if c.get('status') in CONFIRMED}))
+    previous=history.get('known_recruitment_details',{})
+    for name,current in snapshots.items():
+        old=previous.get(name)
+        if old is None or old==current:continue
+        fields=sorted(k for k in current if current[k]!=old.get(k))
+        history['events'].append({'kind':'recruitment_updated','date':today,'name':name,'observed_at':observed_at,'changed_fields':fields,'scope':current['source_scope']})
+    history['known_recruitment_details']=snapshots
     prior=set(history.get('known_launch_names',[]));new_names=known-prior
     old_dates=history.get('known_open_dates');current_dates={c['name']:verified_date(c) for c in companies if verified_date(c)}
     new_dates=set()
@@ -28,7 +44,7 @@ def update_history(companies,history,today):
     for c in companies:
         for kind,selected in (('first_confirmed',new_names),('date_verified',new_dates)):
             if c['name'] not in selected:continue
-            event={'date':today,'name':c['name'],'groups':c.get('groups',[]),'scope':c.get('source_scope','employer'),'opening_date':verified_date(c),'kind':kind}
+            event={'observed_at':observed_at,'date':today,'name':c['name'],'groups':c.get('groups',[]),'scope':c.get('source_scope','employer'),'opening_date':verified_date(c),'kind':kind}
             key=(kind,today,c['name'],event['opening_date'])
             if key not in existing:history['events'].append(event);existing.add(key)
     history['schema_version']=2;history['known_launch_names']=sorted(known|prior)

@@ -42,6 +42,10 @@ SCHOOLS=[
     {'name':'华南理工大学','url':'https://career.scut.edu.cn/','mode':'auto','cap':12},
     {'name':'深圳大学','url':'https://job.szu.edu.cn/','mode':'auto','cap':12},
     {'name':'西南交通大学' ,'url':'https://jiuye.swjtu.edu.cn/career/index','mode':'onclick','cap':1},
+    {'name':'西南财经大学','url':'https://career.swufe.edu.cn/','mode':'auto','cap':12},
+    {'name':'中国农业大学','url':'https://job.cau.edu.cn/','mode':'auto','cap':12},
+    {'name':'中国石油大学','url':'https://career.cup.edu.cn/','mode':'auto','cap':12},
+    {'name':'厦门大学嘉庚学院','url':'https://career.xujc.com/2026/0928/c3959a173096/page.htm','mode':'auto','cap':12},
 ]
 RECRUIT=r'校园招聘|校招|秋招|秋季招聘|应届生招聘|毕业生招聘|管培生招聘|管培生计划'
 

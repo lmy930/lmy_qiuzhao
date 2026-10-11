@@ -174,22 +174,29 @@ def site_feed(c):
     n=(dt.date.fromisoformat(TODAY).toordinal()+sum(ord(k) for k in c["name"]))%len(relevant)
     source=relevant[n]
     official=OFFICIAL_DOMAIN.get(c["name"])
-    if official:source={"name":"该企业官网优先","domain":official}
+    selected=([{"name":"该企业官网优先","domain":official}] if official else [])+[source]
+    selected=list({entry["domain"]:entry for entry in selected}.values())
     short=search_name(c["name"])
-    query=f'site:{source["domain"]} "{short}" "2027" (校招 OR 秋招 OR 校园招聘)'
-    url="https://www.bing.com/search?format=rss&q="+urllib.parse.quote(query)
-    req=urllib.request.Request(url,headers={"User-Agent":UA})
-    with urllib.request.urlopen(req,timeout=11) as response:root=ET.fromstring(response.read(350000))
-    hits=[]
-    for item in root.findall(".//item")[:15]:
-        title=(item.findtext("title") or "").strip()
-        link=(item.findtext("link") or "").strip()
-        description=re.sub("<[^>]+>"," ",item.findtext("description") or "").strip()
-        body=normalize(title+" "+description)
-        if not any(x in body for x in ("2027","27届")) or not any(k in body for k in RECRUIT) or normalize(short) not in body:continue
-        if not link.startswith("https://"):continue
-        hits.append({"title":title[:160],"url":link,"snippet":description[:280],"published_at":None,"discovered_via":source["name"]})
-    return hits[:5]
+    def query_site(selected_source):
+        query=f'site:{selected_source["domain"]} "{short}" "2027" (校招 OR 秋招 OR 校园招聘)'
+        url="https://www.bing.com/search?format=rss&q="+urllib.parse.quote(query)
+        req=urllib.request.Request(url,headers={"User-Agent":UA})
+        with urllib.request.urlopen(req,timeout=11) as response:root=ET.fromstring(response.read(350000))
+        hits=[]
+        for item in root.findall(".//item")[:15]:
+            title=(item.findtext("title") or "").strip();link=(item.findtext("link") or "").strip()
+            description=re.sub("<[^>]+>"," ",item.findtext("description") or "").strip()
+            body=normalize(title+" "+description)
+            if not any(x in body for x in ("2027","27届")) or not any(k in body for k in RECRUIT) or normalize(short) not in body:continue
+            if link.startswith("https://"):hits.append({"title":title[:160],"url":link,"snippet":description[:280],"published_at":None,"discovered_via":selected_source["name"]})
+        return hits[:5]
+    hits=[];failures=[]
+    # A broken official search must not suppress the independent fallback.
+    for selected_source in selected:
+        try:hits+=query_site(selected_source)
+        except Exception as error:failures.append(error)
+    if failures and len(failures)==len(selected):raise failures[0]
+    return list({hit['url']:hit for hit in hits}.values())
 
 def worker(c):
     hits=[]; failures=[]; successes=0

@@ -14,6 +14,9 @@ import re
 import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
+from broad_sources import ListingParser
+from source_documents import resolve_url
+from employer_aliases import aliases as employer_aliases
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/"data"/"leads.json"
@@ -30,6 +33,15 @@ PAGES=[
 "https://www.offerstar.cn/recruitment",
 "https://campus.sma-wiki.cn/",
 "https://mnowpick.nowcoder.com/m/school/schedule",
+"https://www2.iguopin.com/",
+"https://www.zhaopin.com/",
+"https://www.51job.com/",
+"https://www.yingjiesheng.com/",
+"https://www.yinhangzhaopin.com/yhks/",
+"https://www.yhks.cn/",
+"https://www.liepin.com/",
+"https://www.zhipin.com/",
+"https://www.ncss.cn/",
 ]
 ALIASES={"中国移动通信集团有限公司":["中国移动"],"中国联合网络通信集团有限公司":["中国联通"],"中国工商银行股份有限公司":["工商银行"],"中国农业银行股份有限公司":["农业银行"],"中国建设银行股份有限公司":["建设银行"],"中国邮政储蓄银行股份有限公司":["邮储银行"],"国家能源投资集团有限责任公司":["国家能源集团"],"中国海洋石油集团有限公司":["中国海油"],"中国第一汽车集团有限公司":["中国一汽"],"华为投资控股有限公司":["华为"],"比亚迪股份有限公司":["比亚迪"],"腾讯控股有限公司":["腾讯"],"阿里巴巴控股集团有限公司":["阿里巴巴"],"上海浦东发展银行股份有限公司":["浦发银行"]}
 class Extract(HTMLParser):
@@ -46,24 +58,36 @@ def load(url):
  with urllib.request.urlopen(req,timeout=17) as r:
   if "html" not in r.headers.get("Content-Type","text/html"):raise ValueError("Non HTML page")
   raw=r.read(1800000); encoding=r.headers.get_content_charset() or "utf-8"
- p=Extract();p.feed(raw.decode(encoding,errors="replace"))
+ document=raw.decode(encoding,errors="replace")
+ links=ListingParser();links.feed(document)
+ p=Extract();p.feed(document)
  text=html.unescape("".join(p.parts))
- return re.sub(r"[ \t\r]+"," ",text)
+ return {"text":re.sub(r"[ \t\r]+"," ",text),"links":links.items}
 def normalize(s):return re.sub(r"\s+|[（）()【】（）·]","",s or "").lower()
 def names(c):
  name=c["name"];stub=re.sub(r"(控股集团股份有限公司|集团股份有限公司|股份有限公司|有限责任公司|集团有限公司|有限公司)$","",name)
- return list(dict.fromkeys([x for x in ([name,stub]+ALIASES.get(name,[])) if len(x)>=4]))
+ return list(dict.fromkeys([x for x in [name,stub] if len(x)>=4]+[x for x in ALIASES.get(name,[])+employer_aliases(name) if len(x)>=2]))
 def inspect(item,companies):
  url,text,error=item
  if error:return [],{"site":url,"error":error}
  # Each line-local window must mention the company and the class/cohort,
  # rather than inferring every employer on a general 2027 landing page is recruiting.
- compact=normalize(text)
+ document=text if isinstance(text,dict) else {"text":text,"links":[]}
+ compact=normalize(document["text"])
  matches=[]
+ # Preserve actual article links; a platform homepage is never the original announcement.
+ for title,href in document["links"]:
+  if not any(k in normalize(title) for k in map(normalize,KEYWORDS)):continue
+  target_url=resolve_url(url,href)
+  if not target_url or not target_url.startswith("https://"):continue
+  for c in companies:
+   if any(normalize(alias) in normalize(title) for alias in names(c)):
+    matches.append({"name":c["name"],"hit":{"title":title,"url":target_url,"snippet":title,"published_at":None,"discovered_via":"招聘平台文章链接","evidence_level":"article_link"}})
+
  for c in companies:
   for alias in names(c):
    target=normalize(alias)
-   if len(target)<3:continue
+   if len(target)<2:continue
    match=re.search(re.escape(target),compact)
    if not match:continue
    idx=match.start(); excerpt=compact[max(0,idx-70):idx+len(target)+110]
