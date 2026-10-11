@@ -1,87 +1,117 @@
 #!/usr/bin/env python3
-"""Discover possible 2027 campus recruitment announcements. Search hits are leads, NOT confirmed openings."""
+"""Daily discovery across all monitored employers. Unverified links never become 'open'."""
+import concurrent.futures as cf
 import datetime as dt
+import email.utils
 import json
-import os
 import pathlib
 import re
-import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from collections import Counter
 
-ROOT = pathlib.Path(__file__).resolve().parents[1]
-DATA = ROOT / "data" / "companies.json"
-OUTPUT = ROOT / "data" / "leads.json"
-TODAY = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).date()
-KEYWORDS = ("2027", "校招", "校园招聘", "秋招", "招聘")
-DISCARD = ("2026届", "2025届", "2024届")
-USER_AGENT = "Mozilla/5.0 (compatible; RecruitmentCalendarBot/1.0)"
-
-def search(company):
-    q = f'"{company}" "2027" ("校园招聘" OR "秋季招聘")'
-    url = "https://www.bing.com/search?format=rss&q=" + urllib.parse.quote(q)
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=14) as response:
-        feed = ET.fromstring(response.read(250000))
-    hits = []
-    for item in feed.findall(".//item")[:8]:
-        title = (item.findtext("title") or "").strip()
-        link = (item.findtext("link") or "").strip()
-        description = re.sub("<[^>]+>", " ", item.findtext("description") or "").strip()
-        body = title + " " + description
-        if "2027" not in body or not any(k in body for k in ("校招","校园招聘","秋招")):
-            continue
-        if any(k in body for k in DISCARD):
-            continue
-        if link.startswith("https://") or link.startswith("http://"):
-            hits.append({"title":title[:150],"url":link,"snippet":description[:260]})
+BASE=pathlib.Path(__file__).resolve().parents[1]
+DATA=BASE/"data"/"companies.json"
+OUTPUT=BASE/"data"/"leads.json"
+NOW=dt.datetime.now(dt.timezone.utc)
+TODAY=(NOW+dt.timedelta(hours=8)).date().isoformat()
+UA="Mozilla/5.0 (compatible; QiuzhaoCalendarBot/1.1)"
+Y="2027"
+ALIASES={
+"华为投资控股有限公司":"华为","比亚迪股份有限公司":"比亚迪",
+"中国移动通信集团有限公司":"中国移动","中国电信集团有限公司":"中国电信",
+"中国联合网络通信集团有限公司":"中国联通",
+"中国工商银行股份有限公司":"工商银行","中国农业银行股份有限公司":"农业银行",
+"中国银行股份有限公司":"中国银行","中国建设银行股份有限公司":"建设银行",
+"中国邮政储蓄银行股份有限公司":"邮储银行",
+"国家能源投资集团有限责任公司":"国家能源集团",
+"中国石油天然气集团有限公司":"中国石油",
+"中国石油化工集团有限公司":"中国石化",
+"中国海洋石油集团有限公司":"中国海油",
+"中国第一汽车集团有限公司":"中国一汽",
+"中国大唐集团有限公司":"中国大唐",
+"中国电子科技集团有限公司":"中国电科",
+"中国航天科工集团有限公司":"航天科工",
+"中国民生银行股份有限公司":"民生银行",
+"上海浦东发展银行股份有限公司":"浦发银行",
+"浙商银行股份有限公司":"浙商银行",
+"国家电网有限公司":"国家电网",
+"中粮集团有限公司":"中粮集团",
+}
+RECRUIT=("校园招聘","秋季招聘","秋招","校招","应届生招聘","毕业生招聘","高校毕业生招聘")
+def search_name(s):
+    return ALIASES.get(s,re.sub(r"(有限责任公司|股份有限公司|集团有限公司|控股有限公司|有限公司)$","",s))
+def normalize(s):
+    return re.sub(r"\s+|[（）()·]","",s or "").lower()
+def feed(name):
+    short=search_name(name)
+    query=f'"{short}" "2027" "校园招聘"'
+    url="https://www.bing.com/search?format=rss&q="+urllib.parse.quote(query)
+    req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/rss+xml,application/xml,text/xml"})
+    with urllib.request.urlopen(req,timeout=11) as response:
+        if response.status!=200: raise RuntimeError(f"HTTP {response.status}")
+        raw=response.read(350000)
+    tree=ET.fromstring(raw)
+    hits=[]
+    for item in tree.findall(".//item")[:12]:
+        title=(item.findtext("title") or "").strip()
+        link=(item.findtext("link") or "").strip()
+        description=re.sub("<[^>]*>"," ",item.findtext("description") or "").strip()
+        body=normalize(title+" "+description)
+        if "2027" not in body or not any(x in body for x in RECRUIT): continue
+        if normalize(short) not in body: continue
+        if not link.startswith("https://"): continue
+        if not urllib.parse.urlsplit(link).hostname: continue
+        stamp=item.findtext("pubDate")
+        try: pub=email.utils.parsedate_to_datetime(stamp).date().isoformat() if stamp else None
+        except (ValueError,TypeError): pub=None
+        hits.append({"title":title[:160],"url":link,"snippet":description[:280],"published_at":pub})
     return hits[:5]
-
+def worker(c):
+    try:return c["name"],feed(c["name"]),None
+    except Exception as exc:return c["name"],[],str(exc)[:150]
 def main():
-    companies = json.loads(DATA.read_text(encoding="utf-8"))["companies"]
-    existing = {}
+    payload=json.loads(DATA.read_text(encoding="utf-8"))
+    companies=payload["companies"]
+    former={}
     if OUTPUT.exists():
-        try:
-            old = json.loads(OUTPUT.read_text(encoding="utf-8"))
-            existing = {entry["name"]:entry for entry in old.get("leads",[])}
-        except (OSError,ValueError,KeyError):
-            pass
-    # Cycle through all 619 companies, plus daily attention to a smaller priority set.
-    priority = ["国家电网有限公司","中国移动通信集团有限公司","中国工商银行股份有限公司",
-                "中国农业银行股份有限公司","中国银行股份有限公司","中国建设银行股份有限公司",
-                "中国邮政储蓄银行股份有限公司","交通银行股份有限公司",
-                "华为投资控股有限公司","比亚迪股份有限公司","宁德时代新能源科技股份有限公司"]
-    n = len(companies)
-    start = (TODAY.toordinal() * 90) % n
-    chosen = [companies[(start+i)%n]["name"] for i in range(min(n,90))]
-    chosen = list(dict.fromkeys(priority + chosen))
-    checked,errors = 0,0
-    for name in chosen:
-        try:
-            hits = search(name)
-            previous = existing.get(name,{})
+        try: former={x["name"]:x for x in json.loads(OUTPUT.read_text(encoding="utf-8")).get("leads",[])}
+        except (ValueError,KeyError): pass
+    results={}
+    # Limit parallelism to avoid overloading search providers. RSS blocking/rate limits are reported.
+    with cf.ThreadPoolExecutor(max_workers=5) as pool:
+        for name,hits,error in pool.map(worker,companies):
+            results[name]=(hits,error)
+    errors=[]
+    good=0
+    for c in companies:
+        name=c["name"]
+        hits,error=results[name]
+        if error:
+            errors.append({"name":name,"error":error})
+            c["last_search_error"]=error
+        else:
+            good+=1
+            c["last_searched_at"]=TODAY
+            c.pop("last_search_error",None)
             if hits:
-                previous["name"] = name
-                previous["hits"] = hits
-                previous["last_found"] = str(TODAY)
-                existing[name] = previous
-            checked += 1
-        except Exception as exc:
-            errors += 1
-            print(f"Search unavailable for {name}: {type(exc).__name__}: {exc}")
-        time.sleep(1.1)
-    payload = {
-        "scanned_at": dt.datetime.now(dt.timezone.utc).isoformat(),
-        "searches_attempted":len(chosen),
-        "searches_succeeded":checked,
-        "searches_failed":errors,
-        "disclaimer":"仅为搜索发现的待核验线索，不能当作已开启公告。状态和开启日期必须经官方来源人工核验。",
-        "leads":sorted(existing.values(), key=lambda c:c.get("last_found",""), reverse=True)
-    }
-    OUTPUT.parent.mkdir(parents=True,exist_ok=True)
-    OUTPUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(f"Scanned {len(chosen)} companies, successful {checked}, failed {errors}, accumulated leads {len(existing)}")
-
-if __name__ == "__main__":
-    main()
+                old=former.get(name,{})
+                old.update({"name":name,"hits":hits,"last_found":TODAY})
+                former[name]=old
+            # Preserve old leads if new search returns empty: an empty RSS result isn't proof of no recruiting.
+        c["discovery_count"]=len(former.get(name,{}).get("hits",[]))
+    OUTPUT.write_text(json.dumps({
+        "scanned_at":NOW.isoformat(),
+        "companies_total":len(companies),
+        "searches_attempted":len(companies),
+        "searches_succeeded":good,
+        "searches_failed":len(errors),
+        "errors":errors[:30],
+        "disclaimer":"RSS搜索发现属于未核验线索，不能据此宣称开放网申。来源可能包含转发、旧消息、伪相关。请以官方招聘公告为准。",
+        "leads":sorted(former.values(),key=lambda x:x.get("last_found",""),reverse=True)
+    },ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    DATA.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print(f"SEARCH_TOTAL={len(companies)} SUCCEEDED={good} FAILED={len(errors)} LEAD_COMPANIES={len(former)}")
+    if good==0: raise RuntimeError("Search provider returned zero successful requests; preserving prior records")
+if __name__=="__main__":main()
