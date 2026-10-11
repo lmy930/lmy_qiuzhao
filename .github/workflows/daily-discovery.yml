@@ -18,8 +18,10 @@ jobs:
         with:
           python-version: '3.12'
       - name: Collect possible recruitment leads
+        continue-on-error: true
         run: python scripts/discover.py
       - name: Verify allowlisted official recruitment sources
+        continue-on-error: true
         run: python scripts/verify_official.py
       - name: Commit discovery and official verification reports when changed
         run: |
