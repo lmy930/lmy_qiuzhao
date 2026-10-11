@@ -55,7 +55,11 @@ def match_scope(name, title):
     if name.startswith('TCL'):
         required=('tcl科技','tcl华星','tcl中环') if '科技' in name else ('tcl实业',)
         if not any(x in t for x in required):return None
-    if re.search(r'子公司|旗下|下属|分公司|分行|支行|分支机构|直属单位|二级单位|研究所|研究院|\d+所|[一二三四五六七八九十]+院|中建[一二三四五六七八九]局|国网信通|天翼云|天翼支付|阿里云|阿里国际|网易雷火|网易游戏|顺丰科技|tcl华星|tcl中环',t):
+    scope_text=t
+    if '研究' in name:
+        own_stem=re.sub(r'(?:集团)?(?:有限责任公司|股份有限公司|有限公司)$','',normalize(name))
+        scope_text=scope_text.replace(own_stem,'')
+    if re.search(r'子公司|旗下|下属|分公司|分行|支行|分支机构|直属单位|二级单位|研究所|研究院|研究中心|\d+所|[一二三四五六七八九十]+院|中建[一二三四五六七八九]局|国网信通|天翼云|天翼支付|阿里云|阿里国际|网易雷火|网易游戏|顺丰科技|tcl华星|tcl中环',scope_text):
         return 'subsidiary'
     if name=='中国航空集团有限公司' and any(x in t for x in ('中国国航','中国国际航空')):return 'subsidiary'
     if name=='腾讯控股有限公司' and any(x in t for x in ('腾讯音乐','腾讯云智')):return 'subsidiary'

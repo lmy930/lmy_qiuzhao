@@ -21,6 +21,9 @@ class EvidenceTests(unittest.TestCase):
     def test_subsidiary_scope(self):
         self.assertEqual(match_scope('中国航天科工集团有限公司','中国航天科工二院二十三所2027届校园招聘'),'subsidiary')
         self.assertEqual(match_scope('中国建设银行股份有限公司','中国建设银行上海分行2027校园招聘'),'subsidiary')
+        self.assertEqual(match_scope('中国航空工业集团有限公司','中国航空工业发展研究中心2027届校园招聘'),'subsidiary')
+        self.assertEqual(match_scope('中国建筑科学研究院有限公司','中国建筑科学研究院有限公司2027届校园招聘'),'employer')
+        self.assertEqual(match_scope('中国建筑科学研究院有限公司','中国建筑科学研究院上海分公司2027届校园招聘'),'subsidiary')
     def test_shared_tcl_brand(self):
         self.assertIsNone(match_scope('TCL科技集团股份有限公司','TCL2027校园招聘'))
         self.assertIsNone(match_scope('TCL 实业控股股份有限公司','TCL华星2027校园招聘'))
@@ -36,6 +39,19 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(opening_evidence(text,'2026-10-11')['date'],'2026-09-03')
 
 class PipelineTests(unittest.TestCase):
+    def test_deadline_without_start_does_not_crash_or_invent_opening(self):
+        from unittest.mock import patch
+        from verify_pages import scan
+        data={'companies':[{'name':'中国农业发展银行','status':'待核验','open_date':None}]}
+        leads={'leads':[{'name':'中国农业发展银行','hits':[{'url':'https://career.nankai.edu.cn/a'}]}]}
+        document='<title>中国农业发展银行2027届校园招聘</title><p>报名截止时间：2027年1月1日</p>'
+        with patch('verify_pages.fetch',return_value=('https://career.nankai.edu.cn/a',document,'digest')):
+            report=scan(data,leads)
+        self.assertEqual(report['pages_read'],1)
+        self.assertEqual(data['companies'][0]['status'],'已发布公告（网申待核验）')
+        self.assertIsNone(data['companies'][0]['open_date'])
+        self.assertEqual(data['companies'][0]['deadline'],'2027-01-01')
+
     def test_scan_backfills_unknown_date_and_keeps_subsidiary_separate(self):
         from unittest.mock import patch
         from verify_pages import scan

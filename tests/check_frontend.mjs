@@ -9,6 +9,7 @@ assert.ok(match,"Inline browser script is missing");
 const script=match[1];
 new vm.Script(script,{filename:"index.html inline script"});
 const db=JSON.parse(fs.readFileSync("data/companies.json","utf8"));
+const baseline=JSON.parse(fs.readFileSync("data/launch_baseline.json","utf8"));
 const history=JSON.parse(fs.readFileSync("data/daily_changes.json","utf8"));
 const elements=new Map();
 function el(id) {
@@ -34,6 +35,7 @@ const ctx={
   fetch:async (url)=>{
     fetches.push(String(url));
     if(String(url).includes("companies.json"))return {ok:true,json:async()=>db};
+    if(String(url).includes("launch_baseline.json"))return {ok:true,json:async()=>baseline};
     if(String(url).includes("daily_changes.json"))return {ok:true,json:async()=>history};
     if(String(url).includes("leads.json"))return {ok:true,json:async()=>({
       scanned_at:"2026-10-11T07:48:00Z",
@@ -60,6 +62,8 @@ assert.match(el("month").textContent,/20\d{2}年\d{1,2}月/);
 assert.match(el("calendar").innerHTML,/class="day/,"Calendar day buttons were not rendered");
 assert.ok(el("dayTitle").textContent.includes("确切开启")&&el("dayTitle").textContent.includes("新确认"),"Clicked-day details not rendered");
 assert.ok(el("list").innerHTML.includes("企业")||el("list").innerHTML.length>200,"Enterprise list missing");
+assert.equal(el("visibleCount").textContent,launched,"Confirmed board should show all baseline enterprises");
+assert.equal(el("boardNew").textContent,db.companies.filter(c=>!baseline.known_launch_names.includes(c.name)&&(["已开启","已结束","已发布公告（网申待核验）"].includes(c.status)||c.announcement_date)).length,"New confirmations should be compared to the fixed baseline");
 assert.equal(typeof el("refreshNow").onclick,"function","Reload button not wired");
 await el("refreshNow").onclick();
 assert.ok(fetches.filter(x=>x.includes("companies.json")).length>=2,"Manual refresh did not request data");

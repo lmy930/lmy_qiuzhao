@@ -105,7 +105,7 @@ def scan(data,leads,limit=0,registry=None):
                         if evidence not in openings:openings.append(evidence)
                     if ev.get('deadline') and ev['scope']=='employer':
                         if ev['deadline']['date']<today:c['status']='已结束'
-                        elif c.get('open_date_evidence',{}).get('date')==c.get('open_date') and c.get('open_date')<=today:c['status']='已开启'
+                        elif c.get('open_date') and (c.get('open_date_evidence') or {}).get('date')==c['open_date'] and c['open_date']<=today:c['status']='已开启'
         jobs.update({u:jobs.get(u,set())|names for u,names in followups.items()})
         queue=[u for u in followups if u not in attempted]
         if not queue:break
