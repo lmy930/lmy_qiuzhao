@@ -15,6 +15,12 @@ class EmployerAliasTests(unittest.TestCase):
     def test_aviation_false_positive_is_rejected(self):
         h={"title":"中国航空发动机集团2027届校园招聘启动 - 国资委","url":"https://wap.sasac.gov.cn/example"}
         self.assertEqual(promote_evidence.score("中国航空集团有限公司",h),0)
+    def test_ambiguous_group_aliases(self):
+        h={"title":"中国航空工业发展研究中心2027届校园招聘 - 南开大学就业网","url":"https://career.nankai.edu.cn/correcruit/content/id/118821.html","evidence_level":"university_listing"}
+        self.assertEqual(promote_evidence.score("中国航空集团有限公司",h),0)
+        h={"title":"中国农业发展银行2027年度校园招聘公告 - 南开大学就业网","url":"https://career.nankai.edu.cn/correcruit/content/id/119483.html","evidence_level":"university_listing"}
+        self.assertEqual(promote_evidence.score("中国农业发展集团有限公司",h),0)
+        self.assertEqual(promote_evidence.score("中国农业发展银行",h),3)
     def test_trusted_university_2027_promotion(self):
         h={"title":"阿里巴巴2027届应届生招聘全球启动 - 南开大学就业网","url":"https://career.nankai.edu.cn/correcruit/content/id/116569.html","evidence_level":"university_listing"}
         self.assertEqual(promote_evidence.score("阿里巴巴 (中国)有限公司",h),3)
