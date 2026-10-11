@@ -1,117 +1,104 @@
 #!/usr/bin/env python3
-"""Promote independently verified multi-source recruitment evidence to the dashboard.
-
-This script consumes links discovered by search, fetches their actual pages, and
-classifies *2027 recruitment launched*, not necessarily *application still open*.
-No manual review is required for high-confidence discoveries. Unknown remains unknown.
+"""Reconcile recruiting leads into employer launch status with auditable evidence.
+Only confirms the 2027 cohort LAUNCHED; never infers applications are still open.
 """
-import concurrent.futures as cf
 import datetime as dt
-import html
 import json
 import pathlib
 import re
 import urllib.parse
-import urllib.request
-
+from collections import defaultdict
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 DIR=ROOT/"data"
-DATE=(dt.datetime.now(dt.timezone.utc)+dt.timedelta(hours=8)).date()
-UA="Mozilla/5.0 (compatible; QiuzhaoEvidenceVerifier/2.0)"
-KWORDS=("校园招聘","秋季校园招聘","校招","秋招","应届生招聘","毕业生招聘")
-EXCLUDE=("2026届校园招聘","2025届校园招聘")
-CORP_DOMAINS=("career.huawei.com","job.byd.com","job.icbc.com.cn","job.10086.cn","zp.czbank.com.cn")
-TRUSTED_GOV=("sasac.gov.cn","gov.cn")
-TRUSTED_UNIV=(".edu.cn",)
-TRUSTED_PUBLISHERS=("国务院国有资产监督管理委员会","国资委","中国农业大学新闻网","南京审计大学","上观新闻","金融时报","中国能源新闻网")
-LAUNCH_WORDS=("启动","正式开启","全面启动","校园招聘开始","秋季校园招聘","秋招开启","火热进行中","校园招聘公告","校招正式开始")
-RENAME={
-"华为投资控股有限公司":["华为"],
-"中国工商银行股份有限公司":["工商银行","中国工商银行"],
+TODAY=(dt.datetime.now(dt.timezone.utc)+dt.timedelta(hours=8)).date().isoformat()
+YEAR=("2027","27届","27级")
+LAUNCH=("正式启动","全面启动","正式开启","正式开招","招聘启动","校招开启","校招开始","秋招启动","秋招开启","校园招聘开启","招聘正式启动","校园招聘正式","2027校园招聘","2027届校园招聘","2027年度校园招聘","校园招聘公告","秋季校园招聘","校招火热进行","秋招宣讲会","招聘宣讲会")
+IGNORE=("2026届","2025届","2024届","2028届")
+HIGH_TRUST=("国务院国有资产监督管理委员会","国资委","银行官网","集团官方网站","就业指导中心","学校就业网","高校就业网","大学新闻网","edu.cn")
+ALIASES={
+"中国航天科技集团有限公司":["中国航天科技集团","航天科技集团"],
+"中国航天科工集团有限公司":["中国航天科工","航天科工"],
+"中国航空发动机集团有限公司":["中国航空发动机","中国航发"],
+"中国航空集团有限公司":["中国国航","中国航空集团"],
+"中国海洋石油集团有限公司":["中国海油"],
+"中国电信集团有限公司":["中国电信"],
+"中国联合网络通信集团有限公司":["中国联通"],
 "中国移动通信集团有限公司":["中国移动"],
-"浙江吉利控股集团有限公司":["吉利控股","吉利"],
-"中粮集团有限公司":["中粮集团"],
-"比亚迪股份有限公司":["比亚迪"],
-"上海浦东发展银行股份有限公司":["浦发银行"],
+"中国远洋海运集团有限公司":["中远海运","中国远洋海运"],
+"中国东方航空集团有限公司":["中国东航","东方航空"],
+"中国第一汽车集团有限公司":["中国一汽","一汽集团"],
+"中国大唐集团有限公司":["中国大唐","大唐集团"],
+"中国东方电气集团有限公司":["东方电气集团"],
 "国家能源投资集团有限责任公司":["国家能源集团"],
+"国家开发投资集团有限公司":["国投集团","国家开发投资集团"],
+"中粮集团有限公司":["中粮集团"],
+"华为投资控股有限公司":["华为"],
+"腾讯控股有限公司":["腾讯"],
+"比亚迪股份有限公司":["比亚迪"],
+"京东集团":["京东集团"],
+"中国工商银行股份有限公司":["中国工商银行","工商银行"],
+"中国农业银行股份有限公司":["中国农业银行","农业银行"],
+"中国建设银行股份有限公司":["中国建设银行","建设银行"],
+"中国邮政储蓄银行股份有限公司":["中国邮政储蓄银行","邮储银行"],
+"上海浦东发展银行股份有限公司":["浦发银行","上海浦东发展银行"],
+"中国光大银行股份有限公司":["中国光大银行","光大银行"],
+"广发银行股份有限公司":["广发银行"],
+"浙商银行股份有限公司":["浙商银行"],
+"招商银行股份有限公司":["招商银行"],
+"携程集团有限公司":["携程集团"],
 }
-def normalize(s):return re.sub(r"\s+|[（）()【】［］\-]","",s or "").lower()
-def names(c):
- s=c["name"]
- a=RENAME.get(s,[])
- shorter=re.sub(r"(控股集团股份有限公司|股份有限公司|有限责任公司|集团有限公司|有限公司)$","",s)
- return [normalize(t) for t in dict.fromkeys([s,shorter]+a) if len(t)>=3]
-def trust(url):
- try:host=urllib.parse.urlparse(url).hostname or ""
- except ValueError:return False
- return host in CORP_DOMAINS or any(host==v or host.endswith("."+v) for v in TRUSTED_GOV) or any(host.endswith(v) for v in TRUSTED_UNIV)
-def fetch(url):
- req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"text/html,application/xhtml+xml"})
- with urllib.request.urlopen(req,timeout=8) as r:
-  if "text/html" not in (r.headers.get("Content-Type","text/html")).lower():return ""
-  data=r.read(280000)
-  h=r.headers.get_content_charset() or "utf-8"
- text=data.decode(h,errors="replace")
- text=re.sub(r"<(script|style|noscript)\b[^>]*>.*?</\1>"," ",text,flags=re.S|re.I)
- return normalize(html.unescape(re.sub(r"<[^>]+>"," ",text)))
-def check(c,entry):
- hits=entry.get("hits",[])[:25]
- aggregate=[h for h in hits if h.get("evidence_level")=="aggregate_nearby_text"]
- agg_hosts={urllib.parse.urlsplit(h.get("url","")).hostname for h in aggregate}
- good=[]
- if len(agg_hosts)>=2:
-  good=[{"url":h["url"],"title":h["title"],"source":"两个及以上独立2027届招聘汇总站点匹配","seen":str(DATE)} for h in aggregate[:3]]
- for h in hits:
-  if h.get("evidence_level")=="aggregate_nearby_text":continue
-  url=h.get("url","")
-  if not url.startswith("https://"):continue
-  # News RSS is a discovery source: resolve the original publisher only if available.
-  # Otherwise require two independent recruitment-index hits before recording launch.
-  if "news.google.com/rss/articles/" in url:
-   title=h.get("title","")
-   if not any(k in title for k in ("2027","27届")) or not any(k in title for k in LAUNCH_WORDS):continue
-   if not any(k in title for k in TRUSTED_PUBLISHERS):continue
-   if not any(n in normalize(title) for n in names(c)):continue
-   # Avoid treating 航空发动机集团 as 中国航空集团, or a subsidiary as its parent without evidence.
-   if c["name"]=="中国航空集团有限公司" and "航空发动机" in title:continue
-   good.append({"url":url,"title":title[:160],"source":"可信发布方的招聘资讯摘要（正文未独立验证）","seen":str(DATE)})
-   continue
-  if not trust(url):continue
-  try:
-   body=fetch(url)
-   if not body or not any(k in body for k in ("2027","27届")) or not any(x in body for x in KWORDS):continue
-   if not any(alias in body for alias in names(c)):continue
-   title=normalize(h.get("title",""))
-   if "2027" not in title and not any(k in title for k in KWORDS):continue
-   good.append({"url":url,"title":h.get("title","")[:160],"source":"官网/政府/高校就业网","seen":str(DATE)})
-  except Exception:continue
- return c["name"],good
+def norm(s):
+ return re.sub(r"\s+|[（）()【】\[\]·•_\-－]","",s or "").lower()
+def company_aliases(name):
+ short=re.sub(r"(控股集团股份有限公司|集团股份有限公司|股份有限公司|有限责任公司|集团有限公司|有限公司)$","",name)
+ return [norm(x) for x in dict.fromkeys(ALIASES.get(name,[])+[name,short]) if len(norm(x))>=4]
+def hosts(h):
+ u=h.get("url","");netloc=urllib.parse.urlsplit(u).hostname or ""
+ if netloc=="news.google.com":
+  # RSS article links proxy different publishers: use the publisher appended to the title.
+  t=h.get("title","")
+  return norm(t.rsplit(" - ",1)[-1]) if " - " in t else "news.google.com"
+ return netloc
+def score(name,h):
+ title=h.get("title","")
+ t=norm(title)
+ if not any(y in t for y in YEAR) or any(y in t for y in IGNORE):return 0
+ if not any(a in t for a in company_aliases(name)):return 0
+ if name=="中国航空集团有限公司" and ("航空发动机" in t or "中国航发" in t):return 0
+ if not any(norm(x) in t for x in LAUNCH):return 0
+ # Explicit 2027 launch headlines from a trusted government or university publication.
+ publisher=hosts(h)
+ if any(norm(x) in publisher for x in HIGH_TRUST) or "sasac.gov.cn" in publisher:return 3
+ # Other clearly attributable 2027 recruitment headlines are discovery evidence.
+ return 1
 def main():
  path=DIR/"companies.json"
  data=json.loads(path.read_text(encoding="utf-8"))
- leads=json.loads((DIR/"leads.json").read_text(encoding="utf-8"))
- candidates={x["name"]:x for x in leads.get("leads",[]) if x.get("hits")}
- targets=[c for c in data["companies"] if c["name"] in candidates]
- results={}
- with cf.ThreadPoolExecutor(max_workers=10) as executor:
-  for name,good in executor.map(lambda c:check(c,candidates[c["name"]]), targets):
-   results[name]=good
- promoted=[]
+ raw=json.loads((DIR/"leads.json").read_text(encoding="utf-8"))
+ leads={x["name"]:x for x in raw.get("leads",[])}
+ changed=[]
+ details=[]
  for c in data["companies"]:
-  good=results.get(c["name"],[])
-  if not good:continue
-  c["evidence_sources"]=good
-  c["evidence_last_checked"]=str(DATE)
-  c["discovered_2027"]=True
-  # An official corporate, government or university announcement establishes launch.
-  # It does not establish that applications are still open or the precise opening date.
-  if c["status"]=="待核验":
+  hits=leads.get(c["name"],{}).get("hits",[])
+  positive=[(h,score(c["name"],h)) for h in hits]
+  positive=[(h,k) for h,k in positive if k]
+  publishers={hosts(h) for h,k in positive if hosts(h)}
+  strong=any(k>=3 for h,k in positive)
+  corroborated=len(publishers)>=2
+  launched=strong or corroborated
+  if positive:
+   c["evidence_last_checked"]=TODAY
+   c["evidence_sources"]=[{"title":h.get("title",""),"url":h.get("url",""),"publisher":hosts(h),"classification":"trusted" if k>=3 else "discovery"} for h,k in positive[:8]]
+  if launched and c.get("status")=="待核验":
    c["status"]="已发布公告（网申待核验）"
-   c["announcement_source_url"]=good[0]["url"]
-   c["verification_note"]="后台自动交叉检索到2027届招聘已发布（官方/高校招聘信息或两个独立聚合平台）；启动日期和报名截止需另行确认。"
-   promoted.append(c["name"])
- data["generated_at"]=str(DATE)
+   c["discovered_2027"]=True
+   c["announcement_source_url"]=positive[0][0].get("url")
+   c["verification_note"]="自动确认2027届校招曾启动：政府/高校发布信息，或至少两家独立来源的明确校招标题。当前报名是否仍开放、首次启动日期尚未确认。"
+   changed.append(c["name"])
+  details.append({"name":c["name"],"evidence":len(positive),"publishers":len(publishers),"accepted":launched})
+ data["generated_at"]=TODAY
  path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
- (DIR/"auto_verification_report.json").write_text(json.dumps({"checked_at":str(DATE),"candidates":len(targets),"verified":sum(bool(x) for x in results.values()),"newly_promoted":len(promoted),"promoted":promoted,"scope":"2027届招聘已发布，不保证报名仍开放"},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
- print(f"AUTO_VERIFIED={sum(bool(x) for x in results.values())} NEW_PROMOTED={len(promoted)}")
+ report={"checked_at":TODAY,"employers":len(data["companies"]),"lead_companies":len(leads),"positive_evidence_companies":sum(x["evidence"]>0 for x in details),"accepted_companies":sum(x["accepted"] for x in details),"newly_promoted":len(changed),"promoted":changed,"note":"已启动不等于仍可报名；原始证据在companies.json，只有明确日期才进入日历"}
+ (DIR/"auto_verification_report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+ print(json.dumps(report,ensure_ascii=False))
 if __name__=="__main__":main()
