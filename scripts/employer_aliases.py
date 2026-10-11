@@ -38,7 +38,8 @@ BRANDS={
 "中国航天科工集团有限公司":["中国航天科工","航天科工"],
 "中国航空发动机集团有限公司":["中国航空发动机","中国航发"],
 "中国航空工业集团有限公司":["航空工业集团","中国航空工业集团"],
-"中国航空集团有限公司":["中国国航","中国航空集团"],
+"中国航空集团有限公司":["中国国航","中国航空集团","中国国际航空"],
+"中国农业发展集团有限公司":["中国农业发展集团","中国农发集团"],
 "中国远洋海运集团有限公司":["中远海运","中国远洋海运"],
 "中国第一汽车集团有限公司":["中国一汽","一汽集团"],
 "中国海洋石油集团有限公司":["中国海油"],
@@ -85,7 +86,11 @@ def aliases(name):
     # Only use generic short names with at least 4 characters; allow short brands only via whitelist.
     brand=BRANDS.get(name,[])
     safe=[x for x in candidates if len(normalize(x))>=4]+brand
-    return list(dict.fromkeys(normalize(x) for x in safe if normalize(x)))
+    denied={
+        "中国航空集团有限公司":{"中国航空"},
+        "中国农业发展集团有限公司":{"中国农业发展"}
+    }.get(name,set())
+    return list(dict.fromkeys(normalize(x) for x in safe if normalize(x) and normalize(x) not in denied))
 def primary(name):
     candidates=BRANDS.get(name,[])
     if candidates:return candidates[0]
