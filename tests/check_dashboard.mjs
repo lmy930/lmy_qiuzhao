@@ -6,7 +6,7 @@ const source=fs.readFileSync('index.html','utf8').match(/<script>([\s\S]*?)<\/sc
 const database=JSON.parse(fs.readFileSync('data/companies.json','utf8'));
 const baseline=JSON.parse(fs.readFileSync('data/launch_baseline.json','utf8'));
 const key='qiuzhao-2027-tracker-v1',name='中国长江三峡集团有限公司';
-async function boot(storage=new Map(),{baselineFails=false,companiesFail=false,healthyScan=false,unverifiedAnnouncement=false,simulateNew=false}={}){
+async function boot(storage=new Map(),{baselineFails=false,companiesFail=false,healthyScan=false,unverifiedAnnouncement=false,simulateNew=false,unsafeLinks=false}={}){
  const db=structuredClone(database),snapshot=structuredClone(baseline);
  db.companies.find(c=>c.name===name).status='已发布公告（网申待核验）';
  // This interaction fixture has its own initial snapshot; production data may
@@ -15,6 +15,7 @@ async function boot(storage=new Map(),{baselineFails=false,companiesFail=false,h
  if(simulateNew)snapshot.known_launch_names=snapshot.known_launch_names.filter(n=>n!==name);
  const unverifiedName=db.companies.find(c=>c.status==='待核验').name;
  if(unverifiedAnnouncement)db.companies.find(c=>c.name===unverifiedName).announcement_date='2026-10-11';
+ if(unsafeLinks){const c=db.companies.find(c=>c.name===name);c.page_verification={url:'javascript:alert(1)',title:'<script>unsafe</script>'};c.announcement_source_url='javascript:alert(1)';c.application_channels=[{company:name,url:'javascript:alert(2)',proof_url:'https://example.com/proof',proof_sha256:'abc'}]}
  const elements=new Map();
  function el(id){if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',disabled:false,dataset:{},listeners:new Map(),addEventListener(type,fn){this.listeners.set(type,fn)},click(){this.clicked=true}});return elements.get(id)}
  const categories=['','银行','央企','民营500'].map(category=>({dataset:{category},listeners:new Map(),attributes:{},setAttribute(k,v){this.attributes[k]=v},addEventListener(k,v){this.listeners.set(k,v)}}));
@@ -63,3 +64,16 @@ const older={...newer,applications:{[name]:{state:'later',marked_at:'2026-10-10T
 await app.el('trackerFile').listeners.get('change')({target:{value:'backup.json',files:[{size:300,text:async()=>JSON.stringify(older)}]}});
 assert.equal(JSON.parse(app.storage.get(key)).applications[name].state,'applied');
 console.log('PASS: fixed baseline, future colors, category/search filters, tracking persistence, baseline failure, backup merge');
+
+const statusBoard=await boot();
+assert.match(statusBoard.el('coverageNotice').textContent,/待核验不代表未开招/);
+for(const [filter,status] of [['open','已开启'],['unknown','已发布公告（网申待核验）'],['ended','已结束']]){
+ statusBoard.select('recruitmentFilter',filter);
+ const names=[...statusBoard.el('applicationList').innerHTML.matchAll(/data-name="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(names.length,statusBoard.db.companies.filter(c=>c.status===status).length);
+ assert.ok(names.every(n=>statusBoard.db.companies.find(c=>c.name===n).status===status));
+}
+statusBoard.select('recruitmentFilter','evidence');assert.match(statusBoard.el('applicationList').innerHTML,/完整正文证据待自动补齐/);
+assert.ok(!statusBoard.el('applicationList').innerHTML.includes('javascript:'));
+const unsafe=await boot(new Map(),{unsafeLinks:true});assert.ok(!unsafe.el('applicationList').innerHTML.includes('href="javascript:'));assert.ok(!unsafe.el('applicationList').innerHTML.includes('<script>unsafe</script>'));
+console.log('PASS: recruitment availability filters, missing body warnings and safe source links');
