@@ -8,10 +8,11 @@ import json
 import pathlib
 import re
 import urllib.request
+import urllib.parse
 from collections import defaultdict
 from difflib import SequenceMatcher
 from page_evidence import evaluate, page_text
-from source_documents import source_kind, publisher_key, decode_document, referenced_official_urls
+from source_documents import source_kind, publisher_key, decode_document, referenced_official_urls, application_links
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 
 def trusted(name,url):
@@ -26,7 +27,23 @@ def fetch(url):
         if len(raw)>1500000:raise ValueError('page_too_large')
         meta=re.search(br'charset\s*=\s*["\']?([\w-]+)',raw[:4096],re.I)
         encoding=r.headers.get_content_charset() or (meta.group(1).decode('ascii') if meta else 'utf-8')
-        document=decode_document(raw.decode(encoding),content_type)
+        decoded=raw.decode(encoding)
+        # This publicly readable school page loads its article through the same
+        # anonymous JSON endpoint used by its browser; do not treat the shell as content.
+        parsed=urllib.parse.urlsplit(final)
+        api=None
+        match=re.fullmatch(r'/career/zpxx/view/zpxx/(\d+)',parsed.path)
+        if parsed.hostname=='jiuye.swjtu.edu.cn' and match and 'postAjax("/zpxx/data/zpxx/' in decoded:
+            api='https://jiuye.swjtu.edu.cn/career/zpxx/data/zpxx/'+match.group(1)
+            request=urllib.request.Request(api,data=b'',headers={'User-Agent':'Mozilla/5.0','Referer':final,'Accept':'application/json','Content-Type':'application/x-www-form-urlencoded'},method='POST')
+            with urllib.request.urlopen(request,timeout=15) as response:
+                raw=response.read(1500001)
+                if len(raw)>1500000:raise ValueError('article_json_too_large')
+            payload=json.loads(raw)
+            if payload.get('code')!=200:raise ValueError('public_article_unavailable_'+str(payload.get('code')))
+            decoded=raw.decode('utf-8');content_type='application/json'
+        document=decode_document(decoded,content_type)
+        if api:document+='<meta name="evidence-json-url" content="'+api+'">'
         return final,document,hashlib.sha256(raw).hexdigest()
 
 def set_opening(c,evidence,now,record):
@@ -50,14 +67,16 @@ def scan(data,leads,limit=0,registry=None):
         hits+=[{'url':c[k]} for k in ('source_url','announcement_source_url') if c.get(k)]
         for hit in hits:
             url=hit.get('url','')
-            if trusted(c['name'],url):jobs.setdefault(url,set()).add(c['name'])
+            if source_kind(c['name'],url,c.get('application_channels')):jobs.setdefault(url,set()).add(c['name'])
+        for channel in c.get('application_channels',[]):
+            if source_kind(c['name'],channel['url'],c['application_channels']):jobs.setdefault(channel['url'],set()).add(c['name'])
     for source in (registry or {}).get('sources',[]):
         if source['company'] in by_name and trusted(source['company'],source['url']):jobs.setdefault(source['url'],set()).add(source['company'])
     records=[];newly=set();dated=set();secondaries=defaultdict(list);read_urls=set();attempted=set();primary_accepted=set()
     def one(url):
         try:return url,fetch(url),None
         except Exception as error:return url,None,f'{type(error).__name__}: {error}'
-    queue=list(jobs)
+    queue=sorted(jobs,key=lambda url:min({'official':0,'official_application':0,'government':1,'university':2,'recruitment':3}.get(source_kind(name,url,by_name[name].get('application_channels')),4) for name in jobs[url]))
     # Reposts may contain authoritative application links. Follow only employer-owned hosts.
     for round_number in range(2):
         if limit:queue=queue[:max(0,limit-len(attempted))]
@@ -69,11 +88,15 @@ def scan(data,leads,limit=0,registry=None):
                     records.append({'url':url,'companies':sorted(jobs[url]),'result':'fetch_failed','error':error});continue
                 read_urls.add(url);final,document,digest=result;title,text=page_text(document)
                 for name in sorted(jobs[url]):
-                    kind=source_kind(name,final)
+                    c=by_name[name];kind=source_kind(name,final,c.get('application_channels'))
                     if not kind:
                         records.append({'company':name,'url':url,'result':'untrusted_redirect'});continue
                     ev=evaluate(name,title,text,today)
+                    if kind=='official_application' and any(channel.get('scope')=='subsidiary' and source_kind(name,final,[channel])=='official_application' for channel in c.get('application_channels',[])):
+                        ev['scope']='subsidiary'
                     record={'company':name,'url':final,'title':title,'sha256':digest,'source_kind':kind,**ev};records.append(record)
+                    api_metadata=re.search(r'<meta name="evidence-json-url" content="([^"]+)"',document)
+                    if api_metadata:record['source_api']={'url':api_metadata.group(1),'method':'POST','digest_basis':'public_article_json'}
                     if not ev['accepted']:continue
                     c=by_name[name];opening=ev['opening']
                     for linked in referenced_official_urls(name,document,final):
@@ -89,8 +112,18 @@ def scan(data,leads,limit=0,registry=None):
                             candidates.append(value)
                         continue
                     primary_accepted.add(name);record['result']='verified_recruitment'
+                    if source_kind(name,final) in ('official','government','university'):
+                        for link in application_links(document,final):
+                            channel={**link,'company':name,'scope':ev['scope'],'proof_url':final,'proof_sha256':digest,'proof_title':title,'checked_at':now}
+                            channels=c.setdefault('application_channels',[])
+                            channels[:]=[item for item in channels if item['url_prefix']!=channel['url_prefix']]
+                            channels.append(channel)
+                            followups.setdefault(channel['url'],set()).add(name)
+                    for key in ('affiliation_evidence','identity_evidence'):
+                        if ev.get(key):c[key]={**ev[key],'url':final,'sha256':digest,'checked_at':now}
                     if ev['scope']=='employer' or c.get('page_verification',{}).get('scope')!='employer':
                         c['source_scope']=ev['scope'];c['page_verification']={'url':final,'title':title,'sha256':digest,'checked_at':now,'scope':ev['scope'],'source_kind':kind}
+                        if record.get('source_api'):c['page_verification']['source_api']=record['source_api']
                     c['last_checked']=today
                     if ev.get('deadline') and ev['scope']=='employer':
                         c['deadline']=ev['deadline']['date']

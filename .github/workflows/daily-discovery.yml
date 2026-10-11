@@ -4,6 +4,11 @@ on:
     - cron: '40 0 * * *'
     - cron: '40 12 * * *'
   workflow_dispatch:
+    inputs:
+      historical_backfill:
+        description: Deep scan public recruitment archives
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -18,6 +23,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Visit employer websites and multiple public recruitment archives
+        env:
+          HISTORICAL_BACKFILL: ${{ inputs.historical_backfill || false }}
+        run: |
+          if [ "$HISTORICAL_BACKFILL" = "true" ]; then
+            python scripts/broad_sources.py --backfill
+          else
+            python scripts/broad_sources.py
+          fi
       - name: Collect possible recruitment leads
         run: python scripts/discover.py
       - name: Read public recruitment aggregator listings
@@ -28,13 +42,13 @@ jobs:
       - name: Scan university recruiting announcement archives
         continue-on-error: true
         run: python scripts/university_sources.py
-      - name: Automatically verify discovered 2027 recruitment pages
-        run: python scripts/promote_evidence.py
       - name: Verify allowlisted official recruitment sources
         continue-on-error: true
         run: python scripts/verify_official.py
       - name: Read evidence pages and backfill explicit application dates
         run: python scripts/verify_pages.py
+      - name: Reconcile verified recruitment evidence
+        run: python scripts/promote_evidence.py
       - name: Record newly confirmed companies for daily calendar
         run: python scripts/update_daily_changes.py
       - name: Validate scan output
@@ -52,7 +66,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/leads.json data/companies.json data/verification_report.json data/auto_verification_report.json data/government_scan_report.json data/university_scan_report.json data/daily_changes.json data/page_verification_report.json
+          git add data/leads.json data/companies.json data/verification_report.json data/auto_verification_report.json data/government_scan_report.json data/university_scan_report.json data/daily_changes.json data/page_verification_report.json data/broad_source_report.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh recruitment discovery leads"
             for attempt in 1 2 3; do

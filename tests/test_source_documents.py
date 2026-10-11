@@ -118,3 +118,60 @@ class ScopeAndCopyTests(unittest.TestCase):
         body=BODY+('招聘岗位、应聘条件、企业介绍和校园招聘流程。'*30)
         c,r=RepostTests().run_scan(urls,{u:'<title>'+TITLE+'</title><article>'+body+('整理发布' if i else '')+'</article>' for i,u in enumerate(urls)})
         self.assertIsNone(c['open_date'])
+
+class ApplicationChannelTests(unittest.TestCase):
+    def test_only_article_application_route_is_bound(self):
+        from source_documents import application_links,source_kind
+        html='<nav><a href="https://other.zhiye.com/">别的公司</a></nav><article><p>网申地址：</p><a href="https://example.zhiye.com/campus">点击投递</a></article>'
+        rows=application_links(html,'https://career.nankai.edu.cn/a')
+        self.assertEqual(len(rows),1)
+        record={**rows[0],'company':'美的集团股份有限公司','proof_url':'https://career.nankai.edu.cn/a','proof_sha256':'a'*64}
+        self.assertEqual(source_kind('美的集团股份有限公司','https://example.zhiye.com/jobs',[record]),'official_application')
+        self.assertIsNone(source_kind('美的集团股份有限公司','https://other.zhiye.com/jobs',[record]))
+        self.assertIsNone(source_kind('科大讯飞股份有限公司','https://example.zhiye.com/jobs',[record]))
+    def test_shared_platform_is_tenant_bound(self):
+        from source_documents import application_links,source_kind
+        rows=application_links('<article><a href="https://app.mokahr.com/campus_apply/testcorp/123/">网申</a></article>','https://career.nankai.edu.cn/a')
+        record={**rows[0],'company':'美的集团股份有限公司','proof_url':'https://career.nankai.edu.cn/a','proof_sha256':'a'*64}
+        self.assertEqual(source_kind('美的集团股份有限公司','https://app.mokahr.com/campus_apply/testcorp/123/jobs',[record]),'official_application')
+        self.assertIsNone(source_kind('美的集团股份有限公司','https://app.mokahr.com/campus_apply/testcorp/1234/jobs',[record]))
+    def test_article_cohort_is_not_granted_to_unrelated_application_source(self):
+        from source_documents import source_kind
+        record={'company':'美的集团股份有限公司','url':'https://example.zhiye.com/','url_prefix':'https://example.zhiye.com/','proof_url':'https://untrusted.test/article','proof_sha256':'a'*64}
+        self.assertIsNone(source_kind('美的集团股份有限公司','https://example.zhiye.com/jobs',[record]))
+
+class StructuredSchoolArticleTests(unittest.TestCase):
+    def test_anonymous_article_json_decodes_actual_body(self):
+        from source_documents import decode_document
+        from page_evidence import page_text,evaluate
+        import json
+        raw=json.dumps({'code':200,'data':{'zpzt':'华勤技术2027届校招','zpxxEditor':'<p>招聘对象：2027届本科生，请投递简历。</p>','dwjs':'公司简介：华勤技术股份有限公司。'}})
+        title,text=page_text(decode_document(raw,'application/json'))
+        self.assertIn('华勤技术2027届',title)
+        self.assertTrue(evaluate('华勤技术股份有限公司',title,text)['accepted'])
+    def test_article_fetch_uses_observed_public_endpoint(self):
+        from unittest.mock import patch
+        from verify_pages import fetch
+        import io,json
+        class Response(io.BytesIO):
+            def __init__(self,body,url,content_type):
+                super().__init__(body);self.url=url
+                from email.message import Message
+                self.headers=Message();self.headers['Content-Type']=content_type
+            def geturl(self):return self.url
+        url='https://jiuye.swjtu.edu.cn/career/zpxx/view/zpxx/123'
+        shell=b'<script>postAjax("/zpxx/data/zpxx/" + id)</script>'
+        payload=json.dumps({'code':200,'data':{'zpzt':'华勤技术2027届校招','zpxxEditor':'招聘对象2027届本科生，投递简历。'}},ensure_ascii=False).encode()
+        with patch('verify_pages.urllib.request.urlopen',side_effect=[Response(shell,url,'text/html'),Response(payload,url,'application/json')]) as requests:
+            final,document,digest=fetch(url)
+        self.assertEqual(final,url)
+        self.assertEqual(requests.call_args_list[1].args[0].full_url,'https://jiuye.swjtu.edu.cn/career/zpxx/data/zpxx/123')
+        self.assertIn('投递简历',document)
+        import hashlib
+        self.assertEqual(digest,hashlib.sha256(payload).hexdigest())
+
+class MalformedPublicLinkTests(unittest.TestCase):
+    def test_bad_links_do_not_abort_the_whole_scan(self):
+        from source_documents import application_links,source_kind
+        self.assertIsNone(source_kind('美的集团股份有限公司','https://[broken'))
+        self.assertEqual(application_links('<article>网申：https://[broken</article>','https://career.nankai.edu.cn/a'),[])

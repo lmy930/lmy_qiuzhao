@@ -92,7 +92,8 @@ def main():
   publishers={hosts(h) for h,k in positive if hosts(h)}
   strong=any(k>=3 for h,k in positive)
   corroborated=len(publishers)>=2
-  launched=strong
+  body=c.get('page_verification') or {}
+  launched=strong and bool(body.get('sha256')) and match_scope(c['name'],body.get('title','')) is not None
   if positive:
    c["evidence_last_checked"]=TODAY
    c["evidence_sources"]=[{"title":h.get("title",""),"url":h.get("url",""),"publisher":hosts(h),"classification":"trusted" if k>=3 else "discovery"} for h,k in positive[:8]]

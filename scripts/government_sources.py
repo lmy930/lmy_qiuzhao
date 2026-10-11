@@ -87,6 +87,7 @@ def valid(title, name):
  return True
 def main():
  path=DIR/"companies.json";data=json.loads(path.read_text(encoding="utf-8"))
+ leads_path=DIR/"leads.json";leads=json.loads(leads_path.read_text());leadmap={e["name"]:e for e in leads.get("leads",[])}
  report=[];changed=[]
  for source,url in SOURCES:
   mode="direct"
@@ -103,15 +104,16 @@ def main():
    if not found:continue
    matches+=1
    title,href=found[0]
-   if c["status"]=="待核验":
-    c["status"]="已发布公告（网申待核验）"
-    c["discovered_2027"]=True
-    c["announcement_source_url"]=urllib.parse.urljoin(url,href)
-    c["source_scope"]=match_scope(c["name"],title)
-    c["verification_note"]="政府招聘栏目直接检索到2027届招聘条目；未确认首次网申开启日期及当前可投状态。"
-    changed.append(c["name"])
+   entry=leadmap.setdefault(c["name"],{"name":c["name"],"hits":[],"last_found":TODAY})
+   for title,href in found:
+    link=urllib.parse.urljoin(url,href)
+    if not any(h.get("url")==link for h in entry["hits"]):
+     entry["hits"].append({"title":title,"url":link,"published_at":None,"discovered_via":source,"evidence_level":"government_article_discovery"})
+     changed.append(c["name"])
+   entry["last_found"]=TODAY
   report.append({"source":source,"mode":mode,"direct_error":direct_error,"links":len(links),"matched_employers":matches})
- path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
- (DIR/"government_scan_report.json").write_text(json.dumps({"scanned_at":TODAY,"sources":report,"newly_confirmed":changed},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+ leads["leads"]=sorted(leadmap.values(),key=lambda x:x.get("last_found",""),reverse=True)
+ leads_path.write_text(json.dumps(leads,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+ (DIR/"government_scan_report.json").write_text(json.dumps({"scanned_at":TODAY,"sources":report,"new_candidate_employers":sorted(set(changed)),"note":"政府栏目标题只用于发现，必须读取正文后才能确认。"},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
  print(json.dumps(report,ensure_ascii=False))
 if __name__=="__main__":main()

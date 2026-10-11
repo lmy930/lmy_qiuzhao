@@ -6,9 +6,12 @@ const source=fs.readFileSync('index.html','utf8').match(/<script>([\s\S]*?)<\/sc
 const database=JSON.parse(fs.readFileSync('data/companies.json','utf8'));
 const baseline=JSON.parse(fs.readFileSync('data/launch_baseline.json','utf8'));
 const key='qiuzhao-2027-tracker-v1',name='中国长江三峡集团有限公司';
-async function boot(storage=new Map(),{baselineFails=false,simulateNew=false}={}){
+async function boot(storage=new Map(),{baselineFails=false,companiesFail=false,simulateNew=false}={}){
  const db=structuredClone(database),snapshot=structuredClone(baseline);
  db.companies.find(c=>c.name===name).status='已发布公告（网申待核验）';
+ // This interaction fixture has its own initial snapshot; production data may
+ // legitimately contain companies discovered after the real fixed baseline.
+ snapshot.known_launch_names=db.companies.filter(c=>['已开启','已结束','已发布公告（网申待核验）'].includes(c.status)||c.announcement_date).map(c=>c.name);
  if(simulateNew)snapshot.known_launch_names=snapshot.known_launch_names.filter(n=>n!==name);
  const elements=new Map();
  function el(id){if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',disabled:false,dataset:{},listeners:new Map(),addEventListener(type,fn){this.listeners.set(type,fn)},click(){this.clicked=true}});return elements.get(id)}
@@ -17,7 +20,7 @@ async function boot(storage=new Map(),{baselineFails=false,simulateNew=false}={}
   if(String(url).includes('launch_baseline.json')){if(baselineFails)throw Error('unreachable');return {ok:true,json:async()=>snapshot}}
   if(String(url).includes('daily_changes.json'))return {ok:true,json:async()=>({events:[]})};
   if(String(url).includes('page_verification_report.json'))return {ok:true,json:async()=>({scanned_at:new Date().toISOString(),pages_read:0,pages_attempted:1})};
-  if(String(url).includes('companies.json'))return {ok:true,json:async()=>db};
+  if(String(url).includes('companies.json')){if(companiesFail)throw Error('unreachable');return {ok:true,json:async()=>db}};
   throw Error('unexpected resource');
  }};
  vm.runInNewContext(source,ctx);await new Promise(r=>setTimeout(r,10));
@@ -47,6 +50,7 @@ future.click(name,'applied');future=await boot(future.storage,{simulateNew:true}
 future.select('boardRange','baseline');assert.ok(!future.el('applicationList').innerHTML.includes(name));
 const failed=await boot(new Map(),{baselineFails:true});assert.equal(failed.el('boardNew').textContent,'—');assert.match(failed.el('baselineWarning').textContent,/新旧标记暂不可用/);assert.ok(failed.el('visibleCount').textContent>0);
 failed.select('boardRange','new');assert.match(failed.el('applicationList').innerHTML,/无法区分新旧企业/);
+const saved=new Map([[key,JSON.stringify({version:1,applications:{[name]:{state:'applied',marked_at:'2026-10-11T11:00:00Z'}},read_updates:[]})]]);const noData=await boot(saved,{companiesFail:true});assert.equal(noData.el('categoryAll').textContent,'—');assert.match(noData.el('dataNotice').textContent,/未读取成功/);assert.equal(JSON.parse(saved.get(key)).applications[name].state,'applied');
 const corrupted=new Map([[key,'invalid-json']]);const fallback=await boot(corrupted);assert.equal(corrupted.get(key),'invalid-json');assert.match(fallback.el('trackingNote').textContent,/备份记录/);
 const newer={version:1,applications:{[name]:{state:'applied',marked_at:'2026-10-11T11:00:00Z'}},read_updates:[]};
 await app.el('trackerFile').listeners.get('change')({target:{value:'backup.json',files:[{size:300,text:async()=>JSON.stringify(newer)}]}});

@@ -1,0 +1,52 @@
+{
+  "scanned_at": "2026-10-11T19:36:07.775229+08:00",
+  "companies_total": 2,
+  "candidate_pages": 2,
+  "pages_attempted": 2,
+  "pages_read": 2,
+  "accepted_employers": 2,
+  "secondary_candidate_employers": 0,
+  "corroborated_recruitment_employers": 0,
+  "confirmed_total": 2,
+  "recorded_date_total": 0,
+  "verified_date_total": 0,
+  "missing_verified_date_total": 2,
+  "newly_confirmed": [],
+  "new_open_dates": [],
+  "checks": [
+    {
+      "company": "中国保利集团有限公司",
+      "url": "https://jiuye.swjtu.edu.cn/career/zpxx/view/zpxx/249217857878102016",
+      "title": "保利集团2027届校园招聘",
+      "sha256": "2abffbe9de30eab4c10a0391900df771969c4680074f930450c96d5cf717108f",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "source_api": {
+        "url": "https://jiuye.swjtu.edu.cn/career/zpxx/data/zpxx/249217857878102016",
+        "method": "POST",
+        "digest_basis": "public_article_json"
+      },
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "华勤技术股份有限公司",
+      "url": "https://jiuye.swjtu.edu.cn/career/zpxx/view/zpxx/232172520072155136",
+      "title": "华勤技术2027届校招",
+      "sha256": "7251f8c162908d162ab65884aa7cbcce2a616a0a2f3fd7abf74d6562c317f896",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "source_api": {
+        "url": "https://jiuye.swjtu.edu.cn/career/zpxx/data/zpxx/232172520072155136",
+        "method": "POST",
+        "digest_basis": "public_article_json"
+      },
+      "result": "verified_recruitment"
+    }
+  ]
+}
