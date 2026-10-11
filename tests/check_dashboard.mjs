@@ -14,6 +14,7 @@ async function boot(storage=new Map(),instant='2026-10-11T09:00:00Z',historyFail
  class Clock extends Date{constructor(...args){super(...(args.length?args:[instant]))}static now(){return new Date(instant).valueOf()}}
  const ctx={Date:Clock,console,Blob,URL,setInterval(){},atob,localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},document:{getElementById:el,querySelectorAll:()=>[],addEventListener(){},createElement:()=>({click(){}})},fetch:async url=>{
   if(String(url).includes('daily_changes.json')){if(historyFails)throw Error('unreachable');return {ok:true,json:async()=>history}}
+  if(String(url).includes('page_verification_report.json'))return {ok:true,json:async()=>({scanned_at:'2026-10-11T17:00:00+08:00',pages_read:0,pages_attempted:1})};
   if(String(url).includes('companies.json'))return {ok:true,json:async()=>db};
   return {ok:true,json:async()=>({})};
  }};
@@ -22,6 +23,7 @@ async function boot(storage=new Map(),instant='2026-10-11T09:00:00Z',historyFail
 }
 const name='中国长江三峡集团有限公司';
 let app=await boot();
+assert.match(app.el('scanNotice').textContent,/自动更新暂受影响/,'Failed verification must not look like a successful empty update');
 const originalPending=app.el('pendingCount').textContent;
 assert.match(app.el('applicationList').innerHTML,/中国长江三峡集团有限公司/);
 app.click(name,'applied');
