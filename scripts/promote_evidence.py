@@ -23,6 +23,8 @@ EXCLUDE=("2026届校园招聘","2025届校园招聘")
 CORP_DOMAINS=("career.huawei.com","job.byd.com","job.icbc.com.cn","job.10086.cn","zp.czbank.com.cn")
 TRUSTED_GOV=("sasac.gov.cn","gov.cn")
 TRUSTED_UNIV=(".edu.cn",)
+TRUSTED_PUBLISHERS=("国务院国有资产监督管理委员会","国资委","中国农业大学新闻网","南京审计大学","上观新闻")
+LAUNCH_WORDS=("启动","正式开启","全面启动","校园招聘开始","秋季校园招聘","秋招开启","火热进行中")
 RENAME={
 "华为投资控股有限公司":["华为"],
 "中国工商银行股份有限公司":["工商银行","中国工商银行"],
@@ -60,7 +62,13 @@ def check(c,entry):
   if not url.startswith("https://"):continue
   # News RSS is a discovery source: resolve the original publisher only if available.
   # Otherwise require two independent recruitment-index hits before recording launch.
-  if "news.google.com/rss/articles/" in url:continue
+  if "news.google.com/rss/articles/" in url:
+   title=h.get("title","")
+   if "2027" not in title or not any(k in title for k in LAUNCH_WORDS):continue
+   if not any(k in title for k in TRUSTED_PUBLISHERS):continue
+   if not any(n in normalize(title) for n in names(c)):continue
+   good.append({"url":url,"title":title[:160],"source":"可信发布方的招聘资讯摘要（正文未独立验证）","seen":str(DATE)})
+   continue
   if not trust(url):continue
   try:
    body=fetch(url)
@@ -93,7 +101,7 @@ def main():
   if c["status"]=="待核验":
    c["status"]="已发布公告（网申待核验）"
    c["announcement_source_url"]=good[0]["url"]
-   c["verification_note"]="自动核验官网、政府或高校就业页面中的2027招聘信息；报名截止和当前是否可投需另行核对。"
+   c["verification_note"]="发现可信发布方的2027届招聘启动信息（部分为RSS标题验证）；尚未核实精确日期及报名截止。"
    promoted.append(c["name"])
  data["generated_at"]=str(DATE)
  path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
