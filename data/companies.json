@@ -394,15 +394,28 @@
       "groups": [
         "央企"
       ],
-      "status": "待核验",
-      "open_date": null,
+      "status": "已发布公告（网申待核验）",
+      "open_date": "2026-09-14",
       "deadline": null,
       "apply_url": null,
       "source_url": null,
       "last_checked": null,
       "rank": null,
       "last_searched_at": "2026-10-11",
-      "discovery_count": 0
+      "discovery_count": 0,
+      "discovered_2027": true,
+      "open_date_basis": "招聘信息页面明确标示的报名开始日期",
+      "evidence_last_checked": "2026-10-11",
+      "announcement_source_url": "https://www.fenbi.com/page/exam-information-detail/469068866410496",
+      "verification_note": "国家电投27届校园招聘，报名9月14日起；报名开始不等于所有子公司统一日期。",
+      "evidence_sources": [
+        {
+          "title": "国家电投27届校园招聘，报名9月14日起",
+          "url": "https://www.fenbi.com/page/exam-information-detail/469068866410496",
+          "classification": "published_2027",
+          "scope": "group"
+        }
+      ]
     },
     {
       "name": "中国长江三峡集团有限公司",
@@ -1066,15 +1079,28 @@
       "groups": [
         "央企"
       ],
-      "status": "待核验",
-      "open_date": null,
+      "status": "已发布公告（网申待核验）",
+      "open_date": "2026-10-04",
       "deadline": null,
       "apply_url": null,
       "source_url": null,
       "last_checked": null,
       "rank": null,
       "last_searched_at": "2026-10-11",
-      "discovery_count": 0
+      "discovery_count": 0,
+      "discovered_2027": true,
+      "open_date_basis": "招聘信息页面明确标示的报名开始日期",
+      "evidence_last_checked": "2026-10-11",
+      "announcement_source_url": "https://fenbi.com/page/exam-information-detail/469530924570624",
+      "verification_note": "中国中煤2027届秋季校园招聘，报名10月4日至11月5日；报名开始不等于所有子公司统一日期。",
+      "evidence_sources": [
+        {
+          "title": "中国中煤2027届秋季校园招聘，报名10月4日至11月5日",
+          "url": "https://fenbi.com/page/exam-information-detail/469530924570624",
+          "classification": "published_2027",
+          "scope": "group"
+        }
+      ]
     },
     {
       "name": "中国煤炭科工集团有限公司",
@@ -1288,7 +1314,7 @@
         "央企"
       ],
       "status": "已发布公告（网申待核验）",
-      "open_date": null,
+      "open_date": "2026-09-10",
       "deadline": null,
       "apply_url": null,
       "source_url": null,
@@ -1297,18 +1323,25 @@
       "last_searched_at": "2026-10-11",
       "discovery_count": 0,
       "discovered_2027": true,
-      "announcement_source_url": "https://crrc.hotjob.cn/SU64d47c466202cc36e27a52d4/pb/account.html",
+      "announcement_source_url": "https://hera-webapp.fenbi.com/api/website/article/detail?apcid=0&app=web&av=100&client_context_id=119a0958c95a02c722e6496bbdc62d80&deviceType=3&hav=100&id=468984686992384&kav=100",
       "evidence_last_checked": "2026-10-11",
       "source_scope": "集团",
-      "verification_note": "已查证中国中车集团2027全球招聘公告；范围：集团。已启动不等于当前仍在报名。",
+      "verification_note": "中国中车2027全球招聘，报名9月10日起；报名开始不等于所有子公司统一日期。",
       "evidence_sources": [
         {
           "title": "中国中车集团2027全球招聘公告",
           "url": "https://crrc.hotjob.cn/SU64d47c466202cc36e27a52d4/pb/account.html",
           "classification": "published_2027",
           "scope": "集团"
+        },
+        {
+          "title": "中国中车2027全球招聘，报名9月10日起",
+          "url": "https://hera-webapp.fenbi.com/api/website/article/detail?apcid=0&app=web&av=100&client_context_id=119a0958c95a02c722e6496bbdc62d80&deviceType=3&hav=100&id=468984686992384&kav=100",
+          "classification": "published_2027",
+          "scope": "group"
         }
-      ]
+      ],
+      "open_date_basis": "招聘信息页面明确标示的报名开始日期"
     },
     {
       "name": "中国长安汽车集团有限公司",
