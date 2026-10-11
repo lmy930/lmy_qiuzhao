@@ -68,9 +68,30 @@ def feed(name):
         except (ValueError,TypeError): pub=None
         hits.append({"title":title[:160],"url":link,"snippet":description[:280],"published_at":pub})
     return hits[:5]
+def google_news(name):
+    short=search_name(name)
+    query=f'"{short}" "2027" "校园招聘"'
+    url="https://news.google.com/rss/search?q="+urllib.parse.quote(query)+"&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
+    req=urllib.request.Request(url,headers={"User-Agent":UA})
+    with urllib.request.urlopen(req,timeout=11) as response:
+        root=ET.fromstring(response.read(350000))
+    hits=[]
+    for item in root.findall(".//item")[:12]:
+        title=(item.findtext("title") or "").strip()
+        link=(item.findtext("link") or "").strip()
+        body=normalize(title+" "+(item.findtext("description") or ""))
+        if "2027" in body and any(x in body for x in RECRUIT) and normalize(short) in body and link.startswith("https://"):
+            hits.append({"title":title[:160],"url":link,"snippet":"","published_at":None})
+    return hits[:5]
+
 def worker(c):
-    try:return c["name"],feed(c["name"]),None
-    except Exception as exc:return c["name"],[],str(exc)[:150]
+    hits=[]; failures=[]; successes=0
+    for provider in (feed,google_news):
+        try:
+            hits+=provider(c["name"]);successes+=1
+        except Exception as exc:failures.append(str(exc)[:90])
+    unique=list({hit["url"]:hit for hit in hits}.values())[:8]
+    return c["name"],unique,None if successes else "; ".join(failures)[:160]
 def main():
     payload=json.loads(DATA.read_text(encoding="utf-8"))
     companies=payload["companies"]
