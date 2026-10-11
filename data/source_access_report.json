@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-11T20:42:47.216422+08:00",
+  "checked_at": "2026-10-11T20:46:50.090865+08:00",
   "platform_checks": [
     {
       "site": "https://www.givemeoc.com/",
@@ -33,9 +33,8 @@
     },
     {
       "site": "https://www.offerstar.cn/recruitment",
-      "readable": true,
-      "article_links": 38,
-      "cohort_links": 2
+      "readable": false,
+      "error": "<urlopen error timed out>"
     },
     {
       "site": "https://campus.sma-wiki.cn/",
@@ -51,74 +50,86 @@
     },
     {
       "site": "https://www2.iguopin.com/",
-      "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "readable": true,
+      "article_links": 0,
+      "cohort_links": 0
     },
     {
       "site": "https://www.zhaopin.com/",
       "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "error": "<urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "site": "https://www.51job.com/",
-      "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "readable": true,
+      "article_links": 352,
+      "cohort_links": 10
     },
     {
       "site": "https://www.yingjiesheng.com/",
-      "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "readable": true,
+      "article_links": 127,
+      "cohort_links": 14
     },
     {
       "site": "https://www.yinhangzhaopin.com/yhks/",
-      "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "readable": true,
+      "article_links": 780,
+      "cohort_links": 0
     },
     {
       "site": "https://www.yhks.cn/",
-      "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "readable": true,
+      "article_links": 1128,
+      "cohort_links": 7
     },
     {
       "site": "https://www.liepin.com/",
-      "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "readable": true,
+      "article_links": 1373,
+      "cohort_links": 0
     },
     {
       "site": "https://www.zhipin.com/",
-      "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "readable": true,
+      "article_links": 1488,
+      "cohort_links": 0
     },
     {
       "site": "https://www.ncss.cn/",
-      "readable": false,
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "readable": true,
+      "article_links": 57,
+      "cohort_links": 0
     }
   ],
   "added_university_checks": [
     {
       "name": "西南财经大学",
       "url": "https://career.swufe.edu.cn/",
-      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
       "links_read": 0
     },
     {
       "name": "中国农业大学",
       "url": "https://job.cau.edu.cn/",
-      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
       "links_read": 0
     },
     {
       "name": "中国石油大学",
       "url": "https://career.cup.edu.cn/",
-      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
-      "links_read": 0
+      "final_url": "https://career.cup.edu.cn/",
+      "sha256": "16d0b5af1a73e484ad3a92168af22ee081fa69660a3198d897d460388e311091",
+      "bytes": 72826,
+      "links_read": 198
     },
     {
       "name": "厦门大学嘉庚学院",
       "url": "https://career.xujc.com/2026/0928/c3959a173096/page.htm",
-      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
-      "links_read": 0
+      "final_url": "https://career.xujc.com/2026/0928/c3959a173096/page.htm",
+      "sha256": "0872e7b3cb62d178e56ebed67c43a3a5a55d4f62b09664731d75c710694e5450",
+      "bytes": 74817,
+      "links_read": 48
     }
   ],
   "note": "仅验证公开入口和线索可读性；成功读取首页不代表已覆盖该平台，失败不代表企业未开招。"
