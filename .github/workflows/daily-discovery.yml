@@ -71,3 +71,10 @@ jobs:
             done
             exit 1
           fi
+  publish:
+    needs: scan
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/publish-site.yml

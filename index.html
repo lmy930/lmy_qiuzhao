@@ -5,6 +5,7 @@
 </style></head><body><main class="wrap"><header><div><h1>2027秋招开启日历</h1><p>先看每天的变化，再处理还没投递的企业</p></div><div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap"><span class="muted" id="updated"></span><button id="refreshNow" type="button">重新加载数据</button></div></header>
 <section class="panel dashboard" aria-labelledby="updatesTitle">
 <div class="dashboard-head"><h2 id="updatesTitle">每日投递看板</h2><span class="muted" id="boardDate"></span></div>
+<p class="muted">每天北京时间 08:40、20:40 自动开始检查，核验与发布完成后更新。无需手动扫描。</p>
 <p id="scanNotice" class="notice" role="status"></p>
 <div class="daily-stats"><span><b id="todayOpen">—</b>今天确切开启</span><span><b id="todayConfirmed">—</b>今天新确认</span><span><b id="unreadCount">—</b>未读更新</span><span><b id="pendingCount">—</b>待投递企业</span></div>
 <div class="dashboard-head"><label>查看更新 <select id="updateWindow"><option value="unread">未读更新</option><option value="today">今天</option><option value="week">近7天</option></select></label><button id="readUpdates" class="read-button">将这些更新标为已读</button></div>
