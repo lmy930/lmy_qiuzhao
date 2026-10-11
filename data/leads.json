@@ -1,44 +1,22 @@
 {
-  "scanned_at": "2026-10-11T09:25:50.645979+00:00",
+  "scanned_at": "2026-10-11T10:42:09.582544+00:00",
   "companies_total": 657,
   "registered_sources": 41,
   "search_methods": [
-    "Bing RSS",
+    "rotating legal/brand alias Bing RSS; date backfill for known launches",
     "Google News RSS",
     "rotating domain-targeted Bing RSS"
   ],
   "searches_attempted": 657,
-  "searches_succeeded": 651,
-  "companies_with_new_hits": 36,
-  "companies_with_any_leads": 83,
+  "searches_succeeded": 657,
+  "companies_with_new_hits": 45,
+  "companies_with_any_leads": 84,
   "note": "搜索成功指至少一个搜索服务返回结果，未必找到招聘公告；未发现不代表未开启。",
-  "searches_failed": 6,
-  "errors": [
-    {
-      "name": "立中四通轻合金集团股份有限公司",
-      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "金鹏控股集团有限公司",
-      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "北京数据街控股集团有限公司",
-      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "南京新华海科技产业集团有限公司",
-      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "河南心连心化学工业集团股份有限公司",
-      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "贵阳银行股份有限公司",
-      "error": "HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable; HTTP Error 503: Service Unavailable"
-    }
-  ],
+  "searches_failed": 0,
+  "provider_requests_attempted": 1971,
+  "provider_requests_failed": 0,
+  "partial_provider_errors": [],
+  "errors": [],
   "disclaimer": "RSS搜索发现属于未核验线索，不能据此宣称开放网申。来源可能包含转发、旧消息、伪相关。请以官方招聘公告为准。",
   "leads": [
     {
@@ -143,6 +121,20 @@
           "published_at": null,
           "evidence_level": "university_listing",
           "discovered_via": "南开大学就业信息网"
+        },
+        {
+          "title": "中国大唐集团有限公司2027年校园招聘公告（第一批）",
+          "url": "https://www.dteg.com.cn/dteg/xwzx/jtxw/2026/9/I1552059660066881536.html",
+          "snippet": "自2026年10月起，中国大唐将陆续开展线下校园宣讲，介绍集团发展布局、人才培养政策与招录岗位详情。 行程包括：清华大学、北京大学、中国人民大学、中央财经大学、上海交通大学、浙江大学、哈尔滨工业大学、西安交通大学、华北电力大学、河海大学等。",
+          "published_at": null,
+          "discovered_via": "BOSS直聘"
+        },
+        {
+          "title": "大唐集团2027年校园招聘官网：https://zhaopin.china-cdt.com - 高顿央国企招聘",
+          "url": "https://m.gwy.com/gqzp/409961.html",
+          "snippet": "中国大唐集团是中央直管特大型能源央企，主营火电、水电、风光新能源、储能、煤炭化工、数字科技等业务，六险二金、完善管培晋升体系，是电气、工科、经管类应届生重点求职赛道。",
+          "published_at": null,
+          "discovered_via": "BOSS直聘"
         }
       ],
       "last_found": "2026-10-11"
@@ -855,7 +847,7 @@
           "url": "https://m.gwy.com/gqzp/409531.html",
           "snippet": "计划投递中核集团2027校园招聘的应届毕业生，需要准确区分官方报名网址与各类辅助访问渠道。 作为承担核工业发展的央企，集团每年秋招、春招全部简历投递、宣讲通知、考核安排均在自有官方平台完成，第三方平台仅作信息展示，无法直接提交报名。",
           "published_at": null,
-          "discovered_via": "应届生求职网"
+          "discovered_via": "该企业官网优先"
         }
       ],
       "last_found": "2026-10-11"
@@ -922,6 +914,27 @@
           "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96SjhCOHlMYkEtYmpEbW1xSzVIMlJDOWpjYXRxd0VkSmRJSE9qQzQ4MUotUloxSEVvb3pZWG8zZEZDR001VWpvVWU4X2Z4TzNMSDBYQ2VKMFh2SzZHVGc?oc=5",
           "snippet": "",
           "published_at": null
+        },
+        {
+          "title": "国家电力投资集团2027届校园招聘",
+          "url": "https://spic2027.iguopin.com/job1",
+          "snippet": "国家电力投资集团2027届校园招聘 科技培优（研发类）-先进核能技术研究所五级工程师（核聚变模拟仿真研究方向） 国家电投集团科学技术研究院有限公司 申请职位",
+          "published_at": null,
+          "discovered_via": "该企业官网优先"
+        },
+        {
+          "title": "国家电投2027届秋招入口:https://spic2027.iguopin.com",
+          "url": "https://www.eoffcn.com/kszx/detail/2206495.html",
+          "snippet": "国家电投2027届校园招聘专区投递简历：https://spic2027.iguopin.com。 国家电力投资有限公司 (简称国家电投)是中央直接管理的特大型国有重要骨干企业，肩负国家能源安全的重要使命。 招聘对象国内外高校2027届全日制应届毕业生 (含两年择业期内未落实工作...",
+          "published_at": null,
+          "discovered_via": "该企业官网优先"
+        },
+        {
+          "title": "2027国家电投集团秋季校园招聘公告",
+          "url": "https://www.jrzp.com/shiyezhaopin/7A31D70CBD6B2216.shtml",
+          "snippet": "关于我们 国家电力投资集团有限公司 (简称国家电投集团)是中央直接管理的特大型国有重要骨干企业，肩负保障国家能源安全的重要使命。 总装机2.95亿千瓦，资产规模2万亿元所属二级单位68家，员工13万人，业务覆盖47个国家和地区。",
+          "published_at": null,
+          "discovered_via": "该企业官网优先"
         }
       ],
       "last_found": "2026-10-11"
@@ -1043,7 +1056,7 @@
           "url": "https://crrc.hotjob.cn/SU64d47c466202cc36e27a52d4/pb/index.html",
           "snippet": "中国中车集团有限公司2027全球招聘公告 中车数智科技（雄安）有限公司2027校园招聘公告 中车信息技术有限公司2027校园招聘公告 中车永济电机有限公司2027校园招聘公告 台州唐车轨道交通装备有限公司招聘启事",
           "published_at": null,
-          "discovered_via": "牛客27届秋招日程"
+          "discovered_via": "该企业官网优先"
         }
       ],
       "last_found": "2026-10-11"
@@ -1113,6 +1126,20 @@
           "published_at": null,
           "evidence_level": "university_listing",
           "discovered_via": "南开大学就业信息网"
+        },
+        {
+          "title": "中国广核集团2027届秋季校园招聘公告 - career.muc.edu.cn",
+          "url": "https://career.muc.edu.cn/front/zwxx.jspa?xqzwId=38210&zpxxId=32058",
+          "snippet": "中广核从1979年筹建广东大亚湾核电站以来，积极落实国家战略要求，逐步发展成为以核 能为主要特色的世界一流清洁能源企业，并持续优化构建“6+1”产业体系，涵盖核能、核燃料、新能源、核技术应用、数字科技、环保科技和产业服务，拥有2个内地上市平台 ...",
+          "published_at": null,
+          "discovered_via": "该企业官网优先"
+        },
+        {
+          "title": "中广核校园招聘官网 - sc.hotjob.cn",
+          "url": "https://sc.hotjob.cn/wt/CGN/mobweb/v8/position/cgnOrgList?brandCode=1&projectId=302701",
+          "snippet": "中国广核新能源控股有限公司2027届校园招聘 中国广核新能源控股有限公司 招聘岗位：运维检修岗/电力营销岗/安全管理岗/海工管理岗/水利工程/抽水蓄能/制氢/技术支持岗/产品运营岗/其他职能岗 工作地点：全国各区域",
+          "published_at": null,
+          "discovered_via": "该企业官网优先"
         }
       ],
       "last_found": "2026-10-11"
@@ -1176,7 +1203,7 @@
           "url": "https://www.ncss.cn/student/jobs/2C833EUP9bZsJoHnfHSsEP/detail.html",
           "snippet": "职位详情 中国农业发展银行2027年度校园招聘公告 中国农业发展银行是全球最大、全国唯一、直属国务院领导的农业政策性银行，主要职责是以国家信用为基础筹集资金，支持“三农”事业发展，全力服务国家粮食安全、乡村振兴等重点领域。",
           "published_at": null,
-          "discovered_via": "Offer多多秋招汇总"
+          "discovered_via": "该企业官网优先"
         },
         {
           "title": "中国农业发展银行2027年度校园招聘公告 - 南开大学就业网",
@@ -1556,6 +1583,13 @@
           "published_at": null,
           "evidence_level": "university_listing",
           "discovered_via": "南开大学就业信息网"
+        },
+        {
+          "title": "中国华能2027校招全攻略｜三大招聘计划、网申规则、笔面试备考完整指南",
+          "url": "https://zhuanlan.zhihu.com/p/2083870232607835150",
+          "snippet": "中国华能2027校招岗位层级丰富、覆盖专业广、择业期考生可报，是能源央企秋招性价比极高的上岸机会。 想要顺利通关，核心在于：精准匹配岗位计划、合理利用6个投递名额、规范网申提升初审通过率、提前刷题适配机考节奏、系统化打磨面试话术。",
+          "published_at": null,
+          "discovered_via": "中国电建招聘"
         }
       ],
       "last_found": "2026-10-11"
@@ -1869,44 +1903,57 @@
         }
       ],
       "last_found": "2026-10-11"
+    },
+    {
+      "name": "华润（集团）有限公司",
+      "hits": [
+        {
+          "title": "华润2027校园招聘官网：https://runjob.crc.com.cn/ - 高顿央国企招聘",
+          "url": "https://www.gwy.com/gqzp/410238.html",
+          "snippet": "华润集团为国务院直管央企，业务覆盖大消费、综合能源、城市运营、大健康、产业金融、科技新兴六大板块，每年分秋招、春招两批开展全国校园招聘。 华润2027校园招聘官网便是https://runjob.crc.com.cn/，唯一的报名入口，关于报名条件已经备好，一起看看吧。",
+          "published_at": null,
+          "discovered_via": "Offer多多秋招汇总"
+        }
+      ],
+      "last_found": "2026-10-11"
     }
   ],
   "aggregate_sources_scanned": 8,
   "aggregate_report": [
     {
       "site": "https://www.givemeoc.com/",
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "matched": 0
     },
     {
       "site": "https://www.gankinterview.cn/campus",
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "matched": 0
     },
     {
       "site": "https://www.mianlingai.com/jobs/",
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "matched": 0
     },
     {
       "site": "https://qiuzhaowang.com/latest",
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "matched": 0
     },
     {
       "site": "https://offerqianxian.com/",
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "matched": 0
     },
     {
       "site": "https://www.offerstar.cn/recruitment",
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "matched": 1
     },
     {
       "site": "https://campus.sma-wiki.cn/",
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "matched": 0
     },
     {
       "site": "https://mnowpick.nowcoder.com/m/school/schedule",
-      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      "matched": 2
     }
   ],
   "university_scan_at": "2026-10-11",
-  "university_pages_ok": 0,
+  "university_pages_ok": 48,
   "university_new_hits": 0
 }

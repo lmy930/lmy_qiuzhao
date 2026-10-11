@@ -1,11 +1,11 @@
 {
-  "scanned_at": "2026-10-11T18:39:12.056582+08:00",
+  "scanned_at": "2026-10-11T18:44:01.793286+08:00",
   "companies_total": 657,
-  "candidate_pages": 141,
-  "pages_attempted": 120,
-  "pages_read": 117,
-  "accepted_employers": 53,
-  "secondary_candidate_employers": 4,
+  "candidate_pages": 144,
+  "pages_attempted": 144,
+  "pages_read": 112,
+  "accepted_employers": 48,
+  "secondary_candidate_employers": 6,
   "corroborated_recruitment_employers": 0,
   "confirmed_total": 101,
   "recorded_date_total": 17,
@@ -15,18 +15,22 @@
   "new_open_dates": [],
   "checks": [
     {
+      "company": "中国东方电气集团有限公司",
       "url": "https://m.gwy.com/gqzp/412945.html",
-      "companies": [
-        "中国东方电气集团有限公司"
-      ],
-      "result": "fetch_failed",
-      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      "title": "中国东方电气集团2027届校园招聘公告已发：共计900+offer名额！ - 高顿央国企招聘\n中国东方电气集团2027届校园招聘公告已发：共计900+offer名额！",
+      "sha256": "1e4f8aba647cb4abf87dc37dcb82b467f07b33dae760c2efb0ddad623b852741",
+      "source_kind": "recruitment",
+      "accepted": false,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "secondary_candidate"
     },
     {
       "company": "中国农业发展银行",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119483.html",
       "title": "中国农业发展银行2027年度校园招聘公告-中国农业发展银行",
-      "sha256": "59880b8488dace9e1a56ad48c883e5b46a2ebcd6ca0aa4d59b2f57adebee580d",
+      "sha256": "4c7910403dfe2132af980452c6322f4373eda0660d05faeb8e64e4d80e7238ff",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -45,7 +49,7 @@
       "company": "中国农业发展集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119483.html",
       "title": "中国农业发展银行2027年度校园招聘公告-中国农业发展银行",
-      "sha256": "59880b8488dace9e1a56ad48c883e5b46a2ebcd6ca0aa4d59b2f57adebee580d",
+      "sha256": "4c7910403dfe2132af980452c6322f4373eda0660d05faeb8e64e4d80e7238ff",
       "source_kind": "university",
       "accepted": false,
       "reason": "employer_ambiguous_or_mismatch"
@@ -54,7 +58,7 @@
       "company": "中国航空工业集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118821.html",
       "title": "中国航空工业发展研究中心2027届校园招聘-中国航空工业发展研究中心",
-      "sha256": "e20bc7ecfeeac1364304388c82206ba3de61afc693a6878fc571e35bb29e9d45",
+      "sha256": "b8f2e298ee4d8b64c25705a36d8e60745f7e0dab2afd72c59797cd3d0ed30639",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -66,25 +70,42 @@
       "company": "中国航空集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118821.html",
       "title": "中国航空工业发展研究中心2027届校园招聘-中国航空工业发展研究中心",
-      "sha256": "e20bc7ecfeeac1364304388c82206ba3de61afc693a6878fc571e35bb29e9d45",
+      "sha256": "b8f2e298ee4d8b64c25705a36d8e60745f7e0dab2afd72c59797cd3d0ed30639",
       "source_kind": "university",
       "accepted": false,
       "reason": "employer_ambiguous_or_mismatch"
     },
     {
-      "url": "https://mnowpick.nowcoder.com/m/school/schedule",
+      "url": "https://www.gwy.com/gqzp/410238.html",
       "companies": [
-        "厦门银行股份有限公司",
-        "招商银行股份有限公司"
+        "华润（集团）有限公司"
       ],
       "result": "fetch_failed",
-      "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "company": "厦门银行股份有限公司",
+      "url": "https://www.nowcoder.com/jobs/school/schedule",
+      "title": "牛客网校招日程_校园招聘全职|实习_应届生招聘信息汇总_牛客网",
+      "sha256": "228bf7e1df70a937b2b78059fbb6ab7004a7730cb287ededbd1f8ea1960c29eb",
+      "source_kind": "recruitment",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "company": "招商银行股份有限公司",
+      "url": "https://www.nowcoder.com/jobs/school/schedule",
+      "title": "牛客网校招日程_校园招聘全职|实习_应届生招聘信息汇总_牛客网",
+      "sha256": "228bf7e1df70a937b2b78059fbb6ab7004a7730cb287ededbd1f8ea1960c29eb",
+      "source_kind": "recruitment",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
     },
     {
       "company": "OPPO (重庆)智能科技有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/index/sel_cate/3/p/37.html",
       "title": "招聘信息|南开大学学生就业指导中心",
-      "sha256": "fa7049712726d9895a86b8ce05e341b4a084d7b97ecb43c78a1b80b5f3deb4a7",
+      "sha256": "4f9bfeff24ee4e1d1b689768eb715b519d0d9a75cb8343591957d5497a671f1e",
       "source_kind": "university",
       "accepted": false,
       "reason": "employer_ambiguous_or_mismatch"
@@ -93,7 +114,7 @@
       "company": "广东小鹏汽车科技集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/index/sel_cate/3/p/37.html",
       "title": "招聘信息|南开大学学生就业指导中心",
-      "sha256": "fa7049712726d9895a86b8ce05e341b4a084d7b97ecb43c78a1b80b5f3deb4a7",
+      "sha256": "4f9bfeff24ee4e1d1b689768eb715b519d0d9a75cb8343591957d5497a671f1e",
       "source_kind": "university",
       "accepted": false,
       "reason": "employer_ambiguous_or_mismatch"
@@ -102,7 +123,7 @@
       "company": "上海浦东发展银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119170.html",
       "title": "浦发银行长沙分行2027年度校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "e516c4b2ac4cafb653863e9fa7ffe676a49979a5c1bba889e834bdd9184a271d",
+      "sha256": "2468262c6fb9fb7316b5f59d3cef7079287ca22277dd77308d63821e8c2197e8",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -111,28 +132,19 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "上海浦东发展银行股份有限公司",
       "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/",
-      "title": "国企招聘_上海市国有资产监督管理委员会\n国企招聘",
-      "sha256": "16feb463cc26b7ec7e67546ef8e411bb7609159a63572d5d33eb1a0d91749f3a",
-      "source_kind": "government",
-      "accepted": false,
-      "reason": "employer_ambiguous_or_mismatch"
-    },
-    {
-      "company": "上海银行股份有限公司",
-      "url": "https://www.gzw.sh.gov.cn/shgzw_xxgk_cqzp/",
-      "title": "国企招聘_上海市国有资产监督管理委员会\n国企招聘",
-      "sha256": "16feb463cc26b7ec7e67546ef8e411bb7609159a63572d5d33eb1a0d91749f3a",
-      "source_kind": "government",
-      "accepted": false,
-      "reason": "employer_ambiguous_or_mismatch"
+      "companies": [
+        "上海浦东发展银行股份有限公司",
+        "上海银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "company": "上海银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119528.html",
       "title": "上海银行2027届校园招聘公告-上海银行股份有限公司",
-      "sha256": "6c59f3ba3bd17d224450839ec08d5832c90aa86352baeec9c944d1f9ac60f098",
+      "sha256": "e3253fadefdc5d3e2a8ac1b4a3805ba366a90c725dd330a0a8122ff82c346cda",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -141,22 +153,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "东莞银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119315.html",
-      "title": "东莞银行2027届秋季校园招聘简章-东莞银行股份有限公司",
-      "sha256": "e256ca2e755926e4e4fb538e094b7b4b6db91a106c5994fa6b7d9d3a37a2f3e3",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "employer",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "东莞银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "东风汽车集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118819.html",
       "title": "东风汽车集团有限公司2027届秋季全球校园招聘-东风汽车集团有限公司",
-      "sha256": "3961aa1436df64e6004b2604221d38c5a22eb8296f3ec95c07d7e37bcd363d9f",
+      "sha256": "835b0dbfb6b78b80b226c348f5a9738250d568fca68fecc3d4bfb65724a795b7",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -180,7 +188,7 @@
       "company": "中信银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119004.html",
       "title": "中信银行大连分行2027年秋季校园招聘公告-南开大学学生就业指导中心代发",
-      "sha256": "2cb48410eac7d19ef71c94f7490771c6f6a0d37e0b7fa2509bacf9562cefff21",
+      "sha256": "fabf647e18fa06e52f7fa916d5411062e7837615bb7af1fccb2fcc3edb7e3f4a",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -231,13 +239,13 @@
         "中国铝业集团有限公司"
       ],
       "result": "fetch_failed",
-      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
     },
     {
       "company": "中国中煤能源集团有限公司",
       "url": "https://fenbi.com/page/exam-information-detail/469530924570624",
       "title": "中国中煤2027届秋季校园招聘正式启幕-国企-2026-国央企正式-国家级机构-中国中煤-粉笔资讯中国中煤2027届秋季校园招聘正式启幕\n中国中煤2027届秋季校园招聘正式启幕公告正文中国中煤2027届秋季校园招聘正式启幕招聘2020人",
-      "sha256": "c49ea316dcadc0df2706fb14e60c69f9f8c83c09cebc6ad79bcb0fb5622f6537",
+      "sha256": "831659ce32f6c9359d67e16ccce9c11f41ee7777dfd8b9d55ee8ae5d52a9b568",
       "source_kind": "recruitment",
       "accepted": false,
       "reason": "employer_ambiguous_or_mismatch"
@@ -252,22 +260,18 @@
       "reason": "not_recruitment"
     },
     {
-      "company": "中国光大银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119641.html",
-      "title": "中国光大银行北京分行2027年  秋季校园招聘启事-中国光大银行股份有限公司北京分行",
-      "sha256": "115a67b01fe6b14e0f13a9c65083b1d971d6568bdafea7f665a9ab4bbbe65119",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国光大银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "中国农业银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119364.html",
       "title": "中国农业银行总行2027年度校园招聘-南开大学学生就业指导中心代发\n中国农业银行总行2027年度校园招聘",
-      "sha256": "12c5a22cff737c5344ed65f31a540005b3e7133a8d45c478adc02fcff6a2888e",
+      "sha256": "c336a365e982138c998568432584259279ea8f316d5122978a8e9182fad214bd",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -279,7 +283,7 @@
       "company": "中国华电集团有限公司",
       "url": "https://www.chd.com.cn/site/2/2026-09-14/b7dffff921ca499c90f84509cd272310.html",
       "title": "中国华电集团有限公司-招聘信息",
-      "sha256": "4fba19871d0f7f1a01ace94b7f1f00d97ee8ed7ab8269f863276d6166a340a13",
+      "sha256": "7122855b1f5ac45ef2e141d9d11a3716efc18a8044723b37c89f29065288177d",
       "source_kind": "official",
       "accepted": false,
       "reason": "headline_cohort_mismatch"
@@ -288,7 +292,7 @@
       "company": "中国华电集团有限公司",
       "url": "https://m.chd.com.cn/site/2mobile/2026-09-14/bfb1ebce929344738977d8978213a933.html",
       "title": "中国华电2027年度校园招聘公告",
-      "sha256": "3fe6100219105d043594fd076a530f8f1a85723862d7741586b1cd5e1f057350",
+      "sha256": "24bc1cb6306c6aa9fd6d4e0e5c0cac0b108ab0312acf8cf2c07e7e30ecdb8a27",
       "source_kind": "official",
       "accepted": true,
       "scope": "employer",
@@ -303,7 +307,7 @@
       "company": "中国华电集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119351.html",
       "title": "中国华电2027年度校园招聘公告-中国华电集团有限公司天津分公司",
-      "sha256": "d58fd64371b98ca4b847c9dd72193281af20a6c35bffe0dc457cfa18124bc64c",
+      "sha256": "3907bf71c1bd99bf7eac306b7e5f7a05f0f5effcf3e3507952f0e0509f5bcec3",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -315,7 +319,7 @@
       "company": "中国华能集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119527.html",
       "title": "中国华能集团有限公司 2027年校园招聘公告-中国华能集团有限公司",
-      "sha256": "0c989dad97abaf2251ba176fc3704f9c9b1aee08fff9b0adfe2c54a6dcb9e0ac",
+      "sha256": "8980a65759f37b564fd06cb9d20e856a92e0099b6cc2555362c096223001a5cd",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -327,7 +331,7 @@
       "company": "中国国新控股有限责任公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119561.html",
       "title": "中国国新控股有限责任公司2027届校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "99a95de47a5331f50999cc92d0f1e47c26504bd79ca0659f937698423ab54f96",
+      "sha256": "58eea31d8656889e9fa9dd05e236208e3fcdad3daa7fb036f845dcc70b8453f3",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -339,7 +343,7 @@
       "company": "中国大唐集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119636.html",
       "title": "中国大唐集团数字科技有限公司2027年高校毕业生招聘公告-中国大唐集团数字科技有限公司",
-      "sha256": "6b28a657e8952d307b81504f818d7d99a7e2c22b92c2a0324fe2b46a714b275b",
+      "sha256": "3ecbd1b0e2fd51e9f985bcb51ac49072d3815644d62a151bf77d5023674314c9",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -354,7 +358,7 @@
       "company": "中国大唐集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119255.html",
       "title": "中国大唐2027年校园招聘正式启动-南开大学学生就业指导中心代发",
-      "sha256": "12769121a9b0b8f8023b4320aedf86b4c2f881d89b0de9644f567c28deb898cd",
+      "sha256": "c5c972aee652287d643927b129dcfe67bd63294db7f4c7c9880c3a4eae3e0dfc",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -363,10 +367,22 @@
       "result": "verified_recruitment"
     },
     {
+      "company": "中国大唐集团有限公司",
+      "url": "https://m.gwy.com/gqzp/409961.html",
+      "title": "大唐集团2027年校园招聘官网：https://zhaopin.china-cdt.com - 高顿央国企招聘\n大唐集团2027年校园招聘官网：https://zhaopin.china-cdt.com",
+      "sha256": "7178d87bc299c30728b15d871403adf5a06eda8ab8b0b812e055c87caaff9e90",
+      "source_kind": "recruitment",
+      "accepted": false,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "secondary_candidate"
+    },
+    {
       "company": "中国工商银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118943.html",
       "title": "中国工商银行四川省分行2027年度校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "ff3ff9b96827d60ef3f8649a8482be71ce6b9a5e40f6970c48c7c5b2b204cd64",
+      "sha256": "bbde0190798a0c6e8d4c9b9746a717d0aacacfe50ecb7f97c836427284a8d08a",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -375,16 +391,12 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "中国广核集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119442.html",
-      "title": "中国广核新能源控股有限公司2027届秋季校园招聘-中广核（北京）新能源科技有限公司",
-      "sha256": "7003f933fc078585ddab7f33d673aaceca47db6d9f030c6dc1183864079c0c81",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "employer",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国广核集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "中国广核集团有限公司",
@@ -399,34 +411,26 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "中国建筑集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119677.html",
-      "title": "中建八局南方公司2027届校园招聘正式启动-南开大学学生就业指导中心代发",
-      "sha256": "526450eec3c93f3c170e3eec3871d99f94f60bdbe8fb9eb4331c5620de8e72df",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国建筑集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
-      "company": "中国建筑集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119196.html",
-      "title": "中建八局城市发展有限公司2027届校园招聘-山东中建城市发展有限公司",
-      "sha256": "aaf066760addae627c7a560656b4fc19a47779ac5fcc20b60a1459edbe1b2d56",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国建筑集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "中国建筑集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118803.html",
       "title": "中建八局土木公司2027届校园招聘-中国建筑土木建设有限公司",
-      "sha256": "e955837f231ed041e47d551ca961962df21b2276a455aaf588645473d8172416",
+      "sha256": "18f7b23bc891532cf9783d07ed4a401f0844e5fade00aaf5e2781f70542ce64f",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -438,7 +442,7 @@
       "company": "中国建筑集团有限公司",
       "url": "https://career.nankai.edu.cn/recruitment/content/type/2/id/6107.html",
       "title": "中国建筑第八工程局有限公司2027届校园招聘（集团招聘）",
-      "sha256": "99d0cdaabd1756484d10a2ff16cbd57729395fd9583bd4aeec899c24edd5ea5b",
+      "sha256": "4b244c27c63887b8647b3b4014c51c6d4b4f048c5891f0a03bd7fbb54fb060b4",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -487,7 +491,7 @@
       "company": "中国电信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118956.html",
       "title": "中国电信广东公司2027秋季校园招聘-中国电信股份有限公司广东分公司",
-      "sha256": "bad6ee9777c0850958941ac8a7a9cfc08e35e74a5acc7b8881087899225fa4a6",
+      "sha256": "72feb8c25a2da9018b64b197b5c8def390b233373bca690a5ccc9b8d05bf2a90",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -499,7 +503,7 @@
       "company": "中国电力建设集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119307.html",
       "title": "中国电建集团贵阳勘测设计研究院有限公司2027年校园招聘-中国电建集团贵阳勘测设计研究院有限公司",
-      "sha256": "689f0d2a5f17d69d5c0302b6218d2a6c91adbf06d1b81b03e009309b65a1551e",
+      "sha256": "8c232fd2187d7c5931d5c03972cfefd5dcaf8d2459a50dfa679217b64be475d2",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -511,7 +515,7 @@
       "company": "中国电子信息产业集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/117515.html",
       "title": "中国电子信息产业集团有限公司 2027届校园招聘-麒麟软件有限公司",
-      "sha256": "bc6a52955b7c144b07dfd6c45cb44e9248bee934cc86e18e6ae26a7a11e7fdec",
+      "sha256": "4319c89e7bf8cadeaa0bad3aafd127d1052cad526a51da43bf785b547d789301",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -535,7 +539,7 @@
       "company": "中国石油化工集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119529.html",
       "title": "中国石化集团重庆川维化工有限公司2027年校园招聘简章-中国石化集团重庆川维化工有限公司",
-      "sha256": "a36cb63e1945d45ff7520caea59e35e5c33e62bdca4c0c9a977a5d7c0ef8a4a6",
+      "sha256": "cf1fd8faf3378a785fb04db35aec3b931ee775d00ecd98baf4a83ae744d8cdbb",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -547,7 +551,7 @@
       "company": "中国石油化工集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119500.html",
       "title": "中国石化茂名石化公司2027年校园招聘启事-中国石油化工股份有限公司茂名分公司",
-      "sha256": "19843bbdd319c393783693c604459d949406481af147e0769535e2a412a5b50d",
+      "sha256": "5e733ccdc84a8d9aab2f15a05e91e88db79f0a53a6ebcb76bc12c229a54ada1b",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -559,7 +563,7 @@
       "company": "中国石油化工集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119294.html",
       "title": "中石化中原石油工程有限公司 2027年校园招聘简章-中石化中原石油工程有限公司",
-      "sha256": "ac5a67ef76fd4347a467d55510c271a4039688e72008eb7823c99706f73ad46d",
+      "sha256": "378ebed028fa9cd32942b2eee45800ce965922f76cff57c5820d1a829891494c",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -571,7 +575,7 @@
       "company": "中国石油天然气集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119327.html",
       "title": "中国石油勘探开发研究院西北分院  —2027届研究生校园招聘-中国石油天然气股份有限公司勘探开发研究院西北分院",
-      "sha256": "55921539790723aec5ca8f333b0d0cc347f70ca671adf74aeb2e685307c2fa15",
+      "sha256": "a5fc08cc10a68c45c1d96d5f2ddc6b1def582b97727d45abb1d39167ed4e9020",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -583,7 +587,7 @@
       "company": "中国移动通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119454.html",
       "title": "中国移动通信集团云南有限公司 2027秋季校园招聘公告-中国移动通信集团云南有限公司",
-      "sha256": "b236e0d59159d89da533e59b7626a9172381b8eaa8072b7f318ddbc2d800ece0",
+      "sha256": "2f7f210a78e32dedd59ccda544449025b57e591b35d43701ef8efdae15bbc951",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -595,7 +599,7 @@
       "company": "中国移动通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119414.html",
       "title": "中国移动财务公司2027校园招聘正式启动！-南开大学学生就业指导中心代发",
-      "sha256": "57a4d477780ccef992c17a91b2e58583b06e97f3c7cb4f384869a810f445f8b9",
+      "sha256": "102fa1a6bc11532c037d4ecc2fdddc54eae6d08ea6db239b4f24e504bcb17bf8",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -607,7 +611,7 @@
       "company": "中国移动通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119357.html",
       "title": "中国移动财务公司（金融机构）2027秋季校园招聘简章-中国移动通信集团财务有限公司",
-      "sha256": "90dc8d496c403e89ad163adc29ac4ff3b2d672e499eda6612a8a69ddcae41ef4",
+      "sha256": "43a01a27ec2e48e6ff6855c1e52da5d13c3af1440f4516655f25aac9dc225d47",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -619,7 +623,7 @@
       "company": "中国移动通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119164.html",
       "title": "汇聚成川·移起闪耀丨中国移动四川公司2027校园招聘正式启动-南开大学学生就业指导中心代发",
-      "sha256": "e2a99cf2dcf3e4066126f3b70e572aed102bdb7462be9446f53ce7c9d9457124",
+      "sha256": "7f0bb14b3ceeb329c649cc41f4a36fc2ded917016a4de8d6fb79284f78b79161",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -631,7 +635,7 @@
       "company": "中国移动通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119104.html",
       "title": "中国移动供应链管理中心2027校园招聘-中国移动通信有限公司",
-      "sha256": "a2fd2db41a0a2a998b586bf40277bf97fb726326599f886e366ec8748d2ecd0a",
+      "sha256": "e0dc173c79c3dca108890accb8d95f097755c911adc27220b4a4a36188122fe4",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -640,22 +644,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "中国移动通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118985.html",
-      "title": "杭研校招季丨中国移动杭州研发中心2027届秋季校园招聘-中移（杭州）信息技术有限公司\n杭研校招季丨中国移动杭州研发中心2027届秋季校园招聘",
-      "sha256": "611dc8edf589d2edb8943d081f0e4b3ea8fac6e53b59806d229065471c8a3287",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "employer",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国移动通信集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "中国移动通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118734.html",
       "title": "中国移动物联网公司 2027届秋季校园招聘-中移物联网有限公司",
-      "sha256": "6953a16e7291b189b2ac39cc0cf6838a1d4c37de093d0ddf9780565c8c77ee43",
+      "sha256": "cf24016fd5210d9cce516afa68ead6ba1cbd7a0a7cb7398dfb3c7c0e687291e5",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -667,7 +667,7 @@
       "company": "中国联合网络通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119535.html",
       "title": "中国联通北京市分公司新苗计划2027校园招聘公告-中国联合网络通信有限公司北京市分公司\n一、公司介绍二、人才专属三、招聘对象四、招聘流程五、投递方式",
-      "sha256": "39c68abf708c57e53cc59d12e2b73c253d2f6f110c5daa715107e4fa88f19880",
+      "sha256": "8ea05f3ea2d54dccf40241c3d77cda9a9ec5266b772de6f96dd6b72b849163cf",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -679,7 +679,7 @@
       "company": "中国联合网络通信集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119376.html",
       "title": "中国联通湖南省分公司2027校园招聘-中国联合网络通信有限公司湖南省分公司",
-      "sha256": "89eb2fcbc87930d8343f9fb3b02951c8ded80bd3627ee2e9627cf4e34e7599ee",
+      "sha256": "85a2ee591ed37d722caed5d961300065d6cc3fb9633971a9e6df201a6d22c63e",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -688,22 +688,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "中国能源建设集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119070.html",
-      "title": "中国能源建设股份有限公司2027届校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "4a9350e3a22b80cd864733da803a254e6c41ff15bc45da206eb33f6f90c5b903",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "employer",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国能源建设集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "中国能源建设集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118974.html",
       "title": "中国能源建设集团广东省电力设计研究院有限公司2027届校园招聘简章-中国能源建设集团广东省电力设计研究院有限公司",
-      "sha256": "e3539cdbaf2c26fd67fc027e29e02752a6e0266829735f12a615380a2674ea01",
+      "sha256": "0eec0c18aa7c868b5b46c8f6750fa9f5503803d77c6fe66d9f8bc07b9d4ab4a6",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -712,22 +708,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "中国航天科工集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119280.html",
-      "title": "中国航天科工二院七O六所2027届校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "6f097f2e61ebdab2dd8550d720e15e30d8508f59a9fad4076698d67e078bbf0b",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国航天科工集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "中国航空发动机集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119141.html",
       "title": "中国航发沈阳发动机研究所2027届校园招聘-中国航发沈阳发动机研究所",
-      "sha256": "a8a6d5ab4215fcaa0b1f9581cd24ce31f0c3d3651c77119c76a09ec749d99591",
+      "sha256": "4ffcff95da4b37e7c99df5c82c41daa725fa664b9305051051beabc5db5d8453",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -739,7 +731,7 @@
       "company": "中国航空发动机集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119063.html",
       "title": "中国航发四川燃气涡轮研究院2027届校园招聘正式启动-南开大学学生就业指导中心代发",
-      "sha256": "5f5bd278ddb434a99b0b82f3820d1120b18642c2ddfdc2bbb27311ee81d9d3e7",
+      "sha256": "66891d59362af2ed5063049af250c4248865e7f3eb84aa82175ffe71f76abc8d",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -748,22 +740,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "中国船舶集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119225.html",
-      "title": "中国船舶第719研究所2027届校园招聘简章-中国船舶集团有限公司第七一九研究所",
-      "sha256": "8c4a42b8697ce0b714a232155e6f29b09651a5e31cebfc699be1812ee0bab021",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国船舶集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "中国船舶集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/117450.html",
       "title": "中国船舶集团有限公司第七二二研究所 2027届校园招聘简章-中国船舶集团有限公司第七二二研究所",
-      "sha256": "a712e0ef408de2db8c681d14c1a03bcd7c79b6cd115ac427e6cf304eb0497284",
+      "sha256": "4a1ef1a434606664709cd0676e3905fd93a4d22a9651e4513e6164cf09fcf3eb",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -775,7 +763,7 @@
       "company": "中国远洋海运集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119098.html",
       "title": "中国远洋海运集团有限公司2027届 秋季校园招聘公告-中国远洋海运集团有限公司",
-      "sha256": "86460639085390658c421eefb582c4b516a3089664cf226d2522512372d8677c",
+      "sha256": "644027943527512c37a763f5e7306d8742ee3a8d2a9833273fc4e8ea05588b86",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -784,22 +772,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "中国邮政储蓄银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119183.html",
-      "title": "中国邮政储蓄银行河北省分行2027年度校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "7b8eb2e63a423c52c59ff7208f557394564a20d96d4e5e8235eb04714be93a6f",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "中国邮政储蓄银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "中国邮政储蓄银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118783.html",
       "title": "中国邮政储蓄银行北京分行2027校园招聘！-南开大学学生就业指导中心代发",
-      "sha256": "d98a20a01e7f19a2749d67d93da7e5a9f971004b93a7c62dc016cf41ac27d7c5",
+      "sha256": "5fcf23cb81a7753efd6800b2665787dd0cdca423d1db84b811c41e37ec171ac0",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -811,7 +795,7 @@
       "company": "中国银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119433.html",
       "title": "中国银行深圳市分行2027年校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "b28b5bd606562800e8701d4c9928a14df55f21e8d6774476d7e2b3dc6601289b",
+      "sha256": "7cb1d71df3af12ec0073dd1da86a370b86dae397d95af2fb7be1663bb934215d",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -823,7 +807,7 @@
       "company": "中国银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119166.html",
       "title": "中国银行保险信息技术管理有限公司2027年度校园招聘公告-南开大学学生就业指导中心代发",
-      "sha256": "8d06de4c9164506582571acf88579cfb7543983b5f8850ebf7b7622b7a612610",
+      "sha256": "45490cb66cae000e30125f7f7c39c9227712a6e69a74fbc7287f15314d8258e0",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -835,7 +819,7 @@
       "company": "中国银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118847.html",
       "title": "中国银行大连市分行2027年校园招聘正式启动-南开大学学生就业指导中心代发",
-      "sha256": "a04740cf094339cd2996c4c8dffe0ddff944e64c953b2c2ad44bbfb0b32a784b",
+      "sha256": "646c7245f158630cdff3af41117f0eda531ddb70e8bf65fc257bd07052c00d1c",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -859,7 +843,7 @@
       "company": "中国长江三峡集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119610.html",
       "title": "中国长江三峡集团有限公司 2027年高校毕业生招聘公告-中国长江三峡集团有限公司",
-      "sha256": "f47f9404a84d5e266f34969cad4bfcce9300bcb7c51283bb72c9c401c49be1c2",
+      "sha256": "716055d7b25f23a1286a3aac3d00f5ca70d3142857d82d7f664e7e7de43c1ac8",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -871,7 +855,7 @@
       "company": "中粮集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119092.html",
       "title": "中粮集团2027届校园招聘-中粮集团有限公司",
-      "sha256": "d19837e1047d8b5ed8fca00ff2a5ee9932cc118585bc83fa18919f8282195d20",
+      "sha256": "2f643ab5f55d5244804fd97fdccaa7ee95c3e43b809145ff7503fc7c4fd4fb6f",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -883,7 +867,7 @@
       "company": "交通银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119689.html",
       "title": "交通银行无锡分行2027校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "098514b0d3d829b9a5ac68663d4a1cc3f737fabf6525777c9c5b1dd8b07172de",
+      "sha256": "181914555134151ff1a4a01ba0b9d60bd533133cf7cbe353cbecc91991217abd",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -895,7 +879,7 @@
       "company": "交通银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119518.html",
       "title": "赣启华章 智汇交行  交通银行江西省分行2027年度校园招聘-交通银行股份有限公司江西省分行",
-      "sha256": "22aa0dfbd340213172b1b8aca19d2f0df8492dc483ea4d6cb8671efe75abd72e",
+      "sha256": "34850f4b9c1699c08ff8faba9d387e6f645720c30f31201c204ed9db4a4b1ee5",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -907,7 +891,7 @@
       "company": "交通银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119330.html",
       "title": "山海赴约 交绘星河 交通银行山东省分行 2027 校园招聘-交通银行股份有限公司山东省分行",
-      "sha256": "024cec8c8af33c09aa14d567683e808966e97f15ec58ee34c556f36e759313d2",
+      "sha256": "308eb7f1814f02421b57e486f047b42d4abd8d80fde79072e16f0a605f0ec127",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -916,22 +900,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "交通银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119055.html",
-      "title": "交通银行2027校园招聘正式启动-南开大学学生就业指导中心代发",
-      "sha256": "99e1b78e5003b3e673459218a6588584b3d37ba442ceac3f0b9544e911213268",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "employer",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "交通银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "交通银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119036.html",
       "title": "交通银行大连分行2027校园招聘公告-交通银行股份有限公司大连分行",
-      "sha256": "0aa0c565d2edafbf20bf50fc6d7c936d458758eb208572680a8045d20310916b",
+      "sha256": "ab082067a93787b626013c7085f57056af4ea5337fbe06f3e335cee21d40c7bc",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -943,7 +923,7 @@
       "company": "交通银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119028.html",
       "title": "交通银行苏州分行2027年度校园招聘简章  -交通银行股份有限公司苏州分行\n一、企业简介二、招聘职位三、招聘对象  四、薪酬福利与职业发展  五、招聘流程  六、投递方式",
-      "sha256": "813bab8779e8b901ce7234b229492f8a3f60ec2951572c7254a45e67c7b2a324",
+      "sha256": "72af7d70037d0561273a9f25207d787009b5e7d2a5f0529e6040a1c8192879b0",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -955,7 +935,7 @@
       "company": "交通银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119027.html",
       "title": "交通银行2027年度校园招聘正式启动！-交通银行股份有限公司",
-      "sha256": "ab787ebaa84b173b777bd74eb70dea1e48d3fe57f9751eb0030aa7d4772e8d40",
+      "sha256": "78996779aa3b29542401dde6b6b4817dbc40571d73dcf78cb785f0832aa0dac3",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -967,7 +947,7 @@
       "company": "交通银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118937.html",
       "title": "交通银行2027年度校园招聘正式启动-南开大学学生就业指导中心代发",
-      "sha256": "d7d5266dfbfde19579ad9275aead87aeeaa1279236876e59cd77f0853ddce188",
+      "sha256": "dbd14e62ef0cfa7bc431669ef190808136a08750d7212f0718bc456f978728eb",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -979,7 +959,7 @@
       "company": "京东集团",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119178.html",
       "title": "Hi YOU！京东方智慧医工2027秋季全球校园招聘正式启动！-北京京东方医院有限公司",
-      "sha256": "189692129f870791871c92a2cf5aa37185e098982b0e1bda78eaa59d4cf6f2c6",
+      "sha256": "db453611860711999629a921d4613abc874835193c14f80de93f0b0146f29e21",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -991,7 +971,7 @@
       "company": "京东集团",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/116372.html",
       "title": "京东2027届-TET管培生招聘启动啦-南开大学学生就业指导中心代发",
-      "sha256": "16b60d0acfdea5403403580d39fd3d3b47cfd9ec4bfe046a8dd55dcc085597c4",
+      "sha256": "d9b644bc2fa000f6719db9d9be404c5bdada85c7ed138bb3d782300706c32840",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1000,22 +980,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "兴业银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119644.html",
-      "title": "兴业银行大连分行2027校园招聘公告-兴业银行股份有限公司大连分行",
-      "sha256": "d15613a94ef1c8acca33f371e91e22bff3d2dde5ebeb3c00142f6c2b59f6beb0",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "兴业银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "兴业银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119355.html",
       "title": "兴业银行深圳分行2027校园招聘公告-兴业银行股份有限公司深圳分行",
-      "sha256": "bfc1cbd04718c980566962be29a6de91036463a57104fed901d2b37308a4e0e1",
+      "sha256": "6eb242d476529b74a3ef7b4faf6e594a19b136619f6ca3e4d9f2b07fd3155c5a",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -1024,16 +1000,12 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "兴业银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119198.html",
-      "title": "兴业银行成都分行2027校园招聘-兴业银行股份有限公司成都分行",
-      "sha256": "bf4873b9781be2bd4ffaa6acf16cbd0d377e855205fc96c0f1581571c2c011a7",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "兴业银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "兴业银行股份有限公司",
@@ -1051,7 +1023,7 @@
       "company": "农夫山泉股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119269.html",
       "title": "养生堂·农夫山泉·万泰生物 2027校招启动！-南开大学学生就业指导中心代发",
-      "sha256": "05740726d825c1492540eb1f3915ac92b35d5f24f3bce84402f287140e3b38c9",
+      "sha256": "2f7bc91cc6a75e2e0dd3637b9b021ec47fb823ae81a1c1eb1117a98b6352b285",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1063,7 +1035,7 @@
       "company": "北京三快在线科技有限公司 (美团)",
       "url": "https://career.nankai.edu.cn/correcruit/index/p/16/sel_area/11.html",
       "title": "招聘信息|南开大学学生就业指导中心",
-      "sha256": "6e125fb67dcbf93388f4a9537040a3af434a36fdb5078c2d6c7762686f55554c",
+      "sha256": "6429118a1a8b5092b9884bd096034bfea71ae079bbb2831353cba73381ec2f9a",
       "source_kind": "university",
       "accepted": false,
       "reason": "employer_ambiguous_or_mismatch"
@@ -1078,13 +1050,12 @@
       "reason": "employer_ambiguous_or_mismatch"
     },
     {
-      "company": "华勤技术股份有限公司",
       "url": "https://jiuye.swjtu.edu.cn/career/zpxx/view/zpxx/232172520072155136",
-      "title": "西南交通大学-大学生就业指导中心西南交通大学-大学生就业指导中心",
-      "sha256": "1949f739fdc57ce3fec338a9f836f71326c57729828ce0c9595628596568fffe",
-      "source_kind": "university",
-      "accepted": false,
-      "reason": "employer_ambiguous_or_mismatch"
+      "companies": [
+        "华勤技术股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)>"
     },
     {
       "company": "华夏银行股份有限公司",
@@ -1099,7 +1070,7 @@
       "company": "吉林银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118745.html",
       "title": "“吉聚才  行新途” ——吉林银行2027届秋季校园招聘公告-吉林银行股份有限公司",
-      "sha256": "11b37a98aa702ef368933207865c31038f90a6ac4e7cf065df377b7e7d7ef103",
+      "sha256": "846ee5ec38d2d9e993a83e2d5b10051a180749ab41a9a7e32bf82bc33a91976d",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1111,25 +1082,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "哈尔滨银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119592.html",
-      "title": "拥抱毕业季 呼唤领跑者 哈尔滨银行（集团）2027校园招聘-哈尔滨银行股份有限公司",
-      "sha256": "2273f88f86d11beb63cec3fa7796e30d6fff5c08f75267cedae16ee885efc4a7",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "employer",
-      "opening": null,
-      "deadline": {
-        "date": "2026-11-20",
-        "quote": "报名截止时间：2026年11月20日"
-      },
-      "result": "verified_recruitment"
+      "companies": [
+        "哈尔滨银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "国家开发投资集团有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119192.html",
       "title": "国家开发投资集团有限公司 2027年度应届毕业生招聘公告-国家开发投资集团有限公司",
-      "sha256": "b72d4be88cfbf82968116852def71f787b8933027627a039b9f0dc7415c08a38",
+      "sha256": "a55ace004bc9d741ada893b6f037801dfedc004e4862d0e21d6a249652a49807",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1160,7 +1124,7 @@
       "company": "国家开发银行",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119366.html",
       "title": "国家开发银行辽宁省分行2027年校园招聘公告-南开大学学生就业指导中心代发",
-      "sha256": "dd30f5e7bc5dc825e508fb15258ef5001bd4bc89f59ae6788b86822291733461",
+      "sha256": "0ac46f956c56c22f9be25184f9315b6d674c53535c23254eb4cfb4daab3c296c",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -1172,7 +1136,7 @@
       "company": "国家开发银行",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119003.html",
       "title": "国家开发银行深圳分行2027年校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "7e6c899806db97d97e7a57339716831d4935c5accb39328cdfd7244df2d78f15",
+      "sha256": "dd5f1d6abb931e75e914cecce4ebd4d5744cc0f52479ad7b77872091301f3696",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -1181,22 +1145,30 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "国家开发银行",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118860.html",
-      "title": "国家开发银行大连市分行2027年校园招聘正式启动！-南开大学学生就业指导中心代发",
-      "sha256": "e0bdb7247dbf56d8a130667ee6c152fbe352d6374a679bf9adb265e2f1e96299",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
+      "companies": [
+        "国家开发银行"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "company": "国家电力投资集团有限公司",
+      "url": "https://www.eoffcn.com/kszx/detail/2206495.html",
+      "title": "国家电投2027届秋招入口:https://spic2027.iguopin.com_中公网校\n国家电投2027届秋招入口:https://spic2027.iguopin.com咨询中心关于我们新手必读常见问题全国统一咨询热线商务合作",
+      "sha256": "d7e6b647193a88f60a6297c42ba13fcede0b951d93131fdea29f530abacf7bc5",
+      "source_kind": "recruitment",
+      "accepted": false,
+      "scope": "employer",
       "opening": null,
       "deadline": null,
-      "result": "verified_recruitment"
+      "result": "secondary_candidate"
     },
     {
       "company": "国家电力投资集团有限公司",
       "url": "https://www.fenbi.com/page/exam-information-detail/469068866410496",
       "title": "国家电力投资集团有限公司27届校园招聘-国企-2026-国央企正式-国家级机构-国家电力投资集团有限公司-粉笔资讯国家电力投资集团有限公司27届校园招聘\n国家电力投资集团有限公司27届校园招聘公告正文国家电力投资集团有限公司27届校园招聘招聘若干人",
-      "sha256": "ca1600cbaf019eca948fedba1eec0ea304d71bdd0bf7ee50005b4f74b6faf12d",
+      "sha256": "69251a81a7567649ecfd45f31d91a248806edd8294f08d73e5d44730537e6c45",
       "source_kind": "recruitment",
       "accepted": false,
       "scope": "employer",
@@ -1221,7 +1193,7 @@
       "company": "国轩高科股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119208.html",
       "title": "国轩高科2027届校园招聘-国轩高科股份有限公司",
-      "sha256": "a2973f29298b0b7cd89601eb389e11f5b83afbecf0960d70c74d008f3b87c56f",
+      "sha256": "478d41c7c07c289590cd46a1997519576fafc635f37bed8c7c63848814347d14",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1230,22 +1202,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "宁德时代新能源科技股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/116814.html",
-      "title": "宁德时代2027届全球校园招聘正式启动  —— 让时代，因我不同-宁德时代新能源科技股份有限公司",
-      "sha256": "22af8415c495162e40ec7399d88ce23c866c1442bd62ceed51edadc48d2d8f8a",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "employer",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "宁德时代新能源科技股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "宁波银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119058.html",
       "title": "与宁同行，银领未来｜宁波银行2027届校园招聘正式启动！-南开大学学生就业指导中心代发",
-      "sha256": "c5aa585fc00429117eb4d27b165faa3fb87cf3b6bb6e08c93c533ce216e8b82f",
+      "sha256": "dea94350434926d10b2a8f0343b2118ed1ccbfe4b524d4d3b85ce77d21d16b91",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1257,7 +1225,7 @@
       "company": "平安银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119026.html",
       "title": "平安银行总行2027届秋季招聘-平安银行股份有限公司",
-      "sha256": "bc344ec796d1706cebdbef8698c6d2f94f917a6c859f98ba98c9c260930734d2",
+      "sha256": "32da21490d523886559aef7448db0b3d23861724a49a12b171f9a4684d19af69",
       "source_kind": "university",
       "accepted": false,
       "reason": "not_recruitment"
@@ -1266,7 +1234,7 @@
       "company": "广发银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119670.html",
       "title": "广发银行长沙分行2027年度校园招聘正式启动-南开大学学生就业指导中心代发",
-      "sha256": "9c4898ff861287ad67ecfc69d5eeea07f5cab731bc45187a1a73001c061b3284",
+      "sha256": "42a46e742b570327a1ed203df7bd22b9095b5a108981e8aeda8e2e02740892fe",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -1275,22 +1243,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "广发银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119251.html",
-      "title": "广发银行深圳分行2027年度秋季校园招聘-分行营销英才-广发银行股份有限公司深圳分行",
-      "sha256": "68995d7606676adf3d3ef894caee9c5070ff0247b61ff20ed227cc6b5145299f",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "广发银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "广发银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118874.html",
       "title": "广发银行2027年度校园招聘-广发银行股份有限公司",
-      "sha256": "6155d5ab82b89b5569b1f03d347e0e6a7f575f5ed195c759e7b98439565513f5",
+      "sha256": "e795fb145f0db41abf0c7beef79ec12b865c83f8cdfacdfd91f480c7956ac833",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1302,7 +1266,7 @@
       "company": "广发银行股份有限公司",
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56228.html",
       "title": "广发银行2027年度校园招聘公告-广发银行股份有限公司",
-      "sha256": "aa1dbb2cb2f21a03c8c0db8115a05009ac2bb699f75ed4e73413366453508923",
+      "sha256": "90dc0ef30c1c53a16263f83688f65f15e5387b1fe29717c874b1c8e4f9e509d7",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1314,7 +1278,7 @@
       "company": "广州银行股份有限公司",
       "url": "https://jy.gzhu.edu.cn/index.php/web/Index/jobs-brief-detail?id=STUXSW8",
       "title": "广州银行2027校园招聘公告\n - 广州大学就业网",
-      "sha256": "8e042f5ee7bacb467996ae86579043d8cf77625e5c0e636f88fc1518b27bbeb6",
+      "sha256": "22d3b2aad59b0847832b79a7fdd9b08f747576c8adae33cfe066038d234449e6",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1335,7 +1299,7 @@
       "company": "招商银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118980.html",
       "title": "“梦想靠岸”招商银行东莞分行2027校园招聘公告-招商银行股份有限公司东莞分行",
-      "sha256": "2fcca2a1cccf55718385c1e7e0c2692333a225093e01cec58057e99c5425de12",
+      "sha256": "7807e6c7a0dfdba93f0ecc637593f3a7057f60b266848725f70ff943f8da9abc",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -1347,7 +1311,7 @@
       "company": "招商银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118848.html",
       "title": "【梦想靠岸】招商银行广州分行2027校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "1b4a630537722536b7730c0a82f28ce42e56c4f6350d7c53fee5212c9f52bf48",
+      "sha256": "a3bea5e0f0e08e7c997f3439ab2fb6881fb6df5307935891a681abc4db84421b",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -1356,19 +1320,12 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "杭州银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118884.html",
-      "title": "杭州银行2027届秋季校园招聘启事-杭州银行股份有限公司",
-      "sha256": "a7be8472b98afff2ad81b5e365e59777eecee5d4b7e29b2d07a51b848789b33f",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "employer",
-      "opening": null,
-      "deadline": {
-        "date": "2026-10-25",
-        "quote": "报名截止时间为2026年10月25日"
-      },
-      "result": "verified_recruitment"
+      "companies": [
+        "杭州银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "比亚迪股份有限公司",
@@ -1383,7 +1340,7 @@
       "company": "永卓控股有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119013.html",
       "title": "永卓控股2027届全球校园招聘正式启动！-南开大学学生就业指导中心代发",
-      "sha256": "908b2c381dd3b2ae5b536ecd0753facb8821d6be47316fee068940f1e91e49bd",
+      "sha256": "824f84dda890b779cb0f418b07ca256721426e547de880f6f40aa367b823c2ea",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1392,22 +1349,18 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "江苏银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119213.html",
-      "title": "江苏银行苏州分行2027届校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "f8c6944c49b9a3db461b24fca0e67465c5af2bcadb3c5263c04a379c40148e6d",
-      "source_kind": "university",
-      "accepted": true,
-      "scope": "subsidiary",
-      "opening": null,
-      "deadline": null,
-      "result": "verified_recruitment"
+      "companies": [
+        "江苏银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "company": "浙商银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119617.html",
       "title": "浙商银行2027届校园招聘启事-浙商银行股份有限公司",
-      "sha256": "f93398c4f6ef3639b0986c726b6f35c522d96701bb442fdba95899698aa3e4b4",
+      "sha256": "a2ff7e34b5632c54ccdec9169089325c923ddc11b13e3b529156785686b350f1",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1419,7 +1372,7 @@
       "company": "浙商银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/119544.html",
       "title": "浙商银行合肥分行2027校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "9700801482efe310faaf16c9739e214633761b1b2217da0aaab9875370e2a2b2",
+      "sha256": "d78c0e8a5a35221bd663bacca5be60a61972fd01d3a520df064bb37535650fe6",
       "source_kind": "university",
       "accepted": true,
       "scope": "subsidiary",
@@ -1431,7 +1384,7 @@
       "company": "浙商银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118746.html",
       "title": "浙商银行2027校园招聘启事 -浙商银行股份有限公司",
-      "sha256": "8c376017f31b6075d717f81d673b6d254598df83fc9806c4dc27502d25296a7c",
+      "sha256": "f3e0b5c66c9ae35d9f3fee63704c5fe9cd88a15af4f6c66fceef963890e8c301",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1464,7 +1417,7 @@
       "company": "渤海银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118811.html",
       "title": "渤海银行2027年校园招聘简章-渤海银行股份有限公司",
-      "sha256": "a07a2e20c483b88e8fa5caa60b949d41ec3ec816b12930152dd940997227d801",
+      "sha256": "54686cfca969607993251f835305428849f54e30e8f4c94f800bbfdfb89c9249",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1476,7 +1429,7 @@
       "company": "渤海银行股份有限公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118866.html",
       "title": "渤海银行2027年校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "dae9f844e6cf20ae867e86737351ff8010fa696bb513a6ad20cbe6649d3f92b9",
+      "sha256": "d0b441d7e5341d9f9eb56f8742254ff1527692f6bf2a93c17cefcd410813c9c1",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
@@ -1485,26 +1438,212 @@
       "result": "verified_recruitment"
     },
     {
-      "company": "百度公司",
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118329.html",
-      "title": "百度 2027届校园招聘-南开大学学生就业指导中心代发",
-      "sha256": "7df61f0f61d2b14f3a69bbee051c9bf19d10b878d2961b488569a98eb8ad3973",
+      "companies": [
+        "百度公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/117003.html",
+      "companies": [
+        "网易 (杭州)网络有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/118845.html",
+      "companies": [
+        "远景能源有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "company": "远景能源有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/index/p/10/sel_area/4.html",
+      "title": "招聘信息|南开大学学生就业指导中心",
+      "sha256": "7132a8fa1ee64daef6f795f87762ad3f5a75a289d5ac81bb92de7047067ca5bb",
+      "source_kind": "university",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119676.html",
+      "companies": [
+        "重庆银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "company": "重庆银行股份有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119596.html",
+      "title": "重庆银行2027届校园招聘公告-重庆银行股份有限公司",
+      "sha256": "1f92e6a25d30b3e9366c47b1ea502dc0d0b26a470f7ffac15b0be4af998a6966",
       "source_kind": "university",
       "accepted": true,
       "scope": "employer",
       "opening": null,
       "deadline": null,
       "result": "verified_recruitment"
+    },
+    {
+      "company": "阿里巴巴 (中国)有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/116569.html",
+      "title": "阿里巴巴2027届应届生招聘全球启动！-阿里巴巴（中国）有限公司",
+      "sha256": "34b72520143395cf17149a20a8ed668ae049106833922d7e448f6b031798f225",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "employer",
+      "opening": null,
+      "deadline": null,
+      "result": "verified_recruitment"
+    },
+    {
+      "company": "顺丰控股股份有限公司",
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119482.html",
+      "title": "顺丰科技有限公司2027届秋季校园招聘全面启动-顺丰科技有限公司",
+      "sha256": "61ddae6b6ba4c121fc27af4e5ce71ca987bffb7b591911c0a5f9902e1d3ac746",
+      "source_kind": "university",
+      "accepted": true,
+      "scope": "subsidiary",
+      "opening": null,
+      "deadline": null,
+      "result": "verified_recruitment"
+    },
+    {
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119083.html",
+      "companies": [
+        "齐鲁银行股份有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119061.html",
+      "companies": [
+        "中国中化控股有限责任公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/118971.html",
+      "companies": [
+        "中国中化控股有限责任公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/119052.html",
+      "companies": [
+        "中国铝业集团有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/116728.html",
+      "companies": [
+        "小米通讯技术有限公司"
+      ],
+      "result": "fetch_failed",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "company": "中国华电集团有限公司",
+      "url": "https://m.chd.com.cn/site/2mobile/list/390ed206ff4d42e4a4330b3c028b7f9a_1.html",
+      "title": "集团要闻",
+      "sha256": "8908af326d8271e18b925e0760daf61862bf3b5f0c94e270511e7f1a2282c783",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "company": "中国华电集团有限公司",
+      "url": "https://m.chd.com.cn/site/2mobile/list/aff17b8be8214f50ac2185acc8f3a957_1.html",
+      "title": "人才招聘",
+      "sha256": "ae1f19073909f9a49bac07b03b8c07fe5f4039bf124bf2f813ec104253c4813c",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "company": "中国华电集团有限公司",
+      "url": "https://m.chd.com.cn/site/2mobile/list/aff17b8be8214f50ac2185acc8f3a957_1.html",
+      "title": "人才招聘",
+      "sha256": "a472f241987a13e5524c11117d34bbd27764dddeda8b9bc4f51d651d21baf6cf",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "company": "中国银行股份有限公司",
+      "url": "https://www.bankofchina.com/index.html",
+      "title": "中国银行网站_全球门户首页",
+      "sha256": "59bd359a272f6c0b846f8802655579d90d36a717f5a3f18ba95709a292bc016d",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "headline_cohort_mismatch"
+    },
+    {
+      "company": "中国银行股份有限公司",
+      "url": "https://www.bankofchina.com/big5/index.html",
+      "title": "中國銀行網站_全球門戶首頁",
+      "sha256": "231e5ea518a248f6dc5de1d70cc9a0e43c4aa4aa83111355622e087de1f782ec",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "company": "中国银行股份有限公司",
+      "url": "https://www.bankofchina.com/russian/",
+      "title": "Международный сайт Банка Китая",
+      "sha256": "f73b766f1969247ce64b174daa59dc84150666aaba550ba2439be11776f745ce",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "employer_ambiguous_or_mismatch"
+    },
+    {
+      "company": "兴业银行股份有限公司",
+      "url": "https://www.xyyh.com.cn/cn/index.html",
+      "title": "首页 -- 兴业银行官方网站",
+      "sha256": "8a9865214a9f47c2abffa7eb52d8fe73cf030ddef0a8e78d5c1e7774e8e80645",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "headline_cohort_mismatch"
+    },
+    {
+      "company": "兴业银行股份有限公司",
+      "url": "https://www.xyyh.com.cn/cn/aboutCIB/index.html",
+      "title": "今日兴业 -- 兴业银行官方网站",
+      "sha256": "6df0f774e8f274185651b9900231803487987bb16f4fa00e4e0d8815aa986afc",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "headline_cohort_mismatch"
+    },
+    {
+      "company": "兴业银行股份有限公司",
+      "url": "https://www.xyyh.com.cn/cn/aboutCIB/about/index.html",
+      "title": "认识兴业 -- 兴业银行官方网站",
+      "sha256": "325bed93361dcac3c45e038d2b99a7360c52fe844e07d6f33c1464f6cadb129b",
+      "source_kind": "official",
+      "accepted": false,
+      "reason": "headline_cohort_mismatch"
     }
   ],
   "last_successful_scan": {
-    "scanned_at": "2026-10-11T18:36:19.041088+08:00",
+    "scanned_at": "2026-10-11T18:39:12.056582+08:00",
     "companies_total": 657,
-    "candidate_pages": 132,
-    "pages_attempted": 12,
-    "pages_read": 11,
-    "accepted_employers": 7,
-    "secondary_candidate_employers": 1,
+    "candidate_pages": 141,
+    "pages_attempted": 120,
+    "pages_read": 117,
+    "accepted_employers": 53,
+    "secondary_candidate_employers": 4,
     "corroborated_recruitment_employers": 0,
     "confirmed_total": 101,
     "recorded_date_total": 17,
@@ -1514,22 +1653,18 @@
     "new_open_dates": [],
     "checks": [
       {
-        "company": "中国东方电气集团有限公司",
         "url": "https://m.gwy.com/gqzp/412945.html",
-        "title": "中国东方电气集团2027届校园招聘公告已发：共计900+offer名额！ - 高顿央国企招聘\n中国东方电气集团2027届校园招聘公告已发：共计900+offer名额！",
-        "sha256": "1e4f8aba647cb4abf87dc37dcb82b467f07b33dae760c2efb0ddad623b852741",
-        "source_kind": "recruitment",
-        "accepted": false,
-        "scope": "employer",
-        "opening": null,
-        "deadline": null,
-        "result": "secondary_candidate"
+        "companies": [
+          "中国东方电气集团有限公司"
+        ],
+        "result": "fetch_failed",
+        "error": "HTTPError: HTTP Error 503: Service Unavailable"
       },
       {
         "company": "中国农业发展银行",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/119483.html",
         "title": "中国农业发展银行2027年度校园招聘公告-中国农业发展银行",
-        "sha256": "5725a9376e9a834282aa59e83e4bb9068e8815604a054412ace96fa567a537dd",
+        "sha256": "59880b8488dace9e1a56ad48c883e5b46a2ebcd6ca0aa4d59b2f57adebee580d",
         "source_kind": "university",
         "accepted": true,
         "scope": "employer",
@@ -1548,7 +1683,7 @@
         "company": "中国农业发展集团有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/119483.html",
         "title": "中国农业发展银行2027年度校园招聘公告-中国农业发展银行",
-        "sha256": "5725a9376e9a834282aa59e83e4bb9068e8815604a054412ace96fa567a537dd",
+        "sha256": "59880b8488dace9e1a56ad48c883e5b46a2ebcd6ca0aa4d59b2f57adebee580d",
         "source_kind": "university",
         "accepted": false,
         "reason": "employer_ambiguous_or_mismatch"
@@ -1557,10 +1692,10 @@
         "company": "中国航空工业集团有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/118821.html",
         "title": "中国航空工业发展研究中心2027届校园招聘-中国航空工业发展研究中心",
-        "sha256": "6fcb68e228372ba4bbdd32db1d2f5cf30968cd630f8f952cf394ced6b3cfe2ae",
+        "sha256": "e20bc7ecfeeac1364304388c82206ba3de61afc693a6878fc571e35bb29e9d45",
         "source_kind": "university",
         "accepted": true,
-        "scope": "employer",
+        "scope": "subsidiary",
         "opening": null,
         "deadline": null,
         "result": "verified_recruitment"
@@ -1569,7 +1704,7 @@
         "company": "中国航空集团有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/118821.html",
         "title": "中国航空工业发展研究中心2027届校园招聘-中国航空工业发展研究中心",
-        "sha256": "6fcb68e228372ba4bbdd32db1d2f5cf30968cd630f8f952cf394ced6b3cfe2ae",
+        "sha256": "e20bc7ecfeeac1364304388c82206ba3de61afc693a6878fc571e35bb29e9d45",
         "source_kind": "university",
         "accepted": false,
         "reason": "employer_ambiguous_or_mismatch"
@@ -1587,7 +1722,7 @@
         "company": "OPPO (重庆)智能科技有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/index/sel_cate/3/p/37.html",
         "title": "招聘信息|南开大学学生就业指导中心",
-        "sha256": "39c27919950c5e45d3311a1eef9b4ddc84b3a431a9ec0a11b5dc7d865c019ab0",
+        "sha256": "fa7049712726d9895a86b8ce05e341b4a084d7b97ecb43c78a1b80b5f3deb4a7",
         "source_kind": "university",
         "accepted": false,
         "reason": "employer_ambiguous_or_mismatch"
@@ -1596,7 +1731,7 @@
         "company": "广东小鹏汽车科技集团有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/index/sel_cate/3/p/37.html",
         "title": "招聘信息|南开大学学生就业指导中心",
-        "sha256": "39c27919950c5e45d3311a1eef9b4ddc84b3a431a9ec0a11b5dc7d865c019ab0",
+        "sha256": "fa7049712726d9895a86b8ce05e341b4a084d7b97ecb43c78a1b80b5f3deb4a7",
         "source_kind": "university",
         "accepted": false,
         "reason": "employer_ambiguous_or_mismatch"
@@ -1605,7 +1740,7 @@
         "company": "上海浦东发展银行股份有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/119170.html",
         "title": "浦发银行长沙分行2027年度校园招聘-南开大学学生就业指导中心代发",
-        "sha256": "9b0f472961626afdc5dad98cea00a278ab8b0809a0a49281fdb8ac5b193fdfbc",
+        "sha256": "e516c4b2ac4cafb653863e9fa7ffe676a49979a5c1bba889e834bdd9184a271d",
         "source_kind": "university",
         "accepted": true,
         "scope": "subsidiary",
@@ -1635,7 +1770,7 @@
         "company": "上海银行股份有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/119528.html",
         "title": "上海银行2027届校园招聘公告-上海银行股份有限公司",
-        "sha256": "63a500bb7873e5aefa514a3c682344ad5f855c48b55c393a1add4be2992fdc97",
+        "sha256": "6c59f3ba3bd17d224450839ec08d5832c90aa86352baeec9c944d1f9ac60f098",
         "source_kind": "university",
         "accepted": true,
         "scope": "employer",
@@ -1647,7 +1782,7 @@
         "company": "东莞银行股份有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/119315.html",
         "title": "东莞银行2027届秋季校园招聘简章-东莞银行股份有限公司",
-        "sha256": "bbc34474ce023829ccc2c9975500bd1c4cd03c0ae343d4e6657375ca521b8ef5",
+        "sha256": "e256ca2e755926e4e4fb538e094b7b4b6db91a106c5994fa6b7d9d3a37a2f3e3",
         "source_kind": "university",
         "accepted": true,
         "scope": "employer",
@@ -1659,7 +1794,7 @@
         "company": "东风汽车集团有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/118819.html",
         "title": "东风汽车集团有限公司2027届秋季全球校园招聘-东风汽车集团有限公司",
-        "sha256": "b6abaf8b06f9686547b9e36af8c0413a38cf7c451cdc650bfbbe43928ab4b64c",
+        "sha256": "3961aa1436df64e6004b2604221d38c5a22eb8296f3ec95c07d7e37bcd363d9f",
         "source_kind": "university",
         "accepted": true,
         "scope": "employer",
@@ -1671,7 +1806,7 @@
         "company": "东风汽车集团有限公司",
         "url": "https://career.hebut.edu.cn/home/correcruit/content/id/80609.html",
         "title": "东风汽车集团有限公司2027届秋季全球校园招聘-东风汽车集团有限公司",
-        "sha256": "cd11d855f282a194aec886e4b88115f3d17e7045263488626f4a73c89ed650f4",
+        "sha256": "0fbc48590fc5fa9171dfbc40d2d400a845b053a514572075315619711e02aed6",
         "source_kind": "university",
         "accepted": true,
         "scope": "employer",
@@ -1683,10 +1818,1318 @@
         "company": "中信银行股份有限公司",
         "url": "https://career.nankai.edu.cn/correcruit/content/id/119004.html",
         "title": "中信银行大连分行2027年秋季校园招聘公告-南开大学学生就业指导中心代发",
-        "sha256": "2f594be03a64107785862ebe5ad368b5ef1bed4fb20056ee032fb0145281950d",
+        "sha256": "2cb48410eac7d19ef71c94f7490771c6f6a0d37e0b7fa2509bacf9562cefff21",
         "source_kind": "university",
         "accepted": true,
         "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中信银行股份有限公司",
+        "url": "https://www.eoffcn.com/kszx/detail/2199600.html",
+        "title": "2027银行秋季校园招聘公告汇总（更新中）_中公网校\n2027银行秋季校园招聘公告汇总（更新中）咨询中心关于我们新手必读常见问题全国统一咨询热线商务合作",
+        "sha256": "5ac5a8aa00ba4394e68ea5a29e3db23f62eb2281303dca7ccf925000e080cbba",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "平安银行股份有限公司",
+        "url": "https://www.eoffcn.com/kszx/detail/2199600.html",
+        "title": "2027银行秋季校园招聘公告汇总（更新中）_中公网校\n2027银行秋季校园招聘公告汇总（更新中）咨询中心关于我们新手必读常见问题全国统一咨询热线商务合作",
+        "sha256": "5ac5a8aa00ba4394e68ea5a29e3db23f62eb2281303dca7ccf925000e080cbba",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "招商银行股份有限公司",
+        "url": "https://www.eoffcn.com/kszx/detail/2199600.html",
+        "title": "2027银行秋季校园招聘公告汇总（更新中）_中公网校\n2027银行秋季校园招聘公告汇总（更新中）咨询中心关于我们新手必读常见问题全国统一咨询热线商务合作",
+        "sha256": "5ac5a8aa00ba4394e68ea5a29e3db23f62eb2281303dca7ccf925000e080cbba",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "url": "https://wap.sasac.gov.cn/n2588035/n2588325/n2588350/index.html",
+        "companies": [
+          "中国东方航空集团有限公司",
+          "中国大唐集团有限公司",
+          "中国机械工业集团有限公司",
+          "中国海洋石油集团有限公司",
+          "中国电子科技集团有限公司",
+          "中国移动通信集团有限公司",
+          "中国第一汽车集团有限公司",
+          "中国航天科工集团有限公司",
+          "中国航空工业集团有限公司",
+          "中国远洋海运集团有限公司",
+          "中国铝业集团有限公司"
+        ],
+        "result": "fetch_failed",
+        "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      },
+      {
+        "company": "中国中煤能源集团有限公司",
+        "url": "https://fenbi.com/page/exam-information-detail/469530924570624",
+        "title": "中国中煤2027届秋季校园招聘正式启幕-国企-2026-国央企正式-国家级机构-中国中煤-粉笔资讯中国中煤2027届秋季校园招聘正式启幕\n中国中煤2027届秋季校园招聘正式启幕公告正文中国中煤2027届秋季校园招聘正式启幕招聘2020人",
+        "sha256": "c49ea316dcadc0df2706fb14e60c69f9f8c83c09cebc6ad79bcb0fb5622f6537",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "中国中车集团有限公司",
+        "url": "https://hera-webapp.fenbi.com/api/website/article/detail?apcid=0&app=web&av=100&client_context_id=119a0958c95a02c722e6496bbdc62d80&deviceType=3&hav=100&id=468984686992384&kav=100",
+        "title": "中国中车集团有限公司2027全球招聘公告\n中国中车集团有限公司2027全球招聘公告招聘若干人",
+        "sha256": "9ca9ae8e81f001d9b5b52e0ca3c8e019658f65abc63b73b5981ed70e15bfbfe1",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "reason": "not_recruitment"
+      },
+      {
+        "company": "中国光大银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119641.html",
+        "title": "中国光大银行北京分行2027年  秋季校园招聘启事-中国光大银行股份有限公司北京分行",
+        "sha256": "115a67b01fe6b14e0f13a9c65083b1d971d6568bdafea7f665a9ab4bbbe65119",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国农业银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119364.html",
+        "title": "中国农业银行总行2027年度校园招聘-南开大学学生就业指导中心代发\n中国农业银行总行2027年度校园招聘",
+        "sha256": "12c5a22cff737c5344ed65f31a540005b3e7133a8d45c478adc02fcff6a2888e",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国华电集团有限公司",
+        "url": "https://www.chd.com.cn/site/2/2026-09-14/b7dffff921ca499c90f84509cd272310.html",
+        "title": "中国华电集团有限公司-招聘信息",
+        "sha256": "4fba19871d0f7f1a01ace94b7f1f00d97ee8ed7ab8269f863276d6166a340a13",
+        "source_kind": "official",
+        "accepted": false,
+        "reason": "headline_cohort_mismatch"
+      },
+      {
+        "company": "中国华电集团有限公司",
+        "url": "https://m.chd.com.cn/site/2mobile/2026-09-14/bfb1ebce929344738977d8978213a933.html",
+        "title": "中国华电2027年度校园招聘公告",
+        "sha256": "3fe6100219105d043594fd076a530f8f1a85723862d7741586b1cd5e1f057350",
+        "source_kind": "official",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": {
+          "date": "2026-10-18",
+          "quote": "报名截止时间：2026年10月18日"
+        },
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国华电集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119351.html",
+        "title": "中国华电2027年度校园招聘公告-中国华电集团有限公司天津分公司",
+        "sha256": "d58fd64371b98ca4b847c9dd72193281af20a6c35bffe0dc457cfa18124bc64c",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国华能集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119527.html",
+        "title": "中国华能集团有限公司 2027年校园招聘公告-中国华能集团有限公司",
+        "sha256": "0c989dad97abaf2251ba176fc3704f9c9b1aee08fff9b0adfe2c54a6dcb9e0ac",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国国新控股有限责任公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119561.html",
+        "title": "中国国新控股有限责任公司2027届校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "99a95de47a5331f50999cc92d0f1e47c26504bd79ca0659f937698423ab54f96",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国大唐集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119636.html",
+        "title": "中国大唐集团数字科技有限公司2027年高校毕业生招聘公告-中国大唐集团数字科技有限公司",
+        "sha256": "6b28a657e8952d307b81504f818d7d99a7e2c22b92c2a0324fe2b46a714b275b",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": {
+          "date": "2026-10-31",
+          "quote": "报名截止时间为2026年10月31日"
+        },
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国大唐集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119255.html",
+        "title": "中国大唐2027年校园招聘正式启动-南开大学学生就业指导中心代发",
+        "sha256": "12769121a9b0b8f8023b4320aedf86b4c2f881d89b0de9644f567c28deb898cd",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国工商银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118943.html",
+        "title": "中国工商银行四川省分行2027年度校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "ff3ff9b96827d60ef3f8649a8482be71ce6b9a5e40f6970c48c7c5b2b204cd64",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国广核集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119442.html",
+        "title": "中国广核新能源控股有限公司2027届秋季校园招聘-中广核（北京）新能源科技有限公司",
+        "sha256": "7003f933fc078585ddab7f33d673aaceca47db6d9f030c6dc1183864079c0c81",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国广核集团有限公司",
+        "url": "https://career.muc.edu.cn/front/zwxx.jspa?xqzwId=38210&zpxxId=32058",
+        "title": "中国广核集团2027届秋季校园招聘公告\n职位信息",
+        "sha256": "79a9c3f6b68b8424722523fdfa4b8a1cbd557a0a6df2ea06eee49915a910872b",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国建筑集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119677.html",
+        "title": "中建八局南方公司2027届校园招聘正式启动-南开大学学生就业指导中心代发",
+        "sha256": "526450eec3c93f3c170e3eec3871d99f94f60bdbe8fb9eb4331c5620de8e72df",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国建筑集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119196.html",
+        "title": "中建八局城市发展有限公司2027届校园招聘-山东中建城市发展有限公司",
+        "sha256": "aaf066760addae627c7a560656b4fc19a47779ac5fcc20b60a1459edbe1b2d56",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国建筑集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118803.html",
+        "title": "中建八局土木公司2027届校园招聘-中国建筑土木建设有限公司",
+        "sha256": "e955837f231ed041e47d551ca961962df21b2276a455aaf588645473d8172416",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国建筑集团有限公司",
+        "url": "https://career.nankai.edu.cn/recruitment/content/type/2/id/6107.html",
+        "title": "中国建筑第八工程局有限公司2027届校园招聘（集团招聘）",
+        "sha256": "99d0cdaabd1756484d10a2ff16cbd57729395fd9583bd4aeec899c24edd5ea5b",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国核工业集团有限公司",
+        "url": "https://m.gwy.com/gqzp/409531.html",
+        "title": "中核集团2027校园招聘官网入口：cnnc.zhiye.com/xiaoyuan - 高顿央国企招聘\n中核集团2027校园招聘官网入口：cnnc.zhiye.com/xiaoyuan",
+        "sha256": "c68dd4e44c77cc13e68e41f2a2723ae0e6fd6ac75b74c0bf7724433870bedcd0",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "secondary_candidate"
+      },
+      {
+        "company": "中国核工业集团有限公司",
+        "url": "https://hera-webapp.fenbi.com/api/website/article/detail?apcid=0&app=web&av=100&client_context_id=37097523d7e0dce87c5a78c21d5fe3bf&deviceType=3&hav=100&id=468620149021696&kav=100",
+        "title": "中国核工业集团有限公司2027届秋季校园招聘\n中国核工业集团有限公司2027届秋季校园招聘招聘若干人",
+        "sha256": "68ba9e77141d3cd4f5b4b4e2719a3d8054ca3c2e519b0f9ea8d5d1111953ba1a",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "scope": "employer",
+        "opening": {
+          "date": "2026-08-14",
+          "quote": "报名时间\n2026/08/14",
+          "cohort_quote": "2027届"
+        },
+        "deadline": null,
+        "result": "secondary_candidate"
+      },
+      {
+        "company": "中国电信集团有限公司",
+        "url": "https://www.offerstar.cn/recruitment",
+        "title": "2027秋招/春招信息汇总｜最新最全校招岗位，涵盖国企、央企、互联网、银行等行业招聘岗位 - OfferStar AI\n2027届秋招｜春招｜日常实习｜暑期实习岗位汇总AI答题，搞定烦人的测评、笔试、考试等，双机位也能用",
+        "sha256": "9ef5fa67122e6357838e81940e4871fe137a4baafaebbc90e32d37c5f6c16a29",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "中国电信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118956.html",
+        "title": "中国电信广东公司2027秋季校园招聘-中国电信股份有限公司广东分公司",
+        "sha256": "bad6ee9777c0850958941ac8a7a9cfc08e35e74a5acc7b8881087899225fa4a6",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国电力建设集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119307.html",
+        "title": "中国电建集团贵阳勘测设计研究院有限公司2027年校园招聘-中国电建集团贵阳勘测设计研究院有限公司",
+        "sha256": "689f0d2a5f17d69d5c0302b6218d2a6c91adbf06d1b81b03e009309b65a1551e",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国电子信息产业集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/117515.html",
+        "title": "中国电子信息产业集团有限公司 2027届校园招聘-麒麟软件有限公司",
+        "sha256": "bc6a52955b7c144b07dfd6c45cb44e9248bee934cc86e18e6ae26a7a11e7fdec",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国电气装备集团有限公司",
+        "url": "https://m.gwy.com/gqzp/410876.html",
+        "title": "中国电气装备集团2027校园招聘：官方入口+招聘岗位 - 高顿央国企招聘\n中国电气装备集团2027校园招聘：官方入口+招聘岗位",
+        "sha256": "64b9004a6d1dd1f10e02e5e465d39af48f261ceba13100700c825e45380697df",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "secondary_candidate"
+      },
+      {
+        "company": "中国石油化工集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119529.html",
+        "title": "中国石化集团重庆川维化工有限公司2027年校园招聘简章-中国石化集团重庆川维化工有限公司",
+        "sha256": "a36cb63e1945d45ff7520caea59e35e5c33e62bdca4c0c9a977a5d7c0ef8a4a6",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国石油化工集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119500.html",
+        "title": "中国石化茂名石化公司2027年校园招聘启事-中国石油化工股份有限公司茂名分公司",
+        "sha256": "19843bbdd319c393783693c604459d949406481af147e0769535e2a412a5b50d",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国石油化工集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119294.html",
+        "title": "中石化中原石油工程有限公司 2027年校园招聘简章-中石化中原石油工程有限公司",
+        "sha256": "ac5a67ef76fd4347a467d55510c271a4039688e72008eb7823c99706f73ad46d",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国石油天然气集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119327.html",
+        "title": "中国石油勘探开发研究院西北分院  —2027届研究生校园招聘-中国石油天然气股份有限公司勘探开发研究院西北分院",
+        "sha256": "55921539790723aec5ca8f333b0d0cc347f70ca671adf74aeb2e685307c2fa15",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国移动通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119454.html",
+        "title": "中国移动通信集团云南有限公司 2027秋季校园招聘公告-中国移动通信集团云南有限公司",
+        "sha256": "b236e0d59159d89da533e59b7626a9172381b8eaa8072b7f318ddbc2d800ece0",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国移动通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119414.html",
+        "title": "中国移动财务公司2027校园招聘正式启动！-南开大学学生就业指导中心代发",
+        "sha256": "57a4d477780ccef992c17a91b2e58583b06e97f3c7cb4f384869a810f445f8b9",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国移动通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119357.html",
+        "title": "中国移动财务公司（金融机构）2027秋季校园招聘简章-中国移动通信集团财务有限公司",
+        "sha256": "90dc8d496c403e89ad163adc29ac4ff3b2d672e499eda6612a8a69ddcae41ef4",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国移动通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119164.html",
+        "title": "汇聚成川·移起闪耀丨中国移动四川公司2027校园招聘正式启动-南开大学学生就业指导中心代发",
+        "sha256": "e2a99cf2dcf3e4066126f3b70e572aed102bdb7462be9446f53ce7c9d9457124",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国移动通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119104.html",
+        "title": "中国移动供应链管理中心2027校园招聘-中国移动通信有限公司",
+        "sha256": "a2fd2db41a0a2a998b586bf40277bf97fb726326599f886e366ec8748d2ecd0a",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国移动通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118985.html",
+        "title": "杭研校招季丨中国移动杭州研发中心2027届秋季校园招聘-中移（杭州）信息技术有限公司\n杭研校招季丨中国移动杭州研发中心2027届秋季校园招聘",
+        "sha256": "611dc8edf589d2edb8943d081f0e4b3ea8fac6e53b59806d229065471c8a3287",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国移动通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118734.html",
+        "title": "中国移动物联网公司 2027届秋季校园招聘-中移物联网有限公司",
+        "sha256": "6953a16e7291b189b2ac39cc0cf6838a1d4c37de093d0ddf9780565c8c77ee43",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国联合网络通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119535.html",
+        "title": "中国联通北京市分公司新苗计划2027校园招聘公告-中国联合网络通信有限公司北京市分公司\n一、公司介绍二、人才专属三、招聘对象四、招聘流程五、投递方式",
+        "sha256": "39c68abf708c57e53cc59d12e2b73c253d2f6f110c5daa715107e4fa88f19880",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国联合网络通信集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119376.html",
+        "title": "中国联通湖南省分公司2027校园招聘-中国联合网络通信有限公司湖南省分公司",
+        "sha256": "89eb2fcbc87930d8343f9fb3b02951c8ded80bd3627ee2e9627cf4e34e7599ee",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国能源建设集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119070.html",
+        "title": "中国能源建设股份有限公司2027届校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "4a9350e3a22b80cd864733da803a254e6c41ff15bc45da206eb33f6f90c5b903",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国能源建设集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118974.html",
+        "title": "中国能源建设集团广东省电力设计研究院有限公司2027届校园招聘简章-中国能源建设集团广东省电力设计研究院有限公司",
+        "sha256": "e3539cdbaf2c26fd67fc027e29e02752a6e0266829735f12a615380a2674ea01",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国航天科工集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119280.html",
+        "title": "中国航天科工二院七O六所2027届校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "6f097f2e61ebdab2dd8550d720e15e30d8508f59a9fad4076698d67e078bbf0b",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国航空发动机集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119141.html",
+        "title": "中国航发沈阳发动机研究所2027届校园招聘-中国航发沈阳发动机研究所",
+        "sha256": "a8a6d5ab4215fcaa0b1f9581cd24ce31f0c3d3651c77119c76a09ec749d99591",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国航空发动机集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119063.html",
+        "title": "中国航发四川燃气涡轮研究院2027届校园招聘正式启动-南开大学学生就业指导中心代发",
+        "sha256": "5f5bd278ddb434a99b0b82f3820d1120b18642c2ddfdc2bbb27311ee81d9d3e7",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国船舶集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119225.html",
+        "title": "中国船舶第719研究所2027届校园招聘简章-中国船舶集团有限公司第七一九研究所",
+        "sha256": "8c4a42b8697ce0b714a232155e6f29b09651a5e31cebfc699be1812ee0bab021",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国船舶集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/117450.html",
+        "title": "中国船舶集团有限公司第七二二研究所 2027届校园招聘简章-中国船舶集团有限公司第七二二研究所",
+        "sha256": "a712e0ef408de2db8c681d14c1a03bcd7c79b6cd115ac427e6cf304eb0497284",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国远洋海运集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119098.html",
+        "title": "中国远洋海运集团有限公司2027届 秋季校园招聘公告-中国远洋海运集团有限公司",
+        "sha256": "86460639085390658c421eefb582c4b516a3089664cf226d2522512372d8677c",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国邮政储蓄银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119183.html",
+        "title": "中国邮政储蓄银行河北省分行2027年度校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "7b8eb2e63a423c52c59ff7208f557394564a20d96d4e5e8235eb04714be93a6f",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国邮政储蓄银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118783.html",
+        "title": "中国邮政储蓄银行北京分行2027校园招聘！-南开大学学生就业指导中心代发",
+        "sha256": "d98a20a01e7f19a2749d67d93da7e5a9f971004b93a7c62dc016cf41ac27d7c5",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119433.html",
+        "title": "中国银行深圳市分行2027年校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "b28b5bd606562800e8701d4c9928a14df55f21e8d6774476d7e2b3dc6601289b",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119166.html",
+        "title": "中国银行保险信息技术管理有限公司2027年度校园招聘公告-南开大学学生就业指导中心代发",
+        "sha256": "8d06de4c9164506582571acf88579cfb7543983b5f8850ebf7b7622b7a612610",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118847.html",
+        "title": "中国银行大连市分行2027年校园招聘正式启动-南开大学学生就业指导中心代发",
+        "sha256": "a04740cf094339cd2996c4c8dffe0ddff944e64c953b2c2ad44bbfb0b32a784b",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国银行股份有限公司",
+        "url": "https://www.bankofchina.com/aboutboc/bi4/202609/t20260903_25689311.html",
+        "title": "中国银行股份有限公司2027年全球校园招聘公告\n中国银行股份有限公司2027年全球校园招聘公告",
+        "sha256": "f25a31fcd98c70b00691206bde3e7a99ac18ffcae7313fe900f88c210ac39ba6",
+        "source_kind": "official",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中国长江三峡集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119610.html",
+        "title": "中国长江三峡集团有限公司 2027年高校毕业生招聘公告-中国长江三峡集团有限公司",
+        "sha256": "f47f9404a84d5e266f34969cad4bfcce9300bcb7c51283bb72c9c401c49be1c2",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "中粮集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119092.html",
+        "title": "中粮集团2027届校园招聘-中粮集团有限公司",
+        "sha256": "d19837e1047d8b5ed8fca00ff2a5ee9932cc118585bc83fa18919f8282195d20",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "交通银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119689.html",
+        "title": "交通银行无锡分行2027校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "098514b0d3d829b9a5ac68663d4a1cc3f737fabf6525777c9c5b1dd8b07172de",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "交通银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119518.html",
+        "title": "赣启华章 智汇交行  交通银行江西省分行2027年度校园招聘-交通银行股份有限公司江西省分行",
+        "sha256": "22aa0dfbd340213172b1b8aca19d2f0df8492dc483ea4d6cb8671efe75abd72e",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "交通银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119330.html",
+        "title": "山海赴约 交绘星河 交通银行山东省分行 2027 校园招聘-交通银行股份有限公司山东省分行",
+        "sha256": "024cec8c8af33c09aa14d567683e808966e97f15ec58ee34c556f36e759313d2",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "交通银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119055.html",
+        "title": "交通银行2027校园招聘正式启动-南开大学学生就业指导中心代发",
+        "sha256": "99e1b78e5003b3e673459218a6588584b3d37ba442ceac3f0b9544e911213268",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "交通银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119036.html",
+        "title": "交通银行大连分行2027校园招聘公告-交通银行股份有限公司大连分行",
+        "sha256": "0aa0c565d2edafbf20bf50fc6d7c936d458758eb208572680a8045d20310916b",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "交通银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119028.html",
+        "title": "交通银行苏州分行2027年度校园招聘简章  -交通银行股份有限公司苏州分行\n一、企业简介二、招聘职位三、招聘对象  四、薪酬福利与职业发展  五、招聘流程  六、投递方式",
+        "sha256": "813bab8779e8b901ce7234b229492f8a3f60ec2951572c7254a45e67c7b2a324",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "交通银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119027.html",
+        "title": "交通银行2027年度校园招聘正式启动！-交通银行股份有限公司",
+        "sha256": "ab787ebaa84b173b777bd74eb70dea1e48d3fe57f9751eb0030aa7d4772e8d40",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "交通银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118937.html",
+        "title": "交通银行2027年度校园招聘正式启动-南开大学学生就业指导中心代发",
+        "sha256": "d7d5266dfbfde19579ad9275aead87aeeaa1279236876e59cd77f0853ddce188",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "京东集团",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119178.html",
+        "title": "Hi YOU！京东方智慧医工2027秋季全球校园招聘正式启动！-北京京东方医院有限公司",
+        "sha256": "189692129f870791871c92a2cf5aa37185e098982b0e1bda78eaa59d4cf6f2c6",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "京东集团",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/116372.html",
+        "title": "京东2027届-TET管培生招聘启动啦-南开大学学生就业指导中心代发",
+        "sha256": "16b60d0acfdea5403403580d39fd3d3b47cfd9ec4bfe046a8dd55dcc085597c4",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "兴业银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119644.html",
+        "title": "兴业银行大连分行2027校园招聘公告-兴业银行股份有限公司大连分行",
+        "sha256": "d15613a94ef1c8acca33f371e91e22bff3d2dde5ebeb3c00142f6c2b59f6beb0",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "兴业银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119355.html",
+        "title": "兴业银行深圳分行2027校园招聘公告-兴业银行股份有限公司深圳分行",
+        "sha256": "bfc1cbd04718c980566962be29a6de91036463a57104fed901d2b37308a4e0e1",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "兴业银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119198.html",
+        "title": "兴业银行成都分行2027校园招聘-兴业银行股份有限公司成都分行",
+        "sha256": "bf4873b9781be2bd4ffaa6acf16cbd0d377e855205fc96c0f1581571c2c011a7",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "兴业银行股份有限公司",
+        "url": "https://www.xyyh.com.cn/cn/aboutCIB/about/jobs/2026/20260922.html",
+        "title": "兴业银行2027校园招聘公告 -- 兴业银行官方网站",
+        "sha256": "0306d7c3a9fc3769b62279040c77373121655d6387c391bc9b6434908288a15c",
+        "source_kind": "official",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "农夫山泉股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119269.html",
+        "title": "养生堂·农夫山泉·万泰生物 2027校招启动！-南开大学学生就业指导中心代发",
+        "sha256": "05740726d825c1492540eb1f3915ac92b35d5f24f3bce84402f287140e3b38c9",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "北京三快在线科技有限公司 (美团)",
+        "url": "https://career.nankai.edu.cn/correcruit/index/p/16/sel_area/11.html",
+        "title": "招聘信息|南开大学学生就业指导中心",
+        "sha256": "6e125fb67dcbf93388f4a9537040a3af434a36fdb5078c2d6c7762686f55554c",
+        "source_kind": "university",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "华为投资控股有限公司",
+        "url": "https://career.huawei.com/cn/campus-recruitment",
+        "title": "校园招聘",
+        "sha256": "0ab778cf96311ff45c0f1687754c9abbdcda51d52bdddbbc7dfc18e619e9fa03",
+        "source_kind": "official",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "华勤技术股份有限公司",
+        "url": "https://jiuye.swjtu.edu.cn/career/zpxx/view/zpxx/232172520072155136",
+        "title": "西南交通大学-大学生就业指导中心西南交通大学-大学生就业指导中心",
+        "sha256": "1949f739fdc57ce3fec338a9f836f71326c57729828ce0c9595628596568fffe",
+        "source_kind": "university",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "华夏银行股份有限公司",
+        "url": "https://job.hust.edu.cn/zpinfo1/2448083.htm",
+        "title": "华中科技大学就业信息网",
+        "sha256": "f2820f9eebd279b9695cf19976555c1c8cc1092f99b657a180895264badf1a65",
+        "source_kind": "university",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "吉林银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118745.html",
+        "title": "“吉聚才  行新途” ——吉林银行2027届秋季校园招聘公告-吉林银行股份有限公司",
+        "sha256": "11b37a98aa702ef368933207865c31038f90a6ac4e7cf065df377b7e7d7ef103",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": {
+          "date": "2026-10-16",
+          "quote": "报名截止日期：2026年10月16日"
+        },
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "哈尔滨银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119592.html",
+        "title": "拥抱毕业季 呼唤领跑者 哈尔滨银行（集团）2027校园招聘-哈尔滨银行股份有限公司",
+        "sha256": "2273f88f86d11beb63cec3fa7796e30d6fff5c08f75267cedae16ee885efc4a7",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": {
+          "date": "2026-11-20",
+          "quote": "报名截止时间：2026年11月20日"
+        },
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "国家开发投资集团有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119192.html",
+        "title": "国家开发投资集团有限公司 2027年度应届毕业生招聘公告-国家开发投资集团有限公司",
+        "sha256": "b72d4be88cfbf82968116852def71f787b8933027627a039b9f0dc7415c08a38",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "国家开发银行",
+        "url": "https://m.gwy.com/yhzp/412983.html",
+        "title": "国家开发银行2027年校园招聘报名入口：https://cdb2027.zhaopin.com - 高顿银行招聘\n国家开发银行2027年校园招聘报名入口：https://cdb2027.zhaopin.com",
+        "sha256": "c28559d224b8c11468484e2d8bf30170e1928a7b0ea669d790d1b5637e182f22",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "scope": "employer",
+        "opening": {
+          "date": "2026-09-12",
+          "quote": "报名时间：2026年9月12日",
+          "cohort_quote": "2027年"
+        },
+        "deadline": {
+          "date": "2026-09-20",
+          "quote": "报名截止\n2026-09-20"
+        },
+        "result": "secondary_candidate"
+      },
+      {
+        "company": "国家开发银行",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119366.html",
+        "title": "国家开发银行辽宁省分行2027年校园招聘公告-南开大学学生就业指导中心代发",
+        "sha256": "dd30f5e7bc5dc825e508fb15258ef5001bd4bc89f59ae6788b86822291733461",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "国家开发银行",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119003.html",
+        "title": "国家开发银行深圳分行2027年校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "7e6c899806db97d97e7a57339716831d4935c5accb39328cdfd7244df2d78f15",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "国家开发银行",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118860.html",
+        "title": "国家开发银行大连市分行2027年校园招聘正式启动！-南开大学学生就业指导中心代发",
+        "sha256": "e0bdb7247dbf56d8a130667ee6c152fbe352d6374a679bf9adb265e2f1e96299",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "国家电力投资集团有限公司",
+        "url": "https://www.fenbi.com/page/exam-information-detail/469068866410496",
+        "title": "国家电力投资集团有限公司27届校园招聘-国企-2026-国央企正式-国家级机构-国家电力投资集团有限公司-粉笔资讯国家电力投资集团有限公司27届校园招聘\n国家电力投资集团有限公司27届校园招聘公告正文国家电力投资集团有限公司27届校园招聘招聘若干人",
+        "sha256": "ca1600cbaf019eca948fedba1eec0ea304d71bdd0bf7ee50005b4f74b6faf12d",
+        "source_kind": "recruitment",
+        "accepted": false,
+        "scope": "employer",
+        "opening": {
+          "date": "2026-09-14",
+          "quote": "报名时间\n2026/9/14",
+          "cohort_quote": "27届"
+        },
+        "deadline": null,
+        "result": "secondary_candidate"
+      },
+      {
+        "company": "国家电网有限公司",
+        "url": "https://job.hust.edu.cn/zjob/2450592.htm",
+        "title": "华中科技大学就业信息网",
+        "sha256": "7a9b22b961a6266bf5a586ca07cb73258832ca9188342c11b8af489cf74d0a05",
+        "source_kind": "university",
+        "accepted": false,
+        "reason": "employer_ambiguous_or_mismatch"
+      },
+      {
+        "company": "国轩高科股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119208.html",
+        "title": "国轩高科2027届校园招聘-国轩高科股份有限公司",
+        "sha256": "a2973f29298b0b7cd89601eb389e11f5b83afbecf0960d70c74d008f3b87c56f",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "宁德时代新能源科技股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/116814.html",
+        "title": "宁德时代2027届全球校园招聘正式启动  —— 让时代，因我不同-宁德时代新能源科技股份有限公司",
+        "sha256": "22af8415c495162e40ec7399d88ce23c866c1442bd62ceed51edadc48d2d8f8a",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "宁波银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119058.html",
+        "title": "与宁同行，银领未来｜宁波银行2027届校园招聘正式启动！-南开大学学生就业指导中心代发",
+        "sha256": "c5aa585fc00429117eb4d27b165faa3fb87cf3b6bb6e08c93c533ce216e8b82f",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "平安银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119026.html",
+        "title": "平安银行总行2027届秋季招聘-平安银行股份有限公司",
+        "sha256": "bc344ec796d1706cebdbef8698c6d2f94f917a6c859f98ba98c9c260930734d2",
+        "source_kind": "university",
+        "accepted": false,
+        "reason": "not_recruitment"
+      },
+      {
+        "company": "广发银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119670.html",
+        "title": "广发银行长沙分行2027年度校园招聘正式启动-南开大学学生就业指导中心代发",
+        "sha256": "9c4898ff861287ad67ecfc69d5eeea07f5cab731bc45187a1a73001c061b3284",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "广发银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119251.html",
+        "title": "广发银行深圳分行2027年度秋季校园招聘-分行营销英才-广发银行股份有限公司深圳分行",
+        "sha256": "68995d7606676adf3d3ef894caee9c5070ff0247b61ff20ed227cc6b5145299f",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "广发银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118874.html",
+        "title": "广发银行2027年度校园招聘-广发银行股份有限公司",
+        "sha256": "6155d5ab82b89b5569b1f03d347e0e6a7f575f5ed195c759e7b98439565513f5",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "广发银行股份有限公司",
+        "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56228.html",
+        "title": "广发银行2027年度校园招聘公告-广发银行股份有限公司",
+        "sha256": "aa1dbb2cb2f21a03c8c0db8115a05009ac2bb699f75ed4e73413366453508923",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "广州银行股份有限公司",
+        "url": "https://jy.gzhu.edu.cn/index.php/web/Index/jobs-brief-detail?id=STUXSW8",
+        "title": "广州银行2027校园招聘公告\n - 广州大学就业网",
+        "sha256": "8e042f5ee7bacb467996ae86579043d8cf77625e5c0e636f88fc1518b27bbeb6",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "招商银行股份有限公司",
+        "url": "https://career.cmbchina.com/campus/home",
+        "title": "招商银行招聘",
+        "sha256": "eebadaacbe4a2d2fc468bc78b0ae3db7ea8c4dda8568140b15bf1af03be4d535",
+        "source_kind": "official",
+        "accepted": false,
+        "reason": "headline_cohort_mismatch"
+      },
+      {
+        "company": "招商银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118980.html",
+        "title": "“梦想靠岸”招商银行东莞分行2027校园招聘公告-招商银行股份有限公司东莞分行",
+        "sha256": "2fcca2a1cccf55718385c1e7e0c2692333a225093e01cec58057e99c5425de12",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "招商银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118848.html",
+        "title": "【梦想靠岸】招商银行广州分行2027校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "1b4a630537722536b7730c0a82f28ce42e56c4f6350d7c53fee5212c9f52bf48",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "杭州银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118884.html",
+        "title": "杭州银行2027届秋季校园招聘启事-杭州银行股份有限公司",
+        "sha256": "a7be8472b98afff2ad81b5e365e59777eecee5d4b7e29b2d07a51b848789b33f",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": {
+          "date": "2026-10-25",
+          "quote": "报名截止时间为2026年10月25日"
+        },
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "比亚迪股份有限公司",
+        "url": "https://job.hust.edu.cn/extxjh/781788309488773.do",
+        "title": "-比亚迪股份有限公司",
+        "sha256": "c6b560534adc26b74012b1b4fa15f0ced40e359aed5f972ca47233df4fe17fa2",
+        "source_kind": "university",
+        "accepted": false,
+        "reason": "headline_cohort_mismatch"
+      },
+      {
+        "company": "永卓控股有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119013.html",
+        "title": "永卓控股2027届全球校园招聘正式启动！-南开大学学生就业指导中心代发",
+        "sha256": "908b2c381dd3b2ae5b536ecd0753facb8821d6be47316fee068940f1e91e49bd",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "江苏银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119213.html",
+        "title": "江苏银行苏州分行2027届校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "f8c6944c49b9a3db461b24fca0e67465c5af2bcadb3c5263c04a379c40148e6d",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "浙商银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119617.html",
+        "title": "浙商银行2027届校园招聘启事-浙商银行股份有限公司",
+        "sha256": "f93398c4f6ef3639b0986c726b6f35c522d96701bb442fdba95899698aa3e4b4",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "浙商银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/119544.html",
+        "title": "浙商银行合肥分行2027校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "9700801482efe310faaf16c9739e214633761b1b2217da0aaab9875370e2a2b2",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "subsidiary",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "浙商银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118746.html",
+        "title": "浙商银行2027校园招聘启事 -浙商银行股份有限公司",
+        "sha256": "8c376017f31b6075d717f81d673b6d254598df83fc9806c4dc27502d25296a7c",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "浙商银行股份有限公司",
+        "url": "https://zp.czbank.com.cn/zpweb/zpPostController/planDetailPage.mvc?planId=8a8340e9a033d10501a06502133f0014",
+        "title": "计划详情浙商银行股份有限公司\nCZ星计划（总行）\r\n                                                \r\n                                                    CZ星计划（北京分行）\r\n                                                \r\n                                                    CZ星计划（杭州分行）\r\n                                                \r\n                                                    CZ星计划（上海分行） \r\n                                                \r\n                                                    CZ星计划（南京分行）\r\n                                                \r\n                                                    CZ星计划（广州分行）",
+        "sha256": "1aa8155df8d013c22cf6fa057a4b19739747a0155dcfbd8bdc74b4929b1d156e",
+        "source_kind": "official",
+        "accepted": false,
+        "reason": "headline_cohort_mismatch"
+      },
+      {
+        "company": "浙江吉利控股集团有限公司",
+        "url": "https://career.hebut.edu.cn/home/correcruit/content/id/79948.html",
+        "title": "吉利控股集团2027届秋季全球校园招聘-浙江吉利控股集团有限公司",
+        "sha256": "c30f9bc8a7b615197d13847c818d30a01ca7928a382c1430ee206ba66e221dc0",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "渤海银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118811.html",
+        "title": "渤海银行2027年校园招聘简章-渤海银行股份有限公司",
+        "sha256": "a07a2e20c483b88e8fa5caa60b949d41ec3ec816b12930152dd940997227d801",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "渤海银行股份有限公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118866.html",
+        "title": "渤海银行2027年校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "dae9f844e6cf20ae867e86737351ff8010fa696bb513a6ad20cbe6649d3f92b9",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
+        "opening": null,
+        "deadline": null,
+        "result": "verified_recruitment"
+      },
+      {
+        "company": "百度公司",
+        "url": "https://career.nankai.edu.cn/correcruit/content/id/118329.html",
+        "title": "百度 2027届校园招聘-南开大学学生就业指导中心代发",
+        "sha256": "7df61f0f61d2b14f3a69bbee051c9bf19d10b878d2961b488569a98eb8ad3973",
+        "source_kind": "university",
+        "accepted": true,
+        "scope": "employer",
         "opening": null,
         "deadline": null,
         "result": "verified_recruitment"
