@@ -83,7 +83,7 @@ function renderDirectory(){
  if(!directoryOrders){$("uncertainSummary").innerHTML='<p class="muted">名单序号正在加载或暂不可用，请稍后刷新。</p>';return}
  const query=$("boardQuery").value.trim().toLowerCase(),byName=new Map(companies.map(c=>[c.name,c]));
  const rows=(directoryOrders[directoryGroup]||[]).filter(row=>!query||row.name.toLowerCase().includes(query));
- $("directoryOrderNote").textContent=directoryGroup==="民营500"?"按已保存的民营500排名排列；民生银行第67位由唯一缺失排名恢复。":"按仓库保留的导入顺序编号；原始附件未保留，序号尚待与原文件核对。";
+ $("directoryOrderNote").textContent=directoryGroup==="民营500"?"已按原始《民营500.pdf》核对500家企业及序号，民生银行为第67位。":directoryGroup==="央企"?"已按原始《央企名录.xlsx》核对99家企业及序号。":"本次两份原件不含银行专用名单；银行暂按仓库保留的导入顺序编号。";
  $("uncertainSummary").innerHTML='<table class="directory-table"><caption>'+esc(directoryGroup)+' · 显示 '+rows.length+' 家</caption><thead><tr><th scope="col">序号</th><th scope="col">企业名称</th><th scope="col">启动状态</th><th scope="col">投递记录</th></tr></thead><tbody>'+rows.map(row=>{
  const c=byName.get(row.name),known=c&&launched(c)&&c.page_verification?.sha256;
  const status=!c||!launched(c)?"待核验（尚未确认启动）":!known?"已有启动记录，证据待补齐":c.status==="已结束"?"已确认招聘，已记录结束":c.status==="已开启"?"已记录网申开启":"已发布本届招聘公告";
