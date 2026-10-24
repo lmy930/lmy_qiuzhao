@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-10-24",
-  "pages_ok": 42,
+  "pages_ok": 48,
   "pages_attempted": 65,
   "new_hits": 0,
   "pages": [
@@ -82,11 +82,11 @@
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/20.html",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "matched_employers": 1
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/21.html",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "matched_employers": 2
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/22.html",
@@ -94,19 +94,19 @@
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/23.html",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "matched_employers": 0
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/24.html",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "matched_employers": 4
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/25.html",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "matched_employers": 2
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/26.html",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "matched_employers": 0
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/27.html",
@@ -150,7 +150,7 @@
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/37.html",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "matched_employers": 4
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/38.html",
@@ -170,7 +170,7 @@
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/42.html",
-      "error": "<urlopen error [Errno 101] Network is unreachable>"
+      "matched_employers": 3
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/43.html",
@@ -178,7 +178,7 @@
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/44.html",
-      "matched_employers": 0
+      "error": "<urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/45.html",
@@ -190,7 +190,7 @@
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/47.html",
-      "matched_employers": 3
+      "error": "<urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/48.html",
@@ -226,7 +226,7 @@
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/56.html",
-      "error": "HTTP Error 404: Not Found"
+      "error": "<urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/57.html",
@@ -246,7 +246,7 @@
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/61.html",
-      "error": "HTTP Error 404: Not Found"
+      "error": "<urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "page": "https://career.nankai.edu.cn/correcruit/index/p/62.html",
