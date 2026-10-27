@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-10-26T19:46:35.901268+00:00",
+  "scanned_at": "2026-10-27T07:12:09.116552+00:00",
   "companies_total": 657,
   "registered_sources": 41,
   "search_methods": [
@@ -9,13 +9,751 @@
   ],
   "searches_attempted": 657,
   "searches_succeeded": 657,
-  "companies_with_new_hits": 57,
-  "companies_with_any_leads": 183,
+  "companies_with_new_hits": 8,
+  "companies_with_any_leads": 184,
   "note": "搜索成功指至少一个搜索服务返回结果，未必找到招聘公告；未发现不代表未开启。",
   "searches_failed": 0,
   "provider_requests_attempted": 1971,
-  "provider_requests_failed": 2,
+  "provider_requests_failed": 153,
   "partial_provider_errors": [
+    {
+      "name": "中国核工业集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国航天科工集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国航空工业集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国船舶集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国电子科技集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国航空发动机集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国石油天然气集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国石油化工集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国海洋石油集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国家石油天然气管网集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国家电网有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国南方电网有限责任公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国华能集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国大唐集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国华电集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国家电力投资集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国长江三峡集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国家能源投资集团有限责任公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国电信集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国联合网络通信集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国移动通信集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国电子信息产业集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国第一汽车集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "东风汽车集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国机械工业集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国铝业集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国远洋海运集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国航空集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国东方航空集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国中化控股有限责任公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中粮集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国五矿集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国通用技术（集团）控股有限责任公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国建筑集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国家开发投资集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华润（集团）有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国中煤能源集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国机械科学研究总院集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国化学工程集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国建材集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国有研科技集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国建筑科学研究院有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国铁路工程集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国铁道建筑集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国保利集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国电力建设集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国能源建设集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国广核集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国电气装备集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国国新控股有限责任公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国民生银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国家开发银行",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国农业发展银行",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国工商银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国农业银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国建设银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "交通银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国邮政储蓄银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "招商银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中信银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国光大银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "上海浦东发展银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "兴业银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "平安银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华夏银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "广发银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "浙商银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "恒丰银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "渤海银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "京东集团",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "阿里巴巴 (中国)有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华为投资控股有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "比亚迪股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "腾讯控股有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "浙江荣盛控股集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "浙江吉利控股集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "美的集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "小米通讯技术有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "青山控股集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "宁德时代新能源科技股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "北京三快在线科技有限公司 (美团)",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "立讯精密工业股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "顺丰控股股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "通威集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "桐昆控股集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华勤技术股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "珠海格力电器股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "永卓控股有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "九州通医药集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "宁波金田投资控股有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "新奥集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华友控股集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "百度公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "广东海大集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "江西双胞胎控股有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "内蒙古伊利实业集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "永荣控股集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "网易 (杭州)网络有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "理想汽车",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "山西鹏飞集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "远景能源有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "新疆特变电工集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "歌尔股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "安踏体育用品集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "广东小鹏汽车科技集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "禾丰食品股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "金风科技股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "通鼎集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "创维集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "天合光能股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "深圳传音控股股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "金发科技股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "远东控股集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "欣旺达电子股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "携程集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华峰集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "河南双汇投资发展股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "农夫山泉股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国轩高科股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "上海龙旗科技股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "骆驼集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "阿特斯阳光电力集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
     {
       "name": "苏州东山精密制造股份有限公司",
       "errors": [
@@ -23,7 +761,175 @@
       ]
     },
     {
+      "name": "四联创业集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "齐鲁制药集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "浙江大华技术股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "江苏恒瑞医药股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "佛山市海天调味食品股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "北京东方雨虹防水技术股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "科大讯飞股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "北京银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "江苏银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "南京银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "宁波银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "杭州银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "成都银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "长沙银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "重庆银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "徽商银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "齐鲁银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "苏州银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "厦门银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "兰州银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "哈尔滨银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "吉林银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "江西银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "汉口银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "广州银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "台州银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "四川银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "广西北部湾银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "桂林银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -1050,6 +1956,22 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "南开大学公开招聘档案"
+        },
+        {
+          "title": "中国光大银行合肥分行2027年  秋季校园招聘启事",
+          "url": "https://job.hust.edu.cn/zpinfo1/2462734.htm",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "华中科技大学公开招聘档案"
+        },
+        {
+          "title": "中国光大银行武汉分行2027年秋季校园招聘启事",
+          "url": "https://job.hust.edu.cn/zpinfo1/2462725.htm",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "华中科技大学公开招聘档案"
         }
       ],
       "last_found": "2026-10-27"
@@ -3561,6 +4483,14 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "华中科技大学公开招聘档案"
+        },
+        {
+          "title": "中国三峡新能源（集团）股份有限公司2027年秋季校园招聘公告",
+          "url": "https://career.cup.edu.cn/campus/view/id/460764",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "中国石油大学公开招聘档案"
         }
       ],
       "last_found": "2026-10-27"
@@ -7516,6 +8446,128 @@
       "last_found": "2026-10-27"
     },
     {
+      "name": "中国五矿集团有限公司",
+      "hits": [
+        {
+          "title": "智聚群英 矿智聚群英 矿蕴山河 ——中冶武勘2027届校园招聘蕴山河 ——中冶武勘2027届校园招聘 一、关于我们中冶武勘工程技术有限公司（简称中冶武勘）创建于1955年，是世界500强企业中国五矿骨干子企业，中国中... 2026/09/09 572",
+          "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSVZ",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "广州大学公开招聘档案"
+        },
+        {
+          "title": "中国五矿集团有限公司2027年度校园招聘",
+          "url": "https://job.hust.edu.cn/zpinfo1/2462486.htm",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "华中科技大学公开招聘档案"
+        }
+      ],
+      "last_found": "2026-10-27"
+    },
+    {
+      "name": "国家电网有限公司",
+      "hits": [
+        {
+          "title": "国家电网公司直属单位国网信息通信产业集团有限公司2027届校园招聘正式启动",
+          "url": "https://career.hebut.edu.cn/correcruit/content/id/81904.html",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "河北工业大学公开招聘档案"
+        },
+        {
+          "title": "国家电网2027校园招聘：入口+公告时间+报考指南 - 高顿央国企招聘",
+          "url": "https://m.gwy.com/gqzp/409643.html",
+          "snippet": "2027届毕业生求职季已逐步展开，国家电网作为能源领域核心央国企，其校园招聘公告是应届生进入电力系统的重要指引。 依据官方发布节奏与招录规则，理清公告核心内容、报名入口与批次安排，能帮助求职者精准筹备、规避虚假信息，顺利对接适配岗位。",
+          "published_at": null,
+          "discovered_via": "智联招聘"
+        },
+        {
+          "title": "国家电网有限公司招聘平台--招聘动态",
+          "url": "https://zhaopin.sgcc.com.cn/sgcchr/static/dynaAument.html",
+          "snippet": "国家电网有限公司西南分部2027年高校毕业生招聘考试公告（国调网调及北交提前批） 2026-10-26 国网东北分部关于2027年招聘高校毕业生考试的通知（国调网调及北交提前批） 2026-10-26",
+          "published_at": null,
+          "discovered_via": "OfferStar校招信息"
+        },
+        {
+          "title": "国家电网有限公司招聘平台--所属单位招聘公告",
+          "url": "https://zhaopin.sgcc.com.cn/sgcchr/static/recrAument.html",
+          "snippet": "国家电网有限公司西北分部2027年高校毕业生招聘公告 （国调网调及北交提前批） 2026-10-17 国家电网有限公司西南分部2027年高校毕业生招聘公告（国调网调及北交提前批） 2026-10-17 国网北京市电力公司2026年高校毕业生招聘公告（第三批） 2026-04-27",
+          "published_at": null,
+          "discovered_via": "该企业官网优先"
+        },
+        {
+          "title": "国家电网-北京智芯微电子科技有限公司  2027届校园招聘",
+          "url": "https://job.hust.edu.cn/zpinfo1/2459295.htm",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "华中科技大学公开招聘档案"
+        },
+        {
+          "title": "国家电网有限公司招聘平台--首页",
+          "url": "https://zhaopin.sgcc.com.cn/sgcchr/static/home.html",
+          "snippet": "国家电网有限公司东北分部2027年高校毕业生招聘公告（国调网调及北交提前批） 2026-10-17 国家电网有限公司西北分部2027年高校毕业生招聘公告 （国调网调及北交提前批） 2026-10-17 国家电网有限公司西南分部2027年高校毕业生招聘公告（国调网调及北交提前批 ...",
+          "published_at": null,
+          "discovered_via": "微信公众号文章索引"
+        },
+        {
+          "title": "国家电网有限公司招聘平台",
+          "url": "https://zhaopin.sgcc.com.cn/webviews/index.html",
+          "snippet": "国家电网有限公司华北分部2027年高校毕业生招聘公告（国调网调及北交提前批）",
+          "published_at": null,
+          "discovered_via": "Offer前线"
+        },
+        {
+          "title": "国家电网2027校园招聘官网入口：https://zhaopin.sgcc.com.cn - 高顿央国企招聘",
+          "url": "https://m.gwy.com/gqzp/411460.html",
+          "snippet": "国家电网2027校园招聘官网入口（https://zhaopin.sgcc.com.cn）是广大应届生报考国网的首要渠道，了解所招聘的专业，也能够帮助考生精准定位岗位，提升网申通过率。",
+          "published_at": null,
+          "discovered_via": "面灵AI 2027秋招"
+        }
+      ],
+      "last_found": "2026-10-27"
+    },
+    {
+      "name": "温州银行股份有限公司",
+      "hits": [
+        {
+          "title": "温州银行股份有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.offerstar.cn/recruitment",
+          "snippet": "招尽快投递投递wtd纬图设计纬图设计2027校招2027届10-20new助理方案设计师,助理植物设计师上海武汉+1专业服务校招尽快投递投递温州银行温州银行2027届校园招聘全面启动！2027届10-20new总行管理培训生定向培养,总分行管理培训生通用培养,分行业务培训生上海杭州+9银行/金融校招尽快投递投递西安恒翔控制技术西安恒翔控制技术有限公",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        },
+        {
+          "title": "温州银行2027届校园招聘公告",
+          "url": "https://career.nankai.edu.cn/correcruit/content/id/120106.html",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "南开大学公开招聘档案"
+        }
+      ],
+      "last_found": "2026-10-27"
+    },
+    {
+      "name": "湖北银行股份有限公司",
+      "hits": [
+        {
+          "title": "湖北银行2027年度秋季校园招聘公告",
+          "url": "https://job.hust.edu.cn/zpinfo1/2462489.htm",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "华中科技大学公开招聘档案"
+        }
+      ],
+      "last_found": "2026-10-27"
+    },
+    {
       "name": "哈尔滨银行股份有限公司",
       "hits": [
         {
@@ -8307,20 +9359,6 @@
       "last_found": "2026-10-26"
     },
     {
-      "name": "中国五矿集团有限公司",
-      "hits": [
-        {
-          "title": "智聚群英 矿智聚群英 矿蕴山河 ——中冶武勘2027届校园招聘蕴山河 ——中冶武勘2027届校园招聘 一、关于我们中冶武勘工程技术有限公司（简称中冶武勘）创建于1955年，是世界500强企业中国五矿骨干子企业，中国中... 2026/09/09 572",
-          "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSVZ",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "广州大学公开招聘档案"
-        }
-      ],
-      "last_found": "2026-10-26"
-    },
-    {
       "name": "山西鹏飞集团有限公司",
       "hits": [
         {
@@ -8471,70 +9509,6 @@
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE54REoxOVNvVlZIMmk1c1ZMV3Z3cTVzZlk4ZWJYMUxvdmhwQ3ctUjljRlRMU3VoUktKeG1WZ0VCaGEtQUZERl9Yd3YyZW1sMllzOUZxblhR?oc=5",
           "snippet": "",
           "published_at": null
-        }
-      ],
-      "last_found": "2026-10-26"
-    },
-    {
-      "name": "国家电网有限公司",
-      "hits": [
-        {
-          "title": "国家电网公司直属单位国网信息通信产业集团有限公司2027届校园招聘正式启动",
-          "url": "https://career.hebut.edu.cn/correcruit/content/id/81904.html",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "河北工业大学公开招聘档案"
-        },
-        {
-          "title": "国家电网2027校园招聘：入口+公告时间+报考指南 - 高顿央国企招聘",
-          "url": "https://m.gwy.com/gqzp/409643.html",
-          "snippet": "2027届毕业生求职季已逐步展开，国家电网作为能源领域核心央国企，其校园招聘公告是应届生进入电力系统的重要指引。 依据官方发布节奏与招录规则，理清公告核心内容、报名入口与批次安排，能帮助求职者精准筹备、规避虚假信息，顺利对接适配岗位。",
-          "published_at": null,
-          "discovered_via": "智联招聘"
-        },
-        {
-          "title": "国家电网有限公司招聘平台--招聘动态",
-          "url": "https://zhaopin.sgcc.com.cn/sgcchr/static/dynaAument.html",
-          "snippet": "国家电网有限公司直属单位2027年高校毕业生招聘校园宣讲公告 2026-09-24 国网吉林省电力有限公司2027年度高校毕业生校园招聘公告 2026-09-24 国网天津市电力公司2027年高校毕业生提前批次招聘安排 2026-09-23 国网江西省电力有限公司2027年提前批校园招聘信息发布 2026 ...",
-          "published_at": null,
-          "discovered_via": "微信公众号文章索引"
-        },
-        {
-          "title": "国家电网有限公司招聘平台--所属单位招聘公告",
-          "url": "https://zhaopin.sgcc.com.cn/sgcchr/static/recrAument.html",
-          "snippet": "国家电网有限公司西北分部2027年高校毕业生招聘公告 （国调网调及北交提前批） 2026-10-17 国家电网有限公司西南分部2027年高校毕业生招聘公告（国调网调及北交提前批） 2026-10-17 国网北京市电力公司2026年高校毕业生招聘公告（第三批） 2026-04-27",
-          "published_at": null,
-          "discovered_via": "该企业官网优先"
-        },
-        {
-          "title": "国家电网-北京智芯微电子科技有限公司  2027届校园招聘",
-          "url": "https://job.hust.edu.cn/zpinfo1/2459295.htm",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "华中科技大学公开招聘档案"
-        },
-        {
-          "title": "国家电网有限公司招聘平台--首页",
-          "url": "https://zhaopin.sgcc.com.cn/sgcchr/static/home.html",
-          "snippet": "国家电网有限公司东北分部2027年高校毕业生招聘公告（国调网调及北交提前批） 2026-10-17 国家电网有限公司西北分部2027年高校毕业生招聘公告 （国调网调及北交提前批） 2026-10-17 国家电网有限公司西南分部2027年高校毕业生招聘公告（国调网调及北交提前批 ...",
-          "published_at": null,
-          "discovered_via": "微信公众号文章索引"
-        },
-        {
-          "title": "国家电网有限公司招聘平台",
-          "url": "https://zhaopin.sgcc.com.cn/webviews/index.html",
-          "snippet": "国家电网有限公司华北分部2027年高校毕业生招聘公告（国调网调及北交提前批）",
-          "published_at": null,
-          "discovered_via": "Offer前线"
-        },
-        {
-          "title": "国家电网2027校园招聘官网入口：https://zhaopin.sgcc.com.cn - 高顿央国企招聘",
-          "url": "https://m.gwy.com/gqzp/411460.html",
-          "snippet": "国家电网2027校园招聘官网入口（https://zhaopin.sgcc.com.cn）是广大应届生报考国网的首要渠道，了解所招聘的专业，也能够帮助考生精准定位岗位，提升网申通过率。",
-          "published_at": null,
-          "discovered_via": "面灵AI 2027秋招"
         }
       ],
       "last_found": "2026-10-26"
@@ -9153,20 +10127,6 @@
           "title": "科大讯飞股份有限公司 2027届秋招｜招聘信息汇总",
           "url": "https://www.mianlingai.com/jobs/",
           "snippet": "字节跳动知名互联网独角兽ai安全开发工程师反爬虫方向-tiktokshop上海/杭州2027届校园招聘校招10月16日10月16日登录后投递科大讯飞知名互联网ai研究算法工程师-机器人多模态交互方向前瞻研究j14733合肥校园招聘校招10月16日10月16日登录后投递宁德时代世界500强具身智能机器人开发工程师蕉城区未公布校招10月16日10月16",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
-        }
-      ],
-      "last_found": "2026-10-21"
-    },
-    {
-      "name": "温州银行股份有限公司",
-      "hits": [
-        {
-          "title": "温州银行股份有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://www.offerstar.cn/recruitment",
-          "snippet": "招尽快投递投递wtd纬图设计纬图设计2027校招2027届10-20new助理方案设计师,助理植物设计师上海武汉+1专业服务校招尽快投递投递温州银行温州银行2027届校园招聘全面启动！2027届10-20new总行管理培训生定向培养,总分行管理培训生通用培养,分行业务培训生上海杭州+9银行/金融校招尽快投递投递西安恒翔控制技术西安恒翔控制技术有限公",
           "published_at": null,
           "discovered_via": "2027届招聘聚合页",
           "evidence_level": "aggregate_nearby_text"
@@ -10070,7 +11030,7 @@
     },
     {
       "site": "https://www.offerstar.cn/recruitment",
-      "matched": 3
+      "matched": 0
     },
     {
       "site": "https://campus.sma-wiki.cn/",
@@ -10078,7 +11038,7 @@
     },
     {
       "site": "https://mnowpick.nowcoder.com/m/school/schedule",
-      "matched": 7
+      "matched": 8
     },
     {
       "site": "https://www2.iguopin.com/",
@@ -10102,7 +11062,7 @@
     },
     {
       "site": "https://www.yhks.cn/",
-      "matched": 0
+      "matched": 1
     },
     {
       "site": "https://www.liepin.com/",
@@ -10118,6 +11078,6 @@
     }
   ],
   "university_scan_at": "2026-10-27",
-  "university_pages_ok": 49,
+  "university_pages_ok": 45,
   "university_new_hits": 0
 }
