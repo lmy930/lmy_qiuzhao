@@ -29,6 +29,7 @@
     "中国华电集团有限公司",
     "中国华能集团有限公司",
     "中国南方电网有限责任公司",
+    "中国南方航空集团有限公司",
     "中国国新控股有限责任公司",
     "中国大唐集团有限公司",
     "中国工商银行股份有限公司",
@@ -168,6 +169,98 @@
     "齐鲁银行股份有限公司"
   ],
   "events": [
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-30",
+      "name": "网易 (杭州)网络有限公司",
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "subsidiary"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-30",
+      "name": "温州银行股份有限公司",
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-30",
+      "name": "宁德时代新能源科技股份有限公司",
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-30",
+      "name": "华润（集团）有限公司",
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "changed_fields": [
+        "source_scope",
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-30",
+      "name": "兰州银行股份有限公司",
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-30",
+      "name": "中国电子信息产业集团有限公司",
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-30",
+      "name": "中国广核集团有限公司",
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "date": "2026-10-30",
+      "name": "中国南方航空集团有限公司",
+      "groups": [
+        "央企"
+      ],
+      "scope": "employer",
+      "opening_date": null,
+      "kind": "first_confirmed"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-10-30",
+      "name": "中国南方电网有限责任公司",
+      "observed_at": "2026-10-30T16:13:26.530958+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
     {
       "kind": "recruitment_updated",
       "date": "2026-10-29",
@@ -6602,7 +6695,7 @@
       "kind": "first_confirmed"
     }
   ],
-  "last_scanned_at": "2026-10-29",
+  "last_scanned_at": "2026-10-30",
   "known_open_dates": {
     "中国铝业集团有限公司": "2026-09-16",
     "中国中化控股有限责任公司": "2026-09-15",
@@ -6732,7 +6825,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/119930.html",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2459716.htm",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -6822,7 +6915,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/117515.html",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2433785.htm",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -6902,6 +6995,15 @@
       "subsidiary_openings": [],
       "application_urls": []
     },
+    "中国南方航空集团有限公司": {
+      "status": "已发布公告（网申待核验）",
+      "deadline": "2026-11-20",
+      "source_scope": "employer",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2464159.htm",
+      "body_verified": true,
+      "subsidiary_openings": [],
+      "application_urls": []
+    },
     "中国中化控股有限责任公司": {
       "status": "已开启",
       "deadline": "2026-12-31",
@@ -6959,8 +7061,8 @@
     "华润（集团）有限公司": {
       "status": "已发布公告（网申待核验）",
       "deadline": null,
-      "source_scope": "subsidiary",
-      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/118029.html",
+      "source_scope": "employer",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2464160.htm",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": [
@@ -7083,7 +7185,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSVY",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2421370.htm",
       "body_verified": true,
       "subsidiary_openings": [
         [
@@ -7430,7 +7532,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/116814.html",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2407371.htm",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": [
@@ -7636,7 +7738,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "subsidiary",
-      "source_url": "https://job.hust.edu.cn/zpinfo1/2407465.htm",
+      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/117003.html",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -8083,7 +8185,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://job.hust.edu.cn/zpinfo1/2461002.htm",
+      "source_url": "https://career.hebut.edu.cn/correcruit/content/id/82132.html",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -8155,7 +8257,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://job.hust.edu.cn/zpinfo1/2463585.htm",
+      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/120106.html",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
