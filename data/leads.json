@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-10-31T18:10:12.485625+00:00",
+  "scanned_at": "2026-11-01T08:35:45.307860+00:00",
   "companies_total": 657,
   "registered_sources": 41,
   "search_methods": [
@@ -9,13 +9,25 @@
   ],
   "searches_attempted": 657,
   "searches_succeeded": 657,
-  "companies_with_new_hits": 32,
+  "companies_with_new_hits": 24,
   "companies_with_any_leads": 192,
   "note": "搜索成功指至少一个搜索服务返回结果，未必找到招聘公告；未发现不代表未开启。",
   "searches_failed": 0,
   "provider_requests_attempted": 1971,
-  "provider_requests_failed": 92,
+  "provider_requests_failed": 120,
   "partial_provider_errors": [
+    {
+      "name": "中国航天科工集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国航空工业集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
     {
       "name": "中国船舶集团有限公司",
       "errors": [
@@ -41,6 +53,18 @@
       ]
     },
     {
+      "name": "中国南方电网有限责任公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国家电力投资集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "中国长江三峡集团有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -59,7 +83,13 @@
       ]
     },
     {
-      "name": "中国联合网络通信集团有限公司",
+      "name": "中国电子信息产业集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "鞍钢集团有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -71,7 +101,25 @@
       ]
     },
     {
+      "name": "中国远洋海运集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "中国中化控股有限责任公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中粮集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国通用技术（集团）控股有限责任公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -83,7 +131,19 @@
       ]
     },
     {
-      "name": "中国能源建设集团有限公司",
+      "name": "华润（集团）有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国铁路工程集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国铁道建筑集团有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -113,6 +173,18 @@
       ]
     },
     {
+      "name": "交通银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国邮政储蓄银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "招商银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -125,7 +197,19 @@
       ]
     },
     {
+      "name": "兴业银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "平安银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华夏银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -155,7 +239,19 @@
       ]
     },
     {
+      "name": "京东集团",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "阿里巴巴 (中国)有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华为投资控股有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -239,6 +335,12 @@
       ]
     },
     {
+      "name": "华勤技术股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "珠海格力电器股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -251,6 +353,12 @@
       ]
     },
     {
+      "name": "九州通医药集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "宁波金田投资控股有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -258,6 +366,12 @@
     },
     {
       "name": "新奥集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "华友控股集团有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -276,6 +390,12 @@
     },
     {
       "name": "江西双胞胎控股有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "内蒙古伊利实业集团股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -347,6 +467,12 @@
       ]
     },
     {
+      "name": "创维集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "天合光能股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -389,6 +515,12 @@
       ]
     },
     {
+      "name": "农夫山泉股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "国轩高科股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -402,6 +534,12 @@
     },
     {
       "name": "苏州东山精密制造股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "四联创业集团股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -425,6 +563,12 @@
       ]
     },
     {
+      "name": "佛山市海天调味食品股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
       "name": "北京东方雨虹防水技术股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -432,6 +576,18 @@
     },
     {
       "name": "科大讯飞股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "北京银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "上海银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -498,6 +654,18 @@
     },
     {
       "name": "苏州银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "厦门银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "兰州银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -4590,6 +4758,22 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "华中科技大学公开招聘档案"
+        },
+        {
+          "title": "收藏 中国建研院 国家级建筑科研央企，薪资稳定，标准编制项目多，建筑科创平台顶尖。 27届秋招 丨 10.28收录 地点： 北京、上海 立即投递",
+          "url": "https://www.nowcoder.com/enterprise/252854?pageSource=5014&channel=recruitmentSchedule",
+          "snippet": "收藏 中国建研院 国家级建筑科研央企，薪资稳定，标准编制项目多，建筑科创平台顶尖。 27届秋招 丨 10.28收录 地点： 北京、上海 立即投递",
+          "published_at": null,
+          "discovered_via": "招聘平台文章链接",
+          "evidence_level": "article_link"
+        },
+        {
+          "title": "中国建筑科学研究院有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://mnowpick.nowcoder.com/m/school/schedule",
+          "snippet": "藏浙江省城乡规划设计研究院省属规划设计院，薪资福利规范，国土空间项目充足，政策研究资源丰富。27届秋招丨10.28收录地点：杭州立即投递收藏中国建研院国家级建筑科研央企，薪资稳定，标准编制项目多，建筑科创平台顶尖。27届秋招丨10.28收录地点：北京、上海立即投递收藏泰康医疗泰康旗下医疗板块，福利体系完善，医险结合模式，多学科专家资源雄厚。27届秋",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
         }
       ],
       "last_found": "2026-11-01"
@@ -6166,6 +6350,12 @@
           "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83RER6MnBpVWkteFNSNTJHdDRrTTdhQzdXcFlwVkJLLVg0QU4zX1JseXBLbFFUOXpQNFdSbHJ4aTJsNUwzMU52WGlOV3g3ZFE2em94U29QUzdFbjdBaWZUY3JtTE84eUFMbHo4X3Z5c1JRUWs?oc=5",
           "snippet": "",
           "published_at": null
+        },
+        {
+          "title": "2027年中国储备粮管理集团有限公司校园招聘公告_山东中公教育网",
+          "url": "https://sd.offcn.com/html/2026/10/601558.html",
+          "snippet": "中国储备粮管理集团有限公司是经国务院批准组建的涉及国家粮食安全和国民经济命脉的公益类国有大型骨干企业，实行集团-分 (子)公司-直属库三级架构。目前下设24家分公司、11家二级专业子公司和1家控股公司，人员、机构和业务覆盖全国31个省、自治区、直辖市。1招聘对象本...",
+          "published_at": "2026-10-31"
         }
       ],
       "last_found": "2026-11-01"
@@ -6178,6 +6368,20 @@
           "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5GVGEzOWRjZ1J5ZWhKak1MbWpIaFJTdEstalc0aWZnWXRuMkJFWTNxc3lHUXFlY043Uy1tRG9fZE5NNTU2YzlPVUtuZG1TcW9fNmJjRjFZOEZiSDdENUtpc2gyelFfQ2oyRW1peXFXdmJNLW8?oc=5",
           "snippet": "",
           "published_at": null
+        },
+        {
+          "title": "中国进出口银行2027年校园招聘启动 - 搜狐网",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMnVXYXMxUHZrOEY3YU5iWWR0UWtGWmsyMk5ldzhpMFo2QW40a1FCVkdydjBQMXBFa0FTWUx3aXdIYzJ4SHYxQmJybFE2WVNyendRR3NQOVlxWVAwZnZsWDRUSzB4aTBHQ2hfalJvQ0VNUnNOOWRKUGlWTkdmQS1xaUQza3lKY0VxZ1FkMA?oc=5",
+          "snippet": "",
+          "published_at": null
+        },
+        {
+          "title": "中国进出口银行 2027届秋招｜招聘信息汇总",
+          "url": "https://qiuzhaowang.com/latest",
+          "snippet": "技术类、语言管理类查看全部更新于10月31日国企西安2027届尽快投递更新于10月31日工作地点西安截止尽快投递岗位匹配度查看收藏查看查看中中国进出口银行国企2027届校园招聘具体岗位见招聘入口查看全部更新于10月31日国企北京、上海、深圳、全国2027届尽快投递更新于10月31日工作地点北京、上海、深圳、全国截止尽快投递岗位匹配度查看收藏查看查看",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
         }
       ],
       "last_found": "2026-11-01"
@@ -7269,6 +7473,136 @@
       "last_found": "2026-11-01"
     },
     {
+      "name": "顺丰控股股份有限公司",
+      "hits": [
+        {
+          "title": "顺丰科技有限公司2027届秋季校园招聘全面启动 - 南开大学就业网",
+          "url": "https://career.nankai.edu.cn/correcruit/content/id/119482.html",
+          "snippet": "南开大学就业信息网2027届招聘信息",
+          "published_at": null,
+          "evidence_level": "university_listing",
+          "discovered_via": "南开大学就业信息网"
+        },
+        {
+          "title": "一起奔赴“晖”光四射的未来——顺新晖2027届校园招聘 一起奔赴“晖”光四射的未来——顺新晖2027届校园招聘一、公司简介顺新晖是中国领先的冷链及供应链公司，是顺丰控股冷... 2026/09/07 711",
+          "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSVW",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "广州大学公开招聘档案"
+        },
+        {
+          "title": "顺丰控股股份有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://mnowpick.nowcoder.com/m/school/schedule",
+          "snippet": "题库专项练习公司真题笔试公司真题面试在线编程面试面试经验ai模拟面试简历求职学习基础学习课实战项目课求职辅导课专栏&文章竞赛招银网络华为蚂蚁顺丰建信金科恒生电子工银科技工银建信荣耀招银网络搜索猜你想搜招银网络华为蚂蚁顺丰建信金科恒生电子工银科技工银建信荣耀校招日程联想携程27届秋招保融科技巨人网络我要招人发布职位发布职位、邀约牛人更多企业解决方案a",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        },
+        {
+          "title": "顺丰集团2027届秋招启动！",
+          "url": "https://career.cup.edu.cn/campus/view/id/460731",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "中国石油大学公开招聘档案"
+        },
+        {
+          "title": "顺丰集团2027届秋招启动！长沙易招招网络科技有限公司",
+          "url": "https://career.cup.edu.cn/job/view/id/622957",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "中国石油大学公开招聘档案"
+        },
+        {
+          "title": "顺丰控股股份有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.mianlingai.com/jobs/",
+          "snippet": "0月19日10月24日登录后投递贝壳知名互联网研发工程师成都2027届秋招j72947成都校园招聘校招10月22日10月24日登录后投递江西顺丰速运有限公司世界500强国际运营管理储备南昌未公布校招10月23日10月24日登录后投递深圳虾皮信息科技知名互联网实习aigc策略产品实习生-bj北京未公布实习10月21日10月24日登录后投递德州仪器世界",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        },
+        {
+          "title": "顺丰控股股份有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.offerstar.cn/recruitment",
+          "snippet": "集团兰石集团2027届校园招聘公告2027届10-28new产品研发设计,产品设计,产品工艺,产品订货上海青岛+7国企制造业校招尽快投递投递顺丰顺丰集团2027届fmp财务管培生项目启动2027届10-28newfmp财务管培生全国物流/供应链校招尽快投递投递厦门欧斯拓科技有限公司厦钨欧斯拓2027校园招聘行程2027届10-28new研发储干材料",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        }
+      ],
+      "last_found": "2026-11-01"
+    },
+    {
+      "name": "三一集团有限公司",
+      "hits": [
+        {
+          "title": "三一集团2027届秋季校园招聘正式启动",
+          "url": "https://career.nankai.edu.cn/correcruit/content/id/119589.html",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "南开大学公开招聘档案"
+        },
+        {
+          "title": "向世界 挥一拳 三一集团2027届秋季校园招聘正式启动",
+          "url": "https://career.hebut.edu.cn/correcruit/content/id/81863.html",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "河北工业大学公开招聘档案"
+        },
+        {
+          "title": "向世界 挥一拳 三一集团2027届秋季校园招聘正式启动",
+          "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56647.html",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "天津工业大学公开招聘档案"
+        },
+        {
+          "title": "向世界 挥一拳 三一集团2027届秋季校园招聘正式启动",
+          "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56082.html",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "天津工业大学公开招聘档案"
+        },
+        {
+          "title": "向世界 挥一拳  三一集团2027届秋季校园招聘正式启动",
+          "url": "https://job.hust.edu.cn/zpinfo1/2410473.htm",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "华中科技大学公开招聘档案"
+        },
+        {
+          "title": "向世界 挥一拳 三一集团2027届秋季校园招聘正式启动",
+          "url": "https://job.hust.edu.cn/zpinfo1/2453330.htm",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "华中科技大学公开招聘档案"
+        },
+        {
+          "title": "三一集团2027校园招聘全球启动，不限学历与背景，有研发技术、计算机及AI等7大岗位方向，国内工作地点有北京、广州、长沙等城市 - QQ News",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9zVVI0cXlucDVUU0o1Z1Z4d3gycU1WQWRLeTBPV2ZHRjVHSTdkWUVLaGdKeEhsb044ZDdoOXBZV0xzR1JPNVkzYkk3ZkswblVoNnMzNy1B?oc=5",
+          "snippet": "",
+          "published_at": null
+        },
+        {
+          "title": "三一集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://mnowpick.nowcoder.com/m/school/schedule",
+          "snippet": "巨头，生态链布局完善，研发投入高，智能终端与汽车业务双轮驱动。27届秋招丨08.15收录地点：南京、德州、武汉、台北、北京、上海官网投递收藏三一集团全球工程机械龙头企业海外业务核心平台，全链条服务能力突出，海外布局完善。27届校招丨今日收录地点：正在收集中立即投递收藏滴滴国内出行服务龙头企业，全生态布局，技术研发与运营能力领先。27届秋招丨08.1",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        }
+      ],
+      "last_found": "2026-11-01"
+    },
+    {
       "name": "东莞银行股份有限公司",
       "hits": [
         {
@@ -7397,136 +7731,6 @@
           "title": "大华 (集团)有限公司 2027届秋招｜招聘信息汇总",
           "url": "https://www.51job.com/",
           "snippet": "告cytiva2027校园招聘广告北京农商银行2027年校园招聘广告信达生物2027届校园招聘主推企业1/4广告华侨银行2027校园招聘广告大华集团2027校招广告声浪传媒-急招配音员广告富邦华一2027校招广告漫汐网络-急招配音岗位广告博时基金2027届秋季校园招聘广告三井住友银行中国有限公司广告珠海万达2027校招广告美丽中国支教项目招聘,应届",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
-        }
-      ],
-      "last_found": "2026-10-31"
-    },
-    {
-      "name": "顺丰控股股份有限公司",
-      "hits": [
-        {
-          "title": "顺丰科技有限公司2027届秋季校园招聘全面启动 - 南开大学就业网",
-          "url": "https://career.nankai.edu.cn/correcruit/content/id/119482.html",
-          "snippet": "南开大学就业信息网2027届招聘信息",
-          "published_at": null,
-          "evidence_level": "university_listing",
-          "discovered_via": "南开大学就业信息网"
-        },
-        {
-          "title": "一起奔赴“晖”光四射的未来——顺新晖2027届校园招聘 一起奔赴“晖”光四射的未来——顺新晖2027届校园招聘一、公司简介顺新晖是中国领先的冷链及供应链公司，是顺丰控股冷... 2026/09/07 711",
-          "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSVW",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "广州大学公开招聘档案"
-        },
-        {
-          "title": "顺丰控股股份有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://mnowpick.nowcoder.com/m/school/schedule",
-          "snippet": "题库专项练习公司真题笔试公司真题面试在线编程面试面试经验ai模拟面试简历求职学习基础学习课实战项目课求职辅导课专栏&文章竞赛招银网络华为蚂蚁顺丰建信金科恒生电子工银科技工银建信荣耀招银网络搜索猜你想搜招银网络华为蚂蚁顺丰建信金科恒生电子工银科技工银建信荣耀校招日程联想携程27届秋招保融科技巨人网络我要招人发布职位发布职位、邀约牛人更多企业解决方案a",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
-        },
-        {
-          "title": "顺丰集团2027届秋招启动！",
-          "url": "https://career.cup.edu.cn/campus/view/id/460731",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "中国石油大学公开招聘档案"
-        },
-        {
-          "title": "顺丰集团2027届秋招启动！长沙易招招网络科技有限公司",
-          "url": "https://career.cup.edu.cn/job/view/id/622957",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "中国石油大学公开招聘档案"
-        },
-        {
-          "title": "顺丰控股股份有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://www.mianlingai.com/jobs/",
-          "snippet": "0月19日10月24日登录后投递贝壳知名互联网研发工程师成都2027届秋招j72947成都校园招聘校招10月22日10月24日登录后投递江西顺丰速运有限公司世界500强国际运营管理储备南昌未公布校招10月23日10月24日登录后投递深圳虾皮信息科技知名互联网实习aigc策略产品实习生-bj北京未公布实习10月21日10月24日登录后投递德州仪器世界",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
-        },
-        {
-          "title": "顺丰控股股份有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://www.offerstar.cn/recruitment",
-          "snippet": "集团兰石集团2027届校园招聘公告2027届10-28new产品研发设计,产品设计,产品工艺,产品订货上海青岛+7国企制造业校招尽快投递投递顺丰顺丰集团2027届fmp财务管培生项目启动2027届10-28newfmp财务管培生全国物流/供应链校招尽快投递投递厦门欧斯拓科技有限公司厦钨欧斯拓2027校园招聘行程2027届10-28new研发储干材料",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
-        }
-      ],
-      "last_found": "2026-10-31"
-    },
-    {
-      "name": "三一集团有限公司",
-      "hits": [
-        {
-          "title": "三一集团2027届秋季校园招聘正式启动",
-          "url": "https://career.nankai.edu.cn/correcruit/content/id/119589.html",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "南开大学公开招聘档案"
-        },
-        {
-          "title": "向世界 挥一拳 三一集团2027届秋季校园招聘正式启动",
-          "url": "https://career.hebut.edu.cn/correcruit/content/id/81863.html",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "河北工业大学公开招聘档案"
-        },
-        {
-          "title": "向世界 挥一拳 三一集团2027届秋季校园招聘正式启动",
-          "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56647.html",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "天津工业大学公开招聘档案"
-        },
-        {
-          "title": "向世界 挥一拳 三一集团2027届秋季校园招聘正式启动",
-          "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56082.html",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "天津工业大学公开招聘档案"
-        },
-        {
-          "title": "向世界 挥一拳  三一集团2027届秋季校园招聘正式启动",
-          "url": "https://job.hust.edu.cn/zpinfo1/2410473.htm",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "华中科技大学公开招聘档案"
-        },
-        {
-          "title": "向世界 挥一拳 三一集团2027届秋季校园招聘正式启动",
-          "url": "https://job.hust.edu.cn/zpinfo1/2453330.htm",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "华中科技大学公开招聘档案"
-        },
-        {
-          "title": "三一集团2027校园招聘全球启动，不限学历与背景，有研发技术、计算机及AI等7大岗位方向，国内工作地点有北京、广州、长沙等城市 - QQ News",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9zVVI0cXlucDVUU0o1Z1Z4d3gycU1WQWRLeTBPV2ZHRjVHSTdkWUVLaGdKeEhsb044ZDdoOXBZV0xzR1JPNVkzYkk3ZkswblVoNnMzNy1B?oc=5",
-          "snippet": "",
-          "published_at": null
-        },
-        {
-          "title": "三一集团有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://mnowpick.nowcoder.com/m/school/schedule",
-          "snippet": "巨头，生态链布局完善，研发投入高，智能终端与汽车业务双轮驱动。27届秋招丨08.15收录地点：南京、德州、武汉、台北、北京、上海官网投递收藏三一集团全球工程机械龙头企业海外业务核心平台，全链条服务能力突出，海外布局完善。27届校招丨今日收录地点：正在收集中立即投递收藏滴滴国内出行服务龙头企业，全生态布局，技术研发与运营能力领先。27届秋招丨08.1",
           "published_at": null,
           "discovered_via": "2027届招聘聚合页",
           "evidence_level": "aggregate_nearby_text"
@@ -11050,11 +11254,11 @@
     },
     {
       "site": "https://www.mianlingai.com/jobs/",
-      "matched": 8
+      "matched": 9
     },
     {
       "site": "https://qiuzhaowang.com/latest",
-      "matched": 0
+      "matched": 1
     },
     {
       "site": "https://offerqianxian.com/",
@@ -11070,7 +11274,7 @@
     },
     {
       "site": "https://mnowpick.nowcoder.com/m/school/schedule",
-      "matched": 2
+      "matched": 3
     },
     {
       "site": "https://www2.iguopin.com/",
@@ -11110,6 +11314,6 @@
     }
   ],
   "university_scan_at": "2026-11-01",
-  "university_pages_ok": 48,
+  "university_pages_ok": 44,
   "university_new_hits": 0
 }
