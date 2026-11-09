@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-08T18:55:47.360439+00:00",
+  "scanned_at": "2026-11-09T08:58:10.821271+00:00",
   "companies_total": 657,
   "registered_sources": 41,
   "search_methods": [
@@ -9,13 +9,92 @@
   ],
   "searches_attempted": 657,
   "searches_succeeded": 657,
-  "companies_with_new_hits": 60,
-  "companies_with_any_leads": 199,
+  "companies_with_new_hits": 70,
+  "companies_with_any_leads": 200,
   "note": "搜索成功指至少一个搜索服务返回结果，未必找到招聘公告；未发现不代表未开启。",
   "searches_failed": 0,
   "provider_requests_attempted": 1971,
-  "provider_requests_failed": 0,
-  "partial_provider_errors": [],
+  "provider_requests_failed": 13,
+  "partial_provider_errors": [
+    {
+      "name": "中国海洋石油集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国铝业集团有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "国家开发银行",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "招商银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "广发银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "小米通讯技术有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "立讯精密工业股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "理想汽车",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "深圳传音控股股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "瑞幸咖啡 (中国)有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "骆驼集团股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "重庆银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "哈尔滨银行股份有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    }
+  ],
   "errors": [],
   "disclaimer": "RSS搜索发现属于未核验线索，不能据此宣称开放网申。来源可能包含转发、旧消息、伪相关。请以官方招聘公告为准。",
   "leads": [
@@ -1219,6 +1298,12 @@
           "published_at": null,
           "discovered_via": "招聘平台文章链接",
           "evidence_level": "article_link"
+        },
+        {
+          "title": "绽放青春与光同行，中国光大银行北京分行2027年校园招聘开启 - 新浪新闻_手机新浪网",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOR2NCbWZtTDJOdmpiWmpULUt2RzJSTFh3eThWZ2dZdGFJdFRCNkVWLVpSeG12d3ZteVFmc1F1TUhhYzU1QjIxVl93Nl9EdnNMOGtOMzMyaS1fSWRRS2ktZGZLWGZDYjZhWjRMZ0NsQ3RfcGs3MzFrZlE3ZDhCX1NZN3ZEb0tsVnQtcUk4OXRxTS1sTHZIN2xaeUNxQTVabi1tTlFXSzFIaU9tNFpEVFRpcERFd3BZN2tTNWkwUDRJZi1ITWMxc0pfTFZJRVdBNVEwYUExM0Y5LTRFb0tXQURERU80V1RwdU0wcF85dFpZd0V6UQ?oc=5",
+          "snippet": "",
+          "published_at": null
         }
       ],
       "last_found": "2026-11-09"
@@ -2486,6 +2571,14 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "华中科技大学公开招聘档案"
+        },
+        {
+          "title": "少年梦想 生生不息 中国电科十二所 2027年校园招聘正式启",
+          "url": "https://job.hust.edu.cn/zpinfo1/2466846.htm",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "华中科技大学公开招聘档案"
         }
       ],
       "last_found": "2026-11-09"
@@ -2962,7 +3055,7 @@
           "url": "https://zhaopin.chng.com.cn/h5/",
           "snippet": "最新公告 查看更多 中国华能2027届校园招聘（秋招）报名已截止，谢谢关注 管培生 中国华能集团有限公司总部 招聘日期：2026-10-31 ~ 2026-12-31 查看详情 中国华能2027届校园招聘（秋招）报名已截止，谢谢关注 在京单位 中国华能集团有限公司总部 招聘日期：2026-10 ...",
           "published_at": null,
-          "discovered_via": "OfferStar校招信息"
+          "discovered_via": "27届校招信息汇总"
         },
         {
           "title": "中国华能2027年校园招聘正式启动 - chng.com.cn",
@@ -3280,7 +3373,7 @@
           "url": "https://career.hebut.edu.cn/correcruit/content/id/81906.html",
           "snippet": "中国建筑科学研究院有限公司2027校园招聘 一、公司简介 中国建筑科学研究院有限公司（原中国建筑科学研究院，简称“中国建研院”）成立于1953年，是国务院国资委直接管理的科技型中央企业。",
           "published_at": null,
-          "discovered_via": "中国公共招聘网"
+          "discovered_via": "牛客27届秋招日程"
         },
         {
           "title": "中国建筑科学研究院有限公司2027校园招聘-北京-北京市-天津-天津市-上海-上海市-四川-广东-国企-2026-国央企正式-中国建筑集团有限 ...",
@@ -3822,6 +3915,12 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "南开大学公开招聘档案"
+        },
+        {
+          "title": "中国资源循环集团有限公司2027届校园招聘",
+          "url": "https://www.crrg.com.cn/crrg/2026-10/09/article_2026100915381717503.html",
+          "snippet": "中国资源循环集团有限公司2027届校园招聘 2026年10月09日",
+          "published_at": "2026-11-07"
         }
       ],
       "last_found": "2026-11-09"
@@ -3848,7 +3947,7 @@
           "url": "https://m.gwy.com/gqzp/409531.html",
           "snippet": "计划投递中核集团2027校园招聘的应届毕业生，需要准确区分官方报名网址与各类辅助访问渠道。 作为承担核工业发展的央企，集团每年秋招、春招全部简历投递、宣讲通知、考核安排均在自有官方平台完成，第三方平台仅作信息展示，无法直接提交报名。",
           "published_at": null,
-          "discovered_via": "华中科技大学就业网"
+          "discovered_via": "西南财经大学就业信息"
         },
         {
           "title": "中国核工业第二二建设有限公司 2027年校园招聘招聘简章",
@@ -4023,7 +4122,7 @@
           "url": "https://jiuye.swjtu.edu.cn/career/zpxx/view/zpxx/249104619098214400",
           "snippet": "在党中央和国务院的坚强领导下，三峡集团始终坚决服从服务国家战略，立足长江、辐射全国、布局全球，历经三十多年持续快速高质量发展，现已成为全球最大的水电开发运营企业和中国领先的清洁能源、生态环保集团。",
           "published_at": null,
-          "discovered_via": "Offer多多秋招汇总"
+          "discovered_via": "Gank Interview校招汇总"
         },
         {
           "title": "中国长江三峡集团有限公司 2027年高校毕业生招聘公告-招聘公告-华北电力大学就业指导中心",
@@ -4080,7 +4179,7 @@
           "url": "https://career.cmbchina.com/campus/home",
           "snippet": "常见问题 请问招商银行2027校园招聘网申截止时间是？ 2027校园招聘的毕业时间要求是？ 请问招商银行校园招聘应聘流程及主要形式是怎样的？ 投递多个岗位，简历是否可以复用？",
           "published_at": null,
-          "discovered_via": "新浪财经"
+          "discovered_via": "该企业官网优先"
         },
         {
           "title": "招商银行股份有限公司 2027届秋招｜招聘信息汇总",
@@ -5079,14 +5178,14 @@
           "url": "https://www.chd.com.cn/site/2/2026-09-14/b7dffff921ca499c90f84509cd272310.html",
           "snippet": "中国华电2027年度校园招聘公告 中国华电集团有限公司（以下简称中国华电）成立于2002年，是中央直管的国有重要骨干企业，是以电力为主的特大型能源企业集团。 连续14年获评国务院国资委年度经营业绩考核A级企业，连续15年上榜《财富》世界500强。",
           "published_at": null,
-          "discovered_via": "国务院国资委招聘"
+          "discovered_via": "华中科技大学就业网"
         },
         {
           "title": "中国华电2027年度校园招聘公告 - m.chd.com.cn",
           "url": "https://m.chd.com.cn/site/2mobile/2026-09-14/bfb1ebce929344738977d8978213a933.html",
           "snippet": "科工板块所属华电科工、国电南自、华电电科院、燃机公司等科技型企业，拥有国家级火力发电能效检测技术实验平台、燃气轮机监测诊断及运维服务技术中心、分布式能源技术平台、国家能源电力工控系统技术研发中心等多个科技创新平台，聚焦人工智能、氢 ...",
           "published_at": null,
-          "discovered_via": "国务院国资委招聘"
+          "discovered_via": "华中科技大学就业网"
         },
         {
           "title": "中国华电2027年度校园招聘公告 - 南开大学就业网",
@@ -5146,7 +5245,7 @@
           "url": "https://m.gwy.com/gqzp/409523.html",
           "snippet": "一、中国华电集团2027年招聘官网入口 1.电脑端核心网申平台 集团专属人才招聘平台是唯一简历投递渠道，官方完整网址为 rencaishichang.chd.com.cn，所有2027校园招聘、青年骏才计划、社会公开招聘统一在此填报简历。",
           "published_at": null,
-          "discovered_via": "中国科学技术大学就业网"
+          "discovered_via": "华中科技大学就业网"
         },
         {
           "title": "国网湖南电力、湖南航天、中国华电湖南分公司2027校园招聘汇总 - 凤凰网",
@@ -6104,7 +6203,7 @@
           "url": "https://zhaopin.sgcc.com.cn/sgcchr/static/dynaAument.html",
           "snippet": "国家电网有限公司西南分部2027年高校毕业生招聘考试公告（国调网调及北交提前批） 2026-10-26 国网东北分部关于2027年招聘高校毕业生考试的通知（国调网调及北交提前批） 2026-10-26",
           "published_at": null,
-          "discovered_via": "国务院国资委招聘"
+          "discovered_via": "国聘"
         },
         {
           "title": "国家电网有限公司招聘平台--所属单位招聘公告",
@@ -6977,7 +7076,8 @@
           "title": "国家开发银行2027年校园招聘",
           "url": "https://cdb2027.zhaopin.com/",
           "snippet": "获得 全国制造业单项冠军企业、中国民营企业 500 强、中国制造业企业 500 强、胡润中国 500 强、国家技术创新示范企业、中国上市公司成长100 强、国家级绿色工厂、国家级绿色矿山、上市公司“金牛奖”、全国工业和信息化系统先进集体 等荣誉。",
-          "published_at": "2026-10-20"
+          "published_at": null,
+          "discovered_via": "前程无忧"
         },
         {
           "title": "国家开发银行2027年校园招聘",
@@ -7122,6 +7222,13 @@
           "url": "https://www.cdb2027.zhaopin.com/index.html",
           "snippet": "获得 全国制造业单项冠军企业、中国民营企业 500 强、中国制造业企业 500 强、胡润中国 500 强、国家技术创新示范企业、中国上市公司成长100 强、国家级绿色工厂、国家级绿色矿山、上市公司“金牛奖”、全国工业和信息化系统先进集体 等荣誉。",
           "published_at": "2026-10-21"
+        },
+        {
+          "title": "国家开发银行2027年校园招聘 - webapp.zhaopin.com",
+          "url": "https://webapp.zhaopin.com/2026/bj/gjkfy0908ZL85165/index.html",
+          "snippet": "截至2025年末，开发银行集团资产总额19.55万亿元。 国家开发银行成立于1994年，目前在中国内地设有37家一级分行和5家二级分行，境外设有香港分行和开罗、莫斯科、里约热内卢、加拉加斯、伦敦、万象、阿斯塔纳、明斯克、雅加达、悉尼、布达佩斯等11家代表处。",
+          "published_at": null,
+          "discovered_via": "前程无忧"
         }
       ],
       "last_found": "2026-11-09"
@@ -7253,8 +7360,7 @@
           "title": "中国船舶集团有限公司2027届校园招聘",
           "url": "https://cssc.zhaopin.com/",
           "snippet": "智联校园招聘xiaoyuan.zhaopin.com为应届大学毕业生及在校生提供最新校园招聘信息，实习信息以及校园宣讲会信息等.为企业提供一站式专业人力资源服务,包括网络招聘,报纸招聘,校园招聘,猎头服务,招聘外包,企业培训以及人才测评等.",
-          "published_at": null,
-          "discovered_via": "牛客27届秋招日程"
+          "published_at": "2026-11-08"
         },
         {
           "title": "中国船舶集团有限公司2027届校园招聘 - zhaopin.com",
@@ -7274,9 +7380,8 @@
         {
           "title": "中国船舶集团有限公司2027届校园招聘 - zhaopin.com",
           "url": "https://cssc.zhaopin.com/company/index.html",
-          "snippet": "中船集团是我国海军武器装备科研、设计、生产、试验、保障的主体力量，拥有我国最大最强的船舶设计建造能力，能够设计建造符合世界上任何一家船级社规范、满足国际通用技术标准和安全公约要求、适航于全球任意航区的船舶海工装备。",
-          "published_at": null,
-          "discovered_via": "牛客27届秋招日程"
+          "snippet": "中国船舶集团有限公司（以下简称中船集团）是中央直接管理的特大型国有重要骨干企业，是我国船舶工业发展的国家队、主力军。中船集团有着深厚的历史底蕴，旗下拥有江南造船、大连造船、黄埔文冲等一批百年船厂。中船集团始终坚决贯彻党中央、国务院决策部署，自力更生、艰苦奋斗，推动 ...",
+          "published_at": "2026-11-07"
         }
       ],
       "last_found": "2026-11-09"
@@ -7942,7 +8047,8 @@
           "title": "2027年南方电网校园招聘官网：https://zhaopin.csg.cn - 高顿央国企招聘",
           "url": "https://www.gwy.com/gqzp/410134.html",
           "snippet": "随着2027届毕业生求职季的全面启动，中国南方电网作为国资委直管的中央骨干能源央企，其校园招聘备受关注。 南方电网负责广东、广西、云南、贵州、海南五省区的电网运营，每年释放数千个正式编制岗位，是电气、计算机、经管类应届毕业生的热门选择。",
-          "published_at": "2026-11-02"
+          "published_at": null,
+          "discovered_via": "牛客27届秋招日程"
         },
         {
           "title": "南方电网储能股份有限公司  2027年秋季校园招聘简章",
@@ -9483,7 +9589,7 @@
           "url": "https://eximbank2027.iguopin.com/notice",
           "snippet": "中国进出口银行2027年校园招聘公告 中国进出口银行是由国家出资设立、直属国务院领导、支持中国对外经济贸易投资发展与国际经济合作、具有独立法人地位的国家政策性银行。",
           "published_at": null,
-          "discovered_via": "中国科学技术大学就业网"
+          "discovered_via": "国家大学生就业服务平台"
         },
         {
           "title": "中国进出口银行2027年校园招聘启动 - 凤凰网",
@@ -9500,6 +9606,12 @@
         {
           "title": "中国进出口银行2027年校园招聘启动 - 新浪财经",
           "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5tN1ZpMi0wWVcyNEw4b3FuMzJKQ2R4RWFPMWVjX2ZzZ2dXV3lBV01TUk9lS3JNaVo3V3dHRE5jYnNnQ1hMMXVoVkFSRXdGTjhPak1lUXY5NnlZRDNhdEUydGtPWk1ldFJGNTIyel9FZmE5N0RVbHdLRw?oc=5",
+          "snippet": "",
+          "published_at": null
+        },
+        {
+          "title": "中国进出口银行2027年校园招聘启动 - 搜狐网",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE15SnVEYXZPSXU5RWJZM3RWYnQ1dVA1WEVxNENYVWsxNmtaempDS0ZNc19VcHFVM0sxNzMtOXBBTS1GWkt1RHl3QVdfVUNPWkNQYTFoVkJR?oc=5",
           "snippet": "",
           "published_at": null
         }
@@ -10253,8 +10365,7 @@
           "title": "2027年度中国煤炭地质总局招聘应届高校毕业生530人公告",
           "url": "https://he.offcn.com/html/2026/11/340031.html",
           "snippet": "中国煤炭地质总局2027年度应届高校毕业生招聘工作已启动，现将有关事项公告如下：一、总局简介中国煤炭地质总局（以下简称总局）是国务院国资委直接管理的中央企业，横跨煤炭、化工两大地勘行业,目前已发展成为国内技术领先的综合性地质勘查与生态 ...",
-          "published_at": null,
-          "discovered_via": "Offer多多秋招汇总"
+          "published_at": "2026-11-02"
         },
         {
           "title": "中国煤炭地质总局2027年度应届高校毕业生招聘公告（招聘计划：530人；报名时间：2026年11月2日至2027年6月30日）_中国煤炭地质 ...",
@@ -10275,9 +10386,145 @@
           "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQakU4OWU5bXpUQjZpX1o1NDk0UlJPWUtrSVJ1cVZVT0ZPeGxIUXhRWDBnYzQ0UmJEWG5nUE8zbmYzWjRrV1FpV0NoUDl1WFJaNmkzVGI3RE1JaGQtZTlpMFktWEUzdnJZaGVNaVdtaXVfaWtybTZyUTVfWDg3QUVTYlA1cVFFajZBNlFscg?oc=5",
           "snippet": "",
           "published_at": null
+        },
+        {
+          "title": "2027年中国煤炭地质总局应届高校毕业生招聘530人公告",
+          "url": "https://sd.offcn.com/html/2026/11/601952.html",
+          "snippet": "中国煤炭地质总局2027年度应届高校毕业生招聘工作已启动，现将有关事项公告如下：一、总局简介中国煤炭地质总局（以下简称总局）是国务院国资委直接管理的中央企业，横跨煤炭、化工两大地勘行业,目前已发展成为国内技术领先的综合性地质勘查与生态 ...",
+          "published_at": "2026-11-08"
         }
       ],
-      "last_found": "2026-11-08"
+      "last_found": "2026-11-09"
+    },
+    {
+      "name": "浙江吉利控股集团有限公司",
+      "hits": [
+        {
+          "title": "浙江吉利控股集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.mianlingai.com/jobs/",
+          "snippet": "生招聘实习10月15日10月17日登录后投递蔚来新势力车企校招-数据分析上海2027届校园招聘-正式批校招10月12日10月17日登录后投递浙江吉利控股世界500强软件开发岗杭州未公布校招10月16日10月17日登录后投递minimax独角兽大模型公司下一代多模态系统-应届生-toptalent上海/北京minimaxtoptalent人才计划校招",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        },
+        {
+          "title": "吉利控股集团2027届毕业生秋招宣讲会在我校举行 - 中国农业大学新闻网",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBZcUJLWWsyQ1dYMk0zZXVNZXBUaHQ4eVVpTmtCamtDd0JTUVRDdU4tbkEySnVSMnhhYVBHX1EzYVlYQ1NQN2xkaXI2eHlqRW5QSTc5RFRtQjZuUWlPRmdPOUNJbGdyaVB4Q3A2dV8xZEs4TWM?oc=5",
+          "snippet": "",
+          "published_at": null
+        }
+      ],
+      "last_found": "2026-11-09"
+    },
+    {
+      "name": "中国宝武钢铁集团有限公司",
+      "hits": [
+        {
+          "title": "中国宝武钢铁集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.51job.com/",
+          "snippet": "招聘广告中冶京诚2027届校园招聘广告申万宏源2027届秋招招聘中广告蔻驰中国2027届零售管理培训生广告合肥市产业投资控股集团有限公司广告中国宝武2027全球校招“国宝生”计划广告创斯达科技集团招聘主推企业1/5广告亚锐檀桐检测技术上海有限公司广告惠州纮昌塑胶五金照明制品宁波办事处广告广州燃气集团有限公司2027校园招聘广告2026年绍兴市秋季招",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        },
+        {
+          "title": "中国宝武钢铁集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.yingjiesheng.com/",
+          "snippet": "海广州深圳南京武汉成都天津杭州苏州济南大连重庆青岛福州厦门西安更多应届生求职app应届生求职app主推企业宝武资源有限公司全国招聘专利审查员中国宝武钢铁集团有限公司路易达孚上海有限公司电投钍能2027届秋季校园招聘广州凯乐石运动科技有限公司厦门银行股份有限公司上海银行股份有限公司上海核工院2027校园招聘国泰君安期货2027届全球校园招聘中国中煤2",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        },
+        {
+          "title": "中国宝武2027全球校招“国宝生”计划启动",
+          "url": "https://campus.51job.com/baowugroup2027/company.html",
+          "snippet": "中国宝武2027全球校招“国宝生”计划启动，前程无忧为您提供最新招聘职位，校园招聘信息，面试技巧等。 帮助您顺利踏入中国宝武2026全球校招“国宝生”计划的大门，开启一段崭新的职业生涯。",
+          "published_at": null,
+          "discovered_via": "中国公共招聘网"
+        }
+      ],
+      "last_found": "2026-11-09"
+    },
+    {
+      "name": "中国国新控股有限责任公司",
+      "hits": [
+        {
+          "title": "中国国新控股有限责任公司2027届校园招聘 - 南开大学就业网",
+          "url": "https://career.nankai.edu.cn/correcruit/content/id/119561.html",
+          "snippet": "南开大学就业信息网2027届招聘信息",
+          "published_at": null,
+          "evidence_level": "university_listing",
+          "discovered_via": "南开大学就业信息网"
+        },
+        {
+          "title": "中国国新控股有限责任公司2027届校园招聘",
+          "url": "https://aeo.uibe.edu.cn/front/zph.jspa?tid=2094608036093018114",
+          "snippet": "“十五五”时期，中国国新锚定高质量发展主题，落实党中央、国务院决策部署，按照国务院国资委工作要求，坚定不移做强做优做大国有企业和国有资本，围绕“两个大局”、服务“国之大者”，谋划实施“1156”发展战略，探索完善“人才+科技+资本+文化”四 ...",
+          "published_at": null,
+          "discovered_via": "猎聘"
+        },
+        {
+          "title": "中国国新控股有限责任公司2027年校园招聘",
+          "url": "https://www.job.sjtu.edu.cn/career/xjhxx/view/245201778130423808",
+          "snippet": "围绕服务国家战略、发挥运营功能，中国国新重点招聘战新产业相关的理工类专业（涵盖机械制造、集成电路、生物技术、计算机、人工智能、电子信息等专业）以及经济、金融、财务、法律、党建、管理等相关专业。 （具体专业需求详见中国国新校园招聘网站）",
+          "published_at": null,
+          "discovered_via": "猎聘"
+        }
+      ],
+      "last_found": "2026-11-09"
+    },
+    {
+      "name": "中天科技集团有限公司",
+      "hits": [
+        {
+          "title": "中天科技集团2027校园招聘",
+          "url": "https://campus.51job.com/ztt/index.html",
+          "snippet": "中天科技集团2027校园招聘，前程无忧为您提供最新招聘职位，校园招聘信息，面试技巧等。帮助您顺利踏入中天科技集团的大门，开启一段崭新的职业生涯。",
+          "published_at": null,
+          "discovered_via": "南开大学就业网"
+        }
+      ],
+      "last_found": "2026-11-09"
+    },
+    {
+      "name": "福耀玻璃工业集团股份有限公司",
+      "hits": [
+        {
+          "title": "福耀集团2027届秋季校园招聘简章",
+          "url": "https://xsjyzd.jmu.edu.cn/campus/view/id/996941",
+          "snippet": "Ø 福耀近10年业绩持续稳定增长，并致力拓展海外市场，未来发展前景广阔； Ø 福耀智能工厂建设项目入选工信部“智能制造示范项目”； Ø 福耀在全球将拥有福建、天津、西南、上海、美国、德国等设计中心，与全球汽车厂商在同一平台进行设计与智慧的碰撞；",
+          "published_at": null,
+          "discovered_via": "BOSS直聘"
+        }
+      ],
+      "last_found": "2026-11-09"
+    },
+    {
+      "name": "山东恒信集团有限公司",
+      "hits": [
+        {
+          "title": "山东恒信集团2027届校园招聘",
+          "url": "https://career.cup.edu.cn/campus/view/id/460211",
+          "snippet": "招聘公告详情 山东恒信集团2027届校园招聘简章 2027年山东恒信集团校园招聘简章.pdf 一、企业基本情况 山东恒信集团有限公司创立于1996年，总部位于孔孟之乡山东省济宁市。",
+          "published_at": null,
+          "discovered_via": "Gank Interview校招汇总"
+        },
+        {
+          "title": "山东恒信集团2027届校园招聘简章",
+          "url": "https://caiji.gxjy.sdei.edu.cn/publicfile/zpgg/fj/1788955186575_2027%E5%B9%B4%E5%B1%B1%E4%B8%9C%E6%81%92%E4%BF%A1%E9%9B%86%E5%9B%A2%E6%A0%A1%E5%9B%AD%E6%8B%9B%E8%81%98%E7%AE%80%E7%AB%A0.pdf",
+          "snippet": "一、企业基本情况 山东恒信集团有限公司创立于1996年,总部位于孔孟之乡山东省济宁市。自创立以来,始终坚守实业报国、制造业强国的初心使命,已发展成为集高端化工、清洁能源、新材料、港航铁路物流、供应链管理等产业板块于一体的现代化企业集团,旗下30多家子公司,现有员工5000余人。曾获 ...",
+          "published_at": null,
+          "discovered_via": "Gank Interview校招汇总"
+        },
+        {
+          "title": "山东恒信集团2027届校园招聘 - duomian.com",
+          "url": "https://www.duomian.com/project/13937431/",
+          "snippet": "山东恒信集团有限公司创立于1996年，总部位于孔孟之乡山东省济宁市。自创立以来，始终坚守实业报国、制造业强国的初心使命，已发展成为集高端化工、清洁能源、新材料、港航铁路物流、供应链管理等产业板块于一体的现代化企业集团，旗下30多家子公司，现有员工5000余人。曾获国家技术创新 ...",
+          "published_at": null,
+          "discovered_via": "Gank Interview校招汇总"
+        }
+      ],
+      "last_found": "2026-11-09"
     },
     {
       "name": "中国机械科学研究总院集团有限公司",
@@ -10430,26 +10677,6 @@
       "last_found": "2026-11-06"
     },
     {
-      "name": "浙江吉利控股集团有限公司",
-      "hits": [
-        {
-          "title": "浙江吉利控股集团有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://www.mianlingai.com/jobs/",
-          "snippet": "生招聘实习10月15日10月17日登录后投递蔚来新势力车企校招-数据分析上海2027届校园招聘-正式批校招10月12日10月17日登录后投递浙江吉利控股世界500强软件开发岗杭州未公布校招10月16日10月17日登录后投递minimax独角兽大模型公司下一代多模态系统-应届生-toptalent上海/北京minimaxtoptalent人才计划校招",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
-        },
-        {
-          "title": "吉利控股集团2027届毕业生秋招宣讲会在我校举行 - 中国农业大学新闻网",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBZcUJLWWsyQ1dYMk0zZXVNZXBUaHQ4eVVpTmtCamtDd0JTUVRDdU4tbkEySnVSMnhhYVBHX1EzYVlYQ1NQN2xkaXI2eHlqRW5QSTc5RFRtQjZuUWlPRmdPOUNJbGdyaVB4Q3A2dV8xZEs4TWM?oc=5",
-          "snippet": "",
-          "published_at": null
-        }
-      ],
-      "last_found": "2026-11-05"
-    },
-    {
       "name": "青岛银行股份有限公司",
       "hits": [
         {
@@ -10499,28 +10726,6 @@
           "snippet": "同时，恒瑞大力发展人工智能药物发现（AIDD），全面赋能药物研发的创新与迭代。 努力推动中国制药品牌走向世界——稳步推进国际化，是恒瑞医药的长期发展战略。 目前公司产品已进入50余个国家，还在继续加快开拓全球市场并重点关注新兴市场。",
           "published_at": null,
           "discovered_via": "秋招网"
-        }
-      ],
-      "last_found": "2026-11-04"
-    },
-    {
-      "name": "中国宝武钢铁集团有限公司",
-      "hits": [
-        {
-          "title": "中国宝武钢铁集团有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://www.51job.com/",
-          "snippet": "招聘广告中冶京诚2027届校园招聘广告申万宏源2027届秋招招聘中广告蔻驰中国2027届零售管理培训生广告合肥市产业投资控股集团有限公司广告中国宝武2027全球校招“国宝生”计划广告创斯达科技集团招聘主推企业1/5广告亚锐檀桐检测技术上海有限公司广告惠州纮昌塑胶五金照明制品宁波办事处广告广州燃气集团有限公司2027校园招聘广告2026年绍兴市秋季招",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
-        },
-        {
-          "title": "中国宝武钢铁集团有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://www.yingjiesheng.com/",
-          "snippet": "海广州深圳南京武汉成都天津杭州苏州济南大连重庆青岛福州厦门西安更多应届生求职app应届生求职app主推企业宝武资源有限公司全国招聘专利审查员中国宝武钢铁集团有限公司路易达孚上海有限公司电投钍能2027届秋季校园招聘广州凯乐石运动科技有限公司厦门银行股份有限公司上海银行股份有限公司上海核工院2027校园招聘国泰君安期货2027届全球校园招聘中国中煤2",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
         }
       ],
       "last_found": "2026-11-04"
@@ -10601,27 +10806,6 @@
           "published_at": null,
           "discovered_via": "2027届招聘聚合页",
           "evidence_level": "aggregate_nearby_text"
-        }
-      ],
-      "last_found": "2026-11-03"
-    },
-    {
-      "name": "中国国新控股有限责任公司",
-      "hits": [
-        {
-          "title": "中国国新控股有限责任公司2027届校园招聘 - 南开大学就业网",
-          "url": "https://career.nankai.edu.cn/correcruit/content/id/119561.html",
-          "snippet": "南开大学就业信息网2027届招聘信息",
-          "published_at": null,
-          "evidence_level": "university_listing",
-          "discovered_via": "南开大学就业信息网"
-        },
-        {
-          "title": "中国国新控股有限责任公司2027届校园招聘",
-          "url": "https://aeo.uibe.edu.cn/front/zph.jspa?tid=2094608036093018114",
-          "snippet": "“十五五”时期，中国国新锚定高质量发展主题，落实党中央、国务院决策部署，按照国务院国资委工作要求，坚定不移做强做优做大国有企业和国有资本，围绕“两个大局”、服务“国之大者”，谋划实施“1156”发展战略，探索完善“人才+科技+资本+文化”四 ...",
-          "published_at": null,
-          "discovered_via": "秋招网"
         }
       ],
       "last_found": "2026-11-03"
@@ -10777,32 +10961,6 @@
         }
       ],
       "last_found": "2026-10-31"
-    },
-    {
-      "name": "中天科技集团有限公司",
-      "hits": [
-        {
-          "title": "中天科技集团2027校园招聘",
-          "url": "https://campus.51job.com/ztt/index.html",
-          "snippet": "中天科技集团2027校园招聘，前程无忧为您提供最新招聘职位，校园招聘信息，面试技巧等。帮助您顺利踏入中天科技集团的大门，开启一段崭新的职业生涯。",
-          "published_at": null,
-          "discovered_via": "中国公共招聘网"
-        }
-      ],
-      "last_found": "2026-10-29"
-    },
-    {
-      "name": "福耀玻璃工业集团股份有限公司",
-      "hits": [
-        {
-          "title": "福耀集团2027届秋季校园招聘简章",
-          "url": "https://xsjyzd.jmu.edu.cn/campus/view/id/996941",
-          "snippet": "Ø 福耀近10年业绩持续稳定增长，并致力拓展海外市场，未来发展前景广阔； Ø 福耀智能工厂建设项目入选工信部“智能制造示范项目”； Ø 福耀在全球将拥有福建、天津、西南、上海、美国、德国等设计中心，与全球汽车厂商在同一平台进行设计与智慧的碰撞；",
-          "published_at": null,
-          "discovered_via": "国家大学生就业服务平台"
-        }
-      ],
-      "last_found": "2026-10-29"
     },
     {
       "name": "中国信息通信科技集团有限公司",
@@ -11427,7 +11585,7 @@
   "aggregate_report": [
     {
       "site": "https://www.givemeoc.com/",
-      "matched": 1
+      "matched": 0
     },
     {
       "site": "https://www.gankinterview.cn/campus",
@@ -11447,7 +11605,7 @@
     },
     {
       "site": "https://www.offerstar.cn/recruitment",
-      "matched": 0
+      "matched": 1
     },
     {
       "site": "https://campus.sma-wiki.cn/",
@@ -11455,7 +11613,7 @@
     },
     {
       "site": "https://mnowpick.nowcoder.com/m/school/schedule",
-      "matched": 9
+      "matched": 6
     },
     {
       "site": "https://www2.iguopin.com/",
@@ -11483,7 +11641,7 @@
     },
     {
       "site": "https://www.liepin.com/",
-      "matched": 0
+      "matched": 1
     },
     {
       "site": "https://www.zhipin.com/",
@@ -11495,6 +11653,6 @@
     }
   ],
   "university_scan_at": "2026-11-09",
-  "university_pages_ok": 49,
+  "university_pages_ok": 50,
   "university_new_hits": 0
 }
