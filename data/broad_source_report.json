@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-11T16:41:30.703001+08:00",
+  "scanned_at": "2026-11-12T17:02:32.736657+08:00",
   "mode": "daily_recent",
   "companies_total": 657,
   "official_company_entries_attempted": 94,
@@ -568,18 +568,18 @@
     "龙信建设集团有限公司",
     "龙湖集团控股有限公司"
   ],
-  "pages_attempted": 440,
-  "pages_read": 401,
+  "pages_attempted": 438,
+  "pages_read": 399,
   "source_failures": {
-    "HTTPError": 11,
-    "URLError": 26,
-    "ValueError": 2
+    "HTTPError": 12,
+    "URLError": 24,
+    "ValueError": 2,
+    "TimeoutError": 1
   },
-  "new_lead_urls": 5,
+  "new_lead_urls": 2,
   "candidate_employers": [
     "三一集团有限公司",
     "上海银行股份有限公司",
-    "东风汽车集团有限公司",
     "中国东方航空集团有限公司",
     "中国光大银行股份有限公司",
     "中国农业发展银行",
@@ -588,7 +588,6 @@
     "中国建筑科学研究院有限公司",
     "中国建筑集团有限公司",
     "中国民生银行股份有限公司",
-    "中国民航信息集团有限公司",
     "中国电信集团有限公司",
     "中国电子科技集团有限公司",
     "中国石油化工集团有限公司",
@@ -611,6 +610,7 @@
     "湖北银行股份有限公司",
     "珠海格力电器股份有限公司",
     "瑞幸咖啡 (中国)有限公司",
+    "科大讯飞股份有限公司",
     "立讯精密工业股份有限公司",
     "腾讯控股有限公司",
     "西安银行股份有限公司",
@@ -654,7 +654,7 @@
       ],
       "url": "https://www.avic.com/",
       "final_url": "https://www.avic.com/",
-      "sha256": "d536bca4f116ace38f753b356273d46e7a1d22eeaad22c055516cba760d764aa",
+      "sha256": "23a3e78648365938b695d3738887171cfd860e6a48fdfd811ec33a008ab74b7b",
       "bytes": 106976
     },
     {
@@ -664,8 +664,8 @@
       ],
       "url": "https://www.cetc.com.cn/",
       "final_url": "https://www.cetc.com.cn/",
-      "sha256": "646ec03839d719e10281f73823edc2a6abd3f2b8b6610cadf7f97358e9c2145f",
-      "bytes": 149748
+      "sha256": "8d4297e34a6a56fa8031876c309861cda3ce6790f70e2ad412d6ac1ad6076742",
+      "bytes": 149380
     },
     {
       "phase": "official",
@@ -710,7 +710,7 @@
       ],
       "url": "https://www.cnooc.com.cn/",
       "final_url": "https://www.cnooc.com.cn/",
-      "sha256": "f4b559904c5d989b2f16aeca8f171cac9ddadb783c67f53c9e4fae5495260acd",
+      "sha256": "043b0327316661c51fdbc449bec25a59da2a5a101c708a3c0f788a82077ffc05",
       "bytes": 345
     },
     {
@@ -727,9 +727,7 @@
         "中国华能集团有限公司"
       ],
       "url": "https://www.chng.com.cn/",
-      "final_url": "https://www.chng.com.cn/",
-      "sha256": "d1ccb05f313e60242908841328e555840bc1d4baf659daf3ed3e0ad034a64302",
-      "bytes": 84995
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "phase": "official",
@@ -738,8 +736,8 @@
       ],
       "url": "https://www.china-cdt.com/",
       "final_url": "https://www.china-cdt.com/",
-      "sha256": "70fd82d3f1cbf31e5dd7fc3e4050b7cb7a20b60e433875d50aaca69d7a33c585",
-      "bytes": 72344
+      "sha256": "505d60aaed25c6bb5593cada4e4be2adbeaf791d47d9f17f75bbd6c255ae5b72",
+      "bytes": 72373
     },
     {
       "phase": "official",
@@ -748,8 +746,8 @@
       ],
       "url": "https://www.chd.com.cn/",
       "final_url": "https://www.chd.com.cn/site/2/index.html",
-      "sha256": "75b5ff59e430edd90bce0cef6af73568705ff3c4b6d54d0831a01b42460aa644",
-      "bytes": 41802
+      "sha256": "c3bab2efb147cecc2b27f70acec3239037a859ca91523f0cc6ad61b7271a18ba",
+      "bytes": 41838
     },
     {
       "phase": "official",
@@ -758,8 +756,8 @@
       ],
       "url": "https://www.spic.com.cn/",
       "final_url": "https://www.spic.com.cn/",
-      "sha256": "e2d27c6020b99c31071a2627664e2315c013da6ae24f0cb5b30dd44fc1c19884",
-      "bytes": 60453
+      "sha256": "85a85a0461d315e98dbb9bd1dd7d0e7e2e5ff518d5e458bb907e9c413d00024a",
+      "bytes": 60400
     },
     {
       "phase": "official",
@@ -776,8 +774,8 @@
       ],
       "url": "https://www.faw.com.cn/",
       "final_url": "https://www.faw.com.cn/",
-      "sha256": "e91fa492a4d683edb2646aa07bd4281c5da9c6d044f1747af25a76d68cea60a0",
-      "bytes": 47087
+      "sha256": "263d51d4883dea2c02ba5a86ef68d8ef54fd9f1e7b7a5cdb2e07ed99200cb6d4",
+      "bytes": 47091
     },
     {
       "phase": "official",
@@ -802,8 +800,8 @@
       ],
       "url": "https://www.chinalco.com.cn/",
       "final_url": "https://www.chinalco.com.cn/",
-      "sha256": "3e4e7992b5f134a84681847a55445560886a8f56da81a6a4bb81964a100e47ac",
-      "bytes": 18629
+      "sha256": "4f537d3170653e9b589bba40799a9e7e7a51c3c5e8a8dab200cea86149a21775",
+      "bytes": 23670
     },
     {
       "phase": "official",
@@ -812,8 +810,8 @@
       ],
       "url": "https://www.coscoshipping.com/",
       "final_url": "https://www.coscoshipping.com/",
-      "sha256": "b4637d217bdef3f45fb18b0c815984eb4154d85dfbf518a9294921fa1c97ab97",
-      "bytes": 31856
+      "sha256": "1ea5b65e4b9e3609fe9ab36676fbec30ea69eec78e04b965f02e1205685b5446",
+      "bytes": 31024
     },
     {
       "phase": "official",
@@ -821,9 +819,9 @@
         "中国东方航空集团有限公司"
       ],
       "url": "https://www.ceair.com/",
-      "final_url": "https://www.ceair.com/",
-      "sha256": "4ee5df10289ac329431b93c52cf4b53aef6c9673cccf715bb22b0d624464682f",
-      "bytes": 902
+      "final_url": "https://www.ceair.com/en/usd/home",
+      "sha256": "127af23cb33bba4ee3163b0ebbbe363b3855d1e89b47b31b4819e9affacfdbb1",
+      "bytes": 438149
     },
     {
       "phase": "official",
@@ -842,7 +840,7 @@
       ],
       "url": "https://www.sinochem.com/",
       "final_url": "https://www.sinochem.com/",
-      "sha256": "92793f5190a9d82e688077f2624300437de5211bde4240244d564c31a6a97d2d",
+      "sha256": "5b6863babe3b9bed1d15ccf912a2888bac3e01f29567574345effec083dc8ca6",
       "bytes": 149209
     },
     {
@@ -852,8 +850,8 @@
       ],
       "url": "https://www.cscec.com/",
       "final_url": "https://www.cscec.com/",
-      "sha256": "e9462ca41c3af1d6bcf51e1fcd056cf77b418e84bf4506744874e0c4a86b8556",
-      "bytes": 114236
+      "sha256": "3731f9a1ffb61a5caa2c6342c95aa9347cd04dd2f866a57a89dbefb2835f56f6",
+      "bytes": 114700
     },
     {
       "phase": "official",
@@ -862,7 +860,7 @@
       ],
       "url": "https://www.sdic.com.cn/",
       "final_url": "https://www.sdic.com.cn/cn/index.htm",
-      "sha256": "a6b77d63df822e2d015b0d9c1cc2753671e83f2c623d4db6fe20a66e6b339ada",
+      "sha256": "cfc4219edb882cccb1d9d87680e8b1b5766bde377218362537b43065d754cdc7",
       "bytes": 31540
     },
     {
@@ -872,8 +870,8 @@
       ],
       "url": "https://www.crc.com.cn/",
       "final_url": "https://www.crc.com.cn/",
-      "sha256": "1f82d4599ed013de6ebc336bbff2c2f57aea3daff3e817e1021e8531c7feece7",
-      "bytes": 986
+      "sha256": "5060540ea905cc57fa315726517de2dd8208c020c8bdb1a17a7fe3061d101077",
+      "bytes": 984
     },
     {
       "phase": "official",
@@ -890,8 +888,8 @@
       ],
       "url": "https://www.chinacoal.com/",
       "final_url": "https://www.chinacoal.com/",
-      "sha256": "7a52e691cea76f5cd9c9a1c743b9585fde64a85ffdcfa2c1dc06754a8fd4f2bc",
-      "bytes": 50384
+      "sha256": "b6a4eca31d3826b7953053f5b604168432bbd4b2f83ab32b2687ccd0181c14d4",
+      "bytes": 50183
     },
     {
       "phase": "official",
@@ -920,8 +918,8 @@
       ],
       "url": "https://www.powerchina.cn/",
       "final_url": "https://www.powerchina.cn/",
-      "sha256": "e666c42b0a71abe5c25025d8030b829d552b85ff972d36bf37ab6d4ca47a328b",
-      "bytes": 65207
+      "sha256": "819b7b9d05f6fc2ac2d754b06a9641516a682fc3d1c8a70d165a822119a8e63d",
+      "bytes": 65048
     },
     {
       "phase": "official",
@@ -960,8 +958,8 @@
       ],
       "url": "https://www.cmbc.com.cn/",
       "final_url": "https://www.cmbc.com.cn/",
-      "sha256": "21dad964dcf9c108d2e884a55dc871f2c02bd49776312609b6a85df19ff044f0",
-      "bytes": 296361
+      "sha256": "e419d586371fc565958053e399408db8b1a74950bc5a908eb91d9eb68482f0e8",
+      "bytes": 296537
     },
     {
       "phase": "official",
@@ -980,7 +978,7 @@
       ],
       "url": "https://campus.chinahr.com/pages/adbc2027",
       "final_url": "https://campus.chinahr.com/pages/adbc2027/",
-      "sha256": "61f32e3b09b265bee42ee599e865fd9cea29fe47440dd273050d1b61bc80588b",
+      "sha256": "a60ff40b864126a9753013431b8ea3d0a4a01aa8ac92eaa8b5fc61bb0bacbbc9",
       "bytes": 12943
     },
     {
@@ -990,7 +988,7 @@
       ],
       "url": "https://www.icbc.com.cn/",
       "final_url": "https://www.icbc.com.cn/",
-      "sha256": "92bb1089e924abf02d80aab8bf18673e0bbd5814137d95a0e1077631cdf1c41d",
+      "sha256": "a5c292dd84c7e236b0023724e1f597e743fd4ecdc5dc715f870dc99f98dd4504",
       "bytes": 521629
     },
     {
@@ -1000,8 +998,8 @@
       ],
       "url": "https://www.abchina.com/",
       "final_url": "https://www.abchina.com/cn/",
-      "sha256": "e96053acd3d7a5f46e73b573ec4b546fea7e67a0ca8a99603772c395036d348c",
-      "bytes": 203195
+      "sha256": "e9626f7c1fc9958853570d1b92603d71bb10c67837fb865de2dbb0663535bb83",
+      "bytes": 203394
     },
     {
       "phase": "official",
@@ -1010,8 +1008,8 @@
       ],
       "url": "https://www.bankofchina.com/",
       "final_url": "https://www.bankofchina.com/",
-      "sha256": "3c4bbcb05cd0127134d5ac80b68b05b9492e34b99efc0afbe13d8de0ff070c78",
-      "bytes": 77395
+      "sha256": "8f0f4fde1f07e80634d929626ea609ecd572a15876ad6f1daa299ff31d78ad16",
+      "bytes": 77399
     },
     {
       "phase": "official",
@@ -1030,7 +1028,7 @@
       ],
       "url": "https://campus.chinahr.com/pages/2026-boc",
       "final_url": "https://campus.chinahr.com/pages/2026-boc/",
-      "sha256": "f140ddb535f6926038a7cc9a18c90351935895e65cac6710570860bdbcc76275",
+      "sha256": "48658a5920dfbdcb59d5358f54b2d710233f5497795b651c8c4b754b91598e0d",
       "bytes": 52507
     },
     {
@@ -1040,7 +1038,7 @@
       ],
       "url": "https://campus.chinahr.com/pages/2027-boc",
       "final_url": "https://campus.chinahr.com/pages/2027-boc/",
-      "sha256": "649bad4e2c04a4e112055e6fb17f987dcd2d964f391e7d470585e7cccb5d0baf",
+      "sha256": "dea942f37e32e5754b7f20c1edeb0336420b53dc7387a9bc5427af752953f71e",
       "bytes": 55362
     },
     {
@@ -1076,8 +1074,8 @@
       ],
       "url": "https://www.cmbchina.com/",
       "final_url": "https://www.cmbchina.com/",
-      "sha256": "b9d51a9be3b01aca33f432504e5bc6e8b5d08bfcba8e3a84c572b795bf75940a",
-      "bytes": 171056
+      "sha256": "d407cf4e0113658e89e1aeae98c576e181211b4a8f51be317af0adc8cb65a6c3",
+      "bytes": 171026
     },
     {
       "phase": "official",
@@ -1095,7 +1093,7 @@
         "中国光大银行股份有限公司"
       ],
       "url": "https://www.cebbank.com/",
-      "error": "URLError: <urlopen error [SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1011)>"
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "phase": "official",
@@ -1134,8 +1132,8 @@
       ],
       "url": "https://www.cgbchina.com.cn/",
       "final_url": "https://www.cgbchina.com.cn/",
-      "sha256": "ee9fb1827840405f919ea8e7d7affe1bdb66d5c35ce2b24a838a3f37c8defc91",
-      "bytes": 74059
+      "sha256": "39db366b6428cafea5818a8422539f0e78884cc83042e9817f7e69072b4c796b",
+      "bytes": 74083
     },
     {
       "phase": "official",
@@ -1160,8 +1158,8 @@
       ],
       "url": "https://www.cbhb.com.cn/",
       "final_url": "https://www.cbhb.com.cn/",
-      "sha256": "f0dc9bbde3de7c4fa5e25abd80ff7ba151e89f9be3bda1d4069a1835f9133040",
-      "bytes": 192193
+      "sha256": "e7e22287442ddc98eb92b20b7d6410c792522e9b9b3658f440c7143ec0e5334c",
+      "bytes": 192194
     },
     {
       "phase": "official",
@@ -1180,8 +1178,8 @@
       ],
       "url": "https://www.hengli.com/",
       "final_url": "https://www.hengli.com/global/",
-      "sha256": "6aafb0a9685e97efc5a35615203a011754b94632c94b47b753b422b724595cf1",
-      "bytes": 40212
+      "sha256": "5bfe7fc22c2536bf8f54717d12df9309aa7a448ff50ae823a58ef4a39408d623",
+      "bytes": 40217
     },
     {
       "phase": "official",
@@ -1200,8 +1198,8 @@
       ],
       "url": "https://www.tencent.com/",
       "final_url": "https://www.tencent.com/",
-      "sha256": "4813bb36bd68ca478b6e5a3f7d2e8accaed79594d17f75a7a321dca933734684",
-      "bytes": 179804
+      "sha256": "f1f1db736e5747bd43d364dfc85c6a3df9ab4f33cf6b796939ccd7b6c077b151",
+      "bytes": 179743
     },
     {
       "phase": "official",
@@ -1220,7 +1218,7 @@
       ],
       "url": "https://www.midea.com/",
       "final_url": "https://www.midea.com/us",
-      "sha256": "5d9d3836e266213457ea53f299ff9c15df7e3f985672dd103d1d60f14c5872a8",
+      "sha256": "84e067e955a9f72342ea0884832074ba5a3ffbf40ac04400ab6d89aba808f359",
       "bytes": 197370
     },
     {
@@ -1248,8 +1246,8 @@
       ],
       "url": "https://www.tongwei.com/",
       "final_url": "https://www.tongwei.com/",
-      "sha256": "e5e069506fe31b000beb378bf5817df3b11d053c25c9a03811bbc11761a8ecd4",
-      "bytes": 45441
+      "sha256": "6108e6f2411c6546ce4040cc81ff6014581d08d855caddce0db04ac9853986df",
+      "bytes": 45491
     },
     {
       "phase": "official",
@@ -1258,7 +1256,7 @@
       ],
       "url": "https://www.didiglobal.com/",
       "final_url": "https://www.didiglobal.com/",
-      "sha256": "d1a1e7d697753ac96510a972a5df7d6a3a692e0870c461ee468979ba347a9e05",
+      "sha256": "fb1b1b11a8558c2181f5431fe73d9fd97889b1f867b4e3dbb704743b1978e3ef",
       "bytes": 10780
     },
     {
@@ -1287,7 +1285,7 @@
         "正泰集团股份有限公司"
       ],
       "url": "https://www.chint.com/",
-      "error": "URLError: <urlopen error timed out>"
+      "error": "HTTPError: HTTP Error 403: Forbidden"
     },
     {
       "phase": "official",
@@ -1344,8 +1342,8 @@
       ],
       "url": "https://www.baidu.com/",
       "final_url": "https://www.baidu.com/",
-      "sha256": "d779c6775d47d9a2ba846606684d3788ea91505d3ae02559dfd4844c24e75b62",
-      "bytes": 722125
+      "sha256": "12e3d39b5209c7e081222977ab85f474d2b29d4b57199f3036eab732b80a4d98",
+      "bytes": 723050
     },
     {
       "phase": "official",
@@ -1400,7 +1398,7 @@
       ],
       "url": "https://www.goertek.com/",
       "final_url": "https://www.goertek.com/",
-      "sha256": "d88f860208e10854b91904bcd3ead59eb1b6f2d801bd53f0fbfecd14c26ba6b5",
+      "sha256": "50964efa3270661739831e7bc5c7c1347557786c224db3043fdb222ca0f03b84",
       "bytes": 345
     },
     {
@@ -1410,8 +1408,8 @@
       ],
       "url": "https://goertek.hotjob.cn/",
       "final_url": "https://goertek.hotjob.cn/",
-      "sha256": "f09ff86dc3ac47ae81fb8df40f350598e9cb4dc509fc55da55397308ebb5ec6f",
-      "bytes": 3572
+      "sha256": "bab0bf15269b6044f6ded3793d0aeda0944ba14e2a690c2112714b9b48d0bac6",
+      "bytes": 3568
     },
     {
       "phase": "official",
@@ -1428,8 +1426,8 @@
       ],
       "url": "https://www.delixi.com/",
       "final_url": "https://www.delixi.com/",
-      "sha256": "86e9781200184e929ab1298bd9f15c4e0c70416d545ad531f3b75c84aa64d0eb",
-      "bytes": 96232
+      "sha256": "9aa66b242470cbc8eb797f19e69ac8dec4f0e1d9dea1a09ba4431009d9e4e112",
+      "bytes": 96233
     },
     {
       "phase": "official",
@@ -1448,7 +1446,7 @@
       ],
       "url": "https://www.longi.com/",
       "final_url": "https://www.longi.com/us/",
-      "sha256": "db5ad77a17f758a6ae4589182c869807f2ff23ec8bc77d3e6d269a4ae7e5d32b",
+      "sha256": "23d058f41a012626be5c95d645f86078261e769cdaddeb73c5c45c86a633d40a",
       "bytes": 174185
     },
     {
@@ -1458,8 +1456,8 @@
       ],
       "url": "https://www.trinasolar.com/",
       "final_url": "https://www.trinasolar.com/en-glb/",
-      "sha256": "926ce2b32352e2f6f74c296b0ddb1182b5fa5b92e4911b64188fa251802aa45e",
-      "bytes": 128967
+      "sha256": "d4f10c6a130d1c9eb17d457b91431ba6c419fb37e80bbbc54ee2275757cd67fb",
+      "bytes": 129460
     },
     {
       "phase": "official",
@@ -1468,8 +1466,8 @@
       ],
       "url": "https://www.jinkosolar.com/",
       "final_url": "https://www.jinkosolar.com/en/",
-      "sha256": "d8a0b663e791f167b0a3c4c55ff023bac817b5afa284f78bc62657155da03b27",
-      "bytes": 81427
+      "sha256": "16973cc25b5e7f6d1eb0b36a9662bf6cbe71184b3899b45249dce277aa0cd631",
+      "bytes": 81888
     },
     {
       "phase": "official",
@@ -1503,7 +1501,7 @@
         "晶澳太阳能科技股份有限公司"
       ],
       "url": "https://www.jasolar.com/",
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "error": "HTTPError: HTTP Error 406: Not Acceptable"
     },
     {
       "phase": "official",
@@ -1562,8 +1560,8 @@
       ],
       "url": "https://www.dahuatech.com/",
       "final_url": "https://www.dahuatech.com/",
-      "sha256": "7cd0f4c13aa4384de82bd7f89747554598e4e2ab839fa23baa063114c512dcbd",
-      "bytes": 224660
+      "sha256": "2c0bf2640c0abc8c53182dfe5f825c36ad23fff0833fd50729198f6f0cc363c4",
+      "bytes": 225834
     },
     {
       "phase": "official",
@@ -1571,9 +1569,7 @@
         "北京东方雨虹防水技术股份有限公司"
       ],
       "url": "https://www.yuhong.com.cn/",
-      "final_url": "https://www.yuhong.com.cn/",
-      "sha256": "cb26a6f8b87dfbf3ade0c8f01db1d8f5f1e0485d855bf52a332be08570bc0d1c",
-      "bytes": 107431
+      "error": "TimeoutError: The read operation timed out"
     },
     {
       "phase": "official",
@@ -1786,51 +1782,11 @@
     {
       "phase": "official_recruitment",
       "companies": [
-        "中国华能集团有限公司"
-      ],
-      "url": "https://www.chng.com.cn/list_rczc/-/article/e7QXJDO2ekps/list/23519/",
-      "final_url": "https://www.chng.com.cn/list_rczc/-/article/e7QXJDO2ekps/list/23519.html",
-      "sha256": "11ccb51049beb80e9bddbe894d64837a4d03ceb41da38729f712156ad09012ff",
-      "bytes": 36027
-    },
-    {
-      "phase": "official_recruitment",
-      "companies": [
-        "中国华能集团有限公司"
-      ],
-      "url": "https://www.chng.com.cn/list_zpxx/-/article/cQQKaBtwslFy/list/23524/",
-      "final_url": "https://www.chng.com.cn/list_zpxx/-/article/cQQKaBtwslFy/list/23524.html",
-      "sha256": "870909433ba9d1fb603cf7d1041d05f6ba2759dabd3c5265869049b032e5343d",
-      "bytes": 46168
-    },
-    {
-      "phase": "official_recruitment",
-      "companies": [
-        "中国华能集团有限公司"
-      ],
-      "url": "https://www.chng.com.cn/list_zpjg/-/article/BfIVelVARKdi/list/23529/",
-      "final_url": "https://www.chng.com.cn/list_zpjg/-/article/BfIVelVARKdi/list/23529.html",
-      "sha256": "550a128420d13895ce21ca075dc7eadf093667dd5616f56a41f0d0541d06e6d7",
-      "bytes": 35861
-    },
-    {
-      "phase": "official_recruitment",
-      "companies": [
-        "中国华能集团有限公司"
-      ],
-      "url": "https://www.chng.com.cn/list_zpxt/-/article/nIRkxmKOSFaS/list/23534/",
-      "final_url": "https://www.chng.com.cn/list_zpxt/-/article/nIRkxmKOSFaS/list/23534.html",
-      "sha256": "1367f5fff491360a727070bfec14c8201e44361c45de6f7e59e3045efb50cdc7",
-      "bytes": 23214
-    },
-    {
-      "phase": "official_recruitment",
-      "companies": [
         "中国大唐集团有限公司"
       ],
       "url": "https://www.china-cdt.com/dtwz/xwzx/sdbd/2026/10/I1565396423942340608.html",
       "final_url": "https://www.china-cdt.com/dtwz/xwzx/sdbd/2026/10/I1565396423942340608.html",
-      "sha256": "4ce005f92b7f821f8ef08d53c1dbb4f9459d132eebf452fca18436176441e920",
+      "sha256": "ddeb0f08eb5329a778b80a8330913b5b38d5bcc58a1b646b0139ecc0b13b4d9b",
       "bytes": 41536
     },
     {
@@ -1850,8 +1806,8 @@
       ],
       "url": "https://www.chd.com.cn/webfront/webpage/web/contentList/channelId/50da77ddba204b85821fecccb3abc804/pageNo/1",
       "final_url": "https://www.chd.com.cn/site/2/list/50da77ddba204b85821fecccb3abc804_1.html",
-      "sha256": "8df3e876a2ade497241196309e3dc6764a8a33559935fd2628ed664848e37ffa",
-      "bytes": 26745
+      "sha256": "652229350b728f522b9b8b47e4e0ac3add53eb7f675e4358aa1d191540002c66",
+      "bytes": 26914
     },
     {
       "phase": "official_recruitment",
@@ -1860,8 +1816,8 @@
       ],
       "url": "https://www.chd.com.cn/webfront/webpage/web/contentList/channelId/c802da7172754e8f8a3fc3bc02d7bfd7/pageNo/1",
       "final_url": "https://www.chd.com.cn/site/2/list/c802da7172754e8f8a3fc3bc02d7bfd7_1.html",
-      "sha256": "d8d01ad7e5a0cc6c52f0d7779572700edbbf24d237c116baaea4a7290052b57b",
-      "bytes": 25930
+      "sha256": "afa35c9f1d312f74921ade858adbda2a436f1da66f2ec96f32b3ccc97364943b",
+      "bytes": 25952
     },
     {
       "phase": "official_recruitment",
@@ -1920,7 +1876,7 @@
       ],
       "url": "https://recruit.cscec.com/recruit#/",
       "final_url": "https://recruit.cscec.com/recruit#/",
-      "sha256": "6aa0fd402f9f9d22729a8c5266c634915c74c98a5c75efd98a5867def9d462a8",
+      "sha256": "a21c4c9417320ce322e0f3a75f10535279ae4e6f20df39b0b63677b56f976bd3",
       "bytes": 29573
     },
     {
@@ -1950,7 +1906,7 @@
       ],
       "url": "https://www.chinacoal.com/col/col37/art/2026/art_f062e4c5c6d5e02697c1004d4075ddc0.html",
       "final_url": "https://www.chinacoal.com/col/col37/art/2026/art_f062e4c5c6d5e02697c1004d4075ddc0.html",
-      "sha256": "9042e5e0156228389fb3c98e68bd5870d1280231043882fa3eef7c59bdabac8c",
+      "sha256": "606fad92bf4e7b97d7be80f0fd418369c76f38dcb462aff41073b410fc8f40e4",
       "bytes": 13151
     },
     {
@@ -1960,7 +1916,7 @@
       ],
       "url": "https://www.chinacoal.com/col/col31/art/2026/art_f4229dce4d882548796c4335d25207ca.html",
       "final_url": "https://www.chinacoal.com/col/col31/art/2026/art_f4229dce4d882548796c4335d25207ca.html",
-      "sha256": "dfe2e1397dbf3f5a74217e106ead7932b6dbc5849524f75e360ee2b0e33a10c8",
+      "sha256": "1a7f346d5ffcf86907be218dea80b77480ac6fa8cc1c5950e6df1d331f158e8a",
       "bytes": 13390
     },
     {
@@ -2100,8 +2056,8 @@
       ],
       "url": "https://e.huawei.com/en/talent/cert/#/careerCert",
       "final_url": "https://e.huawei.com/en/talent/cert/#/careerCert",
-      "sha256": "2d9ccf0272660c851dc3bf08da471226e3d8f8960a8f9d3731a489dd4ae226f4",
-      "bytes": 26338
+      "sha256": "0a9cbb9d9d5b4ed4fc3029429fa6cf8c0f7f06479e457b7551a313be74009a69",
+      "bytes": 26336
     },
     {
       "phase": "official_recruitment",
@@ -2130,7 +2086,7 @@
       ],
       "url": "https://www.midea.com/us/careers",
       "final_url": "https://www.midea.com/us/careers",
-      "sha256": "9093dde05e92dfd91570d6762d9683f6ac0260882fa69c0fa19ab3b913888424",
+      "sha256": "b98acb54bf9b595ada7ad40241cdb3e9b714541d1f23483a12aef1dacb2b64d1",
       "bytes": 177647
     },
     {
@@ -2240,7 +2196,7 @@
       ],
       "url": "https://www.sanygroup.com/join/",
       "final_url": "https://www.sanygroup.com/join/",
-      "sha256": "6c35e7f4b28160930a1448b3673a3d58d14a95722d49c88708465980d816cdff",
+      "sha256": "5e868a2035eb438ad9476afc9a798d270bf6118490763b2ea62c354d3439eebd",
       "bytes": 370179
     },
     {
@@ -2270,7 +2226,7 @@
       ],
       "url": "https://www.longi.com/us/career/",
       "final_url": "https://www.longi.com/us/career/",
-      "sha256": "5481f2879c93ec4557fa2a3f739b4729d95d55d073b29dc3dbc57d776ec7ec39",
+      "sha256": "252b78364e59a3031a9c8fd4a42b31d52a95cea7d10183426bbd1e2e8d4de1d9",
       "bytes": 112961
     },
     {
@@ -2280,8 +2236,8 @@
       ],
       "url": "https://www.jinkosolar.com/en/site/brand",
       "final_url": "https://www.jinkosolar.com/en/site/brand",
-      "sha256": "3b908ba14d729d748890bf7345e5e5225ca3ac535693883dcd56951786fb469a",
-      "bytes": 71003
+      "sha256": "6bf4d16f0ca240c768c1a7e08b5f5206fedd410610ad1109938dab5995e2825c",
+      "bytes": 71247
     },
     {
       "phase": "official_recruitment",
@@ -2290,7 +2246,7 @@
       ],
       "url": "https://job.fuyaogroup.com/fuyao/position/index?recruitmentType=SOCIALRECRUITMENT",
       "final_url": "https://job.fuyaogroup.com/fuyao/position/index?recruitmentType=SOCIALRECRUITMENT",
-      "sha256": "cfc8b8648a6beb178bfe6256c28dfd06f8922dda91ddb24df276fbfae69592ed",
+      "sha256": "fbfb8543c9d83257e0c1b1d5fb7f9ec6d6df537615f4dcbe226c8a6d5eee0a5f",
       "bytes": 94622
     },
     {
@@ -2300,8 +2256,8 @@
       ],
       "url": "https://job.fuyaogroup.com/fuyao/position/index?projectId=6a752162d3d9c2792c84e535&recruitmentType=CAMPUSRECRUITMENT",
       "final_url": "https://job.fuyaogroup.com/fuyao/position/index?projectId=6a752162d3d9c2792c84e535&recruitmentType=CAMPUSRECRUITMENT",
-      "sha256": "18a4404d3c2335add74d4f9f824e19728598787dc3f415c1974d5c2b17bfcb2f",
-      "bytes": 69946
+      "sha256": "d7bf07a4dbe66e7cf7bfe3920e77f8750b9d3f9bebf93736c12712d2f362e138",
+      "bytes": 69975
     },
     {
       "phase": "official_recruitment",
@@ -2316,47 +2272,46 @@
     {
       "phase": "university_archive",
       "source": "南开大学",
-      "candidate_employers": [
-        "西安银行股份有限公司",
-        "青岛银行股份有限公司"
-      ],
-      "recruitment_articles": 5,
+      "candidate_employers": [],
+      "recruitment_articles": 6,
       "url": "https://career.nankai.edu.cn/correcruit/index.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/index.html",
-      "sha256": "cb1d830d96ba8a01dd31a63af733f1b5db7159d8fc41bad1f9fb3d23e9a26e21",
-      "bytes": 34714
+      "sha256": "48b09ffaa65545eacd4aac1ee04ffc54df8faa1fc648b38f4843929b45a22521",
+      "bytes": 34963
     },
     {
       "phase": "university_archive",
       "source": "河北工业大学",
-      "candidate_employers": [],
-      "recruitment_articles": 7,
+      "candidate_employers": [
+        "科大讯飞股份有限公司"
+      ],
+      "recruitment_articles": 5,
       "url": "https://career.hebut.edu.cn/correcruit/index.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index.html",
-      "sha256": "63a13d3b7d8a29dfc8859fd661f1f38e52515b4b071fd886f350d297728f428a",
-      "bytes": 29604
+      "sha256": "66aa80303eb69b18794d37bac5c49a1dc91680ccdeb56df1f22523b7d02434bf",
+      "bytes": 29516
     },
     {
       "phase": "university_archive",
       "source": "天津工业大学",
-      "candidate_employers": [],
-      "recruitment_articles": 1,
+      "candidate_employers": [
+        "青岛银行股份有限公司"
+      ],
+      "recruitment_articles": 5,
       "url": "https://jobs.tiangong.edu.cn/correcruit/index.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/index.html",
-      "sha256": "9b1cf6e5ab021faff3f929d7cffdd2b9a73c0c0c9c1bcb93f2d7767a0bdce77e",
-      "bytes": 32597
+      "sha256": "0e4601aa093b4fe1579fd1c47de311ced00c166c6b2d804feef4be23d09f7b74",
+      "bytes": 32976
     },
     {
       "phase": "university_archive",
       "source": "华中科技大学",
-      "candidate_employers": [
-        "青岛银行股份有限公司"
-      ],
+      "candidate_employers": [],
       "recruitment_articles": 8,
       "url": "https://job.hust.edu.cn/searchJob.do?type=2",
       "final_url": "https://job.hust.edu.cn/searchJob.do?type=2",
-      "sha256": "34ef6b67d18e305cd7222674ec0f327381e7893ab8676dd6fca2a3f3b56195de",
-      "bytes": 31538
+      "sha256": "2b62a8838b68afd83a7e842a15f268d5fbab9bda7a4580f75c1654e23c407504",
+      "bytes": 31688
     },
     {
       "phase": "university_archive",
@@ -2365,8 +2320,8 @@
       "recruitment_articles": 14,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list",
-      "sha256": "6cea32ed626c21e75b18d30461c44c2753bc092cd08b55328cae404d08cef479",
-      "bytes": 58424
+      "sha256": "fae006da358b67038c45cbe9e4f166c59e2d8f0dabb5f5d75f953a8da09ed69d",
+      "bytes": 58509
     },
     {
       "phase": "university_archive",
@@ -2431,7 +2386,7 @@
       "recruitment_articles": 0,
       "url": "https://job.ustc.edu.cn/",
       "final_url": "https://job.ustc.edu.cn/",
-      "sha256": "9b08dd52f3a594ab8a3ce616bf54121d3c01a2770a58c37725af129faccf4d7e",
+      "sha256": "985dde126c737af872c40ed80e3c4b4f6e7344b24b0e05c3e19ef054385fb28a",
       "bytes": 62466
     },
     {
@@ -2467,8 +2422,8 @@
       "recruitment_articles": 0,
       "url": "https://jiuye.uestc.edu.cn/",
       "final_url": "https://jiuye.uestc.edu.cn/career/",
-      "sha256": "0292ccd343508a6575bc18077c272563c7103f2c70084db1dbc36674556858ab",
-      "bytes": 270817
+      "sha256": "4198156f0fccac08e462d4f11c5ff94e6e5c52bf662659d98c7eaf0de1e12580",
+      "bytes": 282134
     },
     {
       "phase": "university_archive",
@@ -2492,7 +2447,7 @@
       "candidate_employers": [],
       "recruitment_articles": 0,
       "url": "https://jiuye.swjtu.edu.cn/career/index",
-      "error": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1011)>"
+      "error": "URLError: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1011)>"
     },
     {
       "phase": "university_archive",
@@ -2522,18 +2477,38 @@
       "recruitment_articles": 22,
       "url": "https://career.cup.edu.cn/",
       "final_url": "https://career.cup.edu.cn/",
-      "sha256": "b73637ec82a89ffed2d288068c2d5a59f9f9d026b3eb6c8af4b3337da4699092",
-      "bytes": 70014
+      "sha256": "0753110e438638e44009d7ced7f949d9d9dfc0e8f0336d24ae824bf18137602a",
+      "bytes": 69999
     },
     {
       "phase": "university_archive",
       "source": "厦门大学嘉庚学院",
       "candidate_employers": [],
-      "recruitment_articles": 0,
+      "recruitment_articles": 1,
       "url": "https://career.xujc.com/2026/0928/c3959a173096/page.htm",
       "final_url": "https://career.xujc.com/2026/0928/c3959a173096/page.htm",
-      "sha256": "6d0f5b2a33e1d3ad495837c06bc3b8b4b3679a5ebdf843b02779c78b0fc161bf",
-      "bytes": 74654
+      "sha256": "8e06082b0890cc309bc3d4c73b1e272c318c8daed3556eec72fa5fe68a1a1bf9",
+      "bytes": 74723
+    },
+    {
+      "phase": "university_archive",
+      "source": "南开大学",
+      "candidate_employers": [],
+      "recruitment_articles": 0,
+      "url": "https://career.nankai.edu.cn/correcruit/index/p/2.html",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "phase": "university_archive",
+      "source": "南开大学",
+      "candidate_employers": [
+        "青岛银行股份有限公司"
+      ],
+      "recruitment_articles": 5,
+      "url": "https://career.nankai.edu.cn/correcruit/index/p/3.html",
+      "final_url": "https://career.nankai.edu.cn/correcruit/index/p/3.html",
+      "sha256": "9ba69b8ebf5b51b77f14509876670e73edecce18def1265c9b152447e45e5c56",
+      "bytes": 34723
     },
     {
       "phase": "university_archive",
@@ -2541,11 +2516,11 @@
       "candidate_employers": [
         "中国稀土集团有限公司"
       ],
-      "recruitment_articles": 6,
-      "url": "https://career.nankai.edu.cn/correcruit/index/p/2.html",
-      "final_url": "https://career.nankai.edu.cn/correcruit/index/p/2.html",
-      "sha256": "1824474fc4f07b799f0ef3afe71f9b2ef6995039b7c2be1f399124fe61abf9b5",
-      "bytes": 34905
+      "recruitment_articles": 5,
+      "url": "https://career.nankai.edu.cn/correcruit/index/p/4.html",
+      "final_url": "https://career.nankai.edu.cn/correcruit/index/p/4.html",
+      "sha256": "bf3997634ed8f4836a96c770b7eff266e6243de3f5e21dd973ad7d4c44ce9ed2",
+      "bytes": 35121
     },
     {
       "phase": "university_archive",
@@ -2554,54 +2529,33 @@
         "远景能源有限公司"
       ],
       "recruitment_articles": 4,
-      "url": "https://career.nankai.edu.cn/correcruit/index/p/3.html",
-      "final_url": "https://career.nankai.edu.cn/correcruit/index/p/3.html",
-      "sha256": "9f722e31678ba0fab6e19d35a2981a764e49782d8861611287cf773d213ec9ca",
-      "bytes": 34835
-    },
-    {
-      "phase": "university_archive",
-      "source": "南开大学",
-      "candidate_employers": [
-        "中国资源循环集团有限公司"
-      ],
-      "recruitment_articles": 3,
-      "url": "https://career.nankai.edu.cn/correcruit/index/p/4.html",
-      "final_url": "https://career.nankai.edu.cn/correcruit/index/p/4.html",
-      "sha256": "1098ffedbdb4212db5f22245e2e5599353c1e43b396e6b69eeff9b6d7f188b01",
-      "bytes": 34943
-    },
-    {
-      "phase": "university_archive",
-      "source": "南开大学",
-      "candidate_employers": [
-        "中国光大银行股份有限公司"
-      ],
-      "recruitment_articles": 7,
       "url": "https://career.nankai.edu.cn/correcruit/index/p/5.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/index/p/5.html",
-      "sha256": "053c5ac53f1b24be2695f9738086b0fea766faf9e51492936013ccd2b54602cd",
-      "bytes": 35026
+      "sha256": "039cbeb23ee182340df5c4f02a078171ea8e29a45a27b3a5ea67361ecad811a1",
+      "bytes": 34939
     },
     {
       "phase": "university_archive",
       "source": "南开大学",
-      "candidate_employers": [],
-      "recruitment_articles": 0,
+      "candidate_employers": [
+        "中国光大银行股份有限公司",
+        "中国资源循环集团有限公司"
+      ],
+      "recruitment_articles": 8,
       "url": "https://career.nankai.edu.cn/correcruit/index/p/6.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/index/p/6.html",
-      "sha256": "5a188fa7bf1a5b765a95e55dd0c1ee79f363788f7005fc4371def34fe899eb10",
-      "bytes": 34817
+      "sha256": "00163fa17090636f64b132832f4fc41bd7e69f806ad1b942b4bcaa46da3267f8",
+      "bytes": 34857
     },
     {
       "phase": "university_archive",
       "source": "南开大学",
       "candidate_employers": [],
-      "recruitment_articles": 1,
+      "recruitment_articles": 2,
       "url": "https://career.nankai.edu.cn/correcruit/index/p/7.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/index/p/7.html",
-      "sha256": "56a43e74a664f1557878bee0cae0dff2364ab570f217c3f4255922d7b752120d",
-      "bytes": 34667
+      "sha256": "4d85f4f5b0a7064f857dfea68acc4e65fb168217f8d6ead8334acc9cc070fd20",
+      "bytes": 34967
     },
     {
       "phase": "university_archive",
@@ -2610,28 +2564,28 @@
       "recruitment_articles": 0,
       "url": "https://career.nankai.edu.cn/correcruit/index/p/8.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/index/p/8.html",
-      "sha256": "59a0496f20c59103c1241f03e613d3af9e1836d495a34119dcab57b40da4fc4f",
-      "bytes": 34684
+      "sha256": "b1f4465e9bb809260d8a39a54abb3e40cf3aa1f361253d130ea8245caec518dd",
+      "bytes": 34651
+    },
+    {
+      "phase": "university_archive",
+      "source": "南开大学",
+      "candidate_employers": [],
+      "recruitment_articles": 1,
+      "url": "https://career.nankai.edu.cn/correcruit/index/p/9.html",
+      "final_url": "https://career.nankai.edu.cn/correcruit/index/p/9.html",
+      "sha256": "fe25d61013cbc9a50e4acdaf405dfe0550a7d000d385bc30257e18ea0ad5ef58",
+      "bytes": 34773
     },
     {
       "phase": "university_archive",
       "source": "南开大学",
       "candidate_employers": [],
       "recruitment_articles": 2,
-      "url": "https://career.nankai.edu.cn/correcruit/index/p/9.html",
-      "final_url": "https://career.nankai.edu.cn/correcruit/index/p/9.html",
-      "sha256": "233a7dfaade661670fdc7ebedd5729fe3efbc63212183ec36ecf231ed1d03daf",
-      "bytes": 34422
-    },
-    {
-      "phase": "university_archive",
-      "source": "南开大学",
-      "candidate_employers": [],
-      "recruitment_articles": 0,
       "url": "https://career.nankai.edu.cn/correcruit/index/p/10.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/index/p/10.html",
-      "sha256": "83867a8844cdfef95fd78a0f385574d10a91248cafcc3879d034dc4094c7871e",
-      "bytes": 34103
+      "sha256": "5a8bed5c7962fe4ba1a344f74fa1f67911d6e8a5546d348a712d21212b414138",
+      "bytes": 34695
     },
     {
       "phase": "university_archive",
@@ -2640,76 +2594,85 @@
       "recruitment_articles": 0,
       "url": "https://career.nankai.edu.cn/correcruit/index/p/11.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/index/p/11.html",
-      "sha256": "c9a3b13f9585b75b45e78fa2c838ea046396a96a9cb44072a7a0a882800726e4",
-      "bytes": 34657
+      "sha256": "222bcf570f3a7826d6fea727383c03f9d21679ee15bcc90d2663bd3f01076786",
+      "bytes": 34046
     },
     {
       "phase": "university_archive",
       "source": "南开大学",
       "candidate_employers": [],
-      "recruitment_articles": 1,
+      "recruitment_articles": 0,
       "url": "https://career.nankai.edu.cn/correcruit/index/p/12.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/index/p/12.html",
-      "sha256": "472bdcbcc7e4ac3351a9a7a0ddf8e1c3196160149141834f6d19845f035ed50c",
-      "bytes": 35310
+      "sha256": "98c20f458cd99b3e80396da04a0a04b1a0d2686af964810e7652198260d1b239",
+      "bytes": 34527
     },
     {
       "phase": "university_archive",
       "source": "河北工业大学",
       "candidate_employers": [],
-      "recruitment_articles": 6,
+      "recruitment_articles": 7,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/2.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/2.html",
-      "sha256": "d19a12ac050e6dec69f4375adbb7ce5e341f27a7e6138739db424e0552686dd5",
-      "bytes": 29570
+      "sha256": "97722de9de1bf4973935a776d6adcab17c46af9bf69c1606df772a5bef5a7ebb",
+      "bytes": 29596
+    },
+    {
+      "phase": "university_archive",
+      "source": "河北工业大学",
+      "candidate_employers": [],
+      "recruitment_articles": 4,
+      "url": "https://career.hebut.edu.cn/correcruit/index/p/3.html",
+      "final_url": "https://career.hebut.edu.cn/correcruit/index/p/3.html",
+      "sha256": "0e567d990145e8be6833abbcb35899925b30cbef8b8953024ad55b4ae1006891",
+      "bytes": 29446
     },
     {
       "phase": "university_archive",
       "source": "河北工业大学",
       "candidate_employers": [],
       "recruitment_articles": 0,
-      "url": "https://career.hebut.edu.cn/correcruit/index/p/3.html",
-      "final_url": "https://career.hebut.edu.cn/correcruit/index/p/3.html",
-      "sha256": "0ffa5c1eb79739a601219264b7501df06f49ea2bce22cc99561de45015a9cf3b",
-      "bytes": 29099
-    },
-    {
-      "phase": "university_archive",
-      "source": "河北工业大学",
-      "candidate_employers": [
-        "中国光大银行股份有限公司",
-        "中国联合网络通信集团有限公司",
-        "中国航空集团有限公司",
-        "腾讯控股有限公司"
-      ],
-      "recruitment_articles": 10,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/4.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/4.html",
-      "sha256": "2a0c0e43290fd60ee01e660e2584362089ff5336ce88d8e866e972b9ec596b69",
-      "bytes": 29465
+      "sha256": "624956381008b892d61ed2945f8af144963d62035c563a146661405376c838e0",
+      "bytes": 29016
     },
     {
       "phase": "university_archive",
       "source": "河北工业大学",
       "candidate_employers": [
         "三一集团有限公司",
-        "中国建筑集团有限公司"
+        "中国光大银行股份有限公司",
+        "中国建筑集团有限公司",
+        "中国联合网络通信集团有限公司",
+        "中国航空集团有限公司",
+        "腾讯控股有限公司"
       ],
-      "recruitment_articles": 4,
+      "recruitment_articles": 13,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/5.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/5.html",
-      "sha256": "057341a9054b51d5c50b0a4a57be453bb1dcebf255a8310150a4790a95bc65c4",
-      "bytes": 29288
+      "sha256": "bd08c3e54bd6b698e46f6a0405e4591122a5b24504934c9860144d74d97079bc",
+      "bytes": 29667
     },
     {
       "phase": "university_archive",
       "source": "河北工业大学",
       "candidate_employers": [],
-      "recruitment_articles": 6,
+      "recruitment_articles": 2,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/6.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/6.html",
-      "sha256": "e14b21497b3a7e479c40f8c6db70dd41a0347e0df1b70533fc3ff528e32c0cf2",
-      "bytes": 29570
+      "sha256": "0e6dc590d2e6a8598028d326022a93806894b6e1bc0eaa4c9c04a703e0707a4a",
+      "bytes": 29181
+    },
+    {
+      "phase": "university_archive",
+      "source": "河北工业大学",
+      "candidate_employers": [],
+      "recruitment_articles": 8,
+      "url": "https://career.hebut.edu.cn/correcruit/index/p/7.html",
+      "final_url": "https://career.hebut.edu.cn/correcruit/index/p/7.html",
+      "sha256": "df5b25f1ea1de9927a2b550868d2dcfeeadb145022032dd378ffac1f13339033",
+      "bytes": 29694
     },
     {
       "phase": "university_archive",
@@ -2719,30 +2682,20 @@
         "兰州银行股份有限公司"
       ],
       "recruitment_articles": 11,
-      "url": "https://career.hebut.edu.cn/correcruit/index/p/7.html",
-      "final_url": "https://career.hebut.edu.cn/correcruit/index/p/7.html",
-      "sha256": "2996108f925cd2ea7150eae95a326a5fb7c12c959a08af952d95e1eef67be677",
-      "bytes": 29667
-    },
-    {
-      "phase": "university_archive",
-      "source": "河北工业大学",
-      "candidate_employers": [],
-      "recruitment_articles": 7,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/8.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/8.html",
-      "sha256": "a70326edf9a5bfa97e701ec3332b72ffe3b999785f934a4508ab9fa11496d878",
-      "bytes": 29599
+      "sha256": "fc9b77ade4987c7af63c85d6dee9c3282274d457916ac9862ca23a0a6b449d32",
+      "bytes": 29720
     },
     {
       "phase": "university_archive",
       "source": "河北工业大学",
       "candidate_employers": [],
-      "recruitment_articles": 3,
+      "recruitment_articles": 6,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/9.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/9.html",
-      "sha256": "a6530f722fdf8d560e0aceb25cc6e56b431d0b45ac0a3cc2cafd535144c0b04c",
-      "bytes": 29182
+      "sha256": "3bae2bee1a988ec750237cb900909c6b8e10450369bd3a944a6fe357d340cc8c",
+      "bytes": 29491
     },
     {
       "phase": "university_archive",
@@ -2750,11 +2703,11 @@
       "candidate_employers": [
         "中国光大银行股份有限公司"
       ],
-      "recruitment_articles": 11,
+      "recruitment_articles": 4,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/10.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/10.html",
-      "sha256": "85e5bad983b43b84d4a6dc095699b4abc1558baa229e157158bfef94435bf5fb",
-      "bytes": 29688
+      "sha256": "e08dad5a12f33bff440b0c643b8cf71dc442b21917f18bc1e9ba0a51c425d3be",
+      "bytes": 29336
     },
     {
       "phase": "university_archive",
@@ -2762,41 +2715,41 @@
       "candidate_employers": [
         "金风科技股份有限公司"
       ],
-      "recruitment_articles": 2,
+      "recruitment_articles": 10,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/11.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/11.html",
-      "sha256": "35b6648c1da194a8d9b1fb428062060c9af5754750eeeca9858e08188259c0b3",
-      "bytes": 29074
+      "sha256": "8efbec60f7acb6552b9e222650bbe043e61a6f9e8299157091a3490c6c32a430",
+      "bytes": 29535
     },
     {
       "phase": "university_archive",
       "source": "河北工业大学",
       "candidate_employers": [],
-      "recruitment_articles": 5,
+      "recruitment_articles": 1,
       "url": "https://career.hebut.edu.cn/correcruit/index/p/12.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/index/p/12.html",
-      "sha256": "02d9d553706780b07c03ac26639ccfcb595bcc607a60513100c457db3c97891e",
-      "bytes": 29393
+      "sha256": "f5e7f4f90c667a040c5bfee7f6d87f236fc333c71a614a1ba44bb9376991ef69",
+      "bytes": 29077
+    },
+    {
+      "phase": "university_archive",
+      "source": "天津工业大学",
+      "candidate_employers": [],
+      "recruitment_articles": 2,
+      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/2.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/2.html",
+      "sha256": "403ac193f252c06c6a2e530954c79e994bec98ba05a7c13803f4dab44c2e9a6e",
+      "bytes": 32799
     },
     {
       "phase": "university_archive",
       "source": "天津工业大学",
       "candidate_employers": [],
       "recruitment_articles": 0,
-      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/2.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/2.html",
-      "sha256": "1bfbd8ac6dd4d2b3f3847a61215f661c06c3661a1b2fb2ff67bd4dd1ccab62d8",
-      "bytes": 32819
-    },
-    {
-      "phase": "university_archive",
-      "source": "天津工业大学",
-      "candidate_employers": [],
-      "recruitment_articles": 3,
       "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/3.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/3.html",
-      "sha256": "5d56f6caec80bd30051c14caa7f68f314e39a99f23b0012c50ce81a118c375a9",
-      "bytes": 32983
+      "sha256": "3d3fa88751e77703dc8ee68a0692e207b813cf71957118156ce524fcfe65d0d1",
+      "bytes": 32694
     },
     {
       "phase": "university_archive",
@@ -2805,8 +2758,18 @@
       "recruitment_articles": 3,
       "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/4.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/4.html",
-      "sha256": "0791d9255d517786a0b240e1abfce3aa83d8b3537d5b4e327223a80da39212a3",
-      "bytes": 33039
+      "sha256": "757af099e64d84a3c0917476f8be165bab725196f3a72812e9d85edd1d337df1",
+      "bytes": 33161
+    },
+    {
+      "phase": "university_archive",
+      "source": "天津工业大学",
+      "candidate_employers": [],
+      "recruitment_articles": 1,
+      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/5.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/5.html",
+      "sha256": "529ac46acba52e7d8ec03ff0e4a6b26aa9f9c0b2923c42a62fbd664444d69200",
+      "bytes": 32950
     },
     {
       "phase": "university_archive",
@@ -2815,31 +2778,21 @@
         "三一集团有限公司",
         "中国光大银行股份有限公司"
       ],
-      "recruitment_articles": 3,
-      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/5.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/5.html",
-      "sha256": "13ee278399262b16cfa13c2b3c0f40d2efbbe78eb4fc81f76889a0cfd5fc2296",
-      "bytes": 33065
+      "recruitment_articles": 5,
+      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/6.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/6.html",
+      "sha256": "66a7bc06615f24abc320f316c45ef176765310c2f4c77ac002a6ba5a89084f06",
+      "bytes": 33067
     },
     {
       "phase": "university_archive",
       "source": "天津工业大学",
       "candidate_employers": [],
       "recruitment_articles": 2,
-      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/6.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/6.html",
-      "sha256": "5849e9dee191c6f9927c604b4f01db8e4888deb49c29e1340118e0c1a8d55624",
-      "bytes": 32849
-    },
-    {
-      "phase": "university_archive",
-      "source": "天津工业大学",
-      "candidate_employers": [],
-      "recruitment_articles": 1,
       "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/7.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/7.html",
-      "sha256": "d5988269e3278c3b340546850b35648b27624477b5732f185d0e9de595d70bcb",
-      "bytes": 33146
+      "sha256": "6fbcc8a1001ee0223d91896cb041e05190b0d7facad679606ab5146c529ec52a",
+      "bytes": 32900
     },
     {
       "phase": "university_archive",
@@ -2848,54 +2801,66 @@
       "recruitment_articles": 1,
       "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/8.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/8.html",
-      "sha256": "a935ed4cc82427894eb83cedfb718c6134cc853869c60ff97797b0938046f552",
-      "bytes": 33038
-    },
-    {
-      "phase": "university_archive",
-      "source": "天津工业大学",
-      "candidate_employers": [
-        "中国光大银行股份有限公司"
-      ],
-      "recruitment_articles": 7,
-      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/9.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/9.html",
-      "sha256": "e6422c6b383c61eb40c462f5d71e15f4d6edab60a3a23888cac54a3c2256c554",
-      "bytes": 33190
-    },
-    {
-      "phase": "university_archive",
-      "source": "天津工业大学",
-      "candidate_employers": [
-        "内蒙古伊利实业集团股份有限公司"
-      ],
-      "recruitment_articles": 8,
-      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/10.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/10.html",
-      "sha256": "93c36baeeaf55e2a0ceffbdadb97815774938af0074017e11b9ad55701d59ebc",
-      "bytes": 33207
-    },
-    {
-      "phase": "university_archive",
-      "source": "天津工业大学",
-      "candidate_employers": [
-        "兰州银行股份有限公司"
-      ],
-      "recruitment_articles": 8,
-      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/11.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/11.html",
-      "sha256": "ce26ca5a6532f0cef3d69853d8da37563d29e21c108c1548e274316007c85929",
-      "bytes": 33069
+      "sha256": "bc9385997be3b5e60d21faec327d159217895e5120e1d57f22170caa321ffb8f",
+      "bytes": 33119
     },
     {
       "phase": "university_archive",
       "source": "天津工业大学",
       "candidate_employers": [],
-      "recruitment_articles": 4,
+      "recruitment_articles": 1,
+      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/9.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/9.html",
+      "sha256": "67bc6660373d9f0923b06f5bbb904291fde801a45f8869680c3a399c3bd4a732",
+      "bytes": 33048
+    },
+    {
+      "phase": "university_archive",
+      "source": "天津工业大学",
+      "candidate_employers": [],
+      "recruitment_articles": 6,
+      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/10.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/10.html",
+      "sha256": "07448bae2766027412e7c41f32a019fed2553bcd806ce525b2601bfd2610334a",
+      "bytes": 33126
+    },
+    {
+      "phase": "university_archive",
+      "source": "天津工业大学",
+      "candidate_employers": [
+        "中国光大银行股份有限公司",
+        "内蒙古伊利实业集团股份有限公司"
+      ],
+      "recruitment_articles": 7,
+      "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/11.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/11.html",
+      "sha256": "2a635134ae2612517f10305ac46e675c488cbc0ea8270ec205e51250ec1e9750",
+      "bytes": 33173
+    },
+    {
+      "phase": "university_archive",
+      "source": "天津工业大学",
+      "candidate_employers": [
+        "兰州银行股份有限公司",
+        "内蒙古伊利实业集团股份有限公司"
+      ],
+      "recruitment_articles": 9,
       "url": "https://jobs.tiangong.edu.cn/correcruit/index/p/12.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/index/p/12.html",
-      "sha256": "0de2c9de5e64b074b623b4d769bb387f51c7dd6480ab908f5934c2a7106c6356",
-      "bytes": 32691
+      "sha256": "a323a6fbff48bd102039c7d2b145cb5f654fc7043794b42f16942e1fd01c1e84",
+      "bytes": 33087
+    },
+    {
+      "phase": "university_archive",
+      "source": "华中科技大学",
+      "candidate_employers": [
+        "青岛银行股份有限公司"
+      ],
+      "recruitment_articles": 8,
+      "url": "https://job.hust.edu.cn/searchJob_2.do?type=2",
+      "final_url": "https://job.hust.edu.cn/searchJob_2.do?type=2",
+      "sha256": "e0be4f9d4e237ec9d981fbc7a03516493acc29032f17f165968bb826134aa1e6",
+      "bytes": 31578
     },
     {
       "phase": "university_archive",
@@ -2904,10 +2869,10 @@
         "中国电子科技集团有限公司"
       ],
       "recruitment_articles": 10,
-      "url": "https://job.hust.edu.cn/searchJob_2.do?type=2",
-      "final_url": "https://job.hust.edu.cn/searchJob_2.do?type=2",
-      "sha256": "8c5cfe376825822edd4e47e0a61838d59133593024384e2e08cf1d4203f07e9d",
-      "bytes": 31760
+      "url": "https://job.hust.edu.cn/searchJob_3.do?type=2",
+      "final_url": "https://job.hust.edu.cn/searchJob_3.do?type=2",
+      "sha256": "98489c6c1c318a6f41534307c5a56aa5a5f5b6bd9d860d0d02bc27a1df7297a7",
+      "bytes": 31693
     },
     {
       "phase": "university_archive",
@@ -2915,21 +2880,11 @@
       "candidate_employers": [
         "中国建筑集团有限公司"
       ],
-      "recruitment_articles": 10,
-      "url": "https://job.hust.edu.cn/searchJob_3.do?type=2",
-      "final_url": "https://job.hust.edu.cn/searchJob_3.do?type=2",
-      "sha256": "d9da372ee0729725fc785c65c8f8b5bd6bf8af551206a030d9ba317b6edb7787",
-      "bytes": 31721
-    },
-    {
-      "phase": "university_archive",
-      "source": "华中科技大学",
-      "candidate_employers": [],
       "recruitment_articles": 9,
       "url": "https://job.hust.edu.cn/searchJob_4.do?type=2",
       "final_url": "https://job.hust.edu.cn/searchJob_4.do?type=2",
-      "sha256": "801a8e502b73dfc2ca0f8ba3822b0e64c191e3705766f4dc1b82350596c01911",
-      "bytes": 81736
+      "sha256": "62b4c3345adfb4ec6411e110f56a15c6aa1c76a1d95d1a76ce7a5a1ce9829608",
+      "bytes": 81782
     },
     {
       "phase": "university_archive",
@@ -2938,101 +2893,101 @@
       "recruitment_articles": 10,
       "url": "https://job.hust.edu.cn/searchJob_5.do?type=2",
       "final_url": "https://job.hust.edu.cn/searchJob_5.do?type=2",
-      "sha256": "1756ce4104e2e4d94ef4f6ff5396f88b07c7338c6496f8372533f32e437de2d3",
-      "bytes": 81615
+      "sha256": "2277eb229c6b310e179134664e99ceb18c9a22447ac0dafd076c33ac283604da",
+      "bytes": 81771
     },
     {
       "phase": "university_archive",
       "source": "华中科技大学",
       "candidate_employers": [
         "中国光大银行股份有限公司",
-        "中国资源循环集团有限公司",
         "瑞幸咖啡 (中国)有限公司"
       ],
-      "recruitment_articles": 11,
+      "recruitment_articles": 10,
       "url": "https://job.hust.edu.cn/searchJob_6.do?type=2",
       "final_url": "https://job.hust.edu.cn/searchJob_6.do?type=2",
-      "sha256": "3897f5bd29ec9a59f5f029b37c0990f23242bf5e229aab6405ca0dd79ba18f9e",
-      "bytes": 81708
-    },
-    {
-      "phase": "university_archive",
-      "source": "华中科技大学",
-      "candidate_employers": [
-        "中国电子科技集团有限公司"
-      ],
-      "recruitment_articles": 12,
-      "url": "https://job.hust.edu.cn/searchJob_7.do?type=2",
-      "final_url": "https://job.hust.edu.cn/searchJob_7.do?type=2",
-      "sha256": "e6625636fee915d5c47b3f8a2320c3ab37197c09b07b1001aa2a8edad81d3180",
-      "bytes": 81957
-    },
-    {
-      "phase": "university_archive",
-      "source": "华中科技大学",
-      "candidate_employers": [
-        "三一集团有限公司",
-        "中国联合网络通信集团有限公司"
-      ],
-      "recruitment_articles": 9,
-      "url": "https://job.hust.edu.cn/searchJob_8.do?type=2",
-      "final_url": "https://job.hust.edu.cn/searchJob_8.do?type=2",
-      "sha256": "9aed239b53c0fc4da674687d77fddd4fa96d86d0e4ee244843f244abe4a83935",
-      "bytes": 81919
-    },
-    {
-      "phase": "university_archive",
-      "source": "华中科技大学",
-      "candidate_employers": [
-        "中国华能集团有限公司",
-        "中国南方航空集团有限公司",
-        "中国航天科工集团有限公司",
-        "华润（集团）有限公司"
-      ],
-      "recruitment_articles": 8,
-      "url": "https://job.hust.edu.cn/searchJob_9.do?type=2",
-      "final_url": "https://job.hust.edu.cn/searchJob_9.do?type=2",
-      "sha256": "8eb60edf8040927e4c1b2a53c2d6d4714771d270d60e0afba55d4523ed967314",
-      "bytes": 81723
+      "sha256": "d5f8791012947f4fcf42052a88de429497d7252584107968d5779e9d947a233f",
+      "bytes": 81692
     },
     {
       "phase": "university_archive",
       "source": "华中科技大学",
       "candidate_employers": [
         "中国光大银行股份有限公司",
-        "温州银行股份有限公司"
+        "中国电子科技集团有限公司",
+        "中国资源循环集团有限公司"
       ],
       "recruitment_articles": 10,
+      "url": "https://job.hust.edu.cn/searchJob_7.do?type=2",
+      "final_url": "https://job.hust.edu.cn/searchJob_7.do?type=2",
+      "sha256": "94891b7ebc12c29cd49eff5299f1a4191dd78610c955747fc17add349dbca376",
+      "bytes": 81897
+    },
+    {
+      "phase": "university_archive",
+      "source": "华中科技大学",
+      "candidate_employers": [
+        "三一集团有限公司"
+      ],
+      "recruitment_articles": 12,
+      "url": "https://job.hust.edu.cn/searchJob_8.do?type=2",
+      "final_url": "https://job.hust.edu.cn/searchJob_8.do?type=2",
+      "sha256": "35058ade0f933350c712ef65829ad5eaa8e5a8ca478ef0069d7ab92a691329ac",
+      "bytes": 81899
+    },
+    {
+      "phase": "university_archive",
+      "source": "华中科技大学",
+      "candidate_employers": [
+        "中国南方航空集团有限公司",
+        "中国联合网络通信集团有限公司",
+        "华润（集团）有限公司"
+      ],
+      "recruitment_articles": 7,
+      "url": "https://job.hust.edu.cn/searchJob_9.do?type=2",
+      "final_url": "https://job.hust.edu.cn/searchJob_9.do?type=2",
+      "sha256": "99666275c6b2757f35ad7dd6b4e7a9c212dfb555563abde02dfedc4e252026f5",
+      "bytes": 81869
+    },
+    {
+      "phase": "university_archive",
+      "source": "华中科技大学",
+      "candidate_employers": [
+        "中国光大银行股份有限公司",
+        "中国华能集团有限公司",
+        "中国航天科工集团有限公司"
+      ],
+      "recruitment_articles": 9,
       "url": "https://job.hust.edu.cn/searchJob_10.do?type=2",
       "final_url": "https://job.hust.edu.cn/searchJob_10.do?type=2",
-      "sha256": "e37e07a0f8b44f5e5352e8446f1b6d0ac2f1e18d5f64f76a8f89af3ff5f6a929",
-      "bytes": 81809
+      "sha256": "4c146a006fad94e2dba1f5b3781367c70991290568b0395123b134212ce6fa71",
+      "bytes": 81857
     },
     {
       "phase": "university_archive",
       "source": "华中科技大学",
       "candidate_employers": [
         "中国建筑科学研究院有限公司",
-        "中国建筑集团有限公司"
+        "中国建筑集团有限公司",
+        "温州银行股份有限公司"
       ],
-      "recruitment_articles": 9,
+      "recruitment_articles": 12,
       "url": "https://job.hust.edu.cn/searchJob_11.do?type=2",
       "final_url": "https://job.hust.edu.cn/searchJob_11.do?type=2",
-      "sha256": "29c1283fcb0c72b429aa35958e75f674f1d01a199d15c0fb1b6e92e41a1db66a",
-      "bytes": 81963
+      "sha256": "9b2faae6e389a56e3f9fe81e653f412da6a5109456b0145ba7ff1b86fdb03b36",
+      "bytes": 81873
     },
     {
       "phase": "university_archive",
       "source": "华中科技大学",
       "candidate_employers": [
-        "中国光大银行股份有限公司",
         "西安银行股份有限公司"
       ],
-      "recruitment_articles": 10,
+      "recruitment_articles": 9,
       "url": "https://job.hust.edu.cn/searchJob_12.do?type=2",
       "final_url": "https://job.hust.edu.cn/searchJob_12.do?type=2",
-      "sha256": "fc880c23c80ddca663ed10504b7bb8713f1ccd93906df6729be9c8f6fdafdcc8",
-      "bytes": 81549
+      "sha256": "e89b0d126aeb10e65c5b0b98a8c79a96f833e93eee668d1736bedfb41f0868b8",
+      "bytes": 81675
     },
     {
       "phase": "university_archive",
@@ -3041,21 +2996,21 @@
         "九州通医药集团股份有限公司",
         "湖北银行股份有限公司"
       ],
-      "recruitment_articles": 15,
+      "recruitment_articles": 16,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=2",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=2",
-      "sha256": "3c41e35948d984c4c53a2c6470cbe9496b2406c769808985b6a2e696eff1887f",
-      "bytes": 58982
+      "sha256": "3c941618eceea6a7658497c702d8e48e0ce91415744d5293bbf104148166490a",
+      "bytes": 58891
     },
     {
       "phase": "university_archive",
       "source": "广州大学",
       "candidate_employers": [],
-      "recruitment_articles": 16,
+      "recruitment_articles": 14,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=3",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=3",
-      "sha256": "c728bea87abcbff613272e9ef034ea6a1cb734ab2ae5a3f322dfd5adec1c85e2",
-      "bytes": 58768
+      "sha256": "dbe883a698b05b1e43694c8e2af892e10ced5c49cf3095461138e9c0d19666cf",
+      "bytes": 59003
     },
     {
       "phase": "university_archive",
@@ -3067,8 +3022,8 @@
       "recruitment_articles": 17,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=4",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=4",
-      "sha256": "5959a43e59a173d462a94d7de2f48a88d6303d997489efaa4eec3908c15bf840",
-      "bytes": 58949
+      "sha256": "64c21953a23834cb949c842e5070c48a2f6b0afbc15b0a5ac5de054fe30fcb60",
+      "bytes": 59001
     },
     {
       "phase": "university_archive",
@@ -3079,8 +3034,18 @@
       "recruitment_articles": 17,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=5",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=5",
-      "sha256": "d06bbe33596ee8bd86e38780c19777ff6a16574dd1367cd3b3bfff30e04382ec",
-      "bytes": 59111
+      "sha256": "031dfac1990d266591c95019d2683d4dfd06e6b74d7f9f3dca2232d480887828",
+      "bytes": 58979
+    },
+    {
+      "phase": "university_archive",
+      "source": "广州大学",
+      "candidate_employers": [],
+      "recruitment_articles": 14,
+      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=6",
+      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=6",
+      "sha256": "b3f4af7ebe9f0c640465b9bcca8b789f4669b484632387bff9e730499067eaac",
+      "bytes": 58845
     },
     {
       "phase": "university_archive",
@@ -3088,11 +3053,11 @@
       "candidate_employers": [
         "中国东方航空集团有限公司"
       ],
-      "recruitment_articles": 13,
-      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=6",
-      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=6",
-      "sha256": "79c5bd712c3970403e8a7c125ea8cdf0d121e15f96074d9fb7b8afd4ebb9b6ab",
-      "bytes": 58825
+      "recruitment_articles": 16,
+      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=7",
+      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=7",
+      "sha256": "dc6e9be0dd4ca4be4b9db783f19b15c6da8cd07a2dfc6e9d2fcdf407f5f9206d",
+      "bytes": 59025
     },
     {
       "phase": "university_archive",
@@ -3103,46 +3068,35 @@
         "中国联合网络通信集团有限公司",
         "中国铁道建筑集团有限公司"
       ],
-      "recruitment_articles": 17,
-      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=7",
-      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=7",
-      "sha256": "03b239ca93327a87ce7253b93fbb82e0d4d0c7301f8614c597beef363eb1cae1",
-      "bytes": 59252
-    },
-    {
-      "phase": "university_archive",
-      "source": "广州大学",
-      "candidate_employers": [
-        "中国民生银行股份有限公司"
-      ],
       "recruitment_articles": 14,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=8",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=8",
-      "sha256": "baff6380bb592f1514b9db9778526b0f76b503fce4a0286a33d5853342417c0e",
-      "bytes": 59302
+      "sha256": "b56f5c87f679acb8fad825aefb08e42bbc81bd1f6e097d8ca838cef1c30d7081",
+      "bytes": 59527
     },
     {
       "phase": "university_archive",
       "source": "广州大学",
       "candidate_employers": [
         "上海银行股份有限公司",
+        "中国民生银行股份有限公司",
         "广发银行股份有限公司"
       ],
-      "recruitment_articles": 16,
+      "recruitment_articles": 17,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=9",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=9",
-      "sha256": "9948df7de2c069d4d26588446f3bfb560e637eceb3479ffc1386fb3f697a5992",
-      "bytes": 59179
+      "sha256": "6c7dd0e1147b90dbbb9d06d087d0dee276369d088a25b6ce989e49b06dfa64c7",
+      "bytes": 58950
     },
     {
       "phase": "university_archive",
       "source": "广州大学",
       "candidate_employers": [],
-      "recruitment_articles": 15,
+      "recruitment_articles": 14,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=10",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=10",
-      "sha256": "7b77385ec5b165fa343c0690509f5875f0a1eda7e685ca4c78729b0011e4b778",
-      "bytes": 59421
+      "sha256": "b78fee42c6e2b31b5c0f46b99222ccb0fc5d396a4819cde6c10bc60f21f5190d",
+      "bytes": 59385
     },
     {
       "phase": "university_archive",
@@ -3153,20 +3107,18 @@
       "recruitment_articles": 17,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=11",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=11",
-      "sha256": "2f1366160fbbcccc124fc3be5de7eadc635f88508de90e3a0879e5195795ae99",
-      "bytes": 59319
+      "sha256": "b3a3a980ca507bdcfce6e87b4240fd8ef8ff7d97dc0de893fc4693ff3d8e3257",
+      "bytes": 59348
     },
     {
       "phase": "university_archive",
       "source": "广州大学",
-      "candidate_employers": [
-        "东风汽车集团有限公司"
-      ],
-      "recruitment_articles": 15,
+      "candidate_employers": [],
+      "recruitment_articles": 16,
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=12",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-list?p=12",
-      "sha256": "3c55a10ea5f05a7b6c86b1f1591666f9637e347f51c823b6f347574509e752f0",
-      "bytes": 59170
+      "sha256": "33f11ccecf6259bb9532f9bf223448ffb2b061b46b87e277794c38900ca5155a",
+      "bytes": 59386
     },
     {
       "phase": "university_archive",
@@ -3185,7 +3137,7 @@
       "recruitment_articles": 0,
       "url": "https://job.ustc.edu.cn/Specialrecruitment/list.aspx",
       "final_url": "https://job.ustc.edu.cn/Specialrecruitment/list.aspx",
-      "sha256": "b0bebd33a7faeafd88522ef0683149c2b7971f37bedc2db8660e1facfaf42870",
+      "sha256": "88dfcee0cb4ecaaadba15902f5e18d81906e9bd7178c8ece12b620ff4c38b3d4",
       "bytes": 20620
     },
     {
@@ -3195,7 +3147,7 @@
       "recruitment_articles": 0,
       "url": "https://job.ustc.edu.cn/Recruitment/list.aspx",
       "final_url": "https://job.ustc.edu.cn/Recruitment/list.aspx",
-      "sha256": "e607a433a3f042c2a7177a50b7f099fb761f8baa3ca3ee4be1482a92ed9c534f",
+      "sha256": "4fee15cfd104dcff3bf95cfd821336b74b32ae3419b82670c3b57b96ecbe7894",
       "bytes": 19395
     },
     {
@@ -3205,7 +3157,7 @@
       "recruitment_articles": 0,
       "url": "https://career.cup.edu.cn/campus",
       "final_url": "https://career.cup.edu.cn/campus",
-      "sha256": "5e780ef988e54adf43a6a8c96d237cfcd0804e15712c3f20211840e9fb48fb92",
+      "sha256": "d33b26801e1fe007d6032d6d8fe5cbacc521db2f03b005ec2fac2fd1d5772a4a",
       "bytes": 32847
     },
     {
@@ -3215,18 +3167,8 @@
       "recruitment_articles": 0,
       "url": "https://career.cup.edu.cn/news/view/aid/95892/tag/tzgg",
       "final_url": "https://career.cup.edu.cn/news/view/aid/95892/tag/tzgg",
-      "sha256": "ade51dca403029053d1f2ae7f8724db34497825a41d1551fdb783d0c9c7f687a",
-      "bytes": 34935
-    },
-    {
-      "phase": "university_archive",
-      "source": "中国石油大学",
-      "candidate_employers": [],
-      "recruitment_articles": 0,
-      "url": "https://career.cup.edu.cn/teachin/view/id/69258",
-      "final_url": "https://career.cup.edu.cn/teachin/view/id/69258",
-      "sha256": "9cc926d32eda46a595dbf3468279412bc6456095430fcab12f2d3e09df4387a2",
-      "bytes": 39851
+      "sha256": "919ead483e405d2dde7c96448634a9e16a12552f43819780ad603212f59950ba",
+      "bytes": 34934
     },
     {
       "phase": "university_archive",
@@ -3235,18 +3177,18 @@
       "recruitment_articles": 0,
       "url": "https://career.cup.edu.cn/teachin/view/id/69265",
       "final_url": "https://career.cup.edu.cn/teachin/view/id/69265",
-      "sha256": "cf163fa5bda4a89c9433f760497b3ae23e43a6c9fa61a604229abb5de5cdb5ae",
-      "bytes": 39054
+      "sha256": "90ac5b244c0c79a355751f8aef51a3a399d8af27a75ad2780e7e3f2c2508da95",
+      "bytes": 39490
     },
     {
       "phase": "university_archive",
       "source": "中国石油大学",
       "candidate_employers": [],
       "recruitment_articles": 0,
-      "url": "https://career.cup.edu.cn/teachin/view/id/69251",
-      "final_url": "https://career.cup.edu.cn/teachin/view/id/69251",
-      "sha256": "bfd3ed32f136f586d3deaacc6ef03d91f88134dc94858c0c1166e67b70971f68",
-      "bytes": 40998
+      "url": "https://career.cup.edu.cn/teachin/view/id/69258",
+      "final_url": "https://career.cup.edu.cn/teachin/view/id/69258",
+      "sha256": "b0dfb3620972753526913849630565d461e00db0eccb3161234833fd507b0020",
+      "bytes": 39851
     },
     {
       "phase": "university_archive",
@@ -3255,8 +3197,8 @@
       "recruitment_articles": 1,
       "url": "https://career.cup.edu.cn/campus/view/id/460837",
       "final_url": "https://career.cup.edu.cn/campus/view/id/460837",
-      "sha256": "0bcc281bcadd24f6ba99d4d02bff0349ad72aa99016de01bc0adb82768f8747c",
-      "bytes": 44805
+      "sha256": "6796376520924cdb20e433daca0799c826999520b96d290a94ff7d297b718ca3",
+      "bytes": 44798
     },
     {
       "phase": "university_archive",
@@ -3265,8 +3207,8 @@
       "recruitment_articles": 0,
       "url": "https://career.cup.edu.cn/campus/view/id/460834",
       "final_url": "https://career.cup.edu.cn/campus/view/id/460834",
-      "sha256": "e54d461f0830d869e80f53aa26b1a301b69f20e2b07ada8247eca7a8780ac6a2",
-      "bytes": 47346
+      "sha256": "9d52e50724b9d1a0f6f56e6c38b73a69badadaf3694bff2fa62166ba79d414f1",
+      "bytes": 47345
     },
     {
       "phase": "university_archive",
@@ -3275,8 +3217,8 @@
       "recruitment_articles": 1,
       "url": "https://career.cup.edu.cn/campus/view/id/460831",
       "final_url": "https://career.cup.edu.cn/campus/view/id/460831",
-      "sha256": "981601001c5a021d6a7d6df972bad4ec9c1de6972f027937547e938102d45a8f",
-      "bytes": 43992
+      "sha256": "f67d4b79356a35b765048e2212aa90a248ca54cdf38fdd2895c1454fd0353f18",
+      "bytes": 43969
     },
     {
       "phase": "university_archive",
@@ -3285,20 +3227,28 @@
       "recruitment_articles": 0,
       "url": "https://career.cup.edu.cn/jobfair/view/id/32448",
       "final_url": "https://career.cup.edu.cn/jobfair/view/id/32448",
-      "sha256": "ce74e33cf77374dffef431454fa510016b7c6caab6e832ff240b60c249f657d4",
-      "bytes": 31708
+      "sha256": "5c7872bacc48d16eec6633a46cb67990805278aa249cd39969e866bb3a1dd280",
+      "bytes": 31711
     },
     {
       "phase": "university_archive",
       "source": "中国石油大学",
-      "candidate_employers": [
-        "阳光保险集团股份有限公司"
-      ],
+      "candidate_employers": [],
       "recruitment_articles": 1,
-      "url": "https://career.cup.edu.cn/news/view/aid/96262/tag/xwzp",
-      "final_url": "https://career.cup.edu.cn/news/view/aid/96262/tag/xwzp",
-      "sha256": "dddc2f15269391ce28f02780d9a27c5f5e3890ab78f6540dd30068ee73bf14ec",
-      "bytes": 36082
+      "url": "https://career.cup.edu.cn/news/view/aid/96269/tag/xwzp",
+      "final_url": "https://career.cup.edu.cn/news/view/aid/96269/tag/xwzp",
+      "sha256": "ced6a1440cecd4ab6263689c15348cf048c907742e4580902e7a9ad20889d952",
+      "bytes": 33520
+    },
+    {
+      "phase": "university_archive",
+      "source": "中国石油大学",
+      "candidate_employers": [],
+      "recruitment_articles": 2,
+      "url": "https://career.cup.edu.cn/news/view/aid/96268/tag/xwzp",
+      "final_url": "https://career.cup.edu.cn/news/view/aid/96268/tag/xwzp",
+      "sha256": "7e74ffcb283270d113f96d2541809f9701f17a3413de3724e58577ec0438c207",
+      "bytes": 33554
     },
     {
       "phase": "university_archive",
@@ -3307,10 +3257,10 @@
         "珠海格力电器股份有限公司"
       ],
       "recruitment_articles": 2,
-      "url": "https://career.cup.edu.cn/news/view/aid/96261/tag/xwzp",
-      "final_url": "https://career.cup.edu.cn/news/view/aid/96261/tag/xwzp",
-      "sha256": "77d1da5201f2545427babb92deb1cf23df10c8e365beaefd3fba1614ff372aed",
-      "bytes": 34883
+      "url": "https://career.cup.edu.cn/news/view/aid/96267/tag/xwzp",
+      "final_url": "https://career.cup.edu.cn/news/view/aid/96267/tag/xwzp",
+      "sha256": "424167d65bfed23c39b7ea33be7103cf15ce84c5354789b1428e2e9cde00c1d7",
+      "bytes": 37082
     },
     {
       "phase": "university_archive",
@@ -3319,35 +3269,57 @@
         "阳光保险集团股份有限公司"
       ],
       "recruitment_articles": 2,
-      "url": "https://career.cup.edu.cn/news/view/aid/96260/tag/xwzp",
-      "final_url": "https://career.cup.edu.cn/news/view/aid/96260/tag/xwzp",
-      "sha256": "eda7f396c71df356aa9735dd7b16507b80de80af691f39011f7f58c143ed8696",
-      "bytes": 35406
+      "url": "https://career.cup.edu.cn/news/view/aid/96262/tag/xwzp",
+      "final_url": "https://career.cup.edu.cn/news/view/aid/96262/tag/xwzp",
+      "sha256": "d2d29dada6d2f7879f15b0a7bc7e1ce30ec582f692c7fa34151c51b15539586f",
+      "bytes": 36185
     },
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "修正药业集团",
-        "扬子江药业集团有限公司",
-        "正大天晴药业集团股份有限公司"
+        "中国储备粮管理集团有限公司",
+        "中国融通资产管理集团有限公司",
+        "宁波海天企业管理有限公司",
+        "珠海万达商业管理集团股份有限公司"
       ],
       "body_matched_employers": [],
-      "url": "https://career.nankai.edu.cn/correcruit/content/id/114743.html",
-      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/114743.html",
-      "sha256": "10269fe5f5ede1e0e85c583f7874a04484a3b91f825e7cf08fd63c29649c033e",
-      "bytes": 24924
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/120590.html",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "中国卫星网络集团有限公司",
-        "浙江卫星控股股份有限公司"
+        "名创优品 (广州)有限责任公司",
+        "广州立白凯晟控股有限公司"
       ],
       "body_matched_employers": [],
-      "url": "https://career.nankai.edu.cn/correcruit/content/id/120553.html",
-      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120553.html",
-      "sha256": "c0fb49bc32288cbd0054ced144c14d6cf8818d2103fd507e67f145f9ad90fff9",
-      "bytes": 49033
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/120583.html",
+      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120583.html",
+      "sha256": "3f00e02bad30edc9daba44172c3b0c0262261cef0894e9b850663ab9ce1ebcf3",
+      "bytes": 37744
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "中国国际工程咨询有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/120574.html",
+      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120574.html",
+      "sha256": "62a47367768666f48d46fcadd76433692189d85bc032b46dd657af823c9a2193",
+      "bytes": 38992
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "名创优品 (广州)有限责任公司",
+        "广州立白凯晟控股有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://career.hebut.edu.cn/correcruit/content/id/82292.html",
+      "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82292.html",
+      "sha256": "cee65d1584ef575d6b76e17550c90922e6c70ab615774b30be8f0b4945748909",
+      "bytes": 32053
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3357,59 +3329,31 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82274.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82274.html",
-      "sha256": "9a10ab6b541b113fc87cf27037e6938cfdef2bdda014040055d93cc620264a9e",
-      "bytes": 31003
+      "sha256": "6564251f882fabcc6543a5b54dfa867299fc11d6cb78e6bbbfc3ac96f7d099f1",
+      "bytes": 31004
     },
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "北京数据街控股集团有限公司",
-        "北京蓝色光标数据科技集团股份有限公司"
+        "江苏满运软件科技有限公司"
       ],
       "body_matched_employers": [],
-      "url": "https://career.hebut.edu.cn/correcruit/content/id/82269.html",
-      "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82269.html",
-      "sha256": "4e099ebab259260230c7e5cc6031f1f54db387eff6baec7fb60874aea565d3a4",
-      "bytes": 31203
+      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57055.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57055.html",
+      "sha256": "b5da65c22c592c0af83a9942f442da3d13cb57fde4006732ed66cdf183a5348c",
+      "bytes": 24820
     },
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "中国航空器材集团有限公司",
-        "海航航空集团有限公司"
+        "中国长安汽车集团有限公司",
+        "长城汽车股份有限公司"
       ],
       "body_matched_employers": [],
-      "url": "https://career.hebut.edu.cn/correcruit/content/id/82256.html",
-      "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82256.html",
-      "sha256": "4af03d3b4de22c1457f967f90cce2603215fd13d84912735ae7e33c5b42e5a5d",
-      "bytes": 38284
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "中国农业发展集团有限公司",
-        "北京嘀嘀无限科技发展有限公司 (滴滴出行)",
-        "深圳市东阳光实业发展有限公司",
-        "深圳市铜锣湾商业发展有限公司",
-        "福建晟育投资发展集团有限公司"
-      ],
-      "body_matched_employers": [],
-      "url": "https://career.hebut.edu.cn/correcruit/content/id/82248.html",
-      "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82248.html",
-      "sha256": "22204878aba423969f27392f19635614eed7aac82deaf5a14fb3c5d0dd0dafd2",
-      "bytes": 35590
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "云南曲靖呈钢钢铁 (集团)有限公司",
-        "云南玉溪玉昆钢铁集团有限公司"
-      ],
-      "body_matched_employers": [],
-      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57033.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57033.html",
-      "sha256": "10febaeae0df7433c9c1704fba7e4805b8d6c2637857cdd5dbaac7d634d522f7",
-      "bytes": 28528
+      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57053.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57053.html",
+      "sha256": "591769211facce76ef64c5b36b784ce0fe31e96f6a60e4e85b0c727820f85dce",
+      "bytes": 37797
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3422,6 +3366,18 @@
       "final_url": "https://job.hust.edu.cn/zpinfo1/2413302.htm",
       "sha256": "9b5f7e2c12600c566d738d407a7ebe3d8935a6dae605cfd5e9382cdd865fc81f",
       "bytes": 76740
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "湖南裕能新能源电池材料股份有限公司",
+        "隆基绿能科技股份有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://job.hust.edu.cn/zpinfo1/2467914.htm",
+      "final_url": "https://job.hust.edu.cn/zpinfo1/2467914.htm",
+      "sha256": "8d6253b0db164042ec7586173bccae09709672eb652b6476ebd5166318276a29",
+      "bytes": 114042
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3449,25 +3405,29 @@
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "名创优品 (广州)有限责任公司",
-        "广州立白凯晟控股有限公司"
+        "申通快递有限公司"
       ],
       "body_matched_employers": [],
-      "url": "https://job.hust.edu.cn/zpinfo1/2467445.htm",
-      "final_url": "https://job.hust.edu.cn/zpinfo1/2467445.htm",
-      "sha256": "4af4c457e5580eb157f0999fcee085a4bfdfe6383c4876b9cbbde00c49bbc00b",
-      "bytes": 47080
+      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSWN",
+      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSWN",
+      "sha256": "7582b2effd88a2741d26961bbc39bf9c9dddfc73747926fcdf571725f5f13f0e",
+      "bytes": 75870
     },
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "深圳迈瑞生物医疗电子股份有限公司"
+        "中国农业发展集团有限公司",
+        "北京嘀嘀无限科技发展有限公司 (滴滴出行)",
+        "新城控股集团股份有限公司",
+        "深圳市东阳光实业发展有限公司",
+        "深圳市铜锣湾商业发展有限公司",
+        "福建晟育投资发展集团有限公司"
       ],
       "body_matched_employers": [],
-      "url": "https://job.hust.edu.cn/zpinfo1/2450606.htm",
-      "final_url": "https://job.hust.edu.cn/zpinfo1/2450606.htm",
-      "sha256": "e88e077688be914673cc0c68af117ce6a04981c1b0b027171f63186cf230f1a2",
-      "bytes": 81827
+      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWN",
+      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWN",
+      "sha256": "155e19587dbcaafe9dd84ebfadcc70586d0254d5b048cadec6018d6ef8aab210",
+      "bytes": 47818
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3478,7 +3438,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSWM",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSWM",
-      "sha256": "cd5b34184d0abb564fb7e1290b0c09b6882e1d0a75ed6224a3623c983c7adbd3",
+      "sha256": "3b3f03ed453838af9dbed357353829ddbe869fd6e2eef39f79c16d718a2ef01c",
       "bytes": 62893
     },
     {
@@ -3489,21 +3449,8 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SVUXSWM",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SVUXSWM",
-      "sha256": "28c8dd9047c670235d33597ab06465516f6f5a905bfdc72bbea6a34e2391f95c",
+      "sha256": "930d59e6158e8dfafb77472df0cb26395102df97662c7675d20cfd3bb756c50d",
       "bytes": 44579
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "唐山东华钢铁企业集团有限公司",
-        "宁波海天企业管理有限公司",
-        "安徽天大企业 (集团)有限公司",
-        "苏州金螳螂企业 (集团)有限公司",
-        "郑州宇通企业集团"
-      ],
-      "body_matched_employers": [],
-      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWM",
-      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3515,7 +3462,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSW6",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSW6",
-      "sha256": "82bdea947b16057cb799ed935a5609eb5ea81b8b947826bc2fa1e8298135d0d8",
+      "sha256": "5c83d24446bcf5a22d0c293e8be16544cf073c67a3d3047b79901a05cf1b959c",
       "bytes": 53147
     },
     {
@@ -3530,7 +3477,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSWB",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSWB",
-      "sha256": "85a3cd9823d30a34a9c67b230517927900950825d7e4e60f508925f02889c408",
+      "sha256": "b16141d2accde47cef7804038cc8ec42b77d157ed12c55bb45b3f5b6ea160f81",
       "bytes": 86752
     },
     {
@@ -3541,8 +3488,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/news/view/aid/95892/tag/tzgg",
       "final_url": "https://career.cup.edu.cn/news/view/aid/95892/tag/tzgg",
-      "sha256": "0d4b382c3acb5158749109b6091769b65aa921c7334e82e64bcc323c9db215fb",
-      "bytes": 34939
+      "sha256": "31a338d62566ac81916c36bfae21e288a5f933a649df60d511d24c2661d255d0",
+      "bytes": 34934
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3552,8 +3499,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/teachin/view/id/69265",
       "final_url": "https://career.cup.edu.cn/teachin/view/id/69265",
-      "sha256": "67ee864dc07000e0bdf17a75002c59bc9d34463d1cb29f8343c08aa115a73707",
-      "bytes": 39058
+      "sha256": "94726af63088b83474728b29f2912c4dfbc687a1626f69f57d5e7fb6ee4c6414",
+      "bytes": 39494
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3563,8 +3510,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/campus/view/id/460837",
       "final_url": "https://career.cup.edu.cn/campus/view/id/460837",
-      "sha256": "5902b1053360c376d58ef38e5cb3ac2e35119c2db5fd68bc45d503ef940bfd22",
-      "bytes": 44785
+      "sha256": "7d78b07cf17f65e0cfcda6a277785d053a509c110d000f66bcad53d4336e6376",
+      "bytes": 44786
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3575,8 +3522,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/campus/view/id/460831",
       "final_url": "https://career.cup.edu.cn/campus/view/id/460831",
-      "sha256": "66665048164393c7623bd46bd4627f2c194a543f4b6837379462f68efea645cf",
-      "bytes": 43972
+      "sha256": "bc2a38b11812c9e98a483b7a670f7da1fb432482ce991ae3fffd4e6fc94c6bb4",
+      "bytes": 43997
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3587,8 +3534,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/jobfair/view/id/32448",
       "final_url": "https://career.cup.edu.cn/jobfair/view/id/32448",
-      "sha256": "b6da394c2b683bac8dd9a4a66fdb442a1917002ada2cef7dffbe15871b17afb4",
-      "bytes": 31708
+      "sha256": "879629d24931f1282e9a894fe0ddcdc2ca0ac47fd71c92c50082ee07e7db008e",
+      "bytes": 31704
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3598,8 +3545,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/jobfair/view/id/32445",
       "final_url": "https://career.cup.edu.cn/jobfair/view/id/32445",
-      "sha256": "b354598150f89516e0c3be04917ef7aa31e58a966c005b376f25e96b4aa828d3",
-      "bytes": 47374
+      "sha256": "8eb649fb385c8f42ed685bdbc0505561a9a3433066b8f187438c9dd2440de558",
+      "bytes": 47306
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3609,8 +3556,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/jobfair/view/id/32435",
       "final_url": "https://career.cup.edu.cn/jobfair/view/id/32435",
-      "sha256": "f56c19805aca01a56cedfc03204a1ee91ea68da3876d57149cc3c7387c384892",
-      "bytes": 34299
+      "sha256": "88e73e1a91ecf6de439952d889be814aca2db0b09c87024799106534b3fb1cfc",
+      "bytes": 34309
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3622,8 +3569,19 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/jobfair/view/id/32442",
       "final_url": "https://career.cup.edu.cn/jobfair/view/id/32442",
-      "sha256": "248e1e174d7f1678829ed7eb6f09aa95dcc7168c98dcd89bee477b063459f7db",
-      "bytes": 30052
+      "sha256": "db2524c012a7b4a30ccca6990760e59bab386b4006b44f0c8c30dbc0d9af419f",
+      "bytes": 30049
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "舜宇集团有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://career.cup.edu.cn/news/view/aid/96268/tag/xwzp",
+      "final_url": "https://career.cup.edu.cn/news/view/aid/96268/tag/xwzp",
+      "sha256": "5318f1743994d2a8b17e1fa85cecfc018c8d4f06a4e37f14f713cd379e81cd97",
+      "bytes": 33550
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3637,21 +3595,20 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/news/view/aid/96261/tag/xwzp",
       "final_url": "https://career.cup.edu.cn/news/view/aid/96261/tag/xwzp",
-      "sha256": "b43053145e28d2615df916b83889e05a9d680e25bac2dfbfb19f8bce3f07c376",
-      "bytes": 34878
+      "sha256": "a0f05a57cc599f51c69cff3d7dea079eaccb06026dc8185cec2d7543d39d9e65",
+      "bytes": 34883
     },
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
         "众安在线财产保险股份有限公司",
-        "泰康保险集团股份有限公司",
-        "阳光保险集团股份有限公司"
+        "泰康保险集团股份有限公司"
       ],
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/news/view/aid/96260/tag/xwzp",
       "final_url": "https://career.cup.edu.cn/news/view/aid/96260/tag/xwzp",
-      "sha256": "d5c15b67b62ba2732b33147ae1a2b3f2810fd3686a6d551f77f33bbbf9c103f9",
-      "bytes": 35374
+      "sha256": "59af2b2bb8873c9d8147ec6ef0b56aca1a984d1f4ed4cf9a3f4f11d95ed7874c",
+      "bytes": 35407
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3662,8 +3619,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/news/view/aid/96258/tag/xwzp",
       "final_url": "https://career.cup.edu.cn/news/view/aid/96258/tag/xwzp",
-      "sha256": "12685e9e3f5e7a2db46c48997d7587adaa4ebba990402f5866272cf273027732",
-      "bytes": 36702
+      "sha256": "ebb57f78916b78a450bb625044b47e641f1a013a3b17d52136f9a81ada8476bd",
+      "bytes": 36723
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3676,8 +3633,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/news/view/aid/96257/tag/xwzp",
       "final_url": "https://career.cup.edu.cn/news/view/aid/96257/tag/xwzp",
-      "sha256": "1cce90a340c1cb9509ffdb7c92eb001a8c85a043b978311de7ace74bc297a643",
-      "bytes": 36043
+      "sha256": "c3e464bf77c075243e6d76bae1437b65dc37a05363763c3379d0954769d1fc44",
+      "bytes": 36020
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3695,31 +3652,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/news/view/aid/96256/tag/xwzp",
       "final_url": "https://career.cup.edu.cn/news/view/aid/96256/tag/xwzp",
-      "sha256": "cee19dfa3122823832a49b3f0e6dc8aad11c8eb0cd16a94a2656be47e017824b",
-      "bytes": 36610
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "江苏国泰国际集团股份有限公司",
-        "浙江国泰建设集团有限公司"
-      ],
-      "body_matched_employers": [],
-      "url": "https://career.cup.edu.cn/news/view/aid/96255/tag/xwzp",
-      "final_url": "https://career.cup.edu.cn/news/view/aid/96255/tag/xwzp",
-      "sha256": "17ec639907438fb340e6c2476628a8a4095ff57c26b278c37d801be6fb230a6f",
-      "bytes": 34337
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "郑州宇通企业集团"
-      ],
-      "body_matched_employers": [],
-      "url": "https://career.cup.edu.cn/news/view/aid/96253/tag/xwzp",
-      "final_url": "https://career.cup.edu.cn/news/view/aid/96253/tag/xwzp",
-      "sha256": "9c5ae00f2619892c48db5110891520562de1cb4caa1ec2b48ca3f5c8999b6926",
-      "bytes": 36996
+      "sha256": "db832fefca1e552afed39341283cd0e753b3ca3777d01673418d995f15397252",
+      "bytes": 36591
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3730,8 +3664,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/job/view/id/623081",
       "final_url": "https://career.cup.edu.cn/job/view/id/623081",
-      "sha256": "09c28138dc6f8700d77ba4b185fff317e9765eafd4515f65eb588c8049712387",
-      "bytes": 40286
+      "sha256": "c693880c39647442950bd122ae483962dbcf12c648268bd126edc449d9de7c51",
+      "bytes": 40304
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3750,8 +3684,33 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/news/view/aid/95949/tag/xwkd",
       "final_url": "https://career.cup.edu.cn/news/view/aid/95949/tag/xwkd",
-      "sha256": "6a1af1e38d614d45e6b6c61e5b1e031730f324c055df94b747a6c4773741d86e",
-      "bytes": 33889
+      "sha256": "15781cf79c55f2b7730bcf0d4eb022ced13e6a34efda42d23f260f5ee9ab30db",
+      "bytes": 33873
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "修正药业集团",
+        "扬子江药业集团有限公司",
+        "正大天晴药业集团股份有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/114743.html",
+      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/114743.html",
+      "sha256": "34ea0231558191d2b44daf5f708766bafe374bdb122067c197743061657d4cb6",
+      "bytes": 24923
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "中国卫星网络集团有限公司",
+        "浙江卫星控股股份有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://career.nankai.edu.cn/correcruit/content/id/120553.html",
+      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120553.html",
+      "sha256": "529fb1d3faafd4125b4a32b12bc39a14a51e8d5cf8892613fc6b3d4298d327ec",
+      "bytes": 49033
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3761,7 +3720,9 @@
       ],
       "body_matched_employers": [],
       "url": "https://career.nankai.edu.cn/correcruit/content/id/120331.html",
-      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120331.html",
+      "sha256": "06bb106fcef582b7ecc221e05ae89b201e9dc1203bcc8d044e14fead2d3d34fc",
+      "bytes": 37711
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3772,7 +3733,7 @@
       "body_matched_employers": [],
       "url": "https://career.nankai.edu.cn/correcruit/content/id/120540.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120540.html",
-      "sha256": "c1ff990097680b74794a25872eb1ccc7e2674c0eb627ca4f36dbf35769d16c3a",
+      "sha256": "ca9a641153ba6c88f3596627758ab1236bb0410671c7cde07202dad5a856780b",
       "bytes": 46516
     },
     {
@@ -3782,22 +3743,21 @@
       ],
       "body_matched_employers": [],
       "url": "https://career.nankai.edu.cn/correcruit/content/id/120539.html",
-      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120539.html",
+      "sha256": "804138d76a3b6f84232f5886bc23226099622b13567cbdf35cff1076007bccb9",
+      "bytes": 26625
     },
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "中国民航信息集团有限公司",
         "中国航天科技集团有限公司",
         "中国航空器材集团有限公司"
       ],
-      "body_matched_employers": [
-        "中国民航信息集团有限公司"
-      ],
+      "body_matched_employers": [],
       "url": "https://career.nankai.edu.cn/correcruit/content/id/120536.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120536.html",
-      "sha256": "36989485c94bff6c6404305fbcee4e819b1fd6f5cc32cb42dabb5020c5ebafa3",
-      "bytes": 42884
+      "sha256": "1c2916011247d63dd8bdc8711c93039e86508e8aec97e6328f235beb171b8aa6",
+      "bytes": 42885
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3820,7 +3780,7 @@
       "body_matched_employers": [],
       "url": "https://career.nankai.edu.cn/correcruit/content/id/118211.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/content/id/118211.html",
-      "sha256": "850e2ce244949018001a097f112f8b0e420d5cf3ea59d7808493cbed0a438403",
+      "sha256": "501a7555ef494c452c05c560dfe32d7723f6b5b2b2b90901289c6c0774aa5bd3",
       "bytes": 27794
     },
     {
@@ -3831,20 +3791,47 @@
       "body_matched_employers": [],
       "url": "https://career.nankai.edu.cn/correcruit/content/id/120491.html",
       "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120491.html",
-      "sha256": "bb29b42688b7996edcab637b6508d386c41eb1f482c3f6f9eb216c72434c7fbd",
-      "bytes": 48796
+      "sha256": "c4ec6b7631c9ee87a18e5dac83a161bf99d0cd9ce38a4890e8fbcbdbe1f7da88",
+      "bytes": 48797
     },
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "河北新华联合冶金控股集团有限公司",
-        "西子联合控股有限公司"
+        "北京数据街控股集团有限公司",
+        "北京蓝色光标数据科技集团股份有限公司"
       ],
       "body_matched_employers": [],
-      "url": "https://career.nankai.edu.cn/correcruit/content/id/120344.html",
-      "final_url": "https://career.nankai.edu.cn/correcruit/content/id/120344.html",
-      "sha256": "c34e7e71ee946308514f2391d50826bfa1acd0f9dec3514e197ee0c1bf40141d",
-      "bytes": 53079
+      "url": "https://career.hebut.edu.cn/correcruit/content/id/82269.html",
+      "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82269.html",
+      "sha256": "e64b9c121b4ff4f449ec805beaa7c602a62b02f7f6f6e13b292695afadbb774f",
+      "bytes": 31203
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "中国航空器材集团有限公司",
+        "海航航空集团有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://career.hebut.edu.cn/correcruit/content/id/82256.html",
+      "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82256.html",
+      "sha256": "d85ac2390bbab6b586269ed3d233c37ea42c8a4603c3771a7eaced229228c955",
+      "bytes": 38284
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "中国农业发展集团有限公司",
+        "北京嘀嘀无限科技发展有限公司 (滴滴出行)",
+        "深圳市东阳光实业发展有限公司",
+        "深圳市铜锣湾商业发展有限公司",
+        "福建晟育投资发展集团有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://career.hebut.edu.cn/correcruit/content/id/82248.html",
+      "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82248.html",
+      "sha256": "a39d5d5ccb80853b636b575d0378a1d8c9ec5f4b94204158cb54ab7f735fde12",
+      "bytes": 35589
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3855,8 +3842,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82238.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82238.html",
-      "sha256": "c4aa4ee7d71805d59458e3c44c27e0a290f980ef70b65e86132cbf72cd41285f",
-      "bytes": 24705
+      "sha256": "cec18e9fffb0a4de03252a1bfa03a476745a89ad8ed264057cee53425a8b6c74",
+      "bytes": 24704
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3866,8 +3853,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82191.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82191.html",
-      "sha256": "677affcb4fd7fe6c95394b6f8f67a7649897c0ea94faeea83c68700cb59bdcb4",
-      "bytes": 24801
+      "sha256": "66c767502c6a8b98b109220d85da2cb923a7729f8fe3eafc071bd262824cf11e",
+      "bytes": 24800
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3880,8 +3867,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82190.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82190.html",
-      "sha256": "0c1a378e773518dff4653f1dc9b3d46eca66a0580a99d81ba578661d3f32ccc3",
-      "bytes": 29808
+      "sha256": "96637c75a48339d3f67517eb6b9d7f87e0334103da57b97872f1aa505a9e7ac1",
+      "bytes": 29809
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3896,8 +3883,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82189.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82189.html",
-      "sha256": "1acb55a86f7f378876049567a166640a0f7395e4617a1d2035c27b4dd5885a3b",
-      "bytes": 31871
+      "sha256": "e9bbff41c5c929cb891bcc0ceeb59518a7d22266243a2c20e05e8a31fd77b9c3",
+      "bytes": 31872
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3907,8 +3894,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82165.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82165.html",
-      "sha256": "a63931aa0d19134684cb254f2e91bb68da16d24de2608b84f5ffe9d767bd75c1",
-      "bytes": 23030
+      "sha256": "7dcb6fbf3ad9563153ab09a7a832d7ba791dbb17e2d83e25beba40c54201530e",
+      "bytes": 23031
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3921,8 +3908,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82152.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82152.html",
-      "sha256": "a4aa41e4fcc8aa00b9815e7827c6a675b61a2cb2f8f0bf623e6f35fd4ee79e4d",
-      "bytes": 23988
+      "sha256": "22d2da81add3e843247720e7af0eaf55271c5f4aae442cfd84b945b73875dcf2",
+      "bytes": 23987
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3939,8 +3926,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82147.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82147.html",
-      "sha256": "7c7c5426797b78c7d1a1a0711056e16f823e29f68522897046a0036f0b04b6cf",
-      "bytes": 46530
+      "sha256": "ab5910d246016a9e61e712d746298b87ab89d8b568a63e8a9305504de23e0d9c",
+      "bytes": 46531
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3950,7 +3937,7 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82146.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82146.html",
-      "sha256": "f62d10e78eb11ba083aa12c1e56ce7ba447599fdf0d930a5ac152708376528f3",
+      "sha256": "d145476b06d1ae7cdf191f167f0a20c62fa338c3c04b5a491c2f4cf4babe4fc1",
       "bytes": 27255
     },
     {
@@ -3961,8 +3948,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/66736.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/66736.html",
-      "sha256": "137217f149e9cd1340355b0c0660f6c8c2d1422ce7a2b2c5ca99611a7b272df9",
-      "bytes": 29463
+      "sha256": "3380fe002e5b09947b3cd55d14e3b4dd9dbc6324f432771f608c9d59061e927a",
+      "bytes": 29462
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3972,8 +3959,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82132.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82132.html",
-      "sha256": "d4869f4c11c461a2432b8a7411140ab9df5991ac5443bdecc5e942a25ddb877e",
-      "bytes": 41397
+      "sha256": "905c906005ed6c0e00b2af456419e70534a753094243d3b7c7fe020d78fb4f84",
+      "bytes": 41398
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -3984,7 +3971,7 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82131.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82131.html",
-      "sha256": "3c448c0aa16328bd0c2e07dcd71342a045f354d9ea1660ada60346fe8345513e",
+      "sha256": "1797caa21ea92be18f10ee361856ab79eba58e80e0b6bb71e32ff9c7ee9b35c6",
       "bytes": 75550
     },
     {
@@ -3995,8 +3982,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82130.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82130.html",
-      "sha256": "273892a4f3bd4169adfe4373d61f666bd64d89b23624dacdc5efa0e6c7eaa787",
-      "bytes": 42169
+      "sha256": "e574f1c1aed5d6b2907f8f59a3603167e467c82a1ab822c646ce8d21a61d91ae",
+      "bytes": 42170
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4006,8 +3993,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82118.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82118.html",
-      "sha256": "16cffe436db5cff869c9e10dafd9210c1b663660b98454064343c26f4986b6ef",
-      "bytes": 43755
+      "sha256": "a37778e418a39373f3bbcb4b4a3730ddf9d1c3dd97aa45bd702fd79fbc8b4a3b",
+      "bytes": 43756
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4022,8 +4009,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82116.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82116.html",
-      "sha256": "e1befbe89b7d2414f62b4af7d49c95540f2f9a354bc5dc60268412a4be2eff53",
-      "bytes": 26832
+      "sha256": "61a9a9a27fcdd75509b0132dc8cb7a9d08f3ea43e5cf2ade8cde3f639b447ac0",
+      "bytes": 26833
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4034,7 +4021,7 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82117.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82117.html",
-      "sha256": "fe6b947ec3c7f6f4dacb153b09db81824f1bf2131a59e12d80643ef2e51b702e",
+      "sha256": "03bdb1c82ee1fc39ec1dffa8412b66541d2dee6ff83691e58d815689571967cc",
       "bytes": 52882
     },
     {
@@ -4047,8 +4034,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82113.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82113.html",
-      "sha256": "94ec6ff69855cd78e26a37d448fe43a20bc17b2312cde404476ad649d26c11c7",
-      "bytes": 27407
+      "sha256": "00d2f77095ecc9d85db246b04ca5564858e35eb08bc0dd0316e5d11d10cffd20",
+      "bytes": 27408
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4058,8 +4045,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82103.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82103.html",
-      "sha256": "a6095fe275e80f5751848fbe482f8f57d87b0861a4d4a3f57a58a77de3d5759f",
-      "bytes": 21104
+      "sha256": "f8f3cde699bf796d9783498f662a647812129dbc1a81f2f25ef613fa7265c8de",
+      "bytes": 21103
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4069,8 +4056,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82099.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82099.html",
-      "sha256": "8f4361a20d08c8ac73964c84963158abfc25b37838fb44e36d99998e170087e5",
-      "bytes": 30310
+      "sha256": "56d625a96593d1ae5627fabf7c9c675faa2906aec1abb4b6fd96f45329f7b4c7",
+      "bytes": 30309
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4080,7 +4067,7 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82069.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82069.html",
-      "sha256": "e4e1b4e98be2eced355b98bb41d07cf945cd70424e839fd881028bd3d7deb211",
+      "sha256": "8fdaf75dfa286e3f14fd43888b24de575bac8242d1b7f22681694906bf6e83cc",
       "bytes": 24647
     },
     {
@@ -4091,8 +4078,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82063.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82063.html",
-      "sha256": "24ca3498d0a2d4a4e94d27000e6db71c982d87c9a725aba3ae9b290f4a53607c",
-      "bytes": 98702
+      "sha256": "25cced546d56196c56827deb96a5e45d45746a1ca60db252241cc5fbb28df676",
+      "bytes": 98699
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4103,8 +4090,8 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82056.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82056.html",
-      "sha256": "6e4966445a17520e0f6fbfb2ec70ac65f19bb16a948e281777a25f2154511763",
-      "bytes": 73491
+      "sha256": "f511351c9fa951be868d03be570b63682ea333e7bbf73b527e35153a720fd06c",
+      "bytes": 73490
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4114,8 +4101,31 @@
       "body_matched_employers": [],
       "url": "https://career.hebut.edu.cn/correcruit/content/id/82054.html",
       "final_url": "https://career.hebut.edu.cn/correcruit/content/id/82054.html",
-      "sha256": "5094cb01619f003575c3c50bf2762c0547a334ad70da8e45bafc6fcaaf9906c1",
+      "sha256": "d9b7f892592948301a2bd287f856e7cf5fd36be08f6da3a742a32972fc67a811",
       "bytes": 55026
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "中国国际工程咨询有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57049.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57049.html",
+      "sha256": "738b2bf3c5c64e4372030c0c8254d3a19dedaf74a34face192b3bb9372085040",
+      "bytes": 34338
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "云南曲靖呈钢钢铁 (集团)有限公司",
+        "云南玉溪玉昆钢铁集团有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57033.html",
+      "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/57033.html",
+      "sha256": "3b00aaea8e87a196cc59d4c93ff2cd2dc4423fc6c123cace588c665d088e802a",
+      "bytes": 28529
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4126,7 +4136,7 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56980.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56980.html",
-      "sha256": "f8d693d0ce1d42b1739593714af48610ec9896a98ed420796bd8135916d6acc8",
+      "sha256": "eb46aa1f179b5dc80c4431b16ef4ccb4441c41d1510b8869da1e6bcf6b1885fa",
       "bytes": 48609
     },
     {
@@ -4138,8 +4148,8 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56930.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56930.html",
-      "sha256": "e26ee6f0c4ee7dc0602ef14f52198cc6789587c33a0a63085bb0ec8c7e675c4f",
-      "bytes": 86567
+      "sha256": "140014f7fda864530224be370818c332247aced6474aae4df9beaf89c67319ea",
+      "bytes": 86570
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4149,7 +4159,7 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56896.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56896.html",
-      "sha256": "5b590019f1d6ff9f623926e0b32856b06d95b05abdfe3a3a55f5bdaf052265eb",
+      "sha256": "69b9333f7ab2c5fa9aa49ab3ba038350e7653c41dd25081ce1cf870e0632d4a0",
       "bytes": 53767
     },
     {
@@ -4160,7 +4170,7 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56881.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56881.html",
-      "sha256": "f3762ac731d021fb4e64f44b025f9965b95955bb10284d66753ae2abc61cfaf3",
+      "sha256": "14810966c083f8b408f970baf09b08616c4f8b8ef6dc5f5cd78dc499e862423d",
       "bytes": 27190
     },
     {
@@ -4175,8 +4185,8 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56880.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56880.html",
-      "sha256": "0d643a760db42f1bfafee5bce5fa68e64393349e6fb1192dacae68d27314e65d",
-      "bytes": 26493
+      "sha256": "ea7f855c5f863d56695d63fbcbc425177c2e7294ed7055184a0ff145d344e22b",
+      "bytes": 26490
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4186,7 +4196,7 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56879.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56879.html",
-      "sha256": "d8e37a1dff18629d89cc226e64000c79a6f6e67f8533a0ebce59b885339551be",
+      "sha256": "47374fa3027fc783c0d2f18aa9b86d8d382a697f7bb47dae4c91eea74151833f",
       "bytes": 26493
     },
     {
@@ -4201,8 +4211,8 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56878.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56878.html",
-      "sha256": "b07721b808e4fc003ab8592c7b185ec292e48f10c271021734bc36a992ce06be",
-      "bytes": 26945
+      "sha256": "241417cbdca0558966e8b6744d03d70be40a3719d2d77ba6094842ede538912f",
+      "bytes": 26946
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4212,8 +4222,8 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56870.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56870.html",
-      "sha256": "1879ddfd6d3a358bf70bd04c6f26e9614bae6988534ebe75c0c790a849dcaf72",
-      "bytes": 21029
+      "sha256": "8db6380030072d780a50c22875052ca7a67f65e3a7b448b0942e3876068ecc9d",
+      "bytes": 21028
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4228,8 +4238,8 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56866.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56866.html",
-      "sha256": "931ea91348baaf63a1b6c8f9da1ee81e0a66bf90136f882ed7aa42ca2717f824",
-      "bytes": 30832
+      "sha256": "f6d03ee9eda3114c3981f825e3071022e183f6ffea3f0e7d338fc1f490811f0e",
+      "bytes": 30831
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4240,8 +4250,8 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56847.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56847.html",
-      "sha256": "feb05b7bfc5fe00b715497847c1c4011c2966d23af120822076dc1d2f7b7d2c7",
-      "bytes": 25332
+      "sha256": "489b4ce02b36fce180d394c4ca220c0384a22ea2befb65ec427f37c47c4d74eb",
+      "bytes": 25329
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4254,8 +4264,8 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56844.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56844.html",
-      "sha256": "d2adbd267f632629a507575a8fc47c99b2868e77755dedcfef9f7b56f4f5d81f",
-      "bytes": 20106
+      "sha256": "86af94321a92e7a7fa652f2389260cc37d3adc40b61a0661c20ccd873a0711c3",
+      "bytes": 20104
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4265,8 +4275,20 @@
       "body_matched_employers": [],
       "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56841.html",
       "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56841.html",
-      "sha256": "17d87f75845be2a90aa022d15956ef8615678c738eba4d521368c60cae3b8001",
+      "sha256": "2fda7a7335528e42cbf36c3e5e236793f62c5180e23e5f1bef85063f341a8849",
       "bytes": 46490
+    },
+    {
+      "phase": "unregistered_brand_backfill",
+      "candidate_employers": [
+        "名创优品 (广州)有限责任公司",
+        "广州立白凯晟控股有限公司"
+      ],
+      "body_matched_employers": [],
+      "url": "https://job.hust.edu.cn/zpinfo1/2467445.htm",
+      "final_url": "https://job.hust.edu.cn/zpinfo1/2467445.htm",
+      "sha256": "4af4c457e5580eb157f0999fcee085a4bfdfe6383c4876b9cbbde00c49bbc00b",
+      "bytes": 47080
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4274,33 +4296,10 @@
         "深圳迈瑞生物医疗电子股份有限公司"
       ],
       "body_matched_employers": [],
-      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56827.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56827.html",
-      "sha256": "ed2f989cfdd1e23dde9de96ac3af5796faa234a80b441fb20ee53825de222497",
-      "bytes": 36928
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "中国盐业集团有限公司"
-      ],
-      "body_matched_employers": [],
-      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56822.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56822.html",
-      "sha256": "ba54bd7b6d6c59f66d6983b9e7668feadeef771aa4398e5c383746269e3dc38f",
-      "bytes": 113509
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "安克创新科技股份有限公司",
-        "山东创新金属科技有限公司"
-      ],
-      "body_matched_employers": [],
-      "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56821.html",
-      "final_url": "https://jobs.tiangong.edu.cn/correcruit/content/id/56821.html",
-      "sha256": "cb22202d2e7d17a609f3703af42367d58489968df1e1ebd2cd0a4155acf26bcb",
-      "bytes": 86333
+      "url": "https://job.hust.edu.cn/zpinfo1/2450606.htm",
+      "final_url": "https://job.hust.edu.cn/zpinfo1/2450606.htm",
+      "sha256": "e88e077688be914673cc0c68af117ce6a04981c1b0b027171f63186cf230f1a2",
+      "bytes": 81827
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4727,8 +4726,7 @@
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
         "众安在线财产保险股份有限公司",
-        "泰康保险集团股份有限公司",
-        "阳光保险集团股份有限公司"
+        "泰康保险集团股份有限公司"
       ],
       "body_matched_employers": [],
       "url": "https://job.hust.edu.cn/zpinfo1/2463089.htm",
@@ -4739,29 +4737,17 @@
     {
       "phase": "unregistered_brand_backfill",
       "candidate_employers": [
-        "合肥维天运通信息科技股份有限公司"
+        "唐山东华钢铁企业集团有限公司",
+        "宁波海天企业管理有限公司",
+        "安徽天大企业 (集团)有限公司",
+        "苏州金螳螂企业 (集团)有限公司",
+        "郑州宇通企业集团"
       ],
       "body_matched_employers": [],
-      "url": "https://job.hust.edu.cn/zpinfo1/2462734.htm",
-      "final_url": "https://job.hust.edu.cn/zpinfo1/2462734.htm",
-      "sha256": "9f303f694fd25e593639536ea14fcf24b04543eba752a997f3885f2706cb057d",
-      "bytes": 79756
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "中国矿产资源集团有限公司",
-        "大自然钢业集团有限公司",
-        "宁波力勤资源科技股份有限公司",
-        "明阳新能源投资控股集团有限公司",
-        "江西中力资源控股集团有限公司",
-        "湖北鑫资再生资源集团有限公司"
-      ],
-      "body_matched_employers": [],
-      "url": "https://job.hust.edu.cn/zpinfo1/2462503.htm",
-      "final_url": "https://job.hust.edu.cn/zpinfo1/2462503.htm",
-      "sha256": "d0924ac014edc6d6d0a7090a8eef146123fdcdb0e478609d94daf05d3196a49e",
-      "bytes": 47396
+      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWM",
+      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWM",
+      "sha256": "0dcc4bf9a19c1bfd423d667cdc2da29317cd3b52f9c91df82148d1c14c2c0b67",
+      "bytes": 62581
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4777,7 +4763,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWM",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWM",
-      "sha256": "da32b5e9261c9f849ac997deeaae9432d512a05f104df42e676b621cd92a06ee",
+      "sha256": "aa71cfa5e16f929591256399110f2213fa50e28a66e9dcc4eafa755bbdbc44fd",
       "bytes": 76459
     },
     {
@@ -4788,7 +4774,9 @@
       ],
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSWK",
-      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSWK",
+      "sha256": "837a7320d78a07aeaee230ddf349cdfeab74bdab435efcc69e4a9b02242f0653",
+      "bytes": 103084
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -4798,7 +4786,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWK",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWK",
-      "sha256": "11f55fe5f9a5a18242d3efcb3236666f3cce78dd556dd91a5eb806179b9a8bee",
+      "sha256": "6c2e8345073ddfd875dccb2e8d11c4718375de5601a0ea855b05ad1d6fa3f04a",
       "bytes": 58987
     },
     {
@@ -4810,7 +4798,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWK",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWK",
-      "sha256": "48cd90ceb5e5c35d43d99dcd6d4a943fce93bfbd6a47ac30284d924d8d25a673",
+      "sha256": "f21ecf4fea34b058e7636daf3110c8b871a0efe1816e7b923790ee8c2a77cbcb",
       "bytes": 65928
     },
     {
@@ -4823,7 +4811,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWK",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWK",
-      "sha256": "a34ee22d762344d326738e65fd049277831de545347bb1a98fee175915262318",
+      "sha256": "8a64721c0bb899323e4f38deb9520ae19adde6072241725f3bd591de357992f9",
       "bytes": 58872
     },
     {
@@ -4835,7 +4823,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWJ",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWJ",
-      "sha256": "9191ec0db314b95303e6a637efaa676911954a2991b7fbfe37697929d29f608d",
+      "sha256": "86fc0f7867d32b42fbe46ff1f414d87cf982012132778effa8a510cb2c1776af",
       "bytes": 53279
     },
     {
@@ -4850,7 +4838,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWJ",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWJ",
-      "sha256": "a131b3b598e20b4bbe4ab4c4a69866f0a2ccaa67d422db0e3c43e8a9ba28c4d2",
+      "sha256": "ae29c608c797d15bd145f2681243fe5ce1e482cd6b6b65c51c781d6f1a1dd62b",
       "bytes": 58201
     },
     {
@@ -4865,7 +4853,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWJ",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWJ",
-      "sha256": "ad755a0b58721f9fe3f24e23299ff5f150a4d7cc776f7859fdee48fb28ed3397",
+      "sha256": "76d8f984c2717a63e1166e1881fa6de2f14e1d1ab59718e4b7c12eea5e012b5a",
       "bytes": 65192
     },
     {
@@ -4882,7 +4870,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWH",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWH",
-      "sha256": "cae9ebec364cd8a0fabd272f669795ef197e79665327fd3a7ab3f6b368ac707f",
+      "sha256": "f8ea3a247992ed9a03204bb92653b38315a6ca7b6ea1caffd07df1c52c2ff9ee",
       "bytes": 75603
     },
     {
@@ -4893,7 +4881,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWH",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWH",
-      "sha256": "3b2b4e2a1e8c4e7748c2a575b10f94bd54a1c9b76d652d46becc4fbb44eea96c",
+      "sha256": "6282eedf5a222b82b8df4e4a49ff02cc34c0f46d1ae5fab0893802d8bb5ff3e6",
       "bytes": 49193
     },
     {
@@ -4908,7 +4896,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWH",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWH",
-      "sha256": "4a5c307c05f1883fdd0779ca5039d24dc5462810615d3aec795a7e73c6c6c47d",
+      "sha256": "71c05db14649e8891f6f4cd117f3fab2eaf3a84b3af038083402162f195dd599",
       "bytes": 100799
     },
     {
@@ -4920,7 +4908,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWH",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWH",
-      "sha256": "ff2ba791cb4d05c53437a72bcd4060d96f0c79a145ea232493358436ce468e22",
+      "sha256": "e34f2937f063339d1458dea59da70f8bd8af6acb6752713243b858f1105aac04",
       "bytes": 57710
     },
     {
@@ -4931,7 +4919,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSWG",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSWG",
-      "sha256": "30c67c1f99e86dba63147ad76251e67140707b5e396d644eceab752c04a6fa0b",
+      "sha256": "d332755035cc149a78f0bbc8a06a8e151f7428d821fb355233ad1e1d3423d23f",
       "bytes": 48979
     },
     {
@@ -4945,7 +4933,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWG",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWG",
-      "sha256": "0d53e90f402b235f431a813e4cd0dbae4f0163a8d1c1bc1e504b0b66efc0c497",
+      "sha256": "2fe59ec2196214eb38f9aadbd1159ed891043e25bcc584292be45e784faed3ff",
       "bytes": 103233
     },
     {
@@ -4958,7 +4946,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWG",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWG",
-      "sha256": "bafe0d01afcdae386c51e48f1b6ae96b2cf3659eb676579c2cd54041f08c169c",
+      "sha256": "bbc4eb2c83ac2dc27f23ecf2f9876eaf2f31f0c04f8150682f6abbfcf051aabb",
       "bytes": 57712
     },
     {
@@ -4969,7 +4957,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWG",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWG",
-      "sha256": "fb21a15600bfd00ce06d797cff6643d2f51470aa129b04950b24ff9c7161b2c9",
+      "sha256": "2b5c984b5a3032fd6db1957bcf8bd1c8a5b05b7f8347e4f9bb56aaa572c73d72",
       "bytes": 38377
     },
     {
@@ -4984,7 +4972,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSWF",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSWF",
-      "sha256": "2629b70c302da748107bb56473d84349e84727e920b802a043ed8770f54471d8",
+      "sha256": "0aa3e16025ce4738ea57f0c34bcfbf0548dea5a8adb8b9275c0b2d197524c219",
       "bytes": 73945
     },
     {
@@ -4999,7 +4987,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSWF",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSWF",
-      "sha256": "ffad523fc53873b77d176ce0d64891020b1920ec2c13ddbcf37ac2927c168ed4",
+      "sha256": "8828a5452741822f00892c5895f7c19f4dcf443acb99a3b053be98fcb5e4e073",
       "bytes": 87861
     },
     {
@@ -5016,7 +5004,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWF",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWF",
-      "sha256": "cfbad8c5de89c50d99a08ec9b6a1d508530452e917fcc562616c14f8fadfe6b0",
+      "sha256": "e4ffd4fb002da4c9b4caef35d5efa8fe72225b2b81397bfab740ef57cd14dc1e",
       "bytes": 58507
     },
     {
@@ -5036,8 +5024,8 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWF",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWF",
-      "sha256": "91035f55d886ac248766ab02776e49ed0c8ba17fe82bee553e5047ed49b50d50",
-      "bytes": 55637
+      "sha256": "9adacb4125daa31574954507623612464bd2f004ad6e9403ff7ce9a5dd594a37",
+      "bytes": 55638
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -5048,7 +5036,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSWF",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSWF",
-      "sha256": "50dfd5c5767c94345d8fa5d17aeccd18a9792408065d5808579fa1652f50269a",
+      "sha256": "83db6d0b767c48f8b6b36037ad5b392ea3a7d639f8338a3a53fafd8bf1520254",
       "bytes": 75992
     },
     {
@@ -5060,7 +5048,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWE",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWE",
-      "sha256": "6bf6786440708c494dad7799625bb318eadbdaa704292d3b38df4f1534e7ffab",
+      "sha256": "8266a48c03cc93f2d61ae0b6c1f4a2bbfad3757e31bedb5beee6af72ef0ac745",
       "bytes": 110866
     },
     {
@@ -5075,7 +5063,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSWE",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSWE",
-      "sha256": "e1e0d7b6874fe3d6d17fae3b98e88d671278a0a2e719cdd74d9b0f604e6629a1",
+      "sha256": "e77b8f964820faed5d89805858b2c8d21df9cd2d412f7698873ce62b51a78776",
       "bytes": 61118
     },
     {
@@ -5088,7 +5076,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWE",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWE",
-      "sha256": "28a8dc7c886db7c0c0233c0b8fac28cc4d339ba5e69594c490da16a55f879f74",
+      "sha256": "02f4e1780c0b11e8a4a3c3e18d9caa0c3500724036f81f9f18d8cbe358579f27",
       "bytes": 70972
     },
     {
@@ -5104,7 +5092,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWD",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWD",
-      "sha256": "ceab046b3954225b839da2232e606d012991ab224f6700eead13da51b57ac7d0",
+      "sha256": "484e3197dc8bb3a94e796ca4a032e90c32a1136c9655cd4210159cf9aee27ef9",
       "bytes": 62969
     },
     {
@@ -5120,7 +5108,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWC",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWC",
-      "sha256": "bd85eeabc3cf8db777086c470864cee2221ff1acdb3a7e98b831a98271088652",
+      "sha256": "816fe4721cbdfaf6c7b809a9ebcc64d7cc316ad82b91983c6fca0dc121d439dc",
       "bytes": 56478
     },
     {
@@ -5135,7 +5123,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWC",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWC",
-      "sha256": "24440e98ffdcc2bd1e5584b18e57d64c1fa5cfa996619cf1776ac34a3f47588d",
+      "sha256": "a40de298a3b93ccee423efd657a5c4a34388225ee47c57f87424d130bc5113c1",
       "bytes": 95179
     },
     {
@@ -5151,7 +5139,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWC",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSWC",
-      "sha256": "be95b546b642fbeaa8ea4afbd54ee9346dbea82c93e5a0d5a0cab5867ad1915a",
+      "sha256": "71e98170e85a76b782767f268d458e3499cd2bc4af52e2412000500aa6795f13",
       "bytes": 105571
     },
     {
@@ -5162,7 +5150,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWC",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWC",
-      "sha256": "e0a0aa26abc6a1e7b0958011f5d363096e1e0c96aa3235e8709bd09e1c3d66a6",
+      "sha256": "f37c869240ed38c05390f32193f5eece9c4bf6352fcef7bea8456a16e28ddd1e",
       "bytes": 53299
     },
     {
@@ -5174,7 +5162,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWC",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSWC",
-      "sha256": "b51eac113b596a2436d8091c3940a3b6a725ac53c110d74f13a668c510a623f7",
+      "sha256": "0e3338fcf983e950e33f5634d897d222b43a1694c82392dd938362f2d802a4dc",
       "bytes": 74869
     },
     {
@@ -5185,7 +5173,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWB",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSWB",
-      "sha256": "5bb61a3ce51b3b4c9a1b4daa74c0a7142768738f336fd94594f93cd1782ca207",
+      "sha256": "a25a18a11734d0d34e86ee00abba453a047b8fd340a9d9bcca48723eccc576af",
       "bytes": 103858
     },
     {
@@ -5196,7 +5184,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWB",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSWB",
-      "sha256": "40ef4a8d8bfa76924a80d2a469dcf5582e6bdd2f4e7ba60d6c86259f44bf48aa",
+      "sha256": "913ae15e816a30e76381389b397ed00784cf3f0dd0441216def0d52d7354ae84",
       "bytes": 50858
     },
     {
@@ -5214,7 +5202,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWB",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSWB",
-      "sha256": "c95667f105d55da33a33c7f67ef686a61601b7660c8b9b3360e2f4b6702cfd57",
+      "sha256": "975d10c1318866d65d10672679100e2155bb07aac0b14bb6f760fbac2ef587c8",
       "bytes": 66322
     },
     {
@@ -5224,20 +5212,7 @@
       ],
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSWA",
-      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSWA",
-      "sha256": "771c83c9f067b753364bdbf2ab1b140cc67dfadd24b94e0250634de57e150970",
-      "bytes": 101144
-    },
-    {
-      "phase": "unregistered_brand_backfill",
-      "candidate_employers": [
-        "中国民航信息集团有限公司"
-      ],
-      "body_matched_employers": [],
-      "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSW9",
-      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSW9",
-      "sha256": "fec71af625869e5f681ed4e0b3d9ded228f43dd4b74880b61d5142ac936996cf",
-      "bytes": 75215
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -5247,7 +5222,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SVUXSW9",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SVUXSW9",
-      "sha256": "5c81d6e5564b48fa10e5696b40c37902bf9c60789baf551abd2116b3e68852a7",
+      "sha256": "31b839171674bf017179268521ce1a51c9bd1871b885850e219d916ae391877d",
       "bytes": 48654
     },
     {
@@ -5259,7 +5234,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSW9",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSW9",
-      "sha256": "804f30955eca12d2d5882f52ad0fcd7dcad67f35657d337475fde3c52fb49615",
+      "sha256": "db41fd1032147ad3c6454375d63f64e455dae230d6bff8a6aaab8db256abd383",
       "bytes": 62733
     },
     {
@@ -5273,7 +5248,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSW8",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSW8",
-      "sha256": "bfbf9496d2e666e3beade3531d744dc3bd503b36f05bf9556144d0285a342d4c",
+      "sha256": "6a04372aebdc5a31d74bf290194067a65fff2c3d172dd341706c9c0e54a5938f",
       "bytes": 68992
     },
     {
@@ -5291,7 +5266,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSW8",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSW8",
-      "sha256": "474e1f72ca47ae212148001df7c32a47369028984156c3d61027c58745c0a2f2",
+      "sha256": "8cf2938ac2c2050bf1618c33845eacae436a714998280ede9bf249ca5d5340a5",
       "bytes": 72571
     },
     {
@@ -5304,13 +5279,12 @@
         "安徽天大企业 (集团)有限公司",
         "泰康保险集团股份有限公司",
         "苏州金螳螂企业 (集团)有限公司",
-        "郑州宇通企业集团",
-        "阳光保险集团股份有限公司"
+        "郑州宇通企业集团"
       ],
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSW7",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSW7",
-      "sha256": "de3773d380a951ff6aafba6c1424cb1b8facef0477fafe1d966327c936133411",
+      "sha256": "4ca0bff60c5e4b866702de054d447b642a934e09043a3fc7a9399f4145d7bfc0",
       "bytes": 85762
     },
     {
@@ -5325,7 +5299,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSW7",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SSUXSW7",
-      "sha256": "c322703cd7499c340dcc0ade48913c2e39ecd5c2bab6986a22ceac819c95ea70",
+      "sha256": "bace94920d19e8a4214bc33a6196105ac9f709aa45961dbf7efcb0cd33011fbd",
       "bytes": 60957
     },
     {
@@ -5337,7 +5311,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSW7",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSW7",
-      "sha256": "c6ce456c1684703e685c55e7b8625529386b7b7a86c27fed61b06649db5083ba",
+      "sha256": "dc15353a44741ff430172c0dae66999b5a2532b1d273a94fc05ee3647d70a19d",
       "bytes": 83578
     },
     {
@@ -5349,7 +5323,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSW7",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSW7",
-      "sha256": "79dd924fe9b21d2d81d1bd56f6b5e715a2e467d8b65eeff613dedce7e17303db",
+      "sha256": "1b23c4ad77396eb949f8efc6118a71e838e162c9b85fe5150949b358f99bf96c",
       "bytes": 73543
     },
     {
@@ -5360,7 +5334,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSW6",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSW6",
-      "sha256": "6591064e5101156b4abb18496fc6a4434ccb0c064da90949328c5aa75c4b7067",
+      "sha256": "df023879f7e9830e66017f296dee80596c9f16ec874b9db3817f1e19e2b4c9ca",
       "bytes": 88305
     },
     {
@@ -5371,7 +5345,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSW6",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSW6",
-      "sha256": "2c411f89e8a90b3ca54fc92cf3ccd6fb461bf7d8176eeed73d2691b00b024228",
+      "sha256": "179c0b43eabd1a4ef6bd4fcf1d514af8374ab435543f0c31783c7977511cd6b8",
       "bytes": 71759
     },
     {
@@ -5385,7 +5359,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSW6",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SNUXSW6",
-      "sha256": "0f4e63fcb5bdfd737813dc3d901fab5dc96002b80af632e0684eca8da6bc9dec",
+      "sha256": "42e3f3279529ad5ffb665849cc16ae8ba747b2cfb56d0e9e93b96f0aab993b6f",
       "bytes": 44598
     },
     {
@@ -5399,7 +5373,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSW6",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSW6",
-      "sha256": "5b1922668a5396c05098bd017b2d3214ac22d096be08d234518abcd8a94df682",
+      "sha256": "ce7ed9bcee3c953f0f78fbcb50120f3996831be2c7e5e19204375a6d0c81b7fd",
       "bytes": 56302
     },
     {
@@ -5407,13 +5381,12 @@
       "candidate_employers": [
         "人民控股集团有限公司",
         "众安在线财产保险股份有限公司",
-        "泰康保险集团股份有限公司",
-        "阳光保险集团股份有限公司"
+        "泰康保险集团股份有限公司"
       ],
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSW5",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SWUXSW5",
-      "sha256": "da9ea274c92abd370708f1ee5f64793d165f91029c16a8a41c5910ebbca8059e",
+      "sha256": "a2ea95d587861e618d3b4369174337e847227600218c955c73b27930d2f8bad5",
       "bytes": 105614
     },
     {
@@ -5427,7 +5400,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSW5",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=STUXSW5",
-      "sha256": "7353d1e5d6278cfca5859b16cb57ab3a3e9beeebfcba07c3cd6df63bd581d3e6",
+      "sha256": "67b2472c447f5f306c925c7d404181e1678c3b7d4908594bd6bec2fc3cd91691",
       "bytes": 88968
     },
     {
@@ -5439,7 +5412,9 @@
       ],
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSW5",
-      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SQUXSW5",
+      "sha256": "708f2604565b628590ba3d20502d72e00f76f3e64907e53762cbbd312858aa62",
+      "bytes": 98889
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -5449,7 +5424,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSW5",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SMUXSW5",
-      "sha256": "01e81a889f1388d979820a731344f9b87a6730f4c95e1f7942fa464291cd72d2",
+      "sha256": "c213b04926f62ffd706ffd0bc94eb458bb98ccd51a36b442d06f92c16a853dce",
       "bytes": 51765
     },
     {
@@ -5464,7 +5439,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSW4",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSW4",
-      "sha256": "07306b6bcb7f5ce8a419dda094f380cb90d1c96c5cca78494de08fd940904ebb",
+      "sha256": "6df2431e22871128f56b832edee0bfeaf9747421a67500785ce0b6aafccc7949",
       "bytes": 44919
     },
     {
@@ -5480,8 +5455,8 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSW4",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SPUXSW4",
-      "sha256": "baf8a9b822c4e3a244b0e962d6fb19d0a42d2f873c15c5908ff91b907067fb3c",
-      "bytes": 51390
+      "sha256": "f9b6e0453e186993c92b062d3107d481448f0aaaef580e7720fa081ef6f1483e",
+      "bytes": 51391
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -5497,7 +5472,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSW3",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SXUXSW3",
-      "sha256": "2f54804a7bd17f35cf94167195133e176f58e9132bee32be2a5aa0322d8c45cc",
+      "sha256": "7fd03d19fbcba83ff1b5adefe48133fcbb7440597a339db7639dae0e5ed1ef0a",
       "bytes": 77558
     },
     {
@@ -5513,7 +5488,7 @@
       "body_matched_employers": [],
       "url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSW3",
       "final_url": "https://jy.gzhu.edu.cn/web/Index/jobs-brief-detail?id=SRUXSW3",
-      "sha256": "b6ce0d4c672fd595d1ce7ac604450f572ce32b14a70cbda11ce46a81d520d859",
+      "sha256": "15378151e4acf01c8641267e16312ae9b2b6d6cfe1797d50766817d9475ab9ce",
       "bytes": 52796
     },
     {
@@ -5524,8 +5499,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/job/view/id/623051/from_type/4/from_id/460837",
       "final_url": "https://career.cup.edu.cn/job/view/id/623051/from_type/4/from_id/460837",
-      "sha256": "90a51ca8008d162a36d082cc91134b8d79a85565eea38e448aa3f55105e3b340",
-      "bytes": 39234
+      "sha256": "ac60e59c060ffd249685974479a5c89100e1fe6553476b91593f06b3ee97029d",
+      "bytes": 39233
     },
     {
       "phase": "unregistered_brand_backfill",
@@ -5536,8 +5511,8 @@
       "body_matched_employers": [],
       "url": "https://career.cup.edu.cn/job/view/id/623081/from_type/4/from_id/460831",
       "final_url": "https://career.cup.edu.cn/job/view/id/623081/from_type/4/from_id/460831",
-      "sha256": "7ef4564ba37e63e0bd07b86cf0d74bc9ec431db11a4b3b7c9f6acf9e231d22b9",
-      "bytes": 40332
+      "sha256": "d4fe602e029bfb38022a6e06184ea6d7a6d4b82ae4f5bcfd1da4b62ebeaf81a2",
+      "bytes": 40349
     }
   ]
 }
