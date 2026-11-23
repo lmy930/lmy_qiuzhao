@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-22T20:48:15.256664+00:00",
+  "scanned_at": "2026-11-23T10:07:34.601078+00:00",
   "companies_total": 657,
   "registered_sources": 41,
   "search_methods": [
@@ -9,17 +9,35 @@
   ],
   "searches_attempted": 657,
   "searches_succeeded": 657,
-  "companies_with_new_hits": 63,
+  "companies_with_new_hits": 65,
   "companies_with_any_leads": 211,
   "note": "搜索成功指至少一个搜索服务返回结果，未必找到招聘公告；未发现不代表未开启。",
   "searches_failed": 0,
   "provider_requests_attempted": 1971,
-  "provider_requests_failed": 1,
+  "provider_requests_failed": 4,
   "partial_provider_errors": [
     {
-      "name": "青山控股集团有限公司",
+      "name": "中国移动通信集团有限公司",
       "errors": [
-        "HTTP Error 503: Service Unavailable"
+        "HTTP Error 429: Too Many Requests"
+      ]
+    },
+    {
+      "name": "中国铁道建筑集团有限公司",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
+      ]
+    },
+    {
+      "name": "湖南博深实业集团有限公司",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
+      ]
+    },
+    {
+      "name": "福建圣农控股集团有限公司",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
       ]
     }
   ],
@@ -2904,7 +2922,7 @@
           "published_at": null
         },
         {
-          "title": "腾讯2027校园招聘启动，包括技术类、产品类、市场类、设计类等；此外，AI全栈工程师、Agent开发工程师、AI应用工程师等AI岗位也全新上架 - QQ News",
+          "title": "腾讯2027校园招聘启动，包括技术类、产品类、市场类、设计类等；此外，AI全栈工程师、Agent开发工程师、AI应用工程师等AI岗位也全新上架 - 腾讯新闻",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tbFhiUEZmXzhrVFZibl9CVVZBcUtYWUZZSXc2TWgyM1JfT3pyenBjaEVYN3owRW1JWjc3T2I2cGVwN1NrN3YxbVBjY2tvUmJ5cFF0eGxB?oc=5",
           "snippet": "",
           "published_at": null
@@ -3904,7 +3922,7 @@
           "url": "https://career.cmbchina.com/campus/home",
           "snippet": "常见问题 请问招商银行2027校园招聘网申截止时间是？ 2027校园招聘的毕业时间要求是？ 请问招商银行校园招聘应聘流程及主要形式是怎样的？ 投递多个岗位，简历是否可以复用？",
           "published_at": null,
-          "discovered_via": "兴业银行招聘官网"
+          "discovered_via": "中国石油大学就业网"
         },
         {
           "title": "招商银行股份有限公司 2027届秋招｜招聘信息汇总",
@@ -6286,7 +6304,7 @@
           "url": "https://zhaopin.sgcc.com.cn/sgcchr/static/dynaAument.html",
           "snippet": "国家电网有限公司西南分部2027年高校毕业生招聘考试公告（国调网调及北交提前批） 2026-10-26 国网东北分部关于2027年招聘高校毕业生考试的通知（国调网调及北交提前批） 2026-10-26",
           "published_at": null,
-          "discovered_via": "新浪财经"
+          "discovered_via": "上观新闻"
         },
         {
           "title": "国家电网有限公司招聘平台--所属单位招聘公告",
@@ -6434,7 +6452,8 @@
           "title": "小米招聘 | 让全球每个人都能享受科技带来的美好生活",
           "url": "https://hr.xiaomi.com/",
           "snippet": "小米2027全球顶尖人才校园招聘正式启动 小米集团实习生招聘火热进行中 小米集团AI人才专项正式启动！ 小米人才日精彩回顾 16年值得被记住的16件事 我们不需要完美的简历， 我们需要不甘于平凡的你。",
-          "published_at": "2026-11-18"
+          "published_at": null,
+          "discovered_via": "新浪财经"
         }
       ],
       "last_found": "2026-11-23"
@@ -6715,10 +6734,10 @@
       "name": "中国能源建设集团有限公司",
       "hits": [
         {
-          "title": "中国能建2027届全球秋季校园招聘",
+          "title": "中国能建2027届全球秋季校园招聘 - iguopin.com",
           "url": "https://ceec.iguopin.com/job",
-          "snippet": "中国能建2027届全球秋季校园招聘 可投递公司数每人不超过3家，每家公司最多投递2个岗位。感谢您的参与！",
-          "published_at": "2026-11-17"
+          "snippet": "中国能建2027届全球秋季校园招聘 计算机科学与技术/软件工程/信息与通信工程/电子信息/集成电路相关岗位 中能建城市投资 ...",
+          "published_at": "2026-11-23"
         },
         {
           "title": "中国能建2027届全球秋季校园招聘",
@@ -6905,7 +6924,7 @@
           "url": "https://m.gwy.com/gqzp/410134.html",
           "snippet": "随着2027届毕业生求职季的全面启动，中国南方电网作为国资委直管的中央骨干能源央企，其校园招聘备受关注。 南方电网负责广东、广西、云南、贵州、海南五省区的电网运营，每年释放数千个正式编制岗位，是电气、计算机、经管类应届毕业生的热门选择。",
           "published_at": null,
-          "discovered_via": "国家电网人才招聘"
+          "discovered_via": "Gank Interview校招汇总"
         },
         {
           "title": "2027中国南方电网招聘官网入口：https://zhaopin.csg.cn - 高顿央国企招聘",
@@ -7448,6 +7467,12 @@
         {
           "title": "浦发银行太原分行2027年度校园招聘启动！附线上报名入口 - 凤凰网",
           "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1qcTQ5QjRib0NTbmljT195UzI3c2ozWGxlLUlUVDIyS0V2S3VOcE85NFVNZ2lKVjlqMC0tVGRtY1VSZnB5QUtqWXVadnU?oc=5",
+          "snippet": "",
+          "published_at": null
+        },
+        {
+          "title": "Call浦青年 锚定未来 | 浦发银行杭州分行2027年度校园招聘正在进行中！ - 腾讯新闻",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE81a1EyQXlxbU9jVXEtQk9iNDFUaTFKQl9XQjdzRDdxUXFpckhMMlZQaDdEdXV5ZExlN0Q2SjhkeTNhNEJ0WmczbW93UDgtNjJtQ0lsYVNR?oc=5",
           "snippet": "",
           "published_at": null
         }
@@ -10759,6 +10784,129 @@
       "last_found": "2026-11-23"
     },
     {
+      "name": "中国储备粮管理集团有限公司",
+      "hits": [
+        {
+          "title": "中国储备粮管理集团有限公司2027年度校园招聘公告",
+          "url": "https://aiqicha.baidu.com/details/ugknowledge?id=0f27d674fb4607099e4e65aec53ec3cd",
+          "snippet": "企业性质不同： 中储粮（中国储备粮管理集团有限公司）是国务院直接管理的国有重要骨干央企，核心使命是“守住大国粮仓、保障粮食安全”； 中粮集团（中粮集团有限公司）是多元化中央企业，业务涵盖食品、粮油、地产等多个领域 。",
+          "published_at": "2026-10-10"
+        },
+        {
+          "title": "【招聘】中国储备粮管理集团有限公司2027年度校园招聘 - 潮新闻客户端",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83RER6MnBpVWkteFNSNTJHdDRrTTdhQzdXcFlwVkJLLVg0QU4zX1JseXBLbFFUOXpQNFdSbHJ4aTJsNUwzMU52WGlOV3g3ZFE2em94U29QUzdFbjdBaWZUY3JtTE84eUFMbHo4X3Z5c1JRUWs?oc=5",
+          "snippet": "",
+          "published_at": null
+        },
+        {
+          "title": "2027年中国储备粮管理集团有限公司校园招聘公告_山东中公教育网",
+          "url": "https://sd.offcn.com/html/2026/10/601558.html",
+          "snippet": "中国储备粮管理集团有限公司是经国务院批准组建的涉及国家粮食安全和国民经济命脉的公益类国有大型骨干企业，实行集团-分 (子)公司-直属库三级架构。目前下设24家分公司、11家二级专业子公司和1家控股公司，人员、机构和业务覆盖全国31个省、自治区、直辖市。1招聘对象本...",
+          "published_at": "2026-10-31"
+        },
+        {
+          "title": "雄安有岗！中国储备粮管理集团有限公司2027年度校园招聘开启 - 新浪网",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQM1VfaE80UFlzZnpSYTBxYXAzQl83YXV1eXV3d3pna25QcUtKNmpvNW82SDA5bG5mU1BDWVJWdUFmbV9SMDU5R0JfY0VVa2JZMzNUcndnYnBtalZPQV9fcHJIUFdOYkV0TGtvOHhrRUFHaWN5S2tHWXdVRGFaVzB3bDkyZUVvNWRlVnBCWEN1MHhPaS1Dam1QZA?oc=5",
+          "snippet": "",
+          "published_at": null
+        },
+        {
+          "title": "中国储备粮管理集团招聘平台 - sinograin2027.iguopin.com",
+          "url": "https://sinograin2027.iguopin.com/notice",
+          "snippet": "中国储备粮管理集团有限公司 2027年度校园招聘公告 中国储备粮管理集团有限公司是经国务院批准组建的涉及国家粮食安全和国民经济命脉的公益类国有大型骨干企业，实行集团-分（子）公司-直属库“三级架构”。",
+          "published_at": null,
+          "discovered_via": "国家电网人才招聘"
+        },
+        {
+          "title": "【招聘】中国储备粮管理集团有限公司2027年度校园招聘 - 新浪财经",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNcDZKSkg0VThiNWtoTE1xTnF6bndYQWJMNDZoNlpubVBnbnZmdDBZTTd3YkdSbVQ5YVdSVjZrajlaWFl1ZERWel9OS0F4N1J0MlliM3ZCQ0VKcU9TMHhacXEybHMxQ3F2SmdEazNJUEc2UERNOXpfUkl3cFFxb1VINUJEQkdVN0U?oc=5",
+          "snippet": "",
+          "published_at": null
+        },
+        {
+          "title": "雄安有岗！中国储备粮管理集团有限公司2027年度校园招聘开启 - 新浪财经",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1SNkxRY1o0aGNiS0NmYnNfRExZTTdfUnJvTXN6V0pRNDlYUEVDcG1OQWJUbm9CNXd0Z0V3TnJtM21lNzB5S2x1d3Q5SGRPbmFiSm0wamZIUEJBR2pCeFdMcVpJSEJfMGVGaHRIY3pYX2VKbE9FTEE?oc=5",
+          "snippet": "",
+          "published_at": null
+        },
+        {
+          "title": "中储粮2027校招公告及报名入口https://sinograin2027.iguopin.com",
+          "url": "https://sa.offcn.com/html/2026/10/403121.html",
+          "snippet": "《2027年中国储备粮管理集团校园招聘公告》已发布，招聘官网：https://sinograin2027.iguopin.com。报名时间：2026年10月30日至2026年11 ...",
+          "published_at": null,
+          "discovered_via": "国家电网人才招聘"
+        },
+        {
+          "title": "浙江国企招聘-中国储备粮管理集团有限公司2027年度校园招聘公告",
+          "url": "https://zj.offcn.com/html/2026/11/499318.html",
+          "snippet": "中国储备粮管理集团有限公司是经国务院批准组建的涉及国家粮食安全和国民经济命脉的公益类国有大型骨干企业，实行集团-分（子）公司-直属库三级架构。目前下设24家分公司、11家二级专业子公司和1家控股公司，人员、机构和业务覆盖全国31个省、自治区、直辖市。一、招聘对象本次招聘面向 ...",
+          "published_at": null,
+          "discovered_via": "国家电网人才招聘"
+        }
+      ],
+      "last_found": "2026-11-23"
+    },
+    {
+      "name": "万向集团公司",
+      "hits": [
+        {
+          "url": "https://job.hust.edu.cn/zpinfo1/2411445.htm",
+          "title": "候选招聘正文待重新核验",
+          "discovered_via": "新增品牌映射后的档案回访"
+        },
+        {
+          "title": "万向集团2027校园招聘",
+          "url": "https://campus.51job.com/wxxz2027/index.html",
+          "snippet": "万向集团2027校园招聘，前程无忧为您提供最新招聘职位，校园招聘信息，面试技巧等。帮助您顺利踏入万向集团的大门，开启 ...",
+          "published_at": null,
+          "discovered_via": "Offer多多秋招汇总"
+        }
+      ],
+      "last_found": "2026-11-23"
+    },
+    {
+      "name": "上海龙旗科技股份有限公司",
+      "hits": [
+        {
+          "title": "龙旗科技2027届校园招聘-上海龙旗科技股份有限公司",
+          "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/55559.html",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "高校招聘正文中的企业身份/关联证据"
+        },
+        {
+          "title": "上海龙旗科技股份有限公司2027届校园招聘",
+          "url": "https://longcheer.zhaopin.com/",
+          "snippet": "围绕智能终端产业升级趋势，公司构建了涵盖智能手机、AIPC、汽车电子、智能眼镜、平板电脑、机器人、智能手表/手环等在内的全品类产品布局，为客户提供从产品定义、研发设计到智能制造的全链条服务。",
+          "published_at": "2026-11-23"
+        }
+      ],
+      "last_found": "2026-11-23"
+    },
+    {
+      "name": "卧龙控股集团有限公司",
+      "hits": [
+        {
+          "title": "收藏 卧龙控股集团 电机制造行业龙头，全球业务布局，薪酬福利优厚，晋升体系完善。 27届秋招 丨 11.17收录 地点： 淮安、绍兴、南阳、上海 立即投递",
+          "url": "https://www.nowcoder.com/enterprise/25005?pageSource=5014&channel=recruitmentSchedule",
+          "snippet": "收藏 卧龙控股集团 电机制造行业龙头，全球业务布局，薪酬福利优厚，晋升体系完善。 27届秋招 丨 11.17收录 地点： 淮安、绍兴、南阳、上海 立即投递",
+          "published_at": null,
+          "discovered_via": "招聘平台文章链接",
+          "evidence_level": "article_link"
+        },
+        {
+          "title": "卧龙控股集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://mnowpick.nowcoder.com/m/school/schedule",
+          "snippet": "藏讯兔科技智能科技行业新锐企业，技术氛围浓厚，薪酬竞争力强，福利体系完善。27届秋招丨11.17收录地点：深圳、北京、上海、香港立即投递收藏卧龙控股集团电机制造行业龙头，全球业务布局，薪酬福利优厚，晋升体系完善。27届秋招丨11.17收录地点：淮安、绍兴、南阳、上海立即投递收藏星卫讯卫星通信行业核心企业，技术平台先进，薪酬福利优厚，发展前景良好。2",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
+        }
+      ],
+      "last_found": "2026-11-23"
+    },
+    {
       "name": "中国航空集团有限公司",
       "hits": [
         {
@@ -10994,69 +11142,6 @@
       "last_found": "2026-11-21"
     },
     {
-      "name": "中国储备粮管理集团有限公司",
-      "hits": [
-        {
-          "title": "中国储备粮管理集团有限公司2027年度校园招聘公告",
-          "url": "https://aiqicha.baidu.com/details/ugknowledge?id=0f27d674fb4607099e4e65aec53ec3cd",
-          "snippet": "企业性质不同： 中储粮（中国储备粮管理集团有限公司）是国务院直接管理的国有重要骨干央企，核心使命是“守住大国粮仓、保障粮食安全”； 中粮集团（中粮集团有限公司）是多元化中央企业，业务涵盖食品、粮油、地产等多个领域 。",
-          "published_at": "2026-10-10"
-        },
-        {
-          "title": "【招聘】中国储备粮管理集团有限公司2027年度校园招聘 - 潮新闻客户端",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE83RER6MnBpVWkteFNSNTJHdDRrTTdhQzdXcFlwVkJLLVg0QU4zX1JseXBLbFFUOXpQNFdSbHJ4aTJsNUwzMU52WGlOV3g3ZFE2em94U29QUzdFbjdBaWZUY3JtTE84eUFMbHo4X3Z5c1JRUWs?oc=5",
-          "snippet": "",
-          "published_at": null
-        },
-        {
-          "title": "2027年中国储备粮管理集团有限公司校园招聘公告_山东中公教育网",
-          "url": "https://sd.offcn.com/html/2026/10/601558.html",
-          "snippet": "中国储备粮管理集团有限公司是经国务院批准组建的涉及国家粮食安全和国民经济命脉的公益类国有大型骨干企业，实行集团-分 (子)公司-直属库三级架构。目前下设24家分公司、11家二级专业子公司和1家控股公司，人员、机构和业务覆盖全国31个省、自治区、直辖市。1招聘对象本...",
-          "published_at": "2026-10-31"
-        },
-        {
-          "title": "雄安有岗！中国储备粮管理集团有限公司2027年度校园招聘开启 - 新浪网",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQM1VfaE80UFlzZnpSYTBxYXAzQl83YXV1eXV3d3pna25QcUtKNmpvNW82SDA5bG5mU1BDWVJWdUFmbV9SMDU5R0JfY0VVa2JZMzNUcndnYnBtalZPQV9fcHJIUFdOYkV0TGtvOHhrRUFHaWN5S2tHWXdVRGFaVzB3bDkyZUVvNWRlVnBCWEN1MHhPaS1Dam1QZA?oc=5",
-          "snippet": "",
-          "published_at": null
-        },
-        {
-          "title": "中国储备粮管理集团招聘平台 - sinograin2027.iguopin.com",
-          "url": "https://sinograin2027.iguopin.com/notice",
-          "snippet": "中国储备粮管理集团有限公司 2027年度校园招聘公告 中国储备粮管理集团有限公司是经国务院批准组建的涉及国家粮食安全和国民经济命脉的公益类国有大型骨干企业，实行集团-分（子）公司-直属库“三级架构”。",
-          "published_at": null,
-          "discovered_via": "国家电网人才招聘"
-        },
-        {
-          "title": "【招聘】中国储备粮管理集团有限公司2027年度校园招聘 - 新浪财经",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNcDZKSkg0VThiNWtoTE1xTnF6bndYQWJMNDZoNlpubVBnbnZmdDBZTTd3YkdSbVQ5YVdSVjZrajlaWFl1ZERWel9OS0F4N1J0MlliM3ZCQ0VKcU9TMHhacXEybHMxQ3F2SmdEazNJUEc2UERNOXpfUkl3cFFxb1VINUJEQkdVN0U?oc=5",
-          "snippet": "",
-          "published_at": null
-        },
-        {
-          "title": "雄安有岗！中国储备粮管理集团有限公司2027年度校园招聘开启 - 新浪财经",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1SNkxRY1o0aGNiS0NmYnNfRExZTTdfUnJvTXN6V0pRNDlYUEVDcG1OQWJUbm9CNXd0Z0V3TnJtM21lNzB5S2x1d3Q5SGRPbmFiSm0wamZIUEJBR2pCeFdMcVpJSEJfMGVGaHRIY3pYX2VKbE9FTEE?oc=5",
-          "snippet": "",
-          "published_at": null
-        },
-        {
-          "title": "中储粮2027校招公告及报名入口https://sinograin2027.iguopin.com",
-          "url": "https://sa.offcn.com/html/2026/10/403121.html",
-          "snippet": "《2027年中国储备粮管理集团校园招聘公告》已发布，招聘官网：https://sinograin2027.iguopin.com。报名时间：2026年10月30日至2026年11 ...",
-          "published_at": null,
-          "discovered_via": "国家电网人才招聘"
-        },
-        {
-          "title": "浙江国企招聘-中国储备粮管理集团有限公司2027年度校园招聘公告",
-          "url": "https://zj.offcn.com/html/2026/11/499318.html",
-          "snippet": "中国储备粮管理集团有限公司是经国务院批准组建的涉及国家粮食安全和国民经济命脉的公益类国有大型骨干企业，实行集团-分（子）公司-直属库三级架构。目前下设24家分公司、11家二级专业子公司和1家控股公司，人员、机构和业务覆盖全国31个省、自治区、直辖市。一、招聘对象本次招聘面向 ...",
-          "published_at": null,
-          "discovered_via": "国家电网人才招聘"
-        }
-      ],
-      "last_found": "2026-11-20"
-    },
-    {
       "name": "福耀玻璃工业集团股份有限公司",
       "hits": [
         {
@@ -11179,28 +11264,6 @@
           "title": "广东小鹏汽车科技集团有限公司 2027届秋招｜招聘信息汇总",
           "url": "https://www.mianlingai.com/jobs/",
           "snippet": "4日10月19日登录后投递腾讯世界500强知名互联网微信视觉-全模态内容理解与推理研究北京应届毕业生青云计划校招未公布10月19日登录后投递小鹏汽车新势力车企27届校招vlm算法工程师机器人上海/深圳未公布校招10月15日10月19日登录后投递智元机器人独角兽共创测试开发工程师上海未公布校招10月16日10月19日登录后投递滴滴知名互联网27届秋招",
-          "published_at": null,
-          "discovered_via": "2027届招聘聚合页",
-          "evidence_level": "aggregate_nearby_text"
-        }
-      ],
-      "last_found": "2026-11-18"
-    },
-    {
-      "name": "卧龙控股集团有限公司",
-      "hits": [
-        {
-          "title": "收藏 卧龙控股集团 电机制造行业龙头，全球业务布局，薪酬福利优厚，晋升体系完善。 27届秋招 丨 11.17收录 地点： 淮安、绍兴、南阳、上海 立即投递",
-          "url": "https://www.nowcoder.com/enterprise/25005?pageSource=5014&channel=recruitmentSchedule",
-          "snippet": "收藏 卧龙控股集团 电机制造行业龙头，全球业务布局，薪酬福利优厚，晋升体系完善。 27届秋招 丨 11.17收录 地点： 淮安、绍兴、南阳、上海 立即投递",
-          "published_at": null,
-          "discovered_via": "招聘平台文章链接",
-          "evidence_level": "article_link"
-        },
-        {
-          "title": "卧龙控股集团有限公司 2027届秋招｜招聘信息汇总",
-          "url": "https://mnowpick.nowcoder.com/m/school/schedule",
-          "snippet": "藏讯兔科技智能科技行业新锐企业，技术氛围浓厚，薪酬竞争力强，福利体系完善。27届秋招丨11.17收录地点：深圳、北京、上海、香港立即投递收藏卧龙控股集团电机制造行业龙头，全球业务布局，薪酬福利优厚，晋升体系完善。27届秋招丨11.17收录地点：淮安、绍兴、南阳、上海立即投递收藏星卫讯卫星通信行业核心企业，技术平台先进，薪酬福利优厚，发展前景良好。2",
           "published_at": null,
           "discovered_via": "2027届招聘聚合页",
           "evidence_level": "aggregate_nearby_text"
@@ -11704,24 +11767,6 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "华中科技大学公开招聘档案"
-        }
-      ],
-      "last_found": "2026-11-02"
-    },
-    {
-      "name": "万向集团公司",
-      "hits": [
-        {
-          "url": "https://job.hust.edu.cn/zpinfo1/2411445.htm",
-          "title": "候选招聘正文待重新核验",
-          "discovered_via": "新增品牌映射后的档案回访"
-        },
-        {
-          "title": "万向集团2027校园招聘",
-          "url": "https://campus.51job.com/wxxz2027/index.html",
-          "snippet": "万向集团2027校园招聘，前程无忧为您提供最新招聘职位，校园招聘信息，面试技巧等。帮助您顺利踏入万向集团的大门，开启 ...",
-          "published_at": null,
-          "discovered_via": "面灵AI 2027秋招"
         }
       ],
       "last_found": "2026-11-02"
@@ -12262,20 +12307,6 @@
       "last_found": "2026-10-11"
     },
     {
-      "name": "上海龙旗科技股份有限公司",
-      "hits": [
-        {
-          "title": "龙旗科技2027届校园招聘-上海龙旗科技股份有限公司",
-          "url": "https://jobs.tiangong.edu.cn/correcruit/content/id/55559.html",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "高校招聘正文中的企业身份/关联证据"
-        }
-      ],
-      "last_found": "2026-10-11"
-    },
-    {
       "name": "欣旺达电子股份有限公司",
       "hits": [
         {
@@ -12322,7 +12353,7 @@
     },
     {
       "site": "https://mnowpick.nowcoder.com/m/school/schedule",
-      "matched": 8
+      "matched": 10
     },
     {
       "site": "https://www2.iguopin.com/",
@@ -12330,7 +12361,7 @@
     },
     {
       "site": "https://www.zhaopin.com/",
-      "matched": 1
+      "matched": 2
     },
     {
       "site": "https://www.51job.com/",
@@ -12362,6 +12393,6 @@
     }
   ],
   "university_scan_at": "2026-11-23",
-  "university_pages_ok": 45,
+  "university_pages_ok": 44,
   "university_new_hits": 0
 }
