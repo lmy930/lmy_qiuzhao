@@ -107,6 +107,7 @@
     "国家能源投资集团有限责任公司",
     "国轩高科股份有限公司",
     "天合光能股份有限公司",
+    "天津银行股份有限公司",
     "宁德时代新能源科技股份有限公司",
     "宁波金田投资控股有限公司",
     "宁波银行股份有限公司",
@@ -229,10 +230,31 @@
       "scope": "employer"
     },
     {
+      "observed_at": "2026-11-25T19:11:19.335120+08:00",
+      "date": "2026-11-25",
+      "name": "天津银行股份有限公司",
+      "groups": [
+        "银行"
+      ],
+      "scope": "employer",
+      "opening_date": null,
+      "kind": "first_confirmed"
+    },
+    {
       "kind": "recruitment_updated",
       "date": "2026-11-25",
       "name": "国轩高科股份有限公司",
       "observed_at": "2026-11-25T07:38:29.271070+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-11-25",
+      "name": "京东集团",
+      "observed_at": "2026-11-25T19:11:19.335120+08:00",
       "changed_fields": [
         "source_url"
       ],
@@ -251,9 +273,41 @@
     {
       "kind": "recruitment_updated",
       "date": "2026-11-25",
+      "name": "中国第一汽车集团有限公司",
+      "observed_at": "2026-11-25T19:11:19.335120+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-11-25",
+      "name": "中国电子信息产业集团有限公司",
+      "observed_at": "2026-11-25T19:11:19.335120+08:00",
+      "changed_fields": [
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-11-25",
       "name": "中国建材集团有限公司",
       "observed_at": "2026-11-25T07:38:29.271070+08:00",
       "changed_fields": [
+        "source_scope",
+        "source_url"
+      ],
+      "scope": "employer"
+    },
+    {
+      "kind": "recruitment_updated",
+      "date": "2026-11-25",
+      "name": "OPPO (重庆)智能科技有限公司",
+      "observed_at": "2026-11-25T19:11:19.335120+08:00",
+      "changed_fields": [
+        "body_verified",
         "source_scope",
         "source_url"
       ],
@@ -11811,7 +11865,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/117515.html",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2433785.htm",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -11820,7 +11874,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/120706.html",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2411775.htm",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -12379,7 +12433,7 @@
       "status": "已发布公告（网申待核验）",
       "deadline": null,
       "source_scope": "employer",
-      "source_url": "https://career.nankai.edu.cn/correcruit/content/id/116372.html",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2410487.htm",
       "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
@@ -12866,9 +12920,9 @@
     "OPPO (重庆)智能科技有限公司": {
       "status": "已发布公告（网申待核验）",
       "deadline": null,
-      "source_scope": "集团品牌",
-      "source_url": null,
-      "body_verified": false,
+      "source_scope": "employer",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2471392.htm",
+      "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
     },
@@ -13115,6 +13169,15 @@
       "source_scope": null,
       "source_url": null,
       "body_verified": false,
+      "subsidiary_openings": [],
+      "application_urls": []
+    },
+    "天津银行股份有限公司": {
+      "status": "已发布公告（网申待核验）",
+      "deadline": "2026-12-27",
+      "source_scope": "employer",
+      "source_url": "https://job.hust.edu.cn/zpinfo1/2471390.htm",
+      "body_verified": true,
       "subsidiary_openings": [],
       "application_urls": []
     },
