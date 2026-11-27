@@ -1,5 +1,5 @@
 {
-  "scanned_at": "2026-11-26T22:47:01.972201+00:00",
+  "scanned_at": "2026-11-27T10:25:22.977838+00:00",
   "companies_total": 657,
   "registered_sources": 41,
   "search_methods": [
@@ -9,12 +9,12 @@
   ],
   "searches_attempted": 657,
   "searches_succeeded": 657,
-  "companies_with_new_hits": 57,
+  "companies_with_new_hits": 54,
   "companies_with_any_leads": 213,
   "note": "搜索成功指至少一个搜索服务返回结果，未必找到招聘公告；未发现不代表未开启。",
   "searches_failed": 0,
   "provider_requests_attempted": 1971,
-  "provider_requests_failed": 62,
+  "provider_requests_failed": 65,
   "partial_provider_errors": [
     {
       "name": "中国海洋石油集团有限公司",
@@ -23,13 +23,13 @@
       ]
     },
     {
-      "name": "国家石油天然气管网集团有限公司",
+      "name": "中国电信集团有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
     },
     {
-      "name": "中国电信集团有限公司",
+      "name": "中国联合网络通信集团有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -42,6 +42,12 @@
     },
     {
       "name": "中国中化控股有限责任公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "中国能源建设集团有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -83,12 +89,6 @@
       ]
     },
     {
-      "name": "恒丰银行股份有限公司",
-      "errors": [
-        "HTTP Error 503: Service Unavailable"
-      ]
-    },
-    {
       "name": "渤海银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -96,6 +96,12 @@
     },
     {
       "name": "阿里巴巴 (中国)有限公司",
+      "errors": [
+        "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "比亚迪股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -161,19 +167,13 @@
       ]
     },
     {
-      "name": "华友控股集团有限公司",
+      "name": "永卓控股有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
     },
     {
       "name": "百度公司",
-      "errors": [
-        "HTTP Error 503: Service Unavailable"
-      ]
-    },
-    {
-      "name": "广东海大集团股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -209,12 +209,6 @@
       ]
     },
     {
-      "name": "歌尔股份有限公司",
-      "errors": [
-        "HTTP Error 503: Service Unavailable"
-      ]
-    },
-    {
       "name": "阳光保险集团股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -245,15 +239,27 @@
       ]
     },
     {
-      "name": "华峰集团有限公司",
+      "name": "河南双汇投资发展股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
     },
     {
-      "name": "河南双汇投资发展股份有限公司",
+      "name": "龙信建设集团有限公司",
       "errors": [
-        "HTTP Error 503: Service Unavailable"
+        "HTTP Error 429: Too Many Requests"
+      ]
+    },
+    {
+      "name": "汇通达网络股份有限公司",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
+      ]
+    },
+    {
+      "name": "湖南五江控股集团有限公司",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
       ]
     },
     {
@@ -293,6 +299,12 @@
       ]
     },
     {
+      "name": "深圳华强集团有限公司",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
+      ]
+    },
+    {
       "name": "江苏恒瑞医药股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -317,12 +329,6 @@
       ]
     },
     {
-      "name": "杭州银行股份有限公司",
-      "errors": [
-        "HTTP Error 503: Service Unavailable"
-      ]
-    },
-    {
       "name": "长沙银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -332,6 +338,12 @@
       "name": "重庆银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
+      ]
+    },
+    {
+      "name": "贵阳银行股份有限公司",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
       ]
     },
     {
@@ -365,6 +377,12 @@
       ]
     },
     {
+      "name": "盛京银行股份有限公司",
+      "errors": [
+        "HTTP Error 429: Too Many Requests"
+      ]
+    },
+    {
       "name": "江西银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
@@ -377,13 +395,13 @@
       ]
     },
     {
-      "name": "汉口银行股份有限公司",
+      "name": "温州银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
     },
     {
-      "name": "温州银行股份有限公司",
+      "name": "台州银行股份有限公司",
       "errors": [
         "HTTP Error 503: Service Unavailable"
       ]
@@ -2251,6 +2269,14 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "华中科技大学公开招聘档案"
+        },
+        {
+          "title": "中国建筑集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.gankinterview.cn/campus",
+          "snippet": "人，具体招聘岗位及要求详见附件1。北京27届秋招25届,26届,27届2026-11-252026/12/07公告链接前往投递加入投递进展表中国建筑-校招合集央国企建筑/房地产中建集团中建基础中海地产中国建筑国际中海物业中建国际中建一局中建二局中建三局中建四局中建五局中建六局中建丝路中建七局中建八局中建新疆建工中建设计研究院中建东北院中建西北院中建",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
         }
       ],
       "last_found": "2026-11-27"
@@ -3210,6 +3236,13 @@
           "snippet": "录用后安排到分支机构岗位轮岗3年，在基层一线深耕业务，全面了解银行业务及工作流程，考核合格后结合个人意愿、表现及岗位需要，分配至总行内相关条线管理或专业岗位，成长为管理型或专业型人才。",
           "published_at": null,
           "discovered_via": "厦门大学嘉庚学院银行校招汇总"
+        },
+        {
+          "title": "青岛银行2027年校园招聘",
+          "url": "https://campus.51job.com/qdccb2027",
+          "snippet": "青岛银行2027年校园招聘，前程无忧为您提供最新招聘职位，校园招聘信息，面试技巧等。帮助您顺利踏入青岛银行2027年校园招聘的大门，开启一段崭新的职业生涯。",
+          "published_at": null,
+          "discovered_via": "厦门大学嘉庚学院银行校招汇总"
         }
       ],
       "last_found": "2026-11-27"
@@ -3278,6 +3311,14 @@
           "url": "https://career.hebut.edu.cn/correcruit/content/id/80609.html",
           "snippet": "1975年首台军车产品下线，同年11月，经报国务院批准，二汽生产的汽车正式命名为“东风”；1978年首款民用EQ140中卡产品批量投产；1992年二汽更名为东风汽车公司；1999年进行全面体制改革，初步建立母子公司型管理架构；2003年公司总部从湖北十堰迁至武汉；2017 ...",
           "published_at": "2026-10-19"
+        },
+        {
+          "title": "东风汽车集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.gankinterview.cn/campus",
+          "snippet": "、南京、苏州、杭州、宁波、合肥、厦门、济南、青岛、武汉、长沙、广州27届秋招27届2026-11-24招满即止公告链接前往投递加入投递进展表东风汽车-热招岗位央国企汽车/智能驾驶计算机类、电子信息类、电气类、车辆类、机械类、自动化类、数学类、营销类、能动类、材料类、语言类、管理类武汉十堰襄阳北京上海成都郑州海外等27届秋招27届2026-11-24",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
         }
       ],
       "last_found": "2026-11-27"
@@ -4052,6 +4093,14 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "南开大学公开招聘档案"
+        },
+        {
+          "title": "天津银行股份有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.gankinterview.cn/campus",
+          "snippet": "案类运营交付类市场营销类职能类雄安新区27届秋招25届,26届,27届2026-11-242026/11/30公告链接前往投递加入投递进展表天津银行银行金融/银行/保险业务管理方向,信息科技方向,业务类岗位经济类、管理类、理工类、法学类、计算机类、电子信息类、数学类、统计学类、人工智能、数据科学、金融工程、数量经济学北京、天津、石家庄、唐山、保定、",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
         }
       ],
       "last_found": "2026-11-27"
@@ -4107,6 +4156,14 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "中国石油大学公开招聘档案"
+        },
+        {
+          "title": "中国建材集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.gankinterview.cn/campus",
+          "snippet": "服务类、市场与职能类、技术与运营类上海黄山深圳27届秋招26届,27届2026-11-242026/12/16公告链接前往投递加入投递进展表中建材装备集团央国企免笔试机械/制造热工研发工程师、粉体研发工程师、焊接研发工程师、数字化研发工程师、液压研发工程师、深度学习算法工程师、数据开发工程师、矿业研发工程师、装备研发工程师、3d打印金属技术工程师、",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
         }
       ],
       "last_found": "2026-11-27"
@@ -4138,14 +4195,15 @@
           "title": "中国华能集团有限公司",
           "url": "https://zhaopin.chng.com.cn/h5/",
           "snippet": "最新公告 查看更多 中国华能2027届校园招聘（秋招）报名已截止，谢谢关注 管培生 中国华能集团有限公司总部 招聘日期：2026-10-31 ~ 2026-12-31 查看详情 中国华能2027届校园招聘（秋招）报名已截止，谢谢关注 在京单位 中国华能集团有限公司总部 招聘日期：2026-10 ...",
-          "published_at": "2026-11-26"
+          "published_at": null,
+          "discovered_via": "南开大学就业网"
         },
         {
           "title": "中国华能2027年校园招聘正式启动 - chng.com.cn",
           "url": "https://www.chng.com.cn/detail_zpxx/-/article/YjJqG0pRRQU6/v/1324715.html",
           "snippet": "中国华能集团有限公司 版权所有 冀ICP备2023038172号-1 信息产业部备案管理系统： https://beian.miit.gov.cn 联系地址：河北雄安新区起步区雄安大街333号中国华能大厦 邮编：070001 华能新媒体 微信公众号 官方微博 能源监管热线",
           "published_at": null,
-          "discovered_via": "中国石油大学就业网"
+          "discovered_via": "南开大学就业网"
         },
         {
           "title": "中国华能集团有限公司 2027年校园招聘公告",
@@ -4684,7 +4742,7 @@
           "published_at": null
         },
         {
-          "title": "中国电气装备集团2027届校园招聘正式启动 - 国有资产监督管理委员会",
+          "title": "中国电气装备集团2027届校园招聘正式启动 - 国务院国有资产监督管理委员会",
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE95Nmd4LUlZLVJ5WWR1dk1FOTB2M3JRWndjRERKVzgyQjBXSkxGWVdkNGZUWVZQUDBQYWhjLUZMUTlOWVhtWlMtYTJfT1pvY1RPSkFxaXVRVmpPSDdocXQzOV8yekQxTjRnWHl3Rk4tay1qY3JaQS05Q1FBSVpjUQ?oc=5",
           "snippet": "",
           "published_at": null
@@ -4718,6 +4776,14 @@
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE53dkd6UHpRMVZjUUM2Qk5tc1JqaGwwNGo0U2NiVDV1enY3cEw2OTIzRDZFX1dxTE11bi1YbFhTMndMS1RNWVM0SEJoZWt6V3ZMZkk1ZjhqWWZHMGRnVkdHTkJjU3FnVHk5N2Q1cWNXLUd1bFllbEF5SUlGbUowdw?oc=5",
           "snippet": "",
           "published_at": null
+        },
+        {
+          "title": "中国电气装备集团有限公司 2027届秋招｜招聘信息汇总",
+          "url": "https://www.gankinterview.cn/campus",
+          "snippet": "顺上海重庆唐山呼和浩特沈阳深圳西安淮北咸阳银川杭州乌鲁木齐常州武汉27届秋招27届2026-11-24招满即止公告链接前往投递加入投递进展表中国电气装备许继集团、许继电气央国企机械/制造软件开发；嵌入式软件开发；产品开发；嵌入式硬件开发；产品设计；许继集团技术中心零碳研究院；高级软件开发师；产品经理；电气设计；系统仿真郑州、成都、许昌、济南、上海、",
+          "published_at": null,
+          "discovered_via": "2027届招聘聚合页",
+          "evidence_level": "aggregate_nearby_text"
         }
       ],
       "last_found": "2026-11-27"
@@ -4947,10 +5013,10 @@
       "name": "中国东方电气集团有限公司",
       "hits": [
         {
-          "title": "东方电气集团2027届校园招聘",
+          "title": "东方电气集团2027届校园招聘 - dongfang2026.zhaopin.com",
           "url": "https://dongfang2026.zhaopin.com/company/index.html",
           "snippet": "中国东方电气集团有限公司 （以下简称东方电气集团）创立于1958年，是 中央管理 的涉及国家安全和国民经济命脉的国有 重要骨干企业，肩负保障国家能源安全的重大责任，是 全球最大 的能源装备制造企业集团之一。",
-          "published_at": "2026-11-14"
+          "published_at": "2026-11-27"
         },
         {
           "title": "中国东方电气集团2027届校园招聘公告已发：共计900+offer名额！",
@@ -5130,7 +5196,7 @@
           "url": "https://eximbank2027.iguopin.com/notice",
           "snippet": "中国进出口银行2027年校园招聘公告 中国进出口银行是由国家出资设立、直属国务院领导、支持中国对外经济贸易投资发展与国际经济合作、具有独立法人地位的国家政策性银行。",
           "published_at": null,
-          "discovered_via": "应届生求职网"
+          "discovered_via": "新浪财经"
         },
         {
           "title": "中国进出口银行2027年校园招聘启动 - 凤凰网",
@@ -5202,7 +5268,7 @@
           "url": "https://eximbank2027.iguopin.com/job",
           "snippet": "中国进出口银行2027年校园招聘 Copyright ©国聘融媒体发展中心. All Rights Reserved",
           "published_at": null,
-          "discovered_via": "应届生求职网"
+          "discovered_via": "新浪财经"
         }
       ],
       "last_found": "2026-11-27"
@@ -7932,6 +7998,59 @@
           "published_at": null,
           "evidence_level": "article_discovery",
           "discovered_via": "华中科技大学公开招聘档案"
+        }
+      ],
+      "last_found": "2026-11-27"
+    },
+    {
+      "name": "中国黄金集团有限公司",
+      "hits": [
+        {
+          "title": "中国黄金集团2027届校园招聘启动 - 腾讯新闻",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE54REoxOVNvVlZIMmk1c1ZMV3Z3cTVzZlk4ZWJYMUxvdmhwQ3ctUjljRlRMU3VoUktKeG1WZ0VCaGEtQUZERl9Yd3YyZW1sMllzOUZxblhR?oc=5",
+          "snippet": "",
+          "published_at": null
+        }
+      ],
+      "last_found": "2026-11-27"
+    },
+    {
+      "name": "中国一重集团有限公司",
+      "hits": [
+        {
+          "title": "中国一重集团有限公司2027校园招聘",
+          "url": "https://cfhi.zhaopin.com/index.html",
+          "snippet": "公司现为大连商品交易所交割委员会成员和上海期货交易所技术管理委员会成员，拥有大连商品交易所、上海期货交易所、上海国际能源交易中心、郑州商品交易所、中国金融期货交易所、广州期货交易所的会员资格。",
+          "published_at": null,
+          "discovered_via": "Offer多多秋招汇总"
+        },
+        {
+          "title": "中国一重集团有限公司2027校园招聘",
+          "url": "https://cfhi.zhaopin.com/jobs/index.html",
+          "snippet": "智联校园招聘xiaoyuan.zhaopin.com为应届大学毕业生及在校生提供最新校园招聘信息，实习信息以及校园宣讲会信息等.为企业提供一站式专业人力资源服务,包括网络招聘,报纸招聘,校园招聘,猎头服务,招聘外包,企业培训以及人才测评等.",
+          "published_at": null,
+          "discovered_via": "猎聘"
+        }
+      ],
+      "last_found": "2026-11-27"
+    },
+    {
+      "name": "四联创业集团股份有限公司",
+      "hits": [
+        {
+          "title": "四联创业集团 2027 届校园招聘",
+          "url": "https://career.cup.edu.cn/campus/view/id/460728",
+          "snippet": "待正文核验，不凭列表确认启动",
+          "published_at": null,
+          "evidence_level": "article_discovery",
+          "discovered_via": "中国石油大学公开招聘档案"
+        },
+        {
+          "title": "四联创业集团 2027 届校园招聘",
+          "url": "https://aeo.uibe.edu.cn/front/zpxx.jspa?tid=2113101436756791298",
+          "snippet": "四联创业集团股份有限公司 (下称“四联创业”)自2001年成立以来，始终专注于服务全国橡塑产业上下游客户，现已发展成为国内领先的橡塑产业综合服务商，先后获评“第一批全国供应链创新与应用示范企业”“中国服务业100强”“最佳雇主、优选雇主”等荣誉。",
+          "published_at": null,
+          "discovered_via": "前程无忧"
         }
       ],
       "last_found": "2026-11-27"
@@ -11782,18 +11901,6 @@
       "last_found": "2026-11-22"
     },
     {
-      "name": "中国黄金集团有限公司",
-      "hits": [
-        {
-          "title": "中国黄金集团2027届校园招聘启动 - 腾讯新闻",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE54REoxOVNvVlZIMmk1c1ZMV3Z3cTVzZlk4ZWJYMUxvdmhwQ3ctUjljRlRMU3VoUktKeG1WZ0VCaGEtQUZERl9Yd3YyZW1sMllzOUZxblhR?oc=5",
-          "snippet": "",
-          "published_at": null
-        }
-      ],
-      "last_found": "2026-11-21"
-    },
-    {
       "name": "中天科技集团有限公司",
       "hits": [
         {
@@ -11917,26 +12024,6 @@
         }
       ],
       "last_found": "2026-11-19"
-    },
-    {
-      "name": "中国一重集团有限公司",
-      "hits": [
-        {
-          "title": "中国一重集团有限公司2027校园招聘",
-          "url": "https://cfhi.zhaopin.com/index.html",
-          "snippet": "公司现为大连商品交易所交割委员会成员和上海期货交易所技术管理委员会成员，拥有大连商品交易所、上海期货交易所、上海国际能源交易中心、郑州商品交易所、中国金融期货交易所、广州期货交易所的会员资格。",
-          "published_at": null,
-          "discovered_via": "Offer多多秋招汇总"
-        },
-        {
-          "title": "中国一重集团有限公司2027校园招聘",
-          "url": "https://cfhi.zhaopin.com/jobs/index.html",
-          "snippet": "智联校园招聘xiaoyuan.zhaopin.com为应届大学毕业生及在校生提供最新校园招聘信息，实习信息以及校园宣讲会信息等.为企业提供一站式专业人力资源服务,包括网络招聘,报纸招聘,校园招聘,猎头服务,招聘外包,企业培训以及人才测评等.",
-          "published_at": null,
-          "discovered_via": "Offer多多秋招汇总"
-        }
-      ],
-      "last_found": "2026-11-18"
     },
     {
       "name": "江西双胞胎控股有限公司",
@@ -12556,20 +12643,6 @@
       "last_found": "2026-10-26"
     },
     {
-      "name": "四联创业集团股份有限公司",
-      "hits": [
-        {
-          "title": "四联创业集团 2027 届校园招聘",
-          "url": "https://career.cup.edu.cn/campus/view/id/460728",
-          "snippet": "待正文核验，不凭列表确认启动",
-          "published_at": null,
-          "evidence_level": "article_discovery",
-          "discovered_via": "中国石油大学公开招聘档案"
-        }
-      ],
-      "last_found": "2026-10-23"
-    },
-    {
       "name": "人本集团有限公司",
       "hits": [
         {
@@ -12954,7 +13027,7 @@
     },
     {
       "site": "https://www.gankinterview.cn/campus",
-      "matched": 2
+      "matched": 6
     },
     {
       "site": "https://www.mianlingai.com/jobs/",
@@ -13018,6 +13091,6 @@
     }
   ],
   "university_scan_at": "2026-11-27",
-  "university_pages_ok": 50,
+  "university_pages_ok": 48,
   "university_new_hits": 0
 }
